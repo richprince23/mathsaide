@@ -29,6 +29,7 @@ class MainApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return Resize(
       builder: () => MaterialApp(
+        title: "MathsAide",
         // debugShowMaterialGrid: true,
         debugShowCheckedModeBanner: false,
         theme: myTheme.copyWith(

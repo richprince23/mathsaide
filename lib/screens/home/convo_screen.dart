@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:math_keyboard/math_keyboard.dart';
 import 'package:mathsaide/constants/constants.dart';
+import 'package:mathsaide/controllers/chat_controller.dart';
 import 'package:mathsaide/providers/session_provider.dart';
 import 'package:mathsaide/widgets/input_control.dart';
 import 'package:mathsaide/widgets/session_start.dart';
@@ -8,8 +9,8 @@ import 'package:provider/provider.dart';
 import 'package:resize/resize.dart';
 // import 'package:math_keyboard/math_keyboard.dart';
 
-class ConvoScreen extends StatelessWidget {
-  const ConvoScreen({
+class ConvoScreen extends StatefulWidget {
+  ConvoScreen({
     super.key,
     required this.scrollController,
     required this.messages,
@@ -17,6 +18,15 @@ class ConvoScreen extends StatelessWidget {
 
   final ScrollController scrollController;
   final List messages;
+
+  @override
+  State<ConvoScreen> createState() => _ConvoScreenState();
+}
+
+class _ConvoScreenState extends State<ConvoScreen> {
+  final txtInput = TextEditingController();
+
+  final mathsInput = MathFieldEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -69,11 +79,11 @@ class ConvoScreen extends StatelessWidget {
         child: ListView.builder(
           cacheExtent: 50.vh,
           padding: EdgeInsets.symmetric(horizontal: 10.w),
-          controller: scrollController,
+          controller: widget.scrollController,
           scrollDirection: Axis.vertical,
-          itemCount: messages.length,
+          itemCount: widget.messages.length,
           itemBuilder: (context, index) {
-            return messages[index];
+            return widget.messages[index];
           },
         ),
       ),
@@ -89,11 +99,14 @@ class ConvoScreen extends StatelessWidget {
                 showLabel: false,
                 hintText: "Enter a prompt...",
                 type: TextInputType.multiline,
+                controller: txtInput,
                 suffixIcon: IconButton(
-                    onPressed: () {
-                      showMathsKeyboard(context);
-                    },
-                    icon: const Icon(Icons.calculate)),
+                  onPressed: () {
+                    showMathsKeyboard(context);
+                  },
+                  icon: const Icon(Icons.calculate),
+                  color: txtCol,
+                ),
               ),
             ),
             SizedBox(
@@ -107,7 +120,14 @@ class ConvoScreen extends StatelessWidget {
                 padding: pa1,
               ),
               icon: const Icon(Icons.send),
-              onPressed: () {},
+              onPressed: () async {
+                if (txtInput.text != "") {
+                  await sendMessage(txtInput.text);
+                  setState(() {
+                    txtInput.text = "";
+                  });
+                }
+              },
             )
           ],
         ),
@@ -118,8 +138,49 @@ class ConvoScreen extends StatelessWidget {
   void showMathsKeyboard(BuildContext context) {
     showDialog(
       context: context,
-      builder: ((context) => const Center(
-            child: MathField(),
+      builder: ((context) => Center(
+            child: Container(
+              height: 60.vh,
+              padding: const EdgeInsets.all(20.0),
+              margin: const EdgeInsets.all(20.0),
+              decoration: ShapeDecoration(
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(10.r),
+                ),
+                color: bgCol,
+              ),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  const Text("Input equation here..."),
+                  SizedBox(
+                    height: 20.h,
+                  ),
+                  MathField(
+                    controller: mathsInput,
+                    keyboardType: MathKeyboardType.expression,
+                    variables: const ['a', 'b', 'c', 'x', 'y', 'z'],
+                  ),
+                  SizedBox(
+                    height: 20.h,
+                  ),
+                  ElevatedButton(
+                    onPressed: () {
+                      final mathExpression =
+                          TeXParser(mathsInput.currentEditingValue()).parse();
+                      setState(() {
+                        txtInput.text +=
+                            // "\n${mathsInput.currentEditingValue()}\n\n";
+                            "\n$mathExpression\n";
+                      });
+                      Navigator.pop(context);
+                    },
+                    child: const Text("Insert Equation"),
+                  )
+                ],
+              ),
+            ),
           )),
     );
   }

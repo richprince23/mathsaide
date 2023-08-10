@@ -33,7 +33,71 @@ class MainApp extends StatelessWidget {
         // debugShowMaterialGrid: true,
         debugShowCheckedModeBanner: false,
         theme: myTheme.copyWith(
-          textTheme: GoogleFonts.poppinsTextTheme(),
+          textTheme: GoogleFonts.poppinsTextTheme().copyWith(
+            displayLarge: GoogleFonts.poppins(
+              fontSize: 96.sp,
+              fontWeight: FontWeight.w300,
+              color: txtCol,
+            ),
+            displayMedium: GoogleFonts.poppins(
+              fontSize: 60.sp,
+              fontWeight: FontWeight.w300,
+              color: txtCol,
+            ),
+            displaySmall: GoogleFonts.poppins(
+              fontSize: 48.sp,
+              fontWeight: FontWeight.w400,
+              color: txtCol,
+            ),
+            headlineMedium: GoogleFonts.poppins(
+              fontSize: 34.sp,
+              fontWeight: FontWeight.w400,
+              color: txtCol,
+            ),
+            headlineSmall: GoogleFonts.poppins(
+              fontSize: 24.sp,
+              fontWeight: FontWeight.w400,
+              color: txtCol,
+            ),
+            titleLarge: GoogleFonts.poppins(
+              fontSize: 20.sp,
+              fontWeight: FontWeight.w500,
+              color: txtCol,
+            ),
+            titleMedium: GoogleFonts.poppins(
+              fontSize: 16.sp,
+              fontWeight: FontWeight.w400,
+              color: txtCol,
+            ),
+            titleSmall: GoogleFonts.poppins(
+              fontSize: 14.sp,
+              fontWeight: FontWeight.w500,
+              color: txtCol,
+            ),
+            bodyLarge: GoogleFonts.poppins(
+              fontSize: 16.sp,
+              fontWeight: FontWeight.w400,
+              color: txtCol,
+            ),
+            bodyMedium: GoogleFonts.poppins(
+              fontSize: 14.sp,
+              fontWeight: FontWeight.w400,
+              color: txtCol,
+            ),
+            labelLarge: GoogleFonts.poppins(
+              fontSize: 14.sp,
+              color: txtCol,
+            ),
+            bodySmall: GoogleFonts.poppins(
+              fontSize: 12.sp,
+              letterSpacing: 0.4,
+              color: txtCol,
+            ),
+            labelSmall: GoogleFonts.poppins(
+              fontSize: 10.sp,
+              color: txtCol,
+            ),
+          ),
         ),
         home: const HomeScreen(),
 

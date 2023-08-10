@@ -14,7 +14,7 @@ class Prefs {
   static Future<String> createSession(String topic) async {
     // generate session ID from random uuid
     String sessionID = DateTime.now().microsecondsSinceEpoch.toString();
-    print("Session ID: $sessionID");
+    // print("Session ID: $sessionID");
     final prefs = await mainPrefs;
     // save session ID
     await prefs.setString("sessionID", sessionID);

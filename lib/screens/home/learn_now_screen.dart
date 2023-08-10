@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:mathsaide/constants/constants.dart';
 import 'package:mathsaide/providers/session_provider.dart';
-import 'package:mathsaide/screens/home/convo_screen.dart';
+import 'package:mathsaide/screens/home/chat_screen.dart';
+import 'package:mathsaide/screens/home/start_session_screen.dart';
 import 'package:provider/provider.dart';
 
 class LearnNowScreen extends StatefulWidget {
@@ -11,14 +13,6 @@ class LearnNowScreen extends StatefulWidget {
 }
 
 class _LearnNowScreenState extends State<LearnNowScreen> {
-  String initialPrompt = "Hello Richard, what do you want to learn today?";
-  List messages = [];
-  FocusNode focusNode = FocusNode();
-  final TextEditingController inputController = TextEditingController();
-  ScrollController scrollController = ScrollController();
-  String prompt = '';
-  String selectedSubject = "";
-
   @override
   void initState() {
     super.initState();
@@ -26,9 +20,6 @@ class _LearnNowScreenState extends State<LearnNowScreen> {
 
   @override
   void dispose() {
-    focusNode.dispose();
-    inputController.dispose();
-    scrollController.dispose();
     super.dispose();
   }
 
@@ -66,7 +57,31 @@ class _LearnNowScreenState extends State<LearnNowScreen> {
         // leading: null,
         automaticallyImplyLeading: false,
       ),
-      body: ConvoScreen(scrollController: scrollController, messages: messages),
+      body: Consumer<SessionProvider>(
+        builder: ((context, value, child) {
+          return FutureBuilder(
+            future: value.getSession,
+            builder: (context, snapshot) {
+              if (snapshot.hasData) {
+                if (snapshot.data != null && snapshot.data != "") {
+                  return ChatScreen();
+                } else {
+                  return const StartSessionScreen();
+                }
+              }
+              if (snapshot.connectionState == ConnectionState.waiting) {
+                return Center(
+                  child: CircularProgressIndicator(
+                    color: priCol,
+                  ),
+                );
+              } else {
+                return const StartSessionScreen();
+              }
+            },
+          );
+        }),
+      ),
     );
   }
 
@@ -81,7 +96,7 @@ class _LearnNowScreenState extends State<LearnNowScreen> {
               child: const Text("Clear Messages"),
               onTap: () {
                 setState(() {
-                  messages = [];
+                  // messages = [];
                 });
               },
             ),

@@ -2,88 +2,51 @@ import 'package:flutter/material.dart';
 import 'package:math_keyboard/math_keyboard.dart';
 import 'package:mathsaide/constants/constants.dart';
 import 'package:mathsaide/controllers/chat_controller.dart';
-import 'package:mathsaide/providers/session_provider.dart';
 import 'package:mathsaide/widgets/input_control.dart';
-import 'package:mathsaide/widgets/session_start.dart';
-import 'package:provider/provider.dart';
 import 'package:resize/resize.dart';
-// import 'package:math_keyboard/math_keyboard.dart';
 
-class ConvoScreen extends StatefulWidget {
-  ConvoScreen({
-    super.key,
-    required this.scrollController,
-    required this.messages,
-  });
-
-  final ScrollController scrollController;
-  final List messages;
+class ChatScreen extends StatefulWidget {
+  const ChatScreen({super.key});
 
   @override
-  State<ConvoScreen> createState() => _ConvoScreenState();
+  State<ChatScreen> createState() => _ChatScreenState();
 }
 
-class _ConvoScreenState extends State<ConvoScreen> {
-  final txtInput = TextEditingController();
-
+class _ChatScreenState extends State<ChatScreen> {
+  String initialPrompt = "Hello Richard, what do you want to learn today?";
+  List messages = [];
+  FocusNode focusNode = FocusNode();
+  final TextEditingController txtInput = TextEditingController();
   final mathsInput = MathFieldEditingController();
+  final scrollController = ScrollController();
+  String prompt = '';
+  String selectedSubject = "";
+
+  @override
+  void initState() {
+    super.initState();
+  }
+
+  @override
+  void dispose() {
+    super.dispose();
+    txtInput.dispose();
+    mathsInput.dispose();
+    scrollController.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
-    return Consumer<SessionProvider>(
-      builder: ((context, value, child) {
-        return FutureBuilder(
-          future: value.getSession,
-          builder: (context, snapshot) {
-            if (snapshot.hasData) {
-              if (snapshot.data != null && snapshot.data != "") {
-                return buildChat(context);
-              } else {
-                return buildStartSession();
-              }
-            }
-            if (snapshot.connectionState == ConnectionState.waiting) {
-              return Center(
-                child: CircularProgressIndicator(
-                  color: priCol,
-                ),
-              );
-            } else {
-              return buildStartSession();
-            }
-          },
-        );
-      }),
-    );
-  }
-
-  Widget buildStartSession() {
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.center,
-      crossAxisAlignment: CrossAxisAlignment.center,
-      children: [
-        Container(
-          padding: px1,
-          width: 100.vw,
-          height: 90.vh - 60,
-          child: const SessionStart(),
-        ),
-      ],
-    );
-  }
-
-//builds a new chat screen
-  Widget buildChat(BuildContext context) {
     return Column(children: [
       Expanded(
         child: ListView.builder(
           cacheExtent: 50.vh,
           padding: EdgeInsets.symmetric(horizontal: 10.w),
-          controller: widget.scrollController,
+          controller: scrollController,
           scrollDirection: Axis.vertical,
-          itemCount: widget.messages.length,
+          itemCount: messages.length,
           itemBuilder: (context, index) {
-            return widget.messages[index];
+            return messages[index];
           },
         ),
       ),
@@ -102,7 +65,7 @@ class _ConvoScreenState extends State<ConvoScreen> {
                 controller: txtInput,
                 suffixIcon: IconButton(
                   onPressed: () {
-                    showMathsKeyboard(context);
+                    showMathsKeyboard();
                   },
                   icon: const Icon(Icons.calculate),
                   color: txtCol,
@@ -135,7 +98,8 @@ class _ConvoScreenState extends State<ConvoScreen> {
     ]);
   }
 
-  void showMathsKeyboard(BuildContext context) {
+  void showMathsKeyboard() {
+    String mathExpression = "";
     showDialog(
       context: context,
       builder: ((context) => Center(
@@ -167,13 +131,9 @@ class _ConvoScreenState extends State<ConvoScreen> {
                   ),
                   ElevatedButton(
                     onPressed: () {
-                      final mathExpression =
+                      final parsedExpression =
                           TeXParser(mathsInput.currentEditingValue()).parse();
-                      setState(() {
-                        txtInput.text +=
-                            // "\n${mathsInput.currentEditingValue()}\n\n";
-                            "\n$mathExpression\n";
-                      });
+                      mathExpression = "\n$parsedExpression\n";
                       Navigator.pop(context);
                     },
                     child: const Text("Insert Equation"),
@@ -182,6 +142,13 @@ class _ConvoScreenState extends State<ConvoScreen> {
               ),
             ),
           )),
-    );
+    ).then((_) {
+      if (mathExpression.isNotEmpty) {
+        setState(() {
+          txtInput.text += mathExpression; // Update txtInput.text
+        });
+      }
+      mathsInput.dispose(); // Dispose of mathsInput controller after use
+    });
   }
 }

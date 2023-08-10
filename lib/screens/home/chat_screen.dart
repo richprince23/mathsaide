@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:math_keyboard/math_keyboard.dart';
 import 'package:mathsaide/constants/constants.dart';
 import 'package:mathsaide/controllers/chat_controller.dart';
+import 'package:mathsaide/models/response_model.dart';
 import 'package:mathsaide/providers/session_provider.dart';
 import 'package:mathsaide/widgets/chat_bubble.dart';
 import 'package:mathsaide/widgets/input_control.dart';
@@ -48,6 +49,7 @@ class _ChatScreenState extends State<ChatScreen> {
                 );
               }),
             });
+    chatHistory.add(ChatResponse(content: systemSolvePrompt, role: "system"));
   }
 
   @override
@@ -72,6 +74,9 @@ class _ChatScreenState extends State<ChatScreen> {
             return messages[index];
           },
         ),
+      ),
+      SizedBox(
+        height: 10.h,
       ),
       Container(
         padding: px1,
@@ -108,7 +113,28 @@ class _ChatScreenState extends State<ChatScreen> {
               icon: const Icon(Icons.send),
               onPressed: () async {
                 if (txtInput.text != "") {
-                  await sendMessage(txtInput.text);
+                  await sendMessage(txtInput.text).then((value) => {
+                        print("value on front $value"),
+                        setState(() {
+                          messages.add(
+                            ChatBubble(
+                              isUser: true,
+                              message: txtInput.text,
+                            ),
+                          );
+                          messages.add(
+                            ChatBubble(
+                              isUser: false,
+                              message: value,
+                            ),
+                          );
+                          scrollController.animateTo(
+                            scrollController.position.maxScrollExtent,
+                            duration: const Duration(milliseconds: 500),
+                            curve: Curves.easeOut,
+                          );
+                        }),
+                      });
                   setState(() {
                     txtInput.text = "";
                   });
@@ -147,7 +173,7 @@ class _ChatScreenState extends State<ChatScreen> {
                   MathField(
                     controller: mathsInput,
                     keyboardType: MathKeyboardType.expression,
-                    variables: const ['a', 'b', 'c', 'x', 'y', 'z'],
+                    variables: const ['a', 'b', 'c', 'x', 'y', 'z', '='],
                   ),
                   SizedBox(
                     height: 20.h,
@@ -159,6 +185,7 @@ class _ChatScreenState extends State<ChatScreen> {
                         final parsedExpression =
                             TeXParser(mathsInput.currentEditingValue()).parse();
                         mathExpression = "\n$parsedExpression\n";
+                        txtInput.text += mathExpression;
                       }
                       Navigator.pop(context);
                     },
@@ -168,13 +195,14 @@ class _ChatScreenState extends State<ChatScreen> {
               ),
             ),
           )),
-    ).then((_) {
-      if (mathExpression.isNotEmpty) {
-        setState(() {
-          txtInput.text += mathExpression; // Update txtInput.text
-        });
-      }
-      mathsInput.dispose(); // Dispose of mathsInput controller after use
-    });
+    );
+    // .then((_) {
+    //   if (mathExpression.isNotEmpty) {
+    //     setState(() {
+    //       txtInput.text += mathExpression; // Update txtInput.text
+    //     });
+    //   }
+    //   mathsInput.dispose(); // Dispose of mathsInput controller after use
+    // });
   }
 }

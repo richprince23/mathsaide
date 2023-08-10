@@ -2,7 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:math_keyboard/math_keyboard.dart';
 import 'package:mathsaide/constants/constants.dart';
 import 'package:mathsaide/controllers/chat_controller.dart';
+import 'package:mathsaide/providers/session_provider.dart';
+import 'package:mathsaide/widgets/chat_bubble.dart';
 import 'package:mathsaide/widgets/input_control.dart';
+import 'package:provider/provider.dart';
 import 'package:resize/resize.dart';
 
 class ChatScreen extends StatefulWidget {
@@ -13,18 +16,38 @@ class ChatScreen extends StatefulWidget {
 }
 
 class _ChatScreenState extends State<ChatScreen> {
-  String initialPrompt = "Hello Richard, what do you want to learn today?";
+  String initialPrompt = "";
   List messages = [];
   FocusNode focusNode = FocusNode();
   final TextEditingController txtInput = TextEditingController();
   final mathsInput = MathFieldEditingController();
   final scrollController = ScrollController();
   String prompt = '';
-  String selectedSubject = "";
+  String selectedTopic = "";
 
   @override
   void initState() {
     super.initState();
+    getTopic();
+  }
+
+  Future getTopic() async {
+    await context
+        .read<SessionProvider>()
+        .getTopic()
+        .then((value) => selectedTopic = value!)
+        .then((value) => {
+              initialPrompt =
+                  "Hello Richard, Please ask $selectedTopic question",
+              setState(() {
+                messages.add(
+                  ChatBubble(
+                    isUser: false,
+                    message: initialPrompt,
+                  ),
+                );
+              }),
+            });
   }
 
   @override
@@ -104,7 +127,7 @@ class _ChatScreenState extends State<ChatScreen> {
       context: context,
       builder: ((context) => Center(
             child: Container(
-              height: 60.vh,
+              height: 40.vh,
               padding: const EdgeInsets.all(20.0),
               margin: const EdgeInsets.all(20.0),
               decoration: ShapeDecoration(
@@ -131,9 +154,12 @@ class _ChatScreenState extends State<ChatScreen> {
                   ),
                   ElevatedButton(
                     onPressed: () {
-                      final parsedExpression =
-                          TeXParser(mathsInput.currentEditingValue()).parse();
-                      mathExpression = "\n$parsedExpression\n";
+                      if (!mathsInput.isEmpty) {
+                        // txtInput.text += mathsInput.currentEditingValue();
+                        final parsedExpression =
+                            TeXParser(mathsInput.currentEditingValue()).parse();
+                        mathExpression = "\n$parsedExpression\n";
+                      }
                       Navigator.pop(context);
                     },
                     child: const Text("Insert Equation"),

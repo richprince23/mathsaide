@@ -23,11 +23,11 @@ class ChatBubble extends StatelessWidget {
       this.msgID = "",
       this.chatID = "",
       this.avatar,
-      this.showAvatar = true,
+      this.showAvatar = false,
       this.mediaUrl,
       this.hasTime = false,
       this.time = "",
-      this.hasOptions = true,
+      this.hasOptions = false,
       // this.fontColor = txtCol,
       super.key});
 

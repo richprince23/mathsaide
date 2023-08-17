@@ -198,7 +198,7 @@ const homePages = [
 const kTopics = [
   "Trigonometry",
   "Indices, Surds, & Logarithms",
-  "Vector, Bearings & Matrices",
+  // "Vector, Bearings & Matrices",
   "Algebra",
   "Statistics & Probability",
   "Polynomials",

@@ -6,6 +6,7 @@ import 'package:mathsaide/models/response_model.dart';
 import 'package:mathsaide/providers/session_provider.dart';
 import 'package:mathsaide/widgets/chat_bubble.dart';
 import 'package:mathsaide/widgets/input_control.dart';
+import 'package:mathsaide/widgets/loader.dart';
 import 'package:provider/provider.dart';
 import 'package:resize/resize.dart';
 
@@ -113,27 +114,36 @@ class _ChatScreenState extends State<ChatScreen> {
               icon: const Icon(Icons.send),
               onPressed: () async {
                 if (txtInput.text != "") {
+                  setState(() {
+                    messages.add(
+                      ChatBubble(
+                        isUser: true,
+                        message: txtInput.text,
+                      ),
+                    );
+                  });
+                  showDialog(
+                    barrierColor: Colors.transparent,
+                    barrierDismissible: false,
+                    context: context,
+                    builder: ((context) => const Loader()),
+                  );
                   await sendMessage(txtInput.text).then((value) => {
                         print("value on front $value"),
+                        Navigator.pop(context),
                         setState(() {
-                          messages.add(
-                            ChatBubble(
-                              isUser: true,
-                              message: txtInput.text,
-                            ),
-                          );
                           messages.add(
                             ChatBubble(
                               isUser: false,
                               message: value,
                             ),
                           );
-                          scrollController.animateTo(
-                            scrollController.position.maxScrollExtent,
-                            duration: const Duration(milliseconds: 500),
-                            curve: Curves.easeOut,
-                          );
                         }),
+                        scrollController.animateTo(
+                          scrollController.position.maxScrollExtent,
+                          duration: const Duration(milliseconds: 500),
+                          curve: Curves.easeOut,
+                        ),
                       });
                   setState(() {
                     txtInput.text = "";

@@ -61,8 +61,8 @@ Future<String?> makeRequest(String message) async {
   var headers = {
     'Content-Type': 'application/json',
     //TODO: remove the API key
-    // 'Authorization':
-    //     "Bearer api-keyhere"
+    'Authorization':
+        "Bearer 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"
   };
 
   chatHistory.add(ChatResponse(content: userPrompt, role: "user"));

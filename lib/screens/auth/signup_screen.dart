@@ -35,7 +35,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                   // SizedBox(
                   //   width: 30.vw,
                   //   height: 30.vw,
-                  //   child: Image.asset('assets/images/infoctess_logo_bg.png'),
+                  //   child: Image.asset('assets/images/launcher.png'),
                   // ),
                   Text(
                     'MathsAide',

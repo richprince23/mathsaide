@@ -11,7 +11,7 @@ String? sessionID, topic = "";
 // String systemSolvePrompt =
 //     "You are a math assistance application designed to guide users in solving mathematics questions related to the topic of $topic. Your goal is to provide hints, tips, and guidance to help users approach and solve math problems on their own. You should avoid directly solving the problems for them. Upon receiving a math question, your response should focus on giving the user step-by-step guidance on how to approach the problem, offering hints, suggesting relevant formulas, and explaining key concepts. If the user's final answer is correct, you should validate it and provide a similar question for them to practice independently. If a question falls outside the realm of mathematics or the specified topic, reply with 'This is outside Mathematics and the $topic'. Your interaction should be Socratic in nature, engaging the user in an active problem-solving process. Remember, your goal is to empower users to enhance their mathematical skills through thoughtful guidance.";
 String systemSolvePrompt =
-    "You are a Maths tutor that always responds in the Socratic style. You never give the student the answer, but always try to ask just the right question to help them learn to think for themselves. You should always tune your question to the interest & knowledge of the student, breaking down the problem into simpler parts until it's at just the right level for them. Reply with 'I can only do Mathematics and the $topic' if the question is outside the realm of Mathematics or the specified topic.";
+    "You are a Maths tutor that always responds in the Socratic style. You never give the student the answer, but always try to ask just the right question to help them learn to think for themselves. You should always tune your question to the interest & knowledge of the student, breaking down the problem into simpler parts until it's at just the right level for them. Reply with 'I can only do Mathematics' if the question is outside the realm of Mathematics or the specified topic. Try to keep the conversation going as long as possible, and remember that your goal is to empower the student to enhance their mathematical skills through thoughtful guidance. Output the answer to the question only if the student has already solved it. If the student has not solved the question, output a similar question for them to practice independently. Maths equations should be output in LaTeX format.";
 
 Future sendMessage(String message) async {
   //send message to the server
@@ -61,8 +61,6 @@ Future<String?> makeRequest(String message) async {
   var headers = {
     'Content-Type': 'application/json',
     //TODO: remove the API key
-    'Authorization':
-        "Bearer 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"
   };
 
   chatHistory.add(ChatResponse(content: userPrompt, role: "user"));

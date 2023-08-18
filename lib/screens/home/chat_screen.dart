@@ -2,13 +2,16 @@ import 'package:flutter/material.dart';
 import 'package:math_keyboard/math_keyboard.dart';
 import 'package:mathsaide/constants/constants.dart';
 import 'package:mathsaide/controllers/chat_controller.dart';
+import 'package:mathsaide/controllers/network_controller.dart';
 import 'package:mathsaide/models/response_model.dart';
 import 'package:mathsaide/providers/session_provider.dart';
 import 'package:mathsaide/widgets/chat_bubble.dart';
 import 'package:mathsaide/widgets/input_control.dart';
 import 'package:mathsaide/widgets/loader.dart';
+import 'package:mathsaide/widgets/no_network.dart';
 import 'package:provider/provider.dart';
 import 'package:resize/resize.dart';
+import 'package:flutter_keyboard_visibility/flutter_keyboard_visibility.dart';
 
 class ChatScreen extends StatefulWidget {
   const ChatScreen({super.key});
@@ -56,105 +59,122 @@ class _ChatScreenState extends State<ChatScreen> {
   @override
   void dispose() {
     super.dispose();
-    txtInput.dispose();
+    // txtInput.dispose();
     mathsInput.dispose();
     scrollController.dispose();
   }
 
   @override
   Widget build(BuildContext context) {
-    return Column(children: [
-      Expanded(
-        child: ListView.builder(
-          cacheExtent: 50.vh,
-          padding: EdgeInsets.symmetric(horizontal: 10.w),
-          controller: scrollController,
-          scrollDirection: Axis.vertical,
-          itemCount: messages.length,
-          itemBuilder: (context, index) {
-            return messages[index];
-          },
-        ),
-      ),
-      SizedBox(
-        height: 10.h,
-      ),
-      Container(
-        padding: px1,
-        // width: 94.vw,
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            Expanded(
-              child: InputControl(
-                showLabel: false,
-                hintText: "Enter a prompt...",
-                type: TextInputType.multiline,
-                controller: txtInput,
-                suffixIcon: IconButton(
-                  onPressed: () {
-                    showMathsKeyboard();
-                  },
-                  icon: const Icon(Icons.calculate),
-                  color: txtCol,
+    return KeyboardDismissOnTap(
+      child: Consumer<NetworkProvider>(
+        builder: (context, value, child) => value.isConnected == true
+            ? Column(children: [
+                Expanded(
+                  child: ListView.builder(
+                    cacheExtent: 50.vh,
+                    padding: EdgeInsets.symmetric(horizontal: 10.w),
+                    controller: scrollController,
+                    scrollDirection: Axis.vertical,
+                    itemCount: messages.length,
+                    itemBuilder: (context, index) {
+                      return messages[index];
+                    },
+                  ),
                 ),
-              ),
-            ),
-            SizedBox(
-              width: 10.w,
-            ),
-            IconButton(
-              style: IconButton.styleFrom(
-                shape: const CircleBorder(),
-                backgroundColor: priCol,
-                foregroundColor: priColLight,
-                padding: pa1,
-              ),
-              icon: const Icon(Icons.send),
-              onPressed: () async {
-                if (txtInput.text != "") {
-                  setState(() {
-                    messages.add(
-                      ChatBubble(
-                        isUser: true,
-                        message: txtInput.text,
-                      ),
-                    );
-                  });
-                  showDialog(
-                    barrierColor: Colors.transparent,
-                    barrierDismissible: false,
-                    context: context,
-                    builder: ((context) => const Loader()),
-                  );
-                  await sendMessage(txtInput.text).then((value) => {
-                        print("value on front $value"),
-                        Navigator.pop(context),
-                        setState(() {
-                          messages.add(
-                            ChatBubble(
-                              isUser: false,
-                              message: value,
-                            ),
-                          );
-                        }),
-                        scrollController.animateTo(
-                          scrollController.position.maxScrollExtent,
-                          duration: const Duration(milliseconds: 500),
-                          curve: Curves.easeOut,
+                SizedBox(
+                  height: 10.h,
+                ),
+                Container(
+                  padding: px1,
+                  // width: 94.vw,
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      Expanded(
+                        child: InputControl(
+                          showLabel: false,
+                          hintText: "Enter a prompt...",
+                          type: TextInputType.multiline,
+                          controller: txtInput,
+                          suffixIcon: IconButton(
+                            onPressed: () {
+                              showMathsKeyboard();
+                            },
+                            icon: const Icon(Icons.calculate),
+                            color: txtCol,
+                          ),
                         ),
-                      });
-                  setState(() {
-                    txtInput.text = "";
-                  });
-                }
-              },
-            )
-          ],
-        ),
+                      ),
+                      SizedBox(
+                        width: 10.w,
+                      ),
+                      Padding(
+                          padding: const EdgeInsets.only(bottom: 8.0),
+                          child: IconButton(
+                            style: IconButton.styleFrom(
+                              fixedSize: const Size(50, 50),
+                              shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(10.r)),
+                              backgroundColor: priCol,
+                              foregroundColor: priColLight,
+                              // padding: pa1,
+                            ),
+                            iconSize: 34,
+                            icon: const Icon(Icons.arrow_circle_right_rounded),
+                            onPressed: () async {
+                              if (txtInput.text != "") {
+                                final inputText =
+                                    txtInput.text; // Store the input text
+
+                                setState(() {
+                                  messages.add(
+                                    ChatBubble(
+                                      isUser: true,
+                                      message: inputText,
+                                    ),
+                                  );
+                                });
+
+                                showDialog(
+                                  barrierColor: Colors.transparent,
+                                  barrierDismissible: false,
+                                  context: context,
+                                  builder: ((context) => const Loader()),
+                                );
+
+                                await sendMessage(inputText).then((value) {
+                                  print("value on front $value");
+                                  Navigator.pop(context);
+                                  setState(() {
+                                    messages.add(
+                                      ChatBubble(
+                                        isUser: false,
+                                        message: value,
+                                      ),
+                                    );
+                                  });
+                                  scrollController.animateTo(
+                                    scrollController.position.maxScrollExtent,
+                                    duration: const Duration(milliseconds: 500),
+                                    curve: Curves.easeOut,
+                                  );
+                                });
+
+                                setState(() {
+                                  txtInput.text = "";
+                                });
+                              }
+                            },
+                          ))
+                    ],
+                  ),
+                ),
+              ])
+            : const NoNetwork(),
       ),
-    ]);
+    );
   }
 
   void showMathsKeyboard() {
@@ -183,7 +203,7 @@ class _ChatScreenState extends State<ChatScreen> {
                   MathField(
                     controller: mathsInput,
                     keyboardType: MathKeyboardType.expression,
-                    variables: const ['a', 'b', 'c', 'x', 'y', 'z', '='],
+                    variables: mathVars,
                   ),
                   SizedBox(
                     height: 20.h,

@@ -1,5 +1,7 @@
+import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:flutter/material.dart';
 import 'package:mathsaide/constants/constants.dart';
+import 'package:mathsaide/controllers/network_controller.dart';
 import 'package:mathsaide/providers/session_provider.dart';
 import 'package:mathsaide/screens/home/chat_screen.dart';
 import 'package:mathsaide/screens/home/start_session_screen.dart';
@@ -16,11 +18,27 @@ class _LearnNowScreenState extends State<LearnNowScreen> {
   @override
   void initState() {
     super.initState();
+    // initialize network listening stream
+    connectivitySubscription =
+        Provider.of<NetworkProvider>(context, listen: false)
+            .connectivity
+            .onConnectivityChanged
+            .listen((ConnectivityResult result) {
+      Provider.of<NetworkProvider>(context, listen: false)
+          .updateConnectionStatus(result);
+    });
+    checkConnectivity();
   }
 
   @override
   void dispose() {
+    connectivitySubscription.cancel();
     super.dispose();
+  }
+
+  void checkConnectivity() async {
+    await Provider.of<NetworkProvider>(context, listen: false)
+        .initConnectivity();
   }
 
   @override

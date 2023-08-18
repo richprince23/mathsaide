@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:mathsaide/screens/home/learn_now_screen.dart';
+import 'package:mathsaide/screens/settings/settings.dart';
 import 'package:resize/resize.dart';
 
 //Primary colors
@@ -81,9 +82,75 @@ ThemeData myTheme = ThemeData(
   ),
 
   //text theme
-  textTheme: GoogleFonts.poppinsTextTheme().apply(
-    decoration: TextDecoration.none,
-  ),
+  textTheme: GoogleFonts.poppinsTextTheme()
+      .apply(
+        decoration: TextDecoration.none,
+      )
+      .copyWith(
+        displayLarge: GoogleFonts.poppins(
+          fontSize: 96.sp,
+          fontWeight: FontWeight.w300,
+          color: txtCol,
+        ),
+        displayMedium: GoogleFonts.poppins(
+          fontSize: 60.sp,
+          fontWeight: FontWeight.w300,
+          color: txtCol,
+        ),
+        displaySmall: GoogleFonts.poppins(
+          fontSize: 48.sp,
+          fontWeight: FontWeight.w400,
+          color: txtCol,
+        ),
+        headlineMedium: GoogleFonts.poppins(
+          fontSize: 34.sp,
+          fontWeight: FontWeight.w400,
+          color: txtCol,
+        ),
+        headlineSmall: GoogleFonts.poppins(
+          fontSize: 24.sp,
+          fontWeight: FontWeight.w400,
+          color: txtCol,
+        ),
+        titleLarge: GoogleFonts.poppins(
+          fontSize: 20.sp,
+          fontWeight: FontWeight.w500,
+          color: txtCol,
+        ),
+        titleMedium: GoogleFonts.poppins(
+          fontSize: 16.sp,
+          fontWeight: FontWeight.w400,
+          color: txtCol,
+        ),
+        titleSmall: GoogleFonts.poppins(
+          fontSize: 14.sp,
+          fontWeight: FontWeight.w500,
+          color: txtCol,
+        ),
+        bodyLarge: GoogleFonts.poppins(
+          fontSize: 16.sp,
+          fontWeight: FontWeight.w400,
+          color: txtCol,
+        ),
+        bodyMedium: GoogleFonts.poppins(
+          fontSize: 14.sp,
+          fontWeight: FontWeight.w400,
+          color: txtCol,
+        ),
+        labelLarge: GoogleFonts.poppins(
+          fontSize: 14.sp,
+          color: txtCol,
+        ),
+        bodySmall: GoogleFonts.poppins(
+          fontSize: 12.sp,
+          letterSpacing: 0.4,
+          color: txtCol,
+        ),
+        labelSmall: GoogleFonts.poppins(
+          fontSize: 10.sp,
+          color: txtCol,
+        ),
+      ),
   primaryTextTheme: GoogleFonts.poppinsTextTheme().apply(
     decoration: TextDecoration.none,
   ),
@@ -192,7 +259,7 @@ const homePages = [
   LearnNowScreen(),
   LearnNowScreen(),
   LearnNowScreen(),
-  LearnNowScreen(),
+  SettingsScreen(),
 ];
 
 const kTopics = [
@@ -208,4 +275,26 @@ const kTopics = [
   "Series & Sequence",
   "Permutations & Combinations",
   "General Mathematics",
+];
+
+const mathVars = [
+  '=',
+  'a',
+  'b',
+  'c',
+  'x',
+  'y',
+  'z',
+  'θ',
+  'π',
+  'r',
+  '!',
+  '∫',
+  '',
+  '∪',
+  '∩',
+  '∑',
+  '[',
+  ']',
+  'Δ',
 ];

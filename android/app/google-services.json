@@ -14,7 +14,7 @@
       },
       "oauth_client": [
         {
-          "client_id": "513703573923-qks9dnad2tl3792v2ntt6mjk7n4pf37t.apps.googleusercontent.com",
+          "client_id": "513703573923-dvb4gpodj2n634vhheo4gb146c7bdbm1.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
@@ -27,8 +27,15 @@
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "513703573923-qks9dnad2tl3792v2ntt6mjk7n4pf37t.apps.googleusercontent.com",
+              "client_id": "513703573923-dvb4gpodj2n634vhheo4gb146c7bdbm1.apps.googleusercontent.com",
               "client_type": 3
+            },
+            {
+              "client_id": "513703573923-2ijmumrl2ngr2n2gc636cg3r0evn8acd.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.arksoft.mathsaide"
+              }
             }
           ]
         }

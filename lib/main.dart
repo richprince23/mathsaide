@@ -1,9 +1,12 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:mathsaide/constants/constants.dart';
 import 'package:mathsaide/controllers/network_controller.dart';
+import 'package:mathsaide/firebase_options.dart';
 import 'package:mathsaide/providers/page_provider.dart';
 import 'package:mathsaide/providers/session_provider.dart';
+import 'package:mathsaide/screens/auth/auth_gate.dart';
 import 'package:mathsaide/screens/auth/forgot_pass_screen.dart';
 import 'package:mathsaide/screens/auth/login_screen.dart';
 import 'package:mathsaide/screens/auth/signup_screen.dart';
@@ -12,7 +15,11 @@ import 'package:mathsaide/screens/settings/edit-profile.dart';
 import 'package:provider/provider.dart';
 import 'package:resize/resize.dart';
 
-void main() {
+void main() async {
+  //init firebase
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
+
   runApp(
     MultiProvider(
       providers: [
@@ -24,7 +31,6 @@ void main() {
     ),
   );
 }
-
 
 class MainApp extends StatelessWidget {
   const MainApp({super.key});
@@ -39,10 +45,11 @@ class MainApp extends StatelessWidget {
         theme: myTheme.copyWith(
           textTheme: GoogleFonts.poppinsTextTheme(),
         ),
-        home: const HomeScreen(),
+        home: const AuthGate(),
 
-        initialRoute: "/home",
+        initialRoute: "/auth-gate",
         routes: {
+          "/auth-gate": (context) => const AuthGate(),
           "/login": (context) => const LoginScreen(),
           "/signup": (context) => const SignUpScreen(),
           "/forgot-pass": (context) => ForgotPassScreen(),

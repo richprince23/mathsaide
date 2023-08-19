@@ -25,7 +25,7 @@ dependencies:
   flutter_keyboard_visibility: ^5.4.0
   connectivity_plus: ^4.0.1
   http: 1.1.0
-  math_keyboard: 0.2.1
+  math_keyboard: 0.2.0
 
 dev_dependencies:
   flutter_test:

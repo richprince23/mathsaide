@@ -2,6 +2,7 @@
 import 'dart:convert';
 import 'package:http/http.dart' as http;
 import 'package:mathsaide/controllers/prefs.dart';
+import 'package:mathsaide/env.dart';
 import 'package:mathsaide/models/response_model.dart';
 
 List<ChatResponse> chatHistory = [];
@@ -61,6 +62,7 @@ Future<String?> makeRequest(String message) async {
   var headers = {
     'Content-Type': 'application/json',
     //TODO: remove the API key
+    'Authorization': apiKey
   };
 
   chatHistory.add(ChatResponse(content: userPrompt, role: "user"));

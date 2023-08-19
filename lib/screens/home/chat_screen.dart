@@ -68,7 +68,7 @@ class _ChatScreenState extends State<ChatScreen> {
   Widget build(BuildContext context) {
     return KeyboardDismissOnTap(
       child: Consumer<NetworkProvider>(
-        builder: (context, value, child) => value.isConnected == true
+        builder: (context, value, child) => value.isConnected
             ? Column(children: [
                 Expanded(
                   child: ListView.builder(
@@ -111,63 +111,59 @@ class _ChatScreenState extends State<ChatScreen> {
                         width: 10.w,
                       ),
                       Padding(
-                          padding: const EdgeInsets.only(bottom: 8.0),
-                          child: IconButton(
-                            style: IconButton.styleFrom(
-                              fixedSize: const Size(50, 50),
-                              shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(10.r)),
-                              backgroundColor: priCol,
-                              foregroundColor: priColLight,
-                              // padding: pa1,
-                            ),
-                            iconSize: 34,
-                            icon: const Icon(Icons.arrow_circle_right_rounded),
-                            onPressed: () async {
-                              if (txtInput.text != "") {
-                                final inputText =
-                                    txtInput.text; // Store the input text
-
-                                setState(() {
-                                  messages.add(
-                                    ChatBubble(
-                                      isUser: true,
-                                      message: inputText,
-                                    ),
-                                  );
-                                });
-
-                                showDialog(
-                                  barrierColor: Colors.transparent,
-                                  barrierDismissible: false,
-                                  context: context,
-                                  builder: ((context) => const Loader()),
+                        padding: const EdgeInsets.only(bottom: 8.0),
+                        child: IconButton(
+                          style: IconButton.styleFrom(
+                            fixedSize: const Size(50, 50),
+                            shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(10.r)),
+                            backgroundColor: priCol,
+                            foregroundColor: priColLight,
+                            // padding: pa1,
+                          ),
+                          iconSize: 34,
+                          icon: const Icon(Icons.arrow_circle_right_rounded),
+                          onPressed: () async {
+                            if (txtInput.text != "") {
+                              setState(() {
+                                messages.add(
+                                  ChatBubble(
+                                    isUser: true,
+                                    message: txtInput.text,
+                                  ),
                                 );
-
-                                await sendMessage(inputText).then((value) {
-                                  print("value on front $value");
-                                  Navigator.pop(context);
-                                  setState(() {
-                                    messages.add(
-                                      ChatBubble(
-                                        isUser: false,
-                                        message: value,
-                                      ),
-                                    );
+                              });
+                              showDialog(
+                                barrierColor: Colors.transparent,
+                                barrierDismissible: false,
+                                context: context,
+                                builder: ((context) => const Loader()),
+                              );
+                              await sendMessage(txtInput.text).then((value) => {
+                                    print("value on front $value"),
+                                    Navigator.pop(context),
+                                    setState(() {
+                                      messages.add(
+                                        ChatBubble(
+                                          isUser: false,
+                                          message: value,
+                                        ),
+                                      );
+                                    }),
+                                    scrollController.animateTo(
+                                      scrollController.position.maxScrollExtent,
+                                      duration:
+                                          const Duration(milliseconds: 500),
+                                      curve: Curves.easeOut,
+                                    ),
                                   });
-                                  scrollController.animateTo(
-                                    scrollController.position.maxScrollExtent,
-                                    duration: const Duration(milliseconds: 500),
-                                    curve: Curves.easeOut,
-                                  );
-                                });
-
-                                setState(() {
-                                  txtInput.text = "";
-                                });
-                              }
-                            },
-                          ))
+                              setState(() {
+                                txtInput.text = "";
+                              });
+                            }
+                          },
+                        ),
+                      )
                     ],
                   ),
                 ),
@@ -203,7 +199,27 @@ class _ChatScreenState extends State<ChatScreen> {
                   MathField(
                     controller: mathsInput,
                     keyboardType: MathKeyboardType.expression,
-                    variables: mathVars,
+                    variables: const [
+                      '=',
+                      'a',
+                      'b',
+                      'c',
+                      'x',
+                      'y',
+                      'z',
+                      'θ',
+                      'π',
+                      'r',
+                      '!',
+                      '∫',
+                      '',
+                      '∪',
+                      '∩',
+                      '∑',
+                      '[',
+                      ']',
+                      'Δ',
+                    ],
                   ),
                   SizedBox(
                     height: 20.h,
@@ -212,9 +228,12 @@ class _ChatScreenState extends State<ChatScreen> {
                     onPressed: () {
                       if (!mathsInput.isEmpty) {
                         // txtInput.text += mathsInput.currentEditingValue();
-                        final parsedExpression =
-                            TeXParser(mathsInput.currentEditingValue()).parse();
+                        final parsedExpression = TeXParser(
+                                mathsInput.currentEditingValue(
+                                    placeholderWhenEmpty: true))
+                            .parse();
                         mathExpression = "\n$parsedExpression\n";
+                        print(mathExpression);
                         txtInput.text += mathExpression;
                       }
                       Navigator.pop(context);

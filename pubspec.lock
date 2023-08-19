@@ -585,10 +585,10 @@ packages:
     dependency: "direct main"
     description:
       name: math_keyboard
-      sha256: "4f5d4eb4b7f003715e2ae7d1f58f5f1fddd9dd746d1f1bbc27f1c967e10124d4"
+      sha256: "7a7a644ce4313f31b74bc31c9d522dbdc08e5462dfa7beb4d0973cd4232e9ba3"
       url: "https://pub.dev"
     source: hosted
-    version: "0.2.1"
+    version: "0.2.0"
   meta:
     dependency: transitive
     description:

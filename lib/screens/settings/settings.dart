@@ -49,7 +49,9 @@ class _SettingsScreenState extends State<SettingsScreen> {
                           ListTile(
                             trailing:
                                 const Icon(Icons.arrow_forward_ios, size: 14),
-                            onTap: () {},
+                            onTap: () {
+                              Navigator.pushNamed(context, "/edit-profile");
+                            },
                             iconColor: priCol,
                             leading: const Icon(Icons.person),
                             title: const Text("Edit Profile"),

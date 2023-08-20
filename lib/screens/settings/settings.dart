@@ -59,12 +59,18 @@ class _SettingsScreenState extends State<SettingsScreen> {
               ),
               SizedBox(height: 10.h),
               Text(
-                Provider.of<UserState>(context, listen: false)
-                    .user
-                    .displayName!,
-                style: const TextStyle(
-                  fontSize: 20,
+                auth.currentUser!.displayName!,
+                style: TextStyle(
+                  fontSize: 20.sp,
                   fontWeight: FontWeight.bold,
+                ),
+              ),
+              SizedBox(height: 5.h),
+              Text(
+                auth.currentUser!.email!,
+                style: TextStyle(
+                  fontSize: 14.sp,
+                  fontWeight: FontWeight.w300,
                 ),
               ),
               SizedBox(height: 10.h),
@@ -74,9 +80,11 @@ class _SettingsScreenState extends State<SettingsScreen> {
                     const Text("Account"),
                     Container(
                       decoration: ShapeDecoration(
-                          color: Colors.white,
-                          shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(10.r))),
+                        color: Colors.white,
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(10.r),
+                        ),
+                      ),
                       child: ListBody(
                         children: [
                           ListTile(
@@ -160,9 +168,11 @@ class _SettingsScreenState extends State<SettingsScreen> {
                     const Text("Data Storage"),
                     Container(
                       decoration: ShapeDecoration(
-                          color: Colors.white,
-                          shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(10.r))),
+                        color: Colors.white,
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(10.r),
+                        ),
+                      ),
                       child: ListBody(
                         children: [
                           ListTile(

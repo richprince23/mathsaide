@@ -6,7 +6,7 @@ final store = FirebaseStorage.instance;
 
 class Auth {
   /// Signup with [email], [password], and [fullName]
-  static Future signUp({
+  static Future<User?> signUp({
     required String email,
     required String password,
     required String fullName,
@@ -15,11 +15,15 @@ class Auth {
     assert(password.length >= 6);
     assert(fullName != "");
     try {
+      User? user;
       await auth
           .createUserWithEmailAndPassword(
               email: email.trim(), password: password)
-          .then((value) async =>
-              await value.user!.updateDisplayName(fullName.trim()));
+          .then((value) async => {
+                user = value.user!,
+                await value.user!.updateDisplayName(fullName.trim()),
+              });
+      return user;
     } on FirebaseAuthException {
       rethrow;
     }

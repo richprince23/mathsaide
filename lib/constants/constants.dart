@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:mathsaide/screens/home/learn_now_screen.dart';
 import 'package:mathsaide/screens/settings/settings.dart';
+import 'package:mathsaide/widgets/loader.dart';
 import 'package:resize/resize.dart';
 
 //Primary colors
@@ -33,7 +34,7 @@ ThemeData myTheme = ThemeData(
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(10.r),
       ),
-      textStyle: GoogleFonts.poppins(fontSize: 18.sp),
+      textStyle: GoogleFonts.poppins(fontSize: 16.sp),
     ),
   ),
   //elevated button theme
@@ -46,7 +47,7 @@ ThemeData myTheme = ThemeData(
         borderRadius: BorderRadius.circular(10.r),
       ),
       padding: kPadding,
-      textStyle: GoogleFonts.poppins(fontSize: 18.sp),
+      textStyle: GoogleFonts.poppins(fontSize: 16.sp),
     ),
   ),
 
@@ -61,7 +62,7 @@ ThemeData myTheme = ThemeData(
         side: BorderSide(color: priColDark, width: 3),
       ),
       padding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 10.w),
-      textStyle: GoogleFonts.poppins(fontSize: 18.sp),
+      textStyle: GoogleFonts.poppins(fontSize: 16.sp),
       side: BorderSide(color: priColDark, width: 1),
     ),
   ),
@@ -77,7 +78,7 @@ ThemeData myTheme = ThemeData(
         side: BorderSide(color: priColDark),
       ),
       padding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 10.w),
-      textStyle: GoogleFonts.poppins(fontSize: 18.sp),
+      textStyle: GoogleFonts.poppins(fontSize: 16.sp),
     ),
   ),
 
@@ -161,6 +162,7 @@ ThemeData myTheme = ThemeData(
   appBarTheme: AppBarTheme(
     backgroundColor: bgColDark,
     elevation: 0.1,
+    scrolledUnderElevation: 0.1,
     iconTheme: IconThemeData(color: txtCol),
     titleTextStyle: GoogleFonts.poppins(fontSize: 18.sp, color: txtCol),
   ),
@@ -298,3 +300,13 @@ const mathVars = [
   ']',
   'Δ',
 ];
+
+void showLoader(BuildContext context) {
+  showDialog(
+    context: context,
+    useRootNavigator: true,
+    barrierDismissible: false,
+    barrierColor: Colors.black.withOpacity(0.5),
+    builder: (context) => const Loader(),
+  );
+}

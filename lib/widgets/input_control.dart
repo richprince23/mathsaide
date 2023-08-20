@@ -53,7 +53,7 @@ class InputControl extends StatefulWidget {
 }
 
 class _InputControlState extends State<InputControl> {
-  bool showPass = false;
+  bool showPass = true;
 
   @override
   void initState() {

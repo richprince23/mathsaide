@@ -1,9 +1,11 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:mathsaide/controllers/auth_controller.dart';
+import 'package:mathsaide/providers/user_provider.dart';
 import 'package:mathsaide/screens/auth/login_screen.dart';
 import 'package:mathsaide/screens/home/home.dart';
 import 'package:mathsaide/widgets/loader.dart';
+import 'package:provider/provider.dart';
 
 class AuthGate extends StatefulWidget {
   const AuthGate({super.key});
@@ -24,11 +26,13 @@ class _AuthGateState extends State<AuthGate> {
         setState(() {
           isLoggedIn = true;
           user = user;
+          Provider.of<UserState>(context).user = user!;
         });
       } else {
         setState(() {
           isLoggedIn = false;
           user = null;
+          Provider.of<UserState>(context).clearUser();
         });
       }
     });

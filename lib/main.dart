@@ -6,6 +6,7 @@ import 'package:mathsaide/controllers/network_controller.dart';
 import 'package:mathsaide/firebase_options.dart';
 import 'package:mathsaide/providers/page_provider.dart';
 import 'package:mathsaide/providers/session_provider.dart';
+import 'package:mathsaide/providers/user_provider.dart';
 import 'package:mathsaide/screens/auth/auth_gate.dart';
 import 'package:mathsaide/screens/auth/forgot_pass_screen.dart';
 import 'package:mathsaide/screens/auth/login_screen.dart';
@@ -25,7 +26,8 @@ void main() async {
       providers: [
         ChangeNotifierProvider(create: (_) => PageProvider()),
         ChangeNotifierProvider(create: (_) => SessionProvider()),
-        ChangeNotifierProvider(create: (_) => NetworkProvider())
+        ChangeNotifierProvider(create: (_) => NetworkProvider()),
+        ChangeNotifierProvider(create: (_) => UserState()),
       ],
       child: const MainApp(),
     ),

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mathsaide/constants/constants.dart';
+import 'package:mathsaide/controllers/auth_controller.dart';
 import 'package:resize/resize.dart';
 
 class SettingsScreen extends StatefulWidget {
@@ -163,12 +164,16 @@ class _SettingsScreenState extends State<SettingsScreen> {
                     SizedBox(height: 10.h),
                     Container(
                       decoration: ShapeDecoration(
-                          color: priCol,
-                          shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(10.r))),
+                        color: priCol,
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(10.r),
+                        ),
+                      ),
                       child: ListTile(
                         // trailing: Icon(Icons.arrow_forward_ios, size: 14),
-                        onTap: () {},
+                        onTap: () async {
+                          await Auth.logout();
+                        },
                         iconColor: bgCol,
                         textColor: bgCol,
                         leading: const Icon(Icons.logout),

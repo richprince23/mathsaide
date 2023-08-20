@@ -129,11 +129,20 @@ class _LoginScreenState extends State<LoginScreen> {
                     ),
                     FractionallySizedBox(
                       widthFactor: 1,
-                      child: OutlinedButton.icon(
-                        icon: const Icon(Icons.g_mobiledata),
+                      child: OutlinedButton(
                         onPressed: () {},
-                        label: const Text(
-                          'Login with Google',
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceAround,
+                          children: [
+                            Image.asset(
+                              "assets/images/google.png",
+                              width: 30,
+                              height: 30,
+                            ),
+                            const Text(
+                              'Login with Google',
+                            ),
+                          ],
                         ),
                       ),
                     ),

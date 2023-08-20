@@ -1,7 +1,11 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_keyboard_visibility/flutter_keyboard_visibility.dart';
 import 'package:mathsaide/constants/constants.dart';
+import 'package:mathsaide/controllers/auth_controller.dart';
 import 'package:mathsaide/widgets/input_control.dart';
+import 'package:mathsaide/widgets/loader.dart';
+import 'package:mathsaide/widgets/status_snack.dart';
 import 'package:resize/resize.dart';
 
 class SignUpScreen extends StatefulWidget {
@@ -122,6 +126,26 @@ class _SignUpScreenState extends State<SignUpScreen> {
                         onPressed: () async {
                           if (!_signupKey.currentState!.validate()) {
                             return;
+                          }
+                          showLoader(context);
+                          try {
+                            await Auth.signUp(
+                                    email: _emailController.text,
+                                    password: _passController.text,
+                                    fullName: _fnameController.text)
+                                .then((value) => null);
+                          } on FirebaseAuthException catch (e) {
+                            CustomSnackBar.show(
+                              context,
+                              message: e.message!,
+                            );
+                          } catch (e) {
+                            CustomSnackBar.show(
+                              context,
+                              message: "An error occured. Please try again",
+                            );
+                          } finally {
+                            Navigator.of(context).pop();
                           }
                         },
                         child: const Text('Create Account'),

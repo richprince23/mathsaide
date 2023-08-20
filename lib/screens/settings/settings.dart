@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:mathsaide/constants/constants.dart';
 import 'package:mathsaide/controllers/auth_controller.dart';
@@ -50,10 +51,11 @@ class _SettingsScreenState extends State<SettingsScreen> {
                   radius: 15.vw,
                   backgroundColor: priCol,
                   child: CircleAvatar(
-                    radius: 14.vw,
-                    // TODO :replace with CachedNetworkImage
-                    backgroundImage:
-                        const AssetImage("assets/images/launcher.png"),
+                    radius: 40.r,
+                    backgroundImage: CachedNetworkImageProvider(
+                      auth.currentUser!.photoURL!,
+                      errorListener: () => const Icon(Icons.person),
+                    ),
                   ),
                 ),
               ),

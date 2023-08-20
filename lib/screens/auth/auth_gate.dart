@@ -26,13 +26,13 @@ class _AuthGateState extends State<AuthGate> {
         setState(() {
           isLoggedIn = true;
           user = user;
-          Provider.of<UserState>(context).user = user!;
+          Provider.of<UserState>(context, listen: false).user = user!;
         });
       } else {
         setState(() {
           isLoggedIn = false;
           user = null;
-          Provider.of<UserState>(context).clearUser();
+          Provider.of<UserState>(context, listen: false).clearUser();
         });
       }
     });

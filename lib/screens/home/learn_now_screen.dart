@@ -82,7 +82,7 @@ class _LearnNowScreenState extends State<LearnNowScreen> {
             builder: (context, snapshot) {
               if (snapshot.hasData) {
                 if (snapshot.data != null && snapshot.data != "") {
-                  return ChatScreen();
+                  return const ChatScreen();
                 } else {
                   return const StartSessionScreen();
                 }

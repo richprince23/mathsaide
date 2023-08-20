@@ -92,9 +92,11 @@ class _BottomNavState extends State<BottomNav> {
               },
               child: pageIndex == 2
                   ? const NavItem(
-                      label: "Quiz", icon: Icons.format_list_numbered)
+                      label: "History",
+                      icon: Icons.work_history,
+                    )
                   : Icon(
-                      Icons.format_list_numbered_outlined,
+                      Icons.work_history_outlined,
                       color: txtCol,
                       size: 24.w,
                     ),

@@ -9,7 +9,7 @@ class SessionProvider extends ChangeNotifier {
   ///Checks if [sessionID] is empty or not and retun from either shared prefs or provider value
   get getSession async {
     String? sess;
-    await Prefs.getSession().then((value) => sess = value!);
+    await Prefs.getSession().then((value) => sess = value ?? "");
 
     // if sessionID is empty, return the provider value
     if (sess == null || sess == "") {
@@ -42,7 +42,7 @@ class SessionProvider extends ChangeNotifier {
   ///Clears the sessionID from shared prefs
   ///
   Future<void> clearSession() async {
-    _sessionID = null;
+    _sessionID = "";
     await Prefs.clearSession();
     notifyListeners();
   }

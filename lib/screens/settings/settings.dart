@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:mathsaide/constants/constants.dart';
 import 'package:mathsaide/controllers/auth_controller.dart';
+import 'package:mathsaide/providers/page_provider.dart';
+import 'package:mathsaide/providers/session_provider.dart';
+import 'package:mathsaide/providers/user_provider.dart';
+import 'package:provider/provider.dart';
 import 'package:resize/resize.dart';
 
 class SettingsScreen extends StatefulWidget {
@@ -11,6 +15,26 @@ class SettingsScreen extends StatefulWidget {
 }
 
 class _SettingsScreenState extends State<SettingsScreen> {
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+  }
+
+  @override
+  void dispose() {
+    super.dispose();
+  }
+
+  /// CLears user data after Logout
+  Future<void> clearUserData() async {
+    Provider.of<SessionProvider>(context, listen: false).clearSession().then(
+          (value) =>
+              Provider.of<PageProvider>(context, listen: false).setPage(0),
+        );
+    await Provider.of<UserState>(context, listen: false).clearUser();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -34,7 +58,15 @@ class _SettingsScreenState extends State<SettingsScreen> {
                 ),
               ),
               SizedBox(height: 10.h),
-              const Text("Theophilus Erskine"),
+              Text(
+                Provider.of<UserState>(context, listen: false)
+                    .user
+                    .displayName!,
+                style: const TextStyle(
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
               SizedBox(height: 10.h),
               Expanded(
                 child: ListView(
@@ -172,7 +204,11 @@ class _SettingsScreenState extends State<SettingsScreen> {
                       child: ListTile(
                         // trailing: Icon(Icons.arrow_forward_ios, size: 14),
                         onTap: () async {
-                          await Auth.logout();
+                          // flow
+                          // logout, clear user, clear session and reset page to 0
+                          await Auth.logout().then(
+                            (value) async => await clearUserData(),
+                          );
                         },
                         iconColor: bgCol,
                         textColor: bgCol,

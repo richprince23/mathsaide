@@ -137,26 +137,40 @@ class _ChatScreenState extends State<ChatScreen> {
                                 barrierColor: Colors.transparent,
                                 barrierDismissible: false,
                                 context: context,
-                                builder: ((context) => const Loader()),
+                                builder: (context) => const Loader(),
                               );
-                              await sendMessage(txtInput.text).then((value) => {
-                                    print("value on front $value"),
-                                    Navigator.pop(context),
-                                    setState(() {
-                                      messages.add(
-                                        ChatBubble(
-                                          isUser: false,
-                                          message: value,
-                                        ),
-                                      );
-                                    }),
-                                    scrollController.animateTo(
-                                      scrollController.position.maxScrollExtent,
-                                      duration:
-                                          const Duration(milliseconds: 500),
-                                      curve: Curves.easeOut,
-                                    ),
-                                  });
+                              // send message to firebase database
+                              await sendChatHistory(
+                                      content: txtInput.text, role: "user")
+                                  .then(
+                                (value) async =>
+                                    // send request to backend
+                                    await sendMessage(txtInput.text)
+                                        .then((value) async => {
+                                              print("value on front $value"),
+                                              Navigator.pop(context),
+                                              setState(() {
+                                                messages.add(
+                                                  ChatBubble(
+                                                    isUser: false,
+                                                    message: value,
+                                                  ),
+                                                );
+                                              }),
+                                              // send response to firebase database
+                                              await sendChatHistory(
+                                                  content: value,
+                                                  role: "assistant"),
+                                              //scroll to bottom
+                                              scrollController.animateTo(
+                                                scrollController
+                                                    .position.maxScrollExtent,
+                                                duration: const Duration(
+                                                    milliseconds: 500),
+                                                curve: Curves.easeOut,
+                                              ),
+                                            }),
+                              );
                               setState(() {
                                 txtInput.text = "";
                               });
@@ -199,27 +213,6 @@ class _ChatScreenState extends State<ChatScreen> {
                   MathField(
                     controller: mathsInput,
                     keyboardType: MathKeyboardType.expression,
-                    // variables: const [
-                    //   '=',
-                    //   'a',
-                    //   'b',
-                    //   'c',
-                    //   'x',
-                    //   'y',
-                    //   'z',
-                    //   'θ',
-                    //   'π',
-                    //   'r',
-                    //   '!',
-                    //   '∫',
-                    //   '',
-                    //   '∪',
-                    //   '∩',
-                    //   '∑',
-                    //   '[',
-                    //   ']',
-                    //   'Δ',
-                    // ],
                     variables: const ['a', 'b', 'c', 'x', 'y', 'z'],
                   ),
                   SizedBox(

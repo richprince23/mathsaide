@@ -1,6 +1,9 @@
 // import 'package:firebase_auth/firebase_auth.dart';
 import 'dart:convert';
+
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:http/http.dart' as http;
+import 'package:mathsaide/controllers/auth_controller.dart';
 import 'package:mathsaide/controllers/prefs.dart';
 import 'package:mathsaide/env.dart';
 import 'package:mathsaide/models/response_model.dart';
@@ -55,15 +58,11 @@ Future sendMessage(String message) async {
 }
 
 Future<String?> makeRequest(String message) async {
-  var url = Uri.parse("https://api.openai.com/v1/chat/completions");
-  String systemPrompt = systemSolvePrompt.replaceAll("topic", topic ?? "");
+  // var url = Uri.parse("https://api.openai.com/v1/chat/completions");
+  String systemPrompt = systemSolvePrompt;
   String userPrompt = message.trim();
 
-  var headers = {
-    'Content-Type': 'application/json',
-    //TODO: remove the API key
-    'Authorization': apiKey
-  };
+  var headers = {'Content-Type': 'application/json', 'Authorization': "Bearer $apiKey"};
 
   chatHistory.add(ChatResponse(content: userPrompt, role: "user"));
 
@@ -81,9 +80,6 @@ Future<String?> makeRequest(String message) async {
     "messages": history,
     // "messages": chatHistory,
   });
-
-  // print(body);
-  // print(history);
 
   // try {
   var request = http.Request(
@@ -104,4 +100,61 @@ Future<String?> makeRequest(String message) async {
   // } catch (e) {
   //   throw Exception(e);
   // }
+}
+
+/// This is the method to send chat history to Firestore database
+/// [sessionID] is the session ID
+/// [topic] is the topic of the session
+/// [userID] is the user ID of the user
+/// [role] is the role of the user
+/// [content] is the content of the message
+
+// send chat history to Firestore database
+
+Future<void> sendChatHistory(
+    {required String content, required String role}) async {
+  final String userID = auth.currentUser!.uid;
+
+  try {
+    await Prefs.getSession().then((value) async {
+      sessionID = value;
+      await Prefs.getTopic().then((value) async {
+        topic = value;
+
+        final db = FirebaseFirestore.instance;
+        final sessionDB = db.collection("sessions");
+
+        final curSessionQuery = sessionDB
+            .where("sessionID", isEqualTo: sessionID)
+            .where("topic", isEqualTo: topic);
+
+        final curSessionSnap = await curSessionQuery.get();
+
+        if (curSessionSnap.docs.isEmpty) {
+          // Create a new session document
+          await sessionDB.doc(userID).set({
+            "sessionID": sessionID,
+            "topic": topic,
+            "userID": userID,
+          });
+
+          // Add the initial chat to the new session
+          await sessionDB.doc(userID).collection("chats").add({
+            "isUser": true,
+            "content": content,
+            "timestamp": FieldValue.serverTimestamp(),
+          }).catchError((error) => throw Exception(error));
+        } else {
+          // Add the chat to the existing session
+          await sessionDB.doc(userID).collection("chats").add({
+            "isUser": true,
+            "content": content,
+            "timestamp": FieldValue.serverTimestamp(),
+          }).catchError((error) => throw Exception(error));
+        }
+      });
+    });
+  } catch (e) {
+    throw Exception(e);
+  }
 }

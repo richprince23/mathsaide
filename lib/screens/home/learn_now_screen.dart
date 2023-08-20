@@ -107,25 +107,26 @@ class _LearnNowScreenState extends State<LearnNowScreen> {
 
   Widget options() {
     return PopupMenuButton(
-        itemBuilder: (context) {
-          return <PopupMenuItem>[
-            PopupMenuItem(
-              value: "clear",
-              child: const Text("Clear Messages"),
-              onTap: () {
-                setState(() {
-                  // messages = [];
-                });
-              },
-            ),
-            PopupMenuItem(
-                value: "end",
-                child: const Text("End Session"),
-                onTap: () async {
-                  context.read<SessionProvider>().clearSession();
-                }),
-          ];
-        },
-        child: const Icon(Icons.more_vert));
+      itemBuilder: (context) {
+        return <PopupMenuItem>[
+          PopupMenuItem(
+            value: "clear",
+            child: const Text("Clear Messages"),
+            onTap: () {
+              setState(() {
+                // messages = [];
+              });
+            },
+          ),
+          PopupMenuItem(
+              value: "end",
+              child: const Text("End Session"),
+              onTap: () async {
+                context.read<SessionProvider>().clearSession();
+              }),
+        ];
+      },
+      child: const Icon(Icons.more_vert),
+    );
   }
 }

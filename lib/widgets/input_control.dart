@@ -121,7 +121,7 @@ class _InputControlState extends State<InputControl> {
           minLines: 1,
           validator: widget.validator,
           keyboardType: widget.type ?? TextInputType.text,
-          obscureText: showPass,
+          obscureText: widget.isPassword == true ? showPass : false,
           controller: widget.controller,
           focusNode: widget.focusNode,
           textCapitalization: TextCapitalization.sentences,
@@ -148,7 +148,9 @@ class _InputControlState extends State<InputControl> {
                       });
                     },
                     icon: Icon(
-                        showPass ? Icons.visibility : Icons.visibility_off),
+                      showPass ? Icons.visibility : Icons.visibility_off,
+                      color: Colors.black.withOpacity(0.7),
+                    ),
                   )
                 : widget.suffixIcon,
           ),

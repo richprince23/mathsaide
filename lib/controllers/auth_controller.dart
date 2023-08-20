@@ -25,6 +25,23 @@ class Auth {
     }
   }
 
+  ///Login with Email and Password
+  ///
+  ///Returns [UserCredential]
+  static Future login({
+    required String email,
+    required String password,
+  }) async {
+    assert(email != "");
+    assert(password.length >= 6);
+    try {
+      return await auth.signInWithEmailAndPassword(
+          email: email.trim(), password: password);
+    } on FirebaseAuthException {
+      rethrow;
+    }
+  }
+
   //log out
   static Future logout() async {
     await auth.signOut();

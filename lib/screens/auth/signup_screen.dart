@@ -175,11 +175,20 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     ),
                     FractionallySizedBox(
                       widthFactor: 1,
-                      child: OutlinedButton.icon(
-                        icon: const Icon(Icons.g_mobiledata),
-                        onPressed: () async {},
-                        label: const Text(
-                          'Continue with Google',
+                      child: OutlinedButton(
+                        onPressed: () {},
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceAround,
+                          children: [
+                            Image.asset(
+                              "assets/images/google.png",
+                              width: 30,
+                              height: 30,
+                            ),
+                            const Text(
+                              'Continue with Google',
+                            ),
+                          ],
                         ),
                       ),
                     ),

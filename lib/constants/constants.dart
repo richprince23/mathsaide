@@ -1,3 +1,4 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_remote_config/firebase_remote_config.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -315,8 +316,8 @@ void showLoader(BuildContext context) {
 FirebaseRemoteConfig remoteConfig = FirebaseRemoteConfig.instance;
 RemoteConfigSettings configSettings = RemoteConfigSettings(
   fetchTimeout: const Duration(seconds: 30),
-  minimumFetchInterval: const Duration(seconds: 12),
+  minimumFetchInterval: const Duration(hours: 12),
 );
 
-
 String? apiKey = remoteConfig.getString("apiKey");
+final db = FirebaseFirestore.instance;

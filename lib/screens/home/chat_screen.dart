@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_keyboard_visibility/flutter_keyboard_visibility.dart';
 import 'package:math_keyboard/math_keyboard.dart';
 import 'package:mathsaide/constants/constants.dart';
+import 'package:mathsaide/controllers/auth_controller.dart';
 import 'package:mathsaide/controllers/chat_controller.dart';
 import 'package:mathsaide/controllers/network_controller.dart';
+import 'package:mathsaide/controllers/session_controller.dart';
 import 'package:mathsaide/models/response_model.dart';
 import 'package:mathsaide/providers/session_provider.dart';
 import 'package:mathsaide/widgets/chat_bubble.dart';
@@ -12,7 +15,6 @@ import 'package:mathsaide/widgets/no_network.dart';
 import 'package:mathsaide/widgets/status_snack.dart';
 import 'package:provider/provider.dart';
 import 'package:resize/resize.dart';
-import 'package:flutter_keyboard_visibility/flutter_keyboard_visibility.dart';
 
 class ChatScreen extends StatefulWidget {
   const ChatScreen({super.key});
@@ -73,16 +75,41 @@ class _ChatScreenState extends State<ChatScreen> {
         builder: (context, value, child) => value.isConnected
             ? Column(children: [
                 Expanded(
-                  child: ListView.builder(
-                    cacheExtent: 50.vh,
-                    padding: EdgeInsets.symmetric(horizontal: 10.w),
-                    controller: scrollController,
-                    scrollDirection: Axis.vertical,
-                    itemCount: messages.length,
-                    itemBuilder: (context, index) {
-                      return messages[index];
-                    },
-                  ),
+                  child: StreamBuilder(
+                      stream: getUserSessionsByTopic(selectedTopic),
+                      builder: (context, snapshot) {
+                        return ListView.builder(
+                          cacheExtent: 50.vh,
+                          padding: EdgeInsets.symmetric(horizontal: 10.w),
+                          controller: scrollController,
+                          scrollDirection: Axis.vertical,
+                          // itemCount: messages.length,
+                          // itemBuilder: (context, index) {
+                          //   return messages[index];
+                          // },
+                          itemCount: snapshot.data?.docs.length,
+                          itemBuilder: (context, index) {
+                            if (snapshot.hasError) {
+                              return Text('Error: ${snapshot.error}');
+                            }
+
+                            if (snapshot.connectionState ==
+                                ConnectionState.waiting) {
+                              return Loader();
+                            }
+
+                            if (!snapshot.hasData ||
+                                snapshot.data!.docs.isEmpty) {
+                              return Text(
+                                  'No user sessions found for the topic.');
+                            }
+                            return ChatBubble(
+                              isUser: snapshot.data?.docs[index]["isUser"],
+                              message: snapshot.data?.docs[index]["content"],
+                            );
+                          },
+                        );
+                      }),
                 ),
                 SizedBox(
                   height: 10.h,

@@ -1,13 +1,11 @@
 // import 'package:firebase_auth/firebase_auth.dart';
 import 'dart:convert';
-import 'dart:io';
 
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:http/http.dart' as http;
 import 'package:mathsaide/constants/constants.dart';
 import 'package:mathsaide/controllers/auth_controller.dart';
 import 'package:mathsaide/controllers/prefs.dart';
-import 'package:mathsaide/env.dart';
 import 'package:mathsaide/models/response_model.dart';
 
 List<ChatResponse> chatHistory = [];
@@ -124,13 +122,12 @@ Future<void> sendChatHistory(
   final String userID = auth.currentUser!.uid;
 
   try {
+    final sessionDB = FirebaseFirestore.instance.collection("sessions");
+
     await Prefs.getSession().then((value) async {
       sessionID = value;
       await Prefs.getTopic().then((value) async {
         topic = value;
-
-        final db = FirebaseFirestore.instance;
-        final sessionDB = db.collection("sessions");
 
         final curSessionQuery = sessionDB
             .where("sessionID", isEqualTo: sessionID)
@@ -138,23 +135,26 @@ Future<void> sendChatHistory(
 
         final curSessionSnap = await curSessionQuery.get();
 
+        final newSessionRef = sessionDB.doc();
+        final newSessionID = newSessionRef.id;
+
         if (curSessionSnap.docs.isEmpty) {
-          // Create a new session document
-          await sessionDB.doc(userID).set({
+          // Create a new session document with random ID
+          await newSessionRef.set({
             "sessionID": sessionID,
             "topic": topic,
             "userID": userID,
           });
 
           // Add the initial chat to the new session
-          await sessionDB.doc(userID).collection("chats").add({
+          await newSessionRef.collection("chats").add({
             "isUser": true,
             "content": content,
             "timestamp": FieldValue.serverTimestamp(),
           }).catchError((error) => throw Exception(error));
         } else {
           // Add the chat to the existing session
-          await sessionDB.doc(userID).collection("chats").add({
+          await newSessionRef.collection("chats").add({
             "isUser": true,
             "content": content,
             "timestamp": FieldValue.serverTimestamp(),

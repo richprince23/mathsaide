@@ -9,6 +9,7 @@ import 'package:mathsaide/widgets/chat_bubble.dart';
 import 'package:mathsaide/widgets/input_control.dart';
 import 'package:mathsaide/widgets/loader.dart';
 import 'package:mathsaide/widgets/no_network.dart';
+import 'package:mathsaide/widgets/status_snack.dart';
 import 'package:provider/provider.dart';
 import 'package:resize/resize.dart';
 import 'package:flutter_keyboard_visibility/flutter_keyboard_visibility.dart';
@@ -62,6 +63,7 @@ class _ChatScreenState extends State<ChatScreen> {
     // txtInput.dispose();
     mathsInput.dispose();
     scrollController.dispose();
+    focusNode.dispose();
   }
 
   @override
@@ -133,51 +135,50 @@ class _ChatScreenState extends State<ChatScreen> {
                                   ),
                                 );
                               });
-                              showDialog(
-                                barrierColor: Colors.transparent,
-                                barrierDismissible: false,
-                                context: context,
-                                builder: (context) => const Loader(),
-                              );
-                              // send message to firebase database
-                              await sendChatHistory(
-                                      content: txtInput.text, role: "user")
-                                  .then(
-                                (value) async =>
-                                    // send request to backend
-                                    await sendMessage(txtInput.text)
-                                        .then((value) async => {
-                                              print("value on front $value"),
-                                              Navigator.pop(context),
-                                              setState(() {
-                                                messages.add(
-                                                  ChatBubble(
-                                                    isUser: false,
-                                                    message: value,
-                                                  ),
-                                                );
-                                              }),
-                                              // send response to firebase database
-                                              await sendChatHistory(
-                                                  content: value,
-                                                  role: "assistant"),
-                                              //scroll to bottom
-                                              scrollController.animateTo(
-                                                scrollController
-                                                    .position.maxScrollExtent,
-                                                duration: const Duration(
-                                                    milliseconds: 500),
-                                                curve: Curves.easeOut,
+                              //show loading
+                              showLoader(context);
+                              try {
+                                await sendMessage(txtInput.text)
+                                    .then((value) async => {
+                                          // print("value on front $value"),
+                                          await sendChatHistory(
+                                                  content: txtInput.text,
+                                                  role: "user")
+                                              .then(
+                                            (res) async =>
+                                                await sendChatHistory(
+                                                    content: value,
+                                                    role: "assistant"),
+                                          ),
+                                          Navigator.pop(context),
+                                          setState(() {
+                                            messages.add(
+                                              ChatBubble(
+                                                isUser: false,
+                                                message: value,
                                               ),
-                                            }),
-                              );
+                                            );
+                                          }),
+                                          scrollController.animateTo(
+                                            scrollController
+                                                .position.maxScrollExtent,
+                                            duration: const Duration(
+                                                milliseconds: 500),
+                                            curve: Curves.easeOut,
+                                          ),
+                                        });
+                              } catch (e) {
+                                Navigator.pop(context);
+                                CustomSnackBar.show(context,
+                                    message: "An error occur!");
+                              }
                               setState(() {
                                 txtInput.text = "";
                               });
                             }
                           },
                         ),
-                      )
+                      ),
                     ],
                   ),
                 ),

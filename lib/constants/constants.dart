@@ -1,3 +1,4 @@
+import 'package:firebase_remote_config/firebase_remote_config.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:mathsaide/screens/home/learn_now_screen.dart';
@@ -310,3 +311,12 @@ void showLoader(BuildContext context) {
     builder: (context) => const Loader(),
   );
 }
+
+FirebaseRemoteConfig remoteConfig = FirebaseRemoteConfig.instance;
+RemoteConfigSettings configSettings = RemoteConfigSettings(
+  fetchTimeout: const Duration(seconds: 30),
+  minimumFetchInterval: const Duration(seconds: 12),
+);
+
+
+String? apiKey = remoteConfig.getString("apiKey");

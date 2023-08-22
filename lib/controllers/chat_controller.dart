@@ -1,8 +1,10 @@
 // import 'package:firebase_auth/firebase_auth.dart';
 import 'dart:convert';
+import 'dart:io';
 
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:http/http.dart' as http;
+import 'package:mathsaide/constants/constants.dart';
 import 'package:mathsaide/controllers/auth_controller.dart';
 import 'package:mathsaide/controllers/prefs.dart';
 import 'package:mathsaide/env.dart';
@@ -53,16 +55,22 @@ Future sendMessage(String message) async {
 
     return content;
   } catch (e) {
+    print(e);
     throw Exception(e);
   }
 }
 
 Future<String?> makeRequest(String message) async {
-  // var url = Uri.parse("https://api.openai.com/v1/chat/completions");
+  var url = Uri.parse("https://api.openai.com/v1/chat/completions");
   String systemPrompt = systemSolvePrompt;
   String userPrompt = message.trim();
+  // var key = File.fromUri(Uri.parse("env.txt")).readAsStringSync();
+  print(apiKey);
 
-  var headers = {'Content-Type': 'application/json', 'Authorization': "Bearer $apiKey"};
+  var headers = {
+    'Content-Type': 'application/json',
+    'Authorization': "Bearer $apiKey"
+  };
 
   chatHistory.add(ChatResponse(content: userPrompt, role: "user"));
 
@@ -81,25 +89,25 @@ Future<String?> makeRequest(String message) async {
     // "messages": chatHistory,
   });
 
-  // try {
-  var request = http.Request(
-      'POST', Uri.parse('https://api.openai.com/v1/chat/completions'));
-  request.body = (body);
-  //     '''{"model": "gpt-3.5-turbo","messages": [{"role": "system","content": $systemPrompt},{"role": "user", "content": $userPrompt}],"max_tokens": 200,"temperature": 0.9,"top_p": 1,"n": 1,"stop": "finish"}''';
-  request.headers.addAll(headers);
+  try {
+    var request = http.Request(
+        'POST', Uri.parse('https://api.openai.com/v1/chat/completions'));
+    request.body = (body);
+    //     '''{"model": "gpt-3.5-turbo","messages": [{"role": "system","content": $systemPrompt},{"role": "user", "content": $userPrompt}],"max_tokens": 200,"temperature": 0.9,"top_p": 1,"n": 1,"stop": "finish"}''';
+    request.headers.addAll(headers);
 
-  http.StreamedResponse response = await request.send();
+    http.StreamedResponse response = await request.send();
 
-  if (response.statusCode == 200) {
-    // print(await response.stream.bytesToString());
-    return await response.stream.bytesToString();
-  } else {
-    print(response.reasonPhrase! + " " + response.statusCode.toString());
-    return ("${response.reasonPhrase!} ${response.statusCode}");
+    if (response.statusCode == 200) {
+      // print(await response.stream.bytesToString());
+      return await response.stream.bytesToString();
+    } else {
+      print(response.reasonPhrase! + " " + response.statusCode.toString());
+      return ("${response.reasonPhrase!} ${response.statusCode}");
+    }
+  } catch (e) {
+    throw Exception(e);
   }
-  // } catch (e) {
-  //   throw Exception(e);
-  // }
 }
 
 /// This is the method to send chat history to Firestore database

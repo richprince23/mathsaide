@@ -46,8 +46,21 @@ class Auth {
     }
   }
 
-  //log out
+  ///log out
   static Future logout() async {
     await auth.signOut();
+  }
+
+  ///Send password reset email
+  ///[email] the email of the user to reset
+  ///
+  static Future resetPassword({required String email}) async {
+    try {
+      if (email.isNotEmpty) {
+        await auth.sendPasswordResetEmail(email: email.trim());
+      }
+    } catch (e) {
+      throw Exception(e);
+    }
   }
 }

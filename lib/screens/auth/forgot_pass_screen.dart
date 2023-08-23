@@ -1,12 +1,30 @@
 import 'package:flutter/material.dart';
 import 'package:mathsaide/constants/constants.dart';
+import 'package:mathsaide/controllers/auth_controller.dart';
 import 'package:mathsaide/widgets/input_control.dart';
+import 'package:mathsaide/widgets/status_snack.dart';
 import 'package:resize/resize.dart';
 
-class ForgotPassScreen extends StatelessWidget {
-  ForgotPassScreen({super.key});
+class ForgotPassScreen extends StatefulWidget {
+  const ForgotPassScreen({super.key});
+
+  @override
+  State<ForgotPassScreen> createState() => _ForgotPassScreenState();
+}
+
+class _ForgotPassScreenState extends State<ForgotPassScreen> {
+  final _email = TextEditingController();
+
+  String status = "";
 
   final _formKey = GlobalKey<FormState>();
+
+  @override
+  void dispose() {
+    super.dispose();
+    _email.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -52,11 +70,36 @@ class ForgotPassScreen extends StatelessWidget {
                 SizedBox(
                   height: 12.w,
                 ),
+                Text(
+                  status,
+                  style: TextStyle(color: priCol),
+                ),
+                SizedBox(
+                  height: 12.w,
+                ),
                 SizedBox(
                   width: 100.vw,
                   child: ElevatedButton(
-                    onPressed: () {
-                      //TODO: Reset password logic here
+                    onPressed: () async {
+                      if (!_formKey.currentState!.validate()) {
+                        return;
+                      }
+                      showLoader(context);
+                      try {
+                        await Auth.resetPassword(email: _email.text).then(
+                          (value) => setState(() {
+                            status =
+                                "Email has been sent successfully. Check your email to reset your password!";
+                          }),
+                        );
+                      } catch (e) {
+                        CustomSnackBar.show(
+                          context,
+                          message: "An error occured. Try again!",
+                        );
+                      } finally {
+                        Navigator.of(context).pop();
+                      }
                     },
                     child: const Text("Reset Password"),
                   ),

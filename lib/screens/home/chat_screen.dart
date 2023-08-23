@@ -32,6 +32,7 @@ class _ChatScreenState extends State<ChatScreen> {
   final scrollController = ScrollController();
   String prompt = '';
   String selectedTopic = "";
+  String _sessionID = "";
 
   @override
   void initState() {
@@ -44,19 +45,35 @@ class _ChatScreenState extends State<ChatScreen> {
         .read<SessionProvider>()
         .getTopic()
         .then((value) => selectedTopic = value!)
-        .then((value) => {
+        .then((value) async => {
               initialPrompt =
                   "Hello Richard, Please ask $selectedTopic question",
-              setState(() {
-                messages.add(
-                  ChatBubble(
-                    isUser: false,
-                    message: initialPrompt,
-                  ),
-                );
-              }),
-            });
-    chatHistory.add(ChatResponse(content: systemSolvePrompt, role: "system"));
+              if (messages.isEmpty)
+                {
+                  //add system prompt to chat history
+                  chatHistory.add(
+                      ChatResponse(content: systemSolvePrompt, role: "system")),
+                  // add initial prompt to chat screen
+                  await uploadChat(
+                      content: initialPrompt, role: "assistant"),
+                  setState(() {
+                    messages.add(
+                      ChatBubble(
+                        isUser: false,
+                        message: initialPrompt,
+                        
+                      ),
+                    );
+                  }),
+                },
+            })
+        .then(
+          (value) => context
+              .read<SessionProvider>()
+              .getSession
+              .then((value) => _sessionID = value),
+        );
+    // get session id
   }
 
   @override
@@ -72,11 +89,11 @@ class _ChatScreenState extends State<ChatScreen> {
   Widget build(BuildContext context) {
     return KeyboardDismissOnTap(
       child: Consumer<NetworkProvider>(
-        builder: (context, value, child) => value.isConnected
+        builder: (context, value, child) => value.isConnected == true
             ? Column(children: [
                 Expanded(
                   child: StreamBuilder(
-                      stream: getUserSessionsByTopic(selectedTopic),
+                      stream: getChatsBySessionID(_sessionID),
                       builder: (context, snapshot) {
                         return ListView.builder(
                           cacheExtent: 50.vh,
@@ -87,8 +104,12 @@ class _ChatScreenState extends State<ChatScreen> {
                           // itemBuilder: (context, index) {
                           //   return messages[index];
                           // },
-                          itemCount: snapshot.data?.docs.length,
+                          itemCount:
+                              snapshot.data?.docs.length ?? messages.length,
                           itemBuilder: (context, index) {
+                            if (snapshot.data == null) {
+                              return messages[0];
+                            }
                             if (snapshot.hasError) {
                               return Text('Error: ${snapshot.error}');
                             }
@@ -103,6 +124,7 @@ class _ChatScreenState extends State<ChatScreen> {
                               return Text(
                                   'No user sessions found for the topic.');
                             }
+
                             return ChatBubble(
                               isUser: snapshot.data?.docs[index]["isUser"],
                               message: snapshot.data?.docs[index]["content"],
@@ -168,12 +190,13 @@ class _ChatScreenState extends State<ChatScreen> {
                                 await sendMessage(txtInput.text)
                                     .then((value) async => {
                                           // print("value on front $value"),
-                                          await sendChatHistory(
+                                          // send chat history to firestore
+                                          await uploadChat(
                                                   content: txtInput.text,
                                                   role: "user")
                                               .then(
                                             (res) async =>
-                                                await sendChatHistory(
+                                                await uploadChat(
                                                     content: value,
                                                     role: "assistant"),
                                           ),
@@ -267,13 +290,5 @@ class _ChatScreenState extends State<ChatScreen> {
             ),
           )),
     );
-    // .then((_) {
-    //   if (mathExpression.isNotEmpty) {
-    //     setState(() {
-    //       txtInput.text += mathExpression; // Update txtInput.text
-    //     });
-    //   }
-    //   mathsInput.dispose(); // Dispose of mathsInput controller after use
-    // });
   }
 }

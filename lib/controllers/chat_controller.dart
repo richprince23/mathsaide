@@ -148,14 +148,14 @@ Future<void> sendChatHistory(
 
           // Add the initial chat to the new session
           await newSessionRef.collection("chats").add({
-            "isUser": true,
+            "isUser": role == "user" ? true : false,
             "content": content,
             "timestamp": FieldValue.serverTimestamp(),
           }).catchError((error) => throw Exception(error));
         } else {
           // Add the chat to the existing session
           await newSessionRef.collection("chats").add({
-            "isUser": true,
+            "isUser": role == "user" ? true : false,
             "content": content,
             "timestamp": FieldValue.serverTimestamp(),
           }).catchError((error) => throw Exception(error));
@@ -165,4 +165,43 @@ Future<void> sendChatHistory(
   } catch (e) {
     throw Exception(e);
   }
+}
+
+Future<void> uploadChat({required String content, required String role}) async {
+  final FirebaseFirestore firestore = FirebaseFirestore.instance;
+  final CollectionReference sessionsCollection =
+      firestore.collection('sessions');
+
+  await Prefs.getSession().then((value) async {
+    sessionID = value!;
+    await Prefs.getTopic().then((value) async {
+      topic = value;
+      // Query sessions by the provided sessionID
+      QuerySnapshot sessionQuery = await sessionsCollection
+          .where('sessionID', isEqualTo: sessionID)
+          .get();
+
+      if (sessionQuery.docs.isNotEmpty) {
+        // Session document with provided sessionID exists, add chat to subcollection
+        String sessionDocID = sessionQuery.docs.first.id;
+        await sessionsCollection.doc(sessionDocID).collection('chats').add({
+          'content': content,
+          'isUser': role == "user" ? true : false,
+          'timestamp': FieldValue.serverTimestamp(),
+        });
+      } else {
+        // Session document with provided sessionID doesn't exist, create session and add chat
+        DocumentReference newSessionDocRef = await sessionsCollection.add({
+          'sessionID': sessionID,
+          'topic': topic,
+          'userID': auth.currentUser!.uid
+        });
+        await newSessionDocRef.collection('chats').add({
+          'content': content,
+          'isUser': role == "user" ? true : false,
+          'timestamp': FieldValue.serverTimestamp(),
+        });
+      }
+    });
+  });
 }

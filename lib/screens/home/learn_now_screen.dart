@@ -27,7 +27,10 @@ class _LearnNowScreenState extends State<LearnNowScreen> {
       Provider.of<NetworkProvider>(context, listen: false)
           .updateConnectionStatus(result);
     });
-    checkConnectivity();
+    // checkConnectivity();
+    if (mounted) {
+      checkConnectivity();
+    }
   }
 
   @override

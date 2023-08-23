@@ -21,6 +21,7 @@ class _AuthGateState extends State<AuthGate> {
   @override
   void initState() {
     super.initState();
+
     auth.authStateChanges().listen((User? user) {
       if (user != null) {
         setState(() {
@@ -29,6 +30,9 @@ class _AuthGateState extends State<AuthGate> {
           Provider.of<UserState>(context, listen: false).user = user!;
         });
       } else {
+        auth.currentUser!.getIdTokenResult().then((value) {
+          print("token ${value.token}");
+        });
         setState(() {
           isLoggedIn = false;
           user = null;
@@ -45,14 +49,16 @@ class _AuthGateState extends State<AuthGate> {
       builder: ((context, snapshot) {
         if (snapshot.connectionState == ConnectionState.waiting) {
           return const Loader();
-        } else if (snapshot.hasData) {
-          if (snapshot.data!.uid.isNotEmpty) {
-            print(snapshot.data!.uid);
-            return const HomeScreen();
-          } else {
-            print("No user");
-            return const LoginScreen();
-          }
+        }
+        if (snapshot.data != null) {
+          // if (snapshot.data!.uid.isNotEmpty) {
+          print(snapshot.data!.uid);
+          return const HomeScreen();
+          // }
+          // else {
+          //   print("No user");
+          //   return const LoginScreen();
+          // }
         } else {
           print("No user data");
           return const LoginScreen();

@@ -50,9 +50,9 @@ class _SettingsScreenState extends State<SettingsScreen> {
                   radius: 15.vw,
                   backgroundColor: priCol,
                   child: CircleAvatar(
-                    radius: 40.r,
+                    radius: 14.vw,
                     backgroundImage: CachedNetworkImageProvider(
-                      auth.currentUser!.photoURL!,
+                      auth.currentUser!.photoURL ?? "https://picsum.photos/200",
                       errorListener: () => const Icon(Icons.person),
                     ),
                   ),

@@ -28,3 +28,26 @@ Stream<QuerySnapshot<Map<String, dynamic>>> getSessionsBySessionID(
       .where("sessionID", isEqualTo: sessionID)
       .snapshots();
 }
+
+// Get all chats from the database as a stream that matches the sessionID
+Stream<QuerySnapshot<Map<String, dynamic>>?> getChatsBySessionID(
+    String sessionID) {
+  final db = FirebaseFirestore.instance;
+  //  var empty =[];
+  final empty = <QuerySnapshot<Map<String, dynamic>>>[];
+  return db
+      .collection("sessions")
+      .where("sessionID", isEqualTo: sessionID)
+      .limit(1) // Since sessionID should be unique, we limit to 1 document
+      .snapshots()
+      .asyncMap((querySnapshot) async {
+    if (querySnapshot.docs.isNotEmpty) {
+      final docSnapshot = querySnapshot.docs.first;
+      final chatsSnapshot =
+          await docSnapshot.reference.collection("chats").get();
+      return chatsSnapshot;
+    } else {
+      return null;
+    }
+  });
+}

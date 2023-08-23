@@ -1,5 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:mathsaide/controllers/auth_controller.dart';
+import 'package:mathsaide/controllers/prefs.dart';
 
 /// Get all sessions from the database as a stream that matches the user ID and topic
 
@@ -30,24 +31,31 @@ Stream<QuerySnapshot<Map<String, dynamic>>> getSessionsBySessionID(
 }
 
 // Get all chats from the database as a stream that matches the sessionID
-Stream<QuerySnapshot<Map<String, dynamic>>?> getChatsBySessionID(
-    String sessionID) {
-  final db = FirebaseFirestore.instance;
-  //  var empty =[];
-  final empty = <QuerySnapshot<Map<String, dynamic>>>[];
-  return db
-      .collection("sessions")
-      .where("sessionID", isEqualTo: sessionID)
-      .limit(1) // Since sessionID should be unique, we limit to 1 document
-      .snapshots()
-      .asyncMap((querySnapshot) async {
-    if (querySnapshot.docs.isNotEmpty) {
-      final docSnapshot = querySnapshot.docs.first;
-      final chatsSnapshot =
-          await docSnapshot.reference.collection("chats").get();
-      return chatsSnapshot;
-    } else {
-      return null;
-    }
+Stream<QuerySnapshot<Map<String, dynamic>>?> getCurrentChat() {
+  final FirebaseFirestore firestore = FirebaseFirestore.instance;
+  final CollectionReference sessionsCollection =
+      firestore.collection('sessions');
+  // String sessionID = "";
+  var results;
+
+  Prefs.getSession().then((sessionID) async {
+    // sessionID = value!;
+    await Prefs.getTopic().then((value) async {
+      // topic = value;
+      // Query sessions by the provided sessionID
+      QuerySnapshot sessionQuery = await sessionsCollection
+          .where('sessionID', isEqualTo: sessionID)
+          .get();
+      // print("")
+      if (sessionQuery.docs.isNotEmpty && sessionQuery.size > 0) {
+        // Session document with provided sessionID exists, add chat to subcollection
+        String sessionDocID = sessionQuery.docs.first.id;
+        results = sessionsCollection
+            .doc(sessionDocID)
+            .collection('chats')
+            .snapshots();
+      }
+    });
   });
+  return results;
 }

@@ -64,4 +64,13 @@ class Prefs {
     // gets the topic from shared prefs
     return prefs.getString("topic");
   }
+
+  /// Saves the current user credentials for reauthentication
+  static saveUser({required String email, required String password}) async {
+    assert(email != "");
+    assert(password != "");
+    
+
+
+  }
 }

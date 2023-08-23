@@ -20,8 +20,8 @@ void main() async {
   //init firebase
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
-  await remoteConfig.setConfigSettings(configSettings);
-  await remoteConfig.fetchAndActivate();
+  // await remoteConfig.setConfigSettings(configSettings);
+  // await remoteConfig.fetchAndActivate();
 
   runApp(
     MultiProvider(

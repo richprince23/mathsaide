@@ -1,10 +1,12 @@
 import 'package:connectivity_plus/connectivity_plus.dart';
+import 'package:firebase_remote_config/firebase_remote_config.dart';
 import 'package:flutter/material.dart';
 import 'package:mathsaide/constants/constants.dart';
 import 'package:mathsaide/controllers/network_controller.dart';
 import 'package:mathsaide/providers/session_provider.dart';
 import 'package:mathsaide/screens/home/chat_screen.dart';
 import 'package:mathsaide/screens/home/start_session_screen.dart';
+import 'package:mathsaide/widgets/loader.dart';
 import 'package:provider/provider.dart';
 
 class LearnNowScreen extends StatefulWidget {
@@ -18,6 +20,7 @@ class _LearnNowScreenState extends State<LearnNowScreen> {
   @override
   void initState() {
     super.initState();
+    _initializeRemoteConfig();
     // initialize network listening stream
     connectivitySubscription =
         Provider.of<NetworkProvider>(context, listen: false)
@@ -27,10 +30,17 @@ class _LearnNowScreenState extends State<LearnNowScreen> {
       Provider.of<NetworkProvider>(context, listen: false)
           .updateConnectionStatus(result);
     });
+
     // checkConnectivity();
     if (mounted) {
       checkConnectivity();
     }
+  }
+
+  ///Initialize remote config
+  Future<void> _initializeRemoteConfig() async {
+    await remoteConfig.setConfigSettings(configSettings);
+    await remoteConfig.fetchAndActivate();
   }
 
   @override
@@ -47,63 +57,64 @@ class _LearnNowScreenState extends State<LearnNowScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text("LearnNow"),
-        actions: [
-          IconButton(
-            onPressed: () {},
-            icon: const Icon(Icons.help_outline),
-          ),
-          Consumer<SessionProvider>(
-            builder: (context, value, child) {
-              return FutureBuilder(
-                  future: value.getSession,
-                  builder: (context, snapshot) {
-                    if (snapshot.hasData) {
-                      if (snapshot.data != null && snapshot.data != "") {
-                        return options();
-                      } else {
+        appBar: AppBar(
+          title: const Text("LearnNow"),
+          actions: [
+            IconButton(
+              onPressed: () {},
+              icon: const Icon(Icons.help_outline),
+            ),
+            Consumer<SessionProvider>(
+              builder: (context, value, child) {
+                return FutureBuilder(
+                    future: value.getSession,
+                    builder: (context, snapshot) {
+                      if (snapshot.hasData) {
+                        if (snapshot.data != null && snapshot.data != "") {
+                          return options();
+                        } else {
+                          return const SizedBox();
+                        }
+                      } else if (snapshot.connectionState ==
+                          ConnectionState.waiting) {
                         return const SizedBox();
                       }
-                    } else if (snapshot.connectionState ==
-                        ConnectionState.waiting) {
-                      return const SizedBox();
-                    }
 
-                    return const SizedBox();
-                  });
-            },
-          ),
-        ],
-        // leading: null,
-        automaticallyImplyLeading: false,
-      ),
-      body: Consumer<SessionProvider>(
-        builder: ((context, value, child) {
-          return FutureBuilder(
-            future: value.getSession,
-            builder: (context, snapshot) {
-              if (snapshot.hasData) {
-                if (snapshot.data != null && snapshot.data != "") {
-                  return const ChatScreen();
+                      return const SizedBox();
+                    });
+              },
+            ),
+          ],
+          // leading: null,
+          automaticallyImplyLeading: false,
+        ),
+        body: Consumer<SessionProvider>(
+          builder: (context, value, child) {
+            return FutureBuilder(
+              future: value.getSession,
+              builder: (context, snapshot) {
+                if (snapshot.connectionState == ConnectionState.waiting) {
+                  return const Loader();
+                }
+
+                if (snapshot.hasData) {
+                  final sessionData = snapshot.data;
+
+                  if (sessionData != null && sessionData != "") {
+                    return const ChatScreen();
+                  } else {
+                    return const StartSessionScreen();
+                  }
+                } else if (snapshot.hasError) {
+                  return Text('Error: ${snapshot.error}');
                 } else {
+                  // Handle the case when snapshot.data is null
                   return const StartSessionScreen();
                 }
-              }
-              if (snapshot.connectionState == ConnectionState.waiting) {
-                return Center(
-                  child: CircularProgressIndicator(
-                    color: priCol,
-                  ),
-                );
-              } else {
-                return const StartSessionScreen();
-              }
-            },
-          );
-        }),
-      ),
-    );
+              },
+            );
+          },
+        ));
   }
 
   //build a dropdown for the user to select an action

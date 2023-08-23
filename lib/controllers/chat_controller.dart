@@ -62,8 +62,6 @@ Future<String?> makeRequest(String message) async {
   var url = Uri.parse("https://api.openai.com/v1/chat/completions");
   String systemPrompt = systemSolvePrompt;
   String userPrompt = message.trim();
-  // var key = File.fromUri(Uri.parse("env.txt")).readAsStringSync();
-  print(apiKey);
 
   var headers = {
     'Content-Type': 'application/json',
@@ -180,10 +178,11 @@ Future<void> uploadChat({required String content, required String role}) async {
       QuerySnapshot sessionQuery = await sessionsCollection
           .where('sessionID', isEqualTo: sessionID)
           .get();
-
-      if (sessionQuery.docs.isNotEmpty) {
+      // print("")
+      if (sessionQuery.docs.isNotEmpty && sessionQuery.size > 0) {
         // Session document with provided sessionID exists, add chat to subcollection
         String sessionDocID = sessionQuery.docs.first.id;
+
         await sessionsCollection.doc(sessionDocID).collection('chats').add({
           'content': content,
           'isUser': role == "user" ? true : false,
@@ -191,16 +190,18 @@ Future<void> uploadChat({required String content, required String role}) async {
         });
       } else {
         // Session document with provided sessionID doesn't exist, create session and add chat
-        DocumentReference newSessionDocRef = await sessionsCollection.add({
+        // DocumentReference newSessionDocRef =
+        await sessionsCollection.add({
           'sessionID': sessionID,
           'topic': topic,
           'userID': auth.currentUser!.uid
-        });
-        await newSessionDocRef.collection('chats').add({
-          'content': content,
-          'isUser': role == "user" ? true : false,
-          'timestamp': FieldValue.serverTimestamp(),
-        });
+        }).then(
+          (value) async => await value.collection('chats').add({
+            'content': content,
+            'isUser': role == "user" ? true : false,
+            'timestamp': FieldValue.serverTimestamp(),
+          }),
+        );
       }
     });
   });

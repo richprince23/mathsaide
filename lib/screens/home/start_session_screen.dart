@@ -21,7 +21,7 @@ class StartSessionScreen extends StatelessWidget {
         Container(
           padding: EdgeInsets.symmetric(horizontal: 20.w),
           width: 100.vw,
-          height: 80.vh - 60,
+          height: 80.vh,
           child: Container(
             padding: EdgeInsets.symmetric(horizontal: 20.w),
             child: Column(

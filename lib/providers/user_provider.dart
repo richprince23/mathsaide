@@ -5,6 +5,7 @@ import 'package:mathsaide/controllers/prefs.dart';
 class UserState extends ChangeNotifier {
   User? _user;
   UserCredential? userCredential;
+
   /// Returns the current User
   User get user => _user!;
 
@@ -23,9 +24,8 @@ class UserState extends ChangeNotifier {
   /// Save the login credentitals to shared Prefs
   /// [email] email of the user
   /// [password] password of the user
-  /// 
-  Future saveUser({required String email, required String password}) async{
-   
-
+  ///
+  Future saveUser({required String email, required String password}) async {
+    //todo: still testing required
   }
 }

@@ -1,10 +1,13 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_keyboard_visibility/flutter_keyboard_visibility.dart';
 import 'package:math_keyboard/math_keyboard.dart';
 import 'package:mathsaide/constants/constants.dart';
 import 'package:mathsaide/controllers/chat_controller.dart';
 import 'package:mathsaide/controllers/network_controller.dart';
+import 'package:mathsaide/controllers/prefs.dart';
 import 'package:mathsaide/controllers/session_controller.dart';
+import 'package:mathsaide/models/response_model.dart';
 import 'package:mathsaide/widgets/chat_bubble.dart';
 import 'package:mathsaide/widgets/input_control.dart';
 import 'package:mathsaide/widgets/loader.dart';
@@ -34,6 +37,33 @@ class _ChatScreenState extends State<ChatScreen> {
   @override
   void initState() {
     super.initState();
+    initChat();
+  }
+
+  void initChat() async {
+    await Prefs.getSession().then(
+      (value) async => {
+        setState(
+          () => _sessionID = value!,
+        ),
+        print(_sessionID),
+        chatHistory.clear(),
+        if (!chatHistory
+            .contains(ChatResponse(content: systemSolvePrompt, role: 'system')))
+          {
+            chatHistory
+                .add(ChatResponse(content: systemSolvePrompt, role: 'system')),
+          },
+        await uploadChat(content: initialPrompt, role: "assistant"),
+        chatHistory
+            .add(ChatResponse(content: systemSolvePrompt, role: 'system')),
+        for (var item in chatHistory)
+          {
+            print(item.content),
+          },
+        print(chatHistory.length),
+      },
+    );
   }
 
   @override
@@ -48,125 +78,133 @@ class _ChatScreenState extends State<ChatScreen> {
   @override
   Widget build(BuildContext context) {
     return KeyboardDismissOnTap(
-        child:
-            // Consumer<NetworkProvider>(
-            //   builder: (context, value, child) => value.isConnected == true
-            //       ?
-            Column(children: [
-      Expanded(
-        child: StreamBuilder(
-            stream: getCurrentChat(),
-            builder: (context, snapshot) {
-              return ListView.builder(
-                cacheExtent: 50.vh,
-                padding: EdgeInsets.symmetric(horizontal: 10.w),
-                controller: scrollController,
-                scrollDirection: Axis.vertical,
-                itemCount: snapshot.data?.docs.length ?? 0,
-                itemBuilder: (context, index) {
-                  if (snapshot.connectionState == ConnectionState.waiting) {
-                    return const Loader();
-                  }
+      child: Consumer<NetworkProvider>(
+        builder: (context, value, child) => value.isConnected == true
+            ? Column(children: [
+                Expanded(
+                  child: StreamBuilder<QuerySnapshot<Map<String, dynamic>>?>(
+                      // stream: getCurrentChat(),
+                      stream: getChatByID(_sessionID),
+                      builder: (context, snapshot) {
+                        return ListView.builder(
+                          cacheExtent: 50.vh,
+                          padding: EdgeInsets.symmetric(horizontal: 10.w),
+                          controller: scrollController,
+                          scrollDirection: Axis.vertical,
+                          itemCount: snapshot.data?.docs.length ?? 0,
+                          itemBuilder: (context, index) {
+                            if (snapshot.connectionState ==
+                                ConnectionState.waiting) {
+                              return const Loader();
+                            }
 
-                  if (snapshot.hasError) {
-                    return Text('Error: ${snapshot.error}');
-                  }
+                            if (snapshot.hasError) {
+                              return Text('Error: ${snapshot.error}');
+                            }
 
-                  if (!snapshot.hasData && snapshot.data!.docs.isEmpty) {
-                    return const Text(
-                      'No learning history found for the topic.',
-                    );
-                  }
-                  final data = snapshot.data?.docs[index];
-                  print("data returned is   ${data?['content']}");
-                  return ChatBubble(
-                    isUser: data!["role"] == "user" ? true : false,
-                    message: data["content"],
-                  );
-                },
-              );
-            }),
-      ),
-      SizedBox(
-        height: 10.h,
-      ),
-      Container(
-        padding: px1,
-        // width: 94.vw,
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            Expanded(
-              child: InputControl(
-                showLabel: false,
-                hintText: "Enter a prompt...",
-                type: TextInputType.multiline,
-                controller: txtInput,
-                suffixIcon: IconButton(
-                  onPressed: () {
-                    showMathsKeyboard();
-                  },
-                  icon: const Icon(Icons.calculate),
-                  color: txtCol,
+                            if (!snapshot.hasData) {
+                              return const Text(
+                                'No learning history found for the topic.',
+                              );
+                            }
+                            final data = snapshot.data?.docs[index];
+                            print("data returned is   ${data?['content']}");
+                            return ChatBubble(
+                              isUser: data!["isUser"],
+                              message: data["content"],
+                            );
+                          },
+                        );
+                      }),
                 ),
-              ),
-            ),
-            SizedBox(
-              width: 10.w,
-            ),
-            Padding(
-              padding: const EdgeInsets.only(bottom: 8.0),
-              child: IconButton(
-                style: IconButton.styleFrom(
-                  fixedSize: const Size(50, 50),
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(10.r)),
-                  backgroundColor: priCol,
-                  foregroundColor: priColLight,
-                  // padding: pa1,
+                SizedBox(
+                  height: 10.h,
                 ),
-                iconSize: 34,
-                icon: const Icon(Icons.arrow_circle_right_rounded),
-                onPressed: () async {
-                  if (txtInput.text != "") {
-                    //show loading
-                    showLoader(context);
-                    try {
-                      await sendMessage(txtInput.text).then((value) async => {
-                            // send chat history to firestore
-                            await uploadChat(
-                                    content: txtInput.text, role: "user")
-                                .then(
-                              (res) async => await uploadChat(
-                                  content: value, role: "assistant"),
+                Container(
+                  padding: px1,
+                  // width: 94.vw,
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      Expanded(
+                        child: InputControl(
+                          showLabel: false,
+                          hintText: "Enter a prompt...",
+                          type: TextInputType.multiline,
+                          controller: txtInput,
+                          suffixIcon: IconButton(
+                            onPressed: () {
+                              showMathsKeyboard();
+                            },
+                            icon: const Icon(Icons.calculate),
+                            color: txtCol,
+                          ),
+                        ),
+                      ),
+                      SizedBox(
+                        width: 10.w,
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(bottom: 8.0),
+                        child: IconButton(
+                          style: IconButton.styleFrom(
+                            fixedSize: const Size(50, 50),
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(10.r),
                             ),
-                            Navigator.pop(context),
+                            backgroundColor: priCol,
+                            foregroundColor: priColLight,
+                            // padding: pa1,
+                          ),
+                          iconSize: 34,
+                          icon: const Icon(Icons.arrow_circle_right_rounded),
+                          onPressed: () async {
+                            if (txtInput.text != "") {
+                              //show loading
+                              showLoader(context);
+                              try {
+                                await sendMessage(txtInput.text)
+                                    .then((value) async => {
+                                          // send chat history to firestore
+                                          await uploadChat(
+                                                  content: txtInput.text,
+                                                  role: "user")
+                                              .then(
+                                            (res) async => await uploadChat(
+                                                content: value,
+                                                role: "assistant"),
+                                          ),
+                                          Navigator.pop(context),
 
-                            scrollController.animateTo(
-                              scrollController.position.maxScrollExtent,
-                              duration: const Duration(milliseconds: 500),
-                              curve: Curves.easeOut,
-                            ),
-                          });
-                    } catch (e) {
-                      Navigator.pop(context);
-                      CustomSnackBar.show(context, message: "An error occur!");
-                    }
-                    setState(() {
-                      txtInput.text = "";
-                    });
-                  }
-                },
-              ),
-            ),
-          ],
-        ),
+                                          scrollController.animateTo(
+                                            scrollController
+                                                    .position.maxScrollExtent +
+                                                80.vh,
+                                            duration: const Duration(
+                                                milliseconds: 500),
+                                            curve: Curves.easeOut,
+                                          ),
+                                        });
+                              } catch (e) {
+                                Navigator.pop(context);
+                                CustomSnackBar.show(context,
+                                    message: "An error occur!");
+                              }
+                              setState(() {
+                                txtInput.text = "";
+                              });
+                            }
+                          },
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ])
+            : const NoNetwork(),
       ),
-    ])
-        // : const NoNetwork(),
-        // ),
-        );
+    );
   }
 
   void showMathsKeyboard() {

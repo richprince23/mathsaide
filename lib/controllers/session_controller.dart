@@ -30,32 +30,13 @@ Stream<QuerySnapshot<Map<String, dynamic>>> getSessionsBySessionID(
       .snapshots();
 }
 
-// Get all chats from the database as a stream that matches the sessionID
-Stream<QuerySnapshot<Map<String, dynamic>>?> getCurrentChat() {
-  final FirebaseFirestore firestore = FirebaseFirestore.instance;
-  final CollectionReference sessionsCollection =
-      firestore.collection('sessions');
-  // String sessionID = "";
-  var results;
-
-  Prefs.getSession().then((sessionID) async {
-    // sessionID = value!;
-    await Prefs.getTopic().then((value) async {
-      // topic = value;
-      // Query sessions by the provided sessionID
-      QuerySnapshot sessionQuery = await sessionsCollection
-          .where('sessionID', isEqualTo: sessionID)
-          .get();
-      // print("")
-      if (sessionQuery.docs.isNotEmpty && sessionQuery.size > 0) {
-        // Session document with provided sessionID exists, add chat to subcollection
-        String sessionDocID = sessionQuery.docs.first.id;
-        results = sessionsCollection
-            .doc(sessionDocID)
-            .collection('chats')
-            .snapshots();
-      }
-    });
-  });
+// Get current chat as stream
+Stream<QuerySnapshot<Map<String, dynamic>>>? getChatByID(String sessionID) {
+  final results = FirebaseFirestore.instance
+      .collection("sessions")
+      .doc(sessionID)
+      .collection("chats")
+      .orderBy("timestamp", descending: false)
+      .snapshots();
   return results;
 }

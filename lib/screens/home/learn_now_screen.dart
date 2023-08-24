@@ -50,8 +50,10 @@ class _LearnNowScreenState extends State<LearnNowScreen> {
   }
 
   void checkConnectivity() async {
-    await Provider.of<NetworkProvider>(context, listen: false)
-        .initConnectivity();
+    if (mounted) {
+      await Provider.of<NetworkProvider>(context, listen: false)
+          .initConnectivity();
+    }
   }
 
   @override

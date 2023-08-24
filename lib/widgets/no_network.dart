@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mathsaide/constants/constants.dart';
 import 'package:resize/resize.dart';
 
 class NoNetwork extends StatelessWidget {
@@ -9,7 +10,8 @@ class NoNetwork extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.white,
+      padding: px2,
+      color: bgWhite,
       child: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -17,10 +19,10 @@ class NoNetwork extends StatelessWidget {
             Icon(
               Icons.wifi_off,
               size: 50.w,
-              color: Colors.grey,
+              color: priCol,
             ),
             Text(
-              "No internet connection",
+              "No Network Connection",
               style: TextStyle(
                 fontSize: 18.sp,
                 fontWeight: FontWeight.bold,
@@ -30,8 +32,9 @@ class NoNetwork extends StatelessWidget {
               "Please check your internet connection",
               style: TextStyle(
                 fontSize: 16.sp,
-                color: Colors.grey,
+                color: txtColLight,
               ),
+              textAlign: TextAlign.center,
             ),
           ],
         ),

@@ -1,5 +1,5 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:mathsaide/constants/constants.dart';
+import 'package:intl/intl.dart';
 import 'package:mathsaide/controllers/auth_controller.dart';
 
 /// Get all sessions from the database as a stream that matches the user ID and topic
@@ -54,4 +54,10 @@ Stream<QuerySnapshot<Map<String, dynamic>>> getLearningHistory() {
       .snapshots();
   // print(history);
   return history;
+}
+
+String convertDateTimeString(String timestamp) {
+  final date = DateTime.fromMicrosecondsSinceEpoch(int.parse(timestamp));
+  String formattedDate = DateFormat('MMMM d, yyyy \'at\' h:mm a').format(date);
+  return formattedDate;
 }

@@ -26,6 +26,7 @@ dependencies:
   connectivity_plus: ^4.0.1
   http: 1.1.0
   math_keyboard: 0.2.0
+  intl:
 
 dev_dependencies:
   flutter_test:

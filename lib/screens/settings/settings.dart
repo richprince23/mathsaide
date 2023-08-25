@@ -101,6 +101,16 @@ class _SettingsScreenState extends State<SettingsScreen> {
                           ListTile(
                             trailing:
                                 const Icon(Icons.arrow_forward_ios, size: 14),
+                            onTap: () {
+                              Navigator.pushNamed(context, "/history");
+                            },
+                            iconColor: priCol,
+                            leading: const Icon(Icons.work_history),
+                            title: const Text("Learning History"),
+                          ),
+                          ListTile(
+                            trailing:
+                                const Icon(Icons.arrow_forward_ios, size: 14),
                             onTap: () {},
                             iconColor: priCol,
                             leading: const Icon(Icons.notifications),

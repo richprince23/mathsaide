@@ -133,8 +133,7 @@ class _ChatScreenState extends State<ChatScreen> {
                                 itemCount: snapshot.data?.docs.length ?? 0,
                                 itemBuilder: (context, index) {
                                   final data = snapshot.data?.docs[index];
-                                  print(
-                                      "data returned is   ${data?['content']}");
+                                  // print("data returned is   ${data?['content']}");
                                   return ChatBubble(
                                     isUser: data!["isUser"],
                                     message: data["content"],
@@ -277,7 +276,7 @@ class _ChatScreenState extends State<ChatScreen> {
                                     placeholderWhenEmpty: true))
                             .parse();
                         mathExpression = "\n$parsedExpression\n";
-                        print(mathExpression);
+                        // print(mathExpression);
                         txtInput.text += mathExpression;
                       }
                       Navigator.pop(context);

@@ -17,16 +17,18 @@ class HistoryScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text("Learning History"),
-        automaticallyImplyLeading: false,
+        // automaticallyImplyLeading: false,
       ),
       body: Container(
-        padding: px4,
+        padding: EdgeInsets.symmetric(horizontal: 10.w, vertical: 10.w),
         child: StreamBuilder<QuerySnapshot<Map<String, dynamic>>>(
+          // stream: getLearningHistory(),
           stream: FirebaseFirestore.instance
               .collection("sessions")
-              .where('userID', isEqualTo: auth.currentUser!.uid)
+              .where('userID', isEqualTo: "sdasd")
               .snapshots(),
           builder: (context, AsyncSnapshot snapshot) {
+            // print(auth.currentUser?.uid);
             if (snapshot.connectionState == ConnectionState.waiting) {
               return const Loader();
             }
@@ -43,7 +45,7 @@ class HistoryScreen extends StatelessWidget {
                 ],
               );
             }
-            if (!snapshot.hasData && snapshot.data?.docs.isEmpty) {
+            if (snapshot.data?.docs.isEmpty) {
               return Center(
                 child: Container(
                   padding: pa4,
@@ -85,6 +87,7 @@ class HistoryScreen extends StatelessWidget {
                         onPressed: () {
                           Provider.of<PageProvider>(context, listen: false)
                               .setPage(0);
+                          Navigator.pop(context);
                         },
                         child: const Text("Start a new session"),
                       ),
@@ -92,19 +95,19 @@ class HistoryScreen extends StatelessWidget {
                   ),
                 ),
               );
+            } else {
+              return ListView.builder(
+                itemCount: snapshot.data!.docs.length ?? 0,
+                itemBuilder: (context, index) {
+                  final data = snapshot.data!.docs[index];
+
+                  return HistoryItem(
+                    topic: data["topic"],
+                    sessionID: data["sessionID"],
+                  );
+                },
+              );
             }
-
-            return ListView.builder(
-              itemCount: snapshot.data?.docs.length ?? 0,
-              itemBuilder: (context, index) {
-                final data = snapshot.data?[index];
-
-                return HistoryItem(
-                  topic: data["topic"],
-                  sessionID: data["sessionID"] as int,
-                );
-              },
-            );
           },
         ),
       ),

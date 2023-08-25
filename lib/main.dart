@@ -12,7 +12,8 @@ import 'package:mathsaide/screens/auth/forgot_pass_screen.dart';
 import 'package:mathsaide/screens/auth/login_screen.dart';
 import 'package:mathsaide/screens/auth/signup_screen.dart';
 import 'package:mathsaide/screens/home/home.dart';
-import 'package:mathsaide/screens/settings/edit-profile.dart';
+import 'package:mathsaide/screens/home/start_session_screen.dart';
+import 'package:mathsaide/screens/settings/edit_profile.dart';
 import 'package:provider/provider.dart';
 import 'package:resize/resize.dart';
 
@@ -56,8 +57,9 @@ class MainApp extends StatelessWidget {
           "/auth-gate": (context) => const AuthGate(),
           "/login": (context) => const LoginScreen(),
           "/signup": (context) => const SignUpScreen(),
-          "/forgot-pass": (context) => ForgotPassScreen(),
+          "/forgot-pass": (context) => const ForgotPassScreen(),
           "/home": (context) => const HomeScreen(),
+          "/start-session": (context) => const StartSessionScreen(),
           "/edit-profile": (context) => const EditProfileScreen()
         },
       ),

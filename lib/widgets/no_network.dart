@@ -13,30 +13,43 @@ class NoNetwork extends StatelessWidget {
       padding: px2,
       color: bgWhite,
       child: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Icon(
-              Icons.wifi_off,
-              size: 50.w,
-              color: priCol,
+        child: Container(
+          padding: pa4,
+          decoration: ShapeDecoration(
+            shape: RoundedRectangleBorder(
+              side: BorderSide(color: priColDark),
+              borderRadius: BorderRadius.circular(10),
             ),
-            Text(
-              "No Network Connection",
-              style: TextStyle(
-                fontSize: 18.sp,
-                fontWeight: FontWeight.bold,
+            color: bgColDark,
+          ),
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Icon(
+                Icons.wifi_off,
+                size: 50.w,
+                color: priCol,
               ),
-            ),
-            Text(
-              "Please check your internet connection",
-              style: TextStyle(
-                fontSize: 16.sp,
-                color: txtColLight,
+              SizedBox(height: 10.w),
+              Text(
+                "No Network Connection",
+                style: TextStyle(
+                  fontSize: 18.sp,
+                  fontWeight: FontWeight.bold,
+                ),
               ),
-              textAlign: TextAlign.center,
-            ),
-          ],
+              SizedBox(height: 10.w),
+              Text(
+                "Please check your internet connection",
+                style: TextStyle(
+                  fontSize: 16.sp,
+                  color: txtColLight,
+                ),
+                textAlign: TextAlign.center,
+              ),
+            ],
+          ),
         ),
       ),
     );

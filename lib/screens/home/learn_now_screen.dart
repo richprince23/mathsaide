@@ -27,14 +27,16 @@ class _LearnNowScreenState extends State<LearnNowScreen> {
             .connectivity
             .onConnectivityChanged
             .listen((ConnectivityResult result) {
+      // if (mounted) {
       Provider.of<NetworkProvider>(context, listen: false)
           .updateConnectionStatus(result);
+      // }
     });
 
     // checkConnectivity();
-    if (mounted) {
-      checkConnectivity();
-    }
+    // if (mounted) {
+    checkConnectivity();
+    // }
   }
 
   ///Initialize remote config
@@ -59,64 +61,65 @@ class _LearnNowScreenState extends State<LearnNowScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          title: const Text("LearnNow"),
-          actions: [
-            IconButton(
-              onPressed: () {},
-              icon: const Icon(Icons.help_outline),
-            ),
-            Consumer<SessionProvider>(
-              builder: (context, value, child) {
-                return FutureBuilder(
-                    future: value.getSession,
-                    builder: (context, snapshot) {
-                      if (snapshot.hasData) {
-                        if (snapshot.data != null && snapshot.data != "") {
-                          return options();
-                        } else {
-                          return const SizedBox();
-                        }
-                      } else if (snapshot.connectionState ==
-                          ConnectionState.waiting) {
+      appBar: AppBar(
+        title: const Text("LearnNow"),
+        actions: [
+          IconButton(
+            onPressed: () {},
+            icon: const Icon(Icons.help_outline),
+          ),
+          Consumer<SessionProvider>(
+            builder: (context, value, child) {
+              return FutureBuilder(
+                  future: value.getSession,
+                  builder: (context, snapshot) {
+                    if (snapshot.hasData) {
+                      if (snapshot.data != null && snapshot.data != "") {
+                        return options();
+                      } else {
                         return const SizedBox();
                       }
-
+                    } else if (snapshot.connectionState ==
+                        ConnectionState.waiting) {
                       return const SizedBox();
-                    });
-              },
-            ),
-          ],
-          // leading: null,
-          automaticallyImplyLeading: false,
-        ),
-        body: Consumer<SessionProvider>(
-          builder: (context, value, child) {
-            return FutureBuilder(
-              future: value.getSession,
-              builder: (context, snapshot) {
-                if (snapshot.connectionState == ConnectionState.waiting) {
-                  return const Loader();
-                }
+                    }
 
-                if (snapshot.hasData) {
-                  final sessionData = snapshot.data;
+                    return const SizedBox();
+                  });
+            },
+          ),
+        ],
+        // leading: null,
+        automaticallyImplyLeading: false,
+      ),
+      body: Consumer<SessionProvider>(
+        builder: (context, value, child) {
+          return FutureBuilder(
+            future: value.getSession,
+            builder: (context, snapshot) {
+              if (snapshot.connectionState == ConnectionState.waiting) {
+                return const Loader();
+              }
 
-                  if (sessionData != null && sessionData != "") {
-                    return const ChatScreen();
-                  } else {
-                    return const StartSessionScreen();
-                  }
-                } else if (snapshot.hasError) {
-                  return Text('Error: ${snapshot.error}');
+              if (snapshot.hasData) {
+                final sessionData = snapshot.data;
+
+                if (sessionData != null && sessionData != "") {
+                  return const ChatScreen();
                 } else {
-                  // Handle the case when snapshot.data is null
                   return const StartSessionScreen();
                 }
-              },
-            );
-          },
-        ));
+              } else if (snapshot.hasError) {
+                return Text('Error: ${snapshot.error}');
+              } else {
+                // Handle the case when snapshot.data is null
+                return const StartSessionScreen();
+              }
+            },
+          );
+        },
+      ),
+    );
   }
 
   //build a dropdown for the user to select an action

@@ -64,8 +64,8 @@ class _AuthGateState extends State<AuthGate> {
   }
 
   Future<void> regenerateAuthTokens(User user) async {
-    String? idToken = await user.getIdToken();
-    String? refreshToken = user.refreshToken;
+    await user.getIdToken();
+    user.refreshToken;
     print('Auth tokens regenerated successfully.');
   }
 

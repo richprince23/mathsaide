@@ -62,7 +62,7 @@ class _InputControlState extends State<InputControl> {
 
   @override
   void dispose() {
-    widget.controller?.dispose();
+    // widget.controller?.dispose();
     widget.focusNode?.dispose();
     super.dispose();
   }

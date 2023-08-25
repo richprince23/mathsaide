@@ -6,7 +6,7 @@ class EditProfileScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("Edit Profile")),
+      appBar: AppBar(title: const Text("Edit Profile")),
     );
   }
 }

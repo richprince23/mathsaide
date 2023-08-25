@@ -179,14 +179,6 @@ class ChatBubble extends StatelessWidget {
                     child: Card(
                       child: Column(
                         children: [
-                          // ListTile(
-                          //   title: const Text("Star"),
-                          //   leading: const Icon(CupertinoIcons.star),
-                          //   onTap: () {
-                          //     //TODO: add to starred messages
-                          //     Navigator.pop(context);
-                          //   },
-                          // ),
                           ListTile(
                             title: const Text("Copy"),
                             leading: const Icon(Icons.copy),

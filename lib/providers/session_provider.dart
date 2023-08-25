@@ -3,6 +3,7 @@ import 'package:mathsaide/controllers/prefs.dart';
 
 class SessionProvider extends ChangeNotifier {
   String? _sessionID;
+  String? _topic;
 
   ///Returns the sessionID.
   ///
@@ -28,6 +29,7 @@ class SessionProvider extends ChangeNotifier {
     await Prefs.saveSession(sessionID);
     // save topic
     await Prefs.saveTopic(topic);
+    _topic = topic;
     _sessionID = sessionID;
     notifyListeners();
   }
@@ -43,7 +45,9 @@ class SessionProvider extends ChangeNotifier {
   ///
   Future<void> clearSession() async {
     _sessionID = "";
+    _topic = "";
     await Prefs.clearSession();
+
     notifyListeners();
   }
 
@@ -53,7 +57,8 @@ class SessionProvider extends ChangeNotifier {
   ///
   Future<void> setTopic(String topic) async {
     await Prefs.saveTopic(topic);
-    print("Topic set to $topic");
+    // print("Topic set to $topic");
+    _topic = topic;
     notifyListeners();
   }
 

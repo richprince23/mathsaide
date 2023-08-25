@@ -1,6 +1,5 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:mathsaide/controllers/prefs.dart';
 
 class UserState extends ChangeNotifier {
   User? _user;

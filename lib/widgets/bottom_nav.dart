@@ -28,105 +28,111 @@ class _BottomNavState extends State<BottomNav> {
         ),
         // borderRadius: BorderRadius.circular(10),
       ),
-      child: NavigationBar(
-        // backgroundColor: cPri.withOpacity(0.5),
-        surfaceTintColor: bgColDark,
-        elevation: 3,
-        selectedIndex: context.watch<PageProvider>().pageIndex,
-        height: 50.w,
-        labelBehavior: NavigationDestinationLabelBehavior.alwaysHide,
-        destinations: [
-          SizedBox(
-            height: 50.w,
-            child: InkWell(
-              // iconSize: 16,
-              onTap: () {
-                setState(() {
-                  pageIndex = 0;
-                  Provider.of<PageProvider>(context, listen: false).setPage(0);
-                });
-              },
-              child: pageIndex == 0
-                  ? const NavItem(
-                      label: "Learn",
-                      icon: Icons.school,
-                    )
-                  : Icon(
-                      Icons.school_outlined,
-                      color: txtCol,
-                      size: 24.w,
-                    ),
+      child: Consumer<PageProvider>(builder: (context, value, child) {
+        return NavigationBar(
+          // backgroundColor: cPri.withOpacity(0.5),
+          surfaceTintColor: bgColDark,
+          elevation: 3,
+          selectedIndex: context.watch<PageProvider>().pageIndex,
+          height: 50.w,
+          labelBehavior: NavigationDestinationLabelBehavior.alwaysHide,
+          destinations: [
+            SizedBox(
+              height: 50.w,
+              child: InkWell(
+                // iconSize: 16,
+                onTap: () {
+                  setState(() {
+                    pageIndex = 0;
+                    Provider.of<PageProvider>(context, listen: false)
+                        .setPage(0);
+                  });
+                },
+                child: value.pageIndex == 0
+                    ? const NavItem(
+                        label: "Learn",
+                        icon: Icons.school,
+                      )
+                    : Icon(
+                        Icons.school_outlined,
+                        color: txtCol,
+                        size: 24.w,
+                      ),
+              ),
             ),
-          ),
-          SizedBox(
-            height: 50.w,
-            child: InkWell(
-              // iconSize: 16,
-              onTap: () {
-                setState(() {
-                  pageIndex = 1;
-                  Provider.of<PageProvider>(context, listen: false).setPage(1);
-                });
-              },
-              child: pageIndex == 1
-                  ? const NavItem(
-                      label: "Practice",
-                      icon: Icons.menu_book,
-                    )
-                  : Icon(
-                      Icons.menu_book_outlined,
-                      color: txtCol,
-                      size: 24.w,
-                    ),
+            SizedBox(
+              height: 50.w,
+              child: InkWell(
+                // iconSize: 16,
+                onTap: () {
+                  setState(() {
+                    pageIndex = 1;
+                    Provider.of<PageProvider>(context, listen: false)
+                        .setPage(1);
+                  });
+                },
+                child: value.pageIndex == 1
+                    ? const NavItem(
+                        label: "Practice",
+                        icon: Icons.menu_book,
+                      )
+                    : Icon(
+                        Icons.menu_book_outlined,
+                        color: txtCol,
+                        size: 24.w,
+                      ),
+              ),
             ),
-          ),
-          SizedBox(
-            height: 50.w,
-            child: InkWell(
-              // iconSize: 16,
-              onTap: () {
-                setState(() {
-                  pageIndex = 2;
-                  Provider.of<PageProvider>(context, listen: false).setPage(2);
-                });
-              },
-              child: pageIndex == 2
-                  ? const NavItem(
-                      label: "History",
-                      icon: Icons.work_history,
-                    )
-                  : Icon(
-                      Icons.work_history_outlined,
-                      color: txtCol,
-                      size: 24.w,
-                    ),
+            SizedBox(
+              height: 50.w,
+              child: InkWell(
+                // iconSize: 16,
+                onTap: () {
+                  setState(() {
+                    pageIndex = 2;
+                    Provider.of<PageProvider>(context, listen: false)
+                        .setPage(2);
+                  });
+                },
+                child: value.pageIndex == 2
+                    ? const NavItem(
+                        label: "History",
+                        icon: Icons.work_history,
+                      )
+                    : Icon(
+                        Icons.work_history_outlined,
+                        color: txtCol,
+                        size: 24.w,
+                      ),
+              ),
             ),
-          ),
-          SizedBox(
-            height: 50.w,
-            // width: size.height * 0.06,
-            child: InkWell(
-              // iconSize: 16,
-              onTap: () {
-                setState(() {
-                  pageIndex = 3;
-                  Provider.of<PageProvider>(context, listen: false).setPage(3);
-                });
-              },
-              child: pageIndex == 3
-                  ? const NavItem(
-                      label: "Settings",
-                      icon: Icons.settings,
-                    )
-                  : Icon(
-                      Icons.settings_outlined,
-                      color: txtCol,
-                      size: 24.w,
-                    ),
+            SizedBox(
+              height: 50.w,
+              // width: size.height * 0.06,
+              child: InkWell(
+                // iconSize: 16,
+                onTap: () {
+                  setState(() {
+                    pageIndex = 3;
+                    Provider.of<PageProvider>(context, listen: false)
+                        .setPage(3);
+                  });
+                },
+                child: value.pageIndex == 3
+                    ? const NavItem(
+                        label: "Settings",
+                        icon: Icons.settings,
+                      )
+                    : Icon(
+                        Icons.settings_outlined,
+                        color: txtCol,
+                        size: 24.w,
+                      ),
+              ),
             ),
-          ),
-        ],
-      ),
+          ],
+        );
+      }),
     );
   }
 }

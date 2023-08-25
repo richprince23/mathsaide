@@ -15,17 +15,20 @@ class TopicItem extends StatelessWidget {
         context.read<SessionProvider>().createSession(title);
       },
       child: Card(
-        elevation: 1,
+        elevation: 0.1,
         color: Colors.white,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(10.r),
         ),
         margin: EdgeInsets.symmetric(vertical: 2.w),
         child: Container(
-          width: 80.vw,
+          width: 90.vw,
           // color: Colors.white,
           padding: pa1.copyWith(left: 20.w),
-          child: Text(title),
+          child: Text(
+            title,
+            style: TextStyle(fontSize: 16.sp),
+          ),
         ),
       ),
     );

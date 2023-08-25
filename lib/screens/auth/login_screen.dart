@@ -4,10 +4,8 @@ import 'package:flutter_keyboard_visibility/flutter_keyboard_visibility.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:mathsaide/constants/constants.dart';
 import 'package:mathsaide/controllers/auth_controller.dart';
-import 'package:mathsaide/providers/user_provider.dart';
 import 'package:mathsaide/widgets/input_control.dart';
 import 'package:mathsaide/widgets/status_snack.dart';
-import 'package:provider/provider.dart';
 import 'package:resize/resize.dart';
 
 class LoginScreen extends StatefulWidget {

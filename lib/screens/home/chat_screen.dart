@@ -1,5 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/scheduler.dart';
 import 'package:flutter_keyboard_visibility/flutter_keyboard_visibility.dart';
 import 'package:math_keyboard/math_keyboard.dart';
 import 'package:mathsaide/constants/constants.dart';
@@ -46,7 +47,11 @@ class _ChatScreenState extends State<ChatScreen> {
         setState(
           () => _sessionID = value!,
         ),
-        print(_sessionID),
+        await Prefs.getTopic().then(
+          (topic) => setState(() => selectedTopic = topic!),
+        ),
+
+        // print(_sessionID),
         chatHistory.clear(),
         if (!chatHistory
             .contains(ChatResponse(content: systemSolvePrompt, role: 'system')))
@@ -57,11 +62,12 @@ class _ChatScreenState extends State<ChatScreen> {
         await uploadChat(content: initialPrompt, role: "assistant"),
         chatHistory
             .add(ChatResponse(content: systemSolvePrompt, role: 'system')),
-        for (var item in chatHistory)
-          {
-            print(item.content),
-          },
-        print(chatHistory.length),
+        // for (var item in chatHistory)
+        //   {
+        //     print(item.content),
+        //   },
+        Future.delayed(const Duration(microseconds: 100))
+        // print(chatHistory.length),
       },
     );
   }
@@ -69,7 +75,7 @@ class _ChatScreenState extends State<ChatScreen> {
   @override
   void dispose() {
     super.dispose();
-    // txtInput.dispose();
+    txtInput.dispose();
     mathsInput.dispose();
     scrollController.dispose();
     focusNode.dispose();
@@ -82,39 +88,60 @@ class _ChatScreenState extends State<ChatScreen> {
         builder: (context, value, child) => value.isConnected == true
             ? Column(children: [
                 Expanded(
-                  child: StreamBuilder<QuerySnapshot<Map<String, dynamic>>?>(
-                      // stream: getCurrentChat(),
-                      stream: getChatByID(_sessionID),
-                      builder: (context, snapshot) {
-                        return ListView.builder(
-                          cacheExtent: 50.vh,
-                          padding: EdgeInsets.symmetric(horizontal: 10.w),
-                          controller: scrollController,
-                          scrollDirection: Axis.vertical,
-                          itemCount: snapshot.data?.docs.length ?? 0,
-                          itemBuilder: (context, index) {
-                            if (snapshot.connectionState ==
-                                ConnectionState.waiting) {
-                              return const Loader();
-                            }
+                  child: FutureBuilder(
+                      future: Prefs.getSession(),
+                      builder: (context, snapData) {
+                        if (snapData.connectionState ==
+                            ConnectionState.waiting) {
+                          return const Loader();
+                        }
+                        if (snapData.hasError) {
+                          return Text("Error: ${snapData.error}");
+                        }
 
-                            if (snapshot.hasError) {
-                              return Text('Error: ${snapshot.error}');
-                            }
+                        return StreamBuilder<
+                                QuerySnapshot<Map<String, dynamic>>?>(
+                            // stream: getCurrentChat(),
+                            stream: getChatByID(_sessionID),
+                            builder: (context, snapshot) {
+                              if (snapshot.connectionState ==
+                                  ConnectionState.waiting) {
+                                return const Loader();
+                              }
 
-                            if (!snapshot.hasData) {
-                              return const Text(
-                                'No learning history found for the topic.',
+                              if (snapshot.hasError) {
+                                return Text('Error: ${snapshot.error}');
+                              }
+
+                              if (!snapshot.hasData ||
+                                  snapshot.data?.docs.isEmpty == true) {
+                                return Column(
+                                  children: [
+                                    ChatBubble(
+                                        isUser: false,
+                                        message:
+                                            "How can i help you with $selectedTopic today?"),
+                                  ],
+                                );
+                              }
+                              return ListView.builder(
+                                physics: const BouncingScrollPhysics(),
+                                cacheExtent: 50.vh,
+                                padding: EdgeInsets.symmetric(horizontal: 10.w),
+                                controller: scrollController,
+                                scrollDirection: Axis.vertical,
+                                itemCount: snapshot.data?.docs.length ?? 0,
+                                itemBuilder: (context, index) {
+                                  final data = snapshot.data?.docs[index];
+                                  print(
+                                      "data returned is   ${data?['content']}");
+                                  return ChatBubble(
+                                    isUser: data!["isUser"],
+                                    message: data["content"],
+                                  );
+                                },
                               );
-                            }
-                            final data = snapshot.data?.docs[index];
-                            print("data returned is   ${data?['content']}");
-                            return ChatBubble(
-                              isUser: data!["isUser"],
-                              message: data["content"],
-                            );
-                          },
-                        );
+                            });
                       }),
                 ),
                 SizedBox(
@@ -177,14 +204,17 @@ class _ChatScreenState extends State<ChatScreen> {
                                           ),
                                           Navigator.pop(context),
 
-                                          scrollController.animateTo(
-                                            scrollController
-                                                    .position.maxScrollExtent +
-                                                80.vh,
-                                            duration: const Duration(
-                                                milliseconds: 500),
-                                            curve: Curves.easeOut,
-                                          ),
+                                          SchedulerBinding.instance
+                                              .addPostFrameCallback((_) {
+                                            scrollController.animateTo(
+                                              scrollController
+                                                  .position.maxScrollExtent,
+                                              duration: const Duration(
+                                                microseconds: 100,
+                                              ),
+                                              curve: Curves.fastOutSlowIn,
+                                            );
+                                          }),
                                         });
                               } catch (e) {
                                 Navigator.pop(context);

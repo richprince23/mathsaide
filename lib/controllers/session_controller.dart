@@ -1,6 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:mathsaide/constants/constants.dart';
 import 'package:mathsaide/controllers/auth_controller.dart';
-import 'package:mathsaide/controllers/prefs.dart';
 
 /// Get all sessions from the database as a stream that matches the user ID and topic
 
@@ -30,8 +30,9 @@ Stream<QuerySnapshot<Map<String, dynamic>>> getSessionsBySessionID(
       .snapshots();
 }
 
-// Get current chat as stream
-Stream<QuerySnapshot<Map<String, dynamic>>>? getChatByID(String sessionID) {
+/// Get current chat as stream
+/// [sessionID] of the conversation
+Stream<QuerySnapshot<Map<String, dynamic>>> getChatByID(String sessionID) {
   final results = FirebaseFirestore.instance
       .collection("sessions")
       .doc(sessionID)
@@ -39,4 +40,18 @@ Stream<QuerySnapshot<Map<String, dynamic>>>? getChatByID(String sessionID) {
       .orderBy("timestamp", descending: false)
       .snapshots();
   return results;
+}
+
+/// Get a list of user's learning history.
+/// [userID] of the logged in user
+///
+/// Returns a List of user's learning history
+///
+Stream<QuerySnapshot<Map<String, dynamic>>> getLearningHistory() {
+  final history = FirebaseFirestore.instance
+      .collection("sessions")
+      .where('userID', isEqualTo: auth.currentUser!.uid)
+      .snapshots();
+  // print(history);
+  return history;
 }

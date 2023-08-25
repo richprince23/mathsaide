@@ -1,7 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:mathsaide/constants/constants.dart';
-import 'package:mathsaide/controllers/auth_controller.dart';
 import 'package:mathsaide/controllers/session_controller.dart';
 import 'package:mathsaide/providers/page_provider.dart';
 import 'package:mathsaide/widgets/history_item.dart';
@@ -22,32 +21,35 @@ class HistoryScreen extends StatelessWidget {
       body: Container(
         padding: EdgeInsets.symmetric(horizontal: 10.w, vertical: 10.w),
         child: StreamBuilder<QuerySnapshot<Map<String, dynamic>>>(
-          // stream: getLearningHistory(),
-          stream: FirebaseFirestore.instance
-              .collection("sessions")
-              .where('userID', isEqualTo: "sdasd")
-              .snapshots(),
+          stream: getLearningHistory(),
+          // stream: FirebaseFirestore.instance
+          //     .collection("sessions")
+          //     .where('userID', isEqualTo: "sdasd")
+          //     .snapshots(),
           builder: (context, AsyncSnapshot snapshot) {
             // print(auth.currentUser?.uid);
             if (snapshot.connectionState == ConnectionState.waiting) {
               return const Loader();
             }
             if (snapshot.hasError) {
-              return Column(
-                mainAxisSize: MainAxisSize.min,
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  const Icon(Icons.error_outline),
-                  SizedBox(
-                    height: 20.w,
-                  ),
-                  const Text("Error while loading data"),
-                ],
+              return Center(
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    const Icon(Icons.error_outline),
+                    SizedBox(
+                      height: 20.w,
+                    ),
+                    const Text("Error while loading data"),
+                  ],
+                ),
               );
             }
             if (snapshot.data?.docs.isEmpty) {
               return Center(
                 child: Container(
+                  margin: px2,
                   padding: pa4,
                   decoration: ShapeDecoration(
                     shape: RoundedRectangleBorder(

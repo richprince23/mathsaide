@@ -23,7 +23,7 @@ Future sendMessage(String message) async {
   //if the message is a response, display the response
   //
   // final String userID = FirebaseAuth.instance.currentUser!.uid;
-  var response;
+  var response ;
 
   String? content;
   // String role;

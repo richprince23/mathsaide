@@ -93,68 +93,64 @@ ThemeData myTheme = ThemeData(
       )
       .copyWith(
         displayLarge: GoogleFonts.poppins(
-          fontSize: 96.sp,
-          fontWeight: FontWeight.w300,
-          color: txtCol,
-        ),
+            fontSize: 96.sp,
+            fontWeight: FontWeight.w300,
+            color: txtCol,
+            letterSpacing: 0),
         displayMedium: GoogleFonts.poppins(
-          fontSize: 60.sp,
-          fontWeight: FontWeight.w300,
-          color: txtCol,
-        ),
+            fontSize: 60.sp,
+            fontWeight: FontWeight.w300,
+            color: txtCol,
+            letterSpacing: 0),
         displaySmall: GoogleFonts.poppins(
-          fontSize: 48.sp,
-          fontWeight: FontWeight.w400,
-          color: txtCol,
-        ),
+            fontSize: 48.sp,
+            fontWeight: FontWeight.w400,
+            color: txtCol,
+            letterSpacing: 0),
         headlineMedium: GoogleFonts.poppins(
-          fontSize: 34.sp,
-          fontWeight: FontWeight.w400,
-          color: txtCol,
-        ),
+            fontSize: 34.sp,
+            fontWeight: FontWeight.w400,
+            color: txtCol,
+            letterSpacing: 0),
         headlineSmall: GoogleFonts.poppins(
-          fontSize: 24.sp,
-          fontWeight: FontWeight.w400,
-          color: txtCol,
-        ),
+            fontSize: 24.sp,
+            fontWeight: FontWeight.w400,
+            color: txtCol,
+            letterSpacing: 0),
         titleLarge: GoogleFonts.poppins(
-          fontSize: 20.sp,
-          fontWeight: FontWeight.w500,
-          color: txtCol,
-        ),
+            fontSize: 20.sp,
+            fontWeight: FontWeight.w500,
+            color: txtCol,
+            letterSpacing: 0),
         titleMedium: GoogleFonts.poppins(
-          fontSize: 16.sp,
-          fontWeight: FontWeight.w400,
-          color: txtCol,
-        ),
+            fontSize: 16.sp,
+            fontWeight: FontWeight.w400,
+            color: txtCol,
+            letterSpacing: 0),
         titleSmall: GoogleFonts.poppins(
-          fontSize: 14.sp,
-          fontWeight: FontWeight.w500,
-          color: txtCol,
-        ),
+            fontSize: 14.sp,
+            fontWeight: FontWeight.w500,
+            color: txtCol,
+            letterSpacing: 0),
         bodyLarge: GoogleFonts.poppins(
-          fontSize: 16.sp,
-          fontWeight: FontWeight.w400,
-          color: txtCol,
-        ),
+            fontSize: 16.sp,
+            fontWeight: FontWeight.w400,
+            color: txtCol,
+            letterSpacing: 0),
         bodyMedium: GoogleFonts.poppins(
-          fontSize: 14.sp,
-          fontWeight: FontWeight.w400,
-          color: txtCol,
-        ),
+            fontSize: 14.sp,
+            fontWeight: FontWeight.w400,
+            color: txtCol,
+            letterSpacing: 0),
         labelLarge: GoogleFonts.poppins(
-          fontSize: 14.sp,
-          color: txtCol,
-        ),
+            fontSize: 14.sp, color: txtCol, letterSpacing: 0),
         bodySmall: GoogleFonts.poppins(
           fontSize: 12.sp,
-          letterSpacing: 0.4,
+          letterSpacing: 0,
           color: txtCol,
         ),
         labelSmall: GoogleFonts.poppins(
-          fontSize: 10.sp,
-          color: txtCol,
-        ),
+            fontSize: 10.sp, color: txtCol, letterSpacing: 0),
       ),
   primaryTextTheme: GoogleFonts.poppinsTextTheme().apply(
     decoration: TextDecoration.none,
@@ -281,6 +277,31 @@ const kTopics = [
   "Series & Sequence",
   "Permutations & Combinations",
   "General Mathematics",
+];
+
+List ageRange = [
+  "12",
+  "13",
+  "14",
+  "15",
+  "16",
+  "17",
+  "18",
+  "19",
+  "20",
+  "21",
+  "22",
+  "23",
+  "24"
+];
+
+List classLevel = [
+  "Grade 7",
+  "Grade 8",
+  "Grade 9",
+  "Grade 10",
+  "Grade 11",
+  "Grade 12",
 ];
 
 void showLoader(BuildContext context) {

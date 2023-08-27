@@ -5,7 +5,7 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleDisplayName</key>
-	<string>Mathsaide</string>
+	<string>MathsAide</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -47,5 +47,27 @@
 	<true/>
 	<key>UIApplicationSupportsIndirectInputEvents</key>
 	<true/>
+	<!-- Camera and photos access -->
+	<key>NSCameraUsageDescription</key>
+	<string>$(PRODUCT_NAME) would like to use the camera</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>$(PRODUCT_NAME) would like to use the microphone</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>$(PRODUCT_NAME) would like to access your photo library</string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>$(PRODUCT_NAME) would like to save photos to your photo library</string>
+	<!-- notifications -->
+	<key>UIBackgroundModes</key>
+		<array>
+			<string>fetch</string>
+			<string>remote-notification</string>
+		</array>
+		<key>NSCalendarsUsageDescription</key>
+		<string>Used to schedule reminders</string>
+		<key>NSNotificationsUsageDescription</key>
+		<string>Used to send notifications</string>
+
+	<key>UIStatusBarHidden</key>
+	<false/>
 </dict>
 </plist>

@@ -56,8 +56,3 @@ Stream<QuerySnapshot<Map<String, dynamic>>> getLearningHistory() {
   return history;
 }
 
-String convertDateTimeString(String timestamp) {
-  final date = DateTime.fromMicrosecondsSinceEpoch(int.parse(timestamp));
-  String formattedDate = DateFormat('MMMM d, yyyy \'at\' h:mm a').format(date);
-  return formattedDate;
-}

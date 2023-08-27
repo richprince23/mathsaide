@@ -1,3 +1,5 @@
+import "dart:io";
+import "package:cloud_firestore/cloud_firestore.dart";
 import "package:firebase_auth/firebase_auth.dart";
 import "package:firebase_storage/firebase_storage.dart";
 
@@ -52,6 +54,7 @@ class Auth {
   }
 
   ///Send password reset email
+  ///
   ///[email] the email of the user to reset
   ///
   static Future resetPassword({required String email}) async {
@@ -61,6 +64,72 @@ class Auth {
       }
     } catch (e) {
       throw Exception(e);
+    }
+  }
+
+  ///Update user details
+  ///[imgPath] the image to set as the avatar
+  ///
+  ///[fullName] the new fullname to set
+  ///
+  ///[age] of the user (12 - 24 years)
+  ///
+  ///[classLevel] the class/grade of the learner (grade 7 - 12)
+  ///
+  ///[school] the school of the user
+  ///
+  static Future updateUser({
+    required String fullName,
+    required int age,
+    required String school,
+    required String classLevel,
+    required String imgPath,
+  }) async {
+    // First update the profile picture
+    FirebaseFirestore db = FirebaseFirestore.instance;
+
+    if (imgPath != "") {
+      if (File(imgPath).existsSync()) {
+        FirebaseStorage storage = FirebaseStorage.instance;
+        UploadTask? task;
+        final avatarRef = storage.ref("avatars");
+        final fileName = "img-${DateTime.now().millisecondsSinceEpoch}.jpg";
+        File img = File(imgPath);
+        final imgRef = avatarRef.child(fileName);
+        task = imgRef.putFile(img.absolute);
+        final imgUrl = await (await task).ref.getDownloadURL();
+        print(imgUrl);
+        // update the user's display image
+        await auth.currentUser?.updatePhotoURL(imgUrl);
+      }
+    }
+
+    //update the other user details
+    final docQuery = await db
+        .collection("user_details")
+        .where("userId", isEqualTo: auth.currentUser!.uid)
+        .get();
+
+    if (docQuery.docs.isNotEmpty && docQuery.size > 0) {
+      //get the docID if the
+      String userDocID = docQuery.docs.first.id;
+
+      await db.collection("user_details").doc(userDocID).update({
+        "fullName": fullName,
+        "age": age,
+        "school": school,
+        "classLevel": classLevel,
+        "userID": auth.currentUser!.uid,
+      });
+    } else {
+      //create a new user details document
+      await db.collection("user_details").add({
+        "fullName": fullName,
+        "age": age,
+        "school": school,
+        "classLevel": classLevel,
+        "userID": auth.currentUser!.uid,
+      });
     }
   }
 }

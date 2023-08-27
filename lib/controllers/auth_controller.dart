@@ -103,7 +103,8 @@ class Auth {
         await auth.currentUser?.updatePhotoURL(imgUrl);
       }
     }
-
+    //update user's name
+    await auth.currentUser?.updateDisplayName(fullName);
     //update the other user details
     final docQuery = await db
         .collection("user_details")

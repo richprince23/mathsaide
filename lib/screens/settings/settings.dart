@@ -16,13 +16,15 @@ class SettingsScreen extends StatefulWidget {
 }
 
 class _SettingsScreenState extends State<SettingsScreen> {
-  String imgUrl = "";
+  String? imgUrl;
+  String name = "";
   @override
   void initState() {
     super.initState();
     auth.userChanges().listen((user) {
       setState(() {
         imgUrl = user?.photoURL ?? "https://picsum.photos/200";
+        name = user?.displayName ?? "";
       });
     });
   }
@@ -58,7 +60,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                   child: CircleAvatar(
                     radius: 14.vw,
                     backgroundImage: CachedNetworkImageProvider(
-                      imgUrl,
+                      imgUrl ?? "https://picsum.photos/200",
                       errorListener: () => const Icon(Icons.person),
                     ),
                   ),
@@ -66,7 +68,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
               ),
               SizedBox(height: 10.h),
               Text(
-                auth.currentUser!.displayName!,
+                name,
                 style: TextStyle(
                   fontSize: 20.sp,
                   fontWeight: FontWeight.bold,

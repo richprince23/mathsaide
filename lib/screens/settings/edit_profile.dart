@@ -9,6 +9,7 @@ import 'package:mathsaide/constants/constants.dart';
 import 'package:mathsaide/constants/utils.dart';
 import 'package:mathsaide/controllers/auth_controller.dart';
 import 'package:mathsaide/widgets/input_control.dart';
+import 'package:mathsaide/widgets/loader.dart';
 import 'package:mathsaide/widgets/select_control1.dart';
 import 'package:mathsaide/widgets/status_snack.dart';
 import 'package:resize/resize.dart';
@@ -22,9 +23,9 @@ class EditProfileScreen extends StatefulWidget {
 
 class _EditProfileScreenState extends State<EditProfileScreen> {
   final _fullNameController = TextEditingController();
-  String _selectedAge = "12";
+  String? _selectedAge;
   final _schoolController = TextEditingController();
-  String? _selectedGrade = "Grade 12";
+  String? _selectedGrade;
   final _formKey = GlobalKey<FormState>();
   String imgUrl = "";
 
@@ -32,11 +33,14 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
   void initState() {
     super.initState();
     auth.userChanges().listen((user) {
-      setState(() {
-        imgUrl = user?.photoURL ?? "https://picsum.photos/200";
-        _fullNameController.text = auth.currentUser!.displayName ?? "";
-      });
+      if (mounted) {
+        setState(() {
+          imgUrl = user?.photoURL ?? "https://picsum.photos/200";
+          _fullNameController.text = auth.currentUser!.displayName ?? "";
+        });
+      }
     });
+    initUser();
   }
 
   @override
@@ -50,12 +54,17 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
 
   initUser() async {
     await Auth.getUserDetails().then((value) {
-      setState(() {
-        _schoolController.text = value?.data()?["school"] ?? "";
-        _selectedAge = value?.data()?["age"] ?? "";
-        _selectedGrade = value?.data()?["classLevel"] ?? "";
-      });
+      if (mounted) {
+        setState(() {
+          _schoolController.text = value?.data()?["school"] ?? "";
+          _selectedAge = value?.data()?["age"].toString() ?? "12";
+          // _selectedAge = (value?.data()?["age"] as int?) as String? ?? "12";
+          _selectedGrade = value?.data()?["classLevel"] ?? "";
+        });
+      }
+      print(_selectedAge);
     });
+    // Future.delayed(const Duration(microseconds: 500));
   }
 
   @override
@@ -123,31 +132,38 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
                     return null;
                   },
                 ),
-                SelectControl(
-                  initialValue: _selectedAge,
-                  onChanged: (age) {
-                    setState(() {
-                      _selectedAge = age!;
-                    });
-                  },
-                  hintText: "Age",
-                  leading: const Icon(Icons.onetwothree),
-                  items: ageRange
-                      .map(
-                        (age) => DropdownMenuItem<String>(
-                          alignment: Alignment.centerLeft,
-                          value: age,
-                          child: Text(age),
-                        ),
-                      )
-                      .toList(),
-                  validator: (value) {
-                    if (value!.isEmpty) {
-                      return "Please enter your age";
-                    }
-                    return null;
-                  },
-                ),
+                FutureBuilder(
+                    initialData: _selectedAge,
+                    builder: (context, data) {
+                      if (data.connectionState == ConnectionState.waiting) {
+                        return const Loader();
+                      }
+                      return SelectControl(
+                        initialValue: _selectedAge,
+                        onChanged: (age) {
+                          setState(() {
+                            _selectedAge = age!;
+                          });
+                        },
+                        hintText: "Age",
+                        leading: const Icon(Icons.onetwothree),
+                        items: ageRange
+                            .map(
+                              (age) => DropdownMenuItem<String>(
+                                alignment: Alignment.centerLeft,
+                                value: age,
+                                child: Text(age),
+                              ),
+                            )
+                            .toList(),
+                        validator: (value) {
+                          if (value!.isEmpty) {
+                            return "Please enter your age";
+                          }
+                          return null;
+                        },
+                      );
+                    }),
                 InputControl(
                   hintText: "School",
                   controller: _schoolController,
@@ -195,7 +211,7 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
                         showLoader(context);
                         await Auth.updateUser(
                           fullName: _fullNameController.text,
-                          age: _selectedAge,
+                          age: _selectedAge!,
                           school: _schoolController.text,
                           classLevel: _selectedGrade!,
                           imgPath: croppedMedia?.path ?? "",

@@ -2,6 +2,8 @@ import 'dart:io';
 
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
+import 'package:image_cropper/image_cropper.dart';
+import 'package:image_picker/image_picker.dart';
 import 'package:mathsaide/constants/constants.dart';
 import 'package:mathsaide/constants/utils.dart';
 import 'package:mathsaide/controllers/auth_controller.dart';
@@ -18,10 +20,41 @@ class EditProfileScreen extends StatefulWidget {
 
 class _EditProfileScreenState extends State<EditProfileScreen> {
   final _fullNameController = TextEditingController();
-  int? _selectedAge;
+  String _selectedAge = "12";
   final _schoolController = TextEditingController();
-  String? _selectedGrade;
+  String? _selectedGrade = "Grade 14";
   final _formKey = GlobalKey<FormState>();
+  String imgUrl = "";
+
+  @override
+  void initState() {
+    super.initState();
+    auth.userChanges().listen((user) {
+      setState(() {
+        imgUrl = user?.photoURL ?? "https://picsum.photos/200";
+      });
+    });
+    _fullNameController.text = auth.currentUser!.displayName ?? "";
+  }
+
+  @override
+  void dispose() {
+    super.dispose();
+    _fullNameController.dispose();
+    _schoolController.dispose();
+    selectedMedia = null;
+    croppedMedia = null;
+  }
+
+  initUser() async {
+    await Auth.getUserDetails().then((value) {
+      setState(() {
+        _schoolController.text = value?.data()?["school"] ?? "";
+        _selectedAge = value?.data()?["age"] ?? "";
+        _selectedGrade = value?.data()?["classLevel"] ?? "";
+      });
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -52,8 +85,7 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
                           : CircleAvatar(
                               radius: 50.r,
                               backgroundImage: CachedNetworkImageProvider(
-                                auth.currentUser!.photoURL ??
-                                    "https://picsum.photos/200",
+                                imgUrl,
                                 errorListener: () => const Icon(Icons.person),
                               ),
                             ),
@@ -77,12 +109,24 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
               SizedBox(
                 height: 10.w,
               ),
-              const InputControl(
+              InputControl(
                 hintText: "Fullname",
-                leading: Icon(Icons.person),
+                leading: const Icon(Icons.person),
+                controller: _fullNameController,
+                validator: (value) {
+                  if (value!.isEmpty) {
+                    return "Please enter your fullname";
+                  }
+                  return null;
+                },
               ),
               SelectControl(
-                onChanged: (age) {},
+                initialValue: "12",
+                onChanged: (age) {
+                  setState(() {
+                    _selectedAge = age!;
+                  });
+                },
                 hintText: "Age",
                 leading: const Icon(Icons.onetwothree),
                 items: ageRange
@@ -94,14 +138,31 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
                       ),
                     )
                     .toList(),
+                validator: (value) {
+                  if (value!.isEmpty) {
+                    return "Please enter your age";
+                  }
+                  return null;
+                },
               ),
               InputControl(
                 hintText: "School",
                 controller: _schoolController,
                 leading: const Icon(Icons.school),
+                validator: (value) {
+                  if (value!.isEmpty) {
+                    return "Please enter your school";
+                  }
+                  return null;
+                },
               ),
               SelectControl(
-                onChanged: (grade) {},
+                initialValue: "Grade 10",
+                onChanged: (grade) {
+                  setState(() {
+                    _selectedGrade = grade!;
+                  });
+                },
                 hintText: "Grade (Class)",
                 leading: const Icon(Icons.people),
                 items: classLevel
@@ -113,6 +174,12 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
                       ),
                     )
                     .toList(),
+                validator: (value) {
+                  if (value!.isEmpty) {
+                    return "Please enter your grade";
+                  }
+                  return null;
+                },
               ),
               SizedBox(
                 height: 20.w,
@@ -120,12 +187,68 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
               SizedBox(
                 width: 100.vw,
                 child: ElevatedButton(
-                    onPressed: () {}, child: const Text("Update Profile")),
+                  onPressed: () async {
+                    if (_formKey.currentState!.validate()) {
+                      showLoader(context);
+                      await Auth.updateUser(
+                        fullName: _fullNameController.text,
+                        age: _selectedAge,
+                        school: _schoolController.text,
+                        classLevel: _selectedGrade!,
+                        imgPath: croppedMedia?.path ?? "",
+                      ).then((value) => Navigator.pop(context));
+                    }
+                  },
+                  child: const Text("Update Profile"),
+                ),
               )
             ],
           ),
         ),
       ),
     );
+  }
+
+  // Crops a selected image file
+  Future<void> cropImage() async {
+    if (selectedMedia != null) {
+      final croppedFile = await ImageCropper().cropImage(
+        sourcePath: selectedMedia!.path,
+        compressFormat: ImageCompressFormat.jpg,
+        compressQuality: 100,
+        uiSettings: [
+          AndroidUiSettings(
+              toolbarTitle: 'Cropper',
+              toolbarColor: priCol,
+              toolbarWidgetColor: Colors.white,
+              initAspectRatio: CropAspectRatioPreset.original,
+              lockAspectRatio: false),
+          IOSUiSettings(
+            title: 'Cropper',
+          ),
+        ],
+      );
+      if (croppedFile != null) {
+        setState(() {
+          croppedMedia = croppedFile;
+        });
+      }
+    }
+  }
+
+  Future<void> uploadImage() async {
+    final pickedFile =
+        await ImagePicker().pickImage(source: ImageSource.gallery);
+    if (pickedFile != null) {
+      setState(() {
+        selectedMedia = pickedFile;
+      });
+    }
+  }
+
+  /// clears selected/cropped image from memory
+  void clear() {
+    selectedMedia = null;
+    croppedMedia = null;
   }
 }

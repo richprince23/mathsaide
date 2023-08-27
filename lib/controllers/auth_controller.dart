@@ -80,7 +80,7 @@ class Auth {
   ///
   static Future updateUser({
     required String fullName,
-    required int age,
+    required String age,
     required String school,
     required String classLevel,
     required String imgPath,
@@ -116,7 +116,7 @@ class Auth {
 
       await db.collection("user_details").doc(userDocID).update({
         "fullName": fullName,
-        "age": age,
+        "age": int.parse(age),
         "school": school,
         "classLevel": classLevel,
         "userID": auth.currentUser!.uid,
@@ -125,11 +125,28 @@ class Auth {
       //create a new user details document
       await db.collection("user_details").add({
         "fullName": fullName,
-        "age": age,
+        "age": int.parse(age),
         "school": school,
         "classLevel": classLevel,
         "userID": auth.currentUser!.uid,
       });
+    }
+  }
+
+  ///Get the user details
+  ///
+  ///Returns a [DocumentSnapshot]
+  static Future<DocumentSnapshot<Map<String, dynamic>>?>
+      getUserDetails() async {
+    final db = FirebaseFirestore.instance;
+    final docQuery = await db
+        .collection("user_details")
+        .where("userID", isEqualTo: auth.currentUser!.uid)
+        .get();
+    if (docQuery.docs.isNotEmpty && docQuery.size > 0) {
+      return docQuery.docs.first;
+    } else {
+      return null;
     }
   }
 }

@@ -12,6 +12,7 @@ class SelectControl extends StatefulWidget {
   final void Function(String? value)? onChanged;
   final bool showLabel;
   final Widget? leading;
+  final String? initialValue;
 
   const SelectControl({
     Key? inputkey,
@@ -21,6 +22,7 @@ class SelectControl extends StatefulWidget {
     this.showLabel = true,
     this.leading,
     this.onChanged,
+    this.initialValue,
   }) : super(key: inputkey);
 
   @override
@@ -54,6 +56,7 @@ class _SelectControlState extends State<SelectControl> {
             height: 1.w,
           ),
         DropdownButtonFormField(
+          value: widget.initialValue ?? "",
           items: widget.items,
           onChanged: widget.onChanged,
           validator: widget.validator,

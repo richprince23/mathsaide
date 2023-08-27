@@ -107,7 +107,7 @@ class Auth {
     //update the other user details
     final docQuery = await db
         .collection("user_details")
-        .where("userId", isEqualTo: auth.currentUser!.uid)
+        .where("userID", isEqualTo: auth.currentUser!.uid)
         .get();
 
     if (docQuery.docs.isNotEmpty && docQuery.size > 0) {

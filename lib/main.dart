@@ -5,6 +5,7 @@ import 'package:mathsaide/constants/constants.dart';
 import 'package:mathsaide/controllers/network_controller.dart';
 import 'package:mathsaide/firebase_options.dart';
 import 'package:mathsaide/providers/page_provider.dart';
+import 'package:mathsaide/providers/quiz_provider.dart';
 import 'package:mathsaide/providers/session_provider.dart';
 import 'package:mathsaide/providers/user_provider.dart';
 import 'package:mathsaide/screens/auth/auth_gate.dart';
@@ -32,6 +33,7 @@ void main() async {
         ChangeNotifierProvider(create: (_) => SessionProvider()),
         ChangeNotifierProvider(create: (_) => NetworkProvider()),
         ChangeNotifierProvider(create: (_) => UserState()),
+        ChangeNotifierProvider(create: (_) => QuizProvider()),
       ],
       child: const MainApp(),
     ),

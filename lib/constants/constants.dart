@@ -2,6 +2,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_remote_config/firebase_remote_config.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:mathsaide/models/quiz_model.dart';
 import 'package:mathsaide/screens/home/quiz.dart';
 import 'package:mathsaide/screens/settings/history.dart';
 import 'package:mathsaide/screens/home/learn_now_screen.dart';
@@ -277,6 +278,22 @@ const kTopics = [
   "Series & Sequence",
   "Permutations & Combinations",
   "General Mathematics",
+];
+
+//JSON file mappings for topics
+const kTopicFiles = [
+  "trigonometry.json",
+  "indices.json",
+  // "vector.json",
+  "algebra.json",
+  "statistics.json",
+  "polynomials.json",
+  "sets.json",
+  "calculus.json",
+  "circle_theorem.json",
+  "series.json",
+  "permutations.json",
+  "general.json",
 ];
 
 List ageRange = [

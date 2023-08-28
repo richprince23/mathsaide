@@ -30,6 +30,9 @@ class _QuizItemState extends State<QuizItem> {
           mainAxisSize: MainAxisSize.min,
           children: [
             Text(widget.quizItem.questionText),
+            SizedBox(
+              height: 10.h,
+            ),
             ...widget.quizItem.options
                 .map(
                   (e) => RadioListTile(

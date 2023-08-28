@@ -1,13 +1,21 @@
 class Question {
   final String questionText;
   final List<String> options;
-  final int correctOptionIndex;
+  final String correctAnswer;
 
   Question({
     required this.questionText,
     required this.options,
-    required this.correctOptionIndex,
+    required this.correctAnswer,
   });
+
+  factory Question.fromJson(Map<String, dynamic> json) {
+    return Question(
+      questionText: json['question'],
+      options: List<String>.from(json['options']),
+      correctAnswer: json['correct_answer'],
+    );
+  }
 }
 
 class Quiz {

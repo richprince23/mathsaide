@@ -1,0 +1,1012 @@
+[
+    {
+        "question": "Simplify the expression: 2x^2 + 5x - 3",
+        "options": [
+            "2x^2 + 5x - 3",
+            "2x^2 - 5x - 3",
+            "2x^2 + 5x + 3",
+            "2x^2 - 5x + 3"
+        ],
+        "correct_answer": "2x^2 + 5x - 3"
+    },
+    {
+        "question": "Factorize the quadratic: x^2 + 6x + 9",
+        "options": [
+            "(x + 3)^2",
+            "(x - 3)^2",
+            "(x + 2)^2",
+            "(x - 2)^2"
+        ],
+        "correct_answer": "(x + 3)^2"
+    },
+    {
+        "question": "Solve the equation: 2x - 8 = 4",
+        "options": [
+            "x = 6",
+            "x = 2",
+            "x = 4",
+            "x = 8"
+        ],
+        "correct_answer": "x = 6"
+    },
+    {
+        "question": "Simplify: (4x^3 + 3x^2 - 2x) / x",
+        "options": [
+            "4x^2 + 3x - 2",
+            "4x^2 - 3x + 2",
+            "4x^3 + 3x^2 - 2x^2",
+            "4x^3 + 3x - 2"
+        ],
+        "correct_answer": "4x^2 + 3x - 2"
+    },
+    {
+        "question": "Find the value of x: |x - 5| = 9",
+        "options": [
+            "x = 14",
+            "x = -14",
+            "x = 4",
+            "x = -4"
+        ],
+        "correct_answer": "x = 14"
+    },
+    {
+        "question": "Solve the equation system: \n2x + y = 10\nx - y = 4",
+        "options": [
+            "x = 3, y = 1",
+            "x = 6, y = -2",
+            "x = 2, y = 6",
+            "x = 5, y = 5"
+        ],
+        "correct_answer": "x = 3, y = 1"
+    },
+    {
+        "question": "Simplify the expression: (2x^2 - 4x + 6) - (x^2 + 2x - 3)",
+        "options": [
+            "x^2 - 6x + 9",
+            "x^2 - 2x + 9",
+            "x^2 - 6x - 9",
+            "x^2 + 6x + 9"
+        ],
+        "correct_answer": "x^2 - 2x + 9"
+    },
+    {
+        "question": "Find the sum of the roots of the quadratic equation: x^2 - 8x + 16 = 0",
+        "options": [
+            "8",
+            "16",
+            "4",
+            "0"
+        ],
+        "correct_answer": "8"
+    },
+    {
+        "question": "Solve for x: 3(x - 2) + 2 = 5(x + 1)",
+        "options": [
+            "x = 1",
+            "x = 2",
+            "x = -1",
+            "x = 3"
+        ],
+        "correct_answer": "x = 2"
+    },
+    {
+        "question": "Simplify: 2(3x + 5) - 3(2x - 4)",
+        "options": [
+            "x + 22",
+            "7x + 7",
+            "x + 16",
+            "x - 18"
+        ],
+        "correct_answer": "x + 16"
+    },
+    {
+        "question": "Find the value of x: √(x^2 + 9) = 6",
+        "options": [
+            "x = 3",
+            "x = -3",
+            "x = 15",
+            "x = -15"
+        ],
+        "correct_answer": "x = 3"
+    },
+    {
+        "question": "Solve the equation: 4(x + 3) = 8x - 4",
+        "options": [
+            "x = 1",
+            "x = -1",
+            "x = 2",
+            "x = -2"
+        ],
+        "correct_answer": "x = 1"
+    },
+    {
+        "question": "Expand the expression: (2x - 3)^2",
+        "options": [
+            "4x^2 - 9",
+            "4x^2 - 12x + 9",
+            "4x^2 + 6x + 9",
+            "4x^2 - 6x + 9"
+        ],
+        "correct_answer": "4x^2 - 12x + 9"
+    },
+    {
+        "question": "Find the domain of the function: f(x) = √(3x + 2)",
+        "options": [
+            "x ≥ -2/3",
+            "x > -2/3",
+            "x < -2/3",
+            "x ≤ -2/3"
+        ],
+        "correct_answer": "x ≥ -2/3"
+    },
+    {
+        "question": "Solve for x: log₂(x + 1) = 3",
+        "options": [
+            "x = 7",
+            "x = 8",
+            "x = 2",
+            "x = 6"
+        ],
+        "correct_answer": "x = 7"
+    },
+    {
+        "question": "Find the value of x: 2^(3x) = 16",
+        "options": [
+            "x = 1",
+            "x = 2",
+            "x = 3",
+            "x = 4"
+        ],
+        "correct_answer": "x = 2"
+    },
+    {
+        "question": "Solve the equation: 5x - 7 = 3x + 5",
+        "options": [
+            "x = 6",
+            "x = -6",
+            "x = 2",
+            "x = -2"
+        ],
+        "correct_answer": "x = 6"
+    },
+    {
+        "question": "Factorize: x^2 - 25",
+        "options": [
+            "(x + 5)(x - 5)",
+            "(x + 25)(x - 1)",
+            "(x + 5)(x + 5)",
+            "(x - 25)(x - 1)"
+        ],
+        "correct_answer": "(x + 5)(x - 5)"
+    },
+    {
+        "question": "Simplify: 2sin²θ + 3cos²θ",
+        "options": [
+            "2",
+            "3",
+            "5",
+            "θ"
+        ],
+        "correct_answer": "2"
+    },
+    {
+        "question": "Find the solution set for the inequality: 4x - 7 ≥ 5",
+        "options": [
+            "x ≥ 3",
+            "x ≤ -3",
+            "x ≥ -3",
+            "x ≤ 3"
+        ],
+        "correct_answer": "x ≥ 3"
+    },
+    {
+        "question": "Solve for x: e^(2x) = 7",
+        "options": [
+            "x = ln(7/2)",
+            "x = ln(2/7)",
+            "x = 7",
+            "x = 2"
+        ],
+        "correct_answer": "x = ln(7/2)"
+    },
+    {
+        "question": "Solve for x: 2x + 3 = 5x - 4",
+        "options": [
+            "x = 1",
+            "x = -1",
+            "x = 2",
+            "x = -2"
+        ],
+        "correct_answer": "x = 1"
+    },
+    {
+        "question": "Find the value of x: log₄(x) = 2",
+        "options": [
+            "x = 16",
+            "x = 8",
+            "x = 4",
+            "x = 2"
+        ],
+        "correct_answer": "x = 16"
+    },
+    {
+        "question": "Simplify: 3(x - 4) + 2(2x + 1)",
+        "options": [
+            "5x - 6",
+            "7x - 5",
+            "7x - 7",
+            "5x - 7"
+        ],
+        "correct_answer": "7x - 5"
+    },
+    {
+        "question": "Find the roots of the quadratic equation: x^2 + 5x + 6 = 0",
+        "options": [
+            "x = -3, x = -2",
+            "x = 3, x = 2",
+            "x = -6, x = -1",
+            "x = 6, x = 1"
+        ],
+        "correct_answer": "x = -3, x = -2"
+    },
+    {
+        "question": "Solve for x: 2(3x - 1) = 4x + 6",
+        "options": [
+            "x = 2",
+            "x = 3",
+            "x = 4",
+            "x = 5"
+        ],
+        "correct_answer": "x = 2"
+    },
+    {
+        "question": "Simplify: cos(π/3) + sin(π/6)",
+        "options": [
+            "√3",
+            "1/√2",
+            "1",
+            "2"
+        ],
+        "correct_answer": "√3"
+    },
+    {
+        "question": "Find the value of x: tan(π/4) = x",
+        "options": [
+            "x = 1",
+            "x = -1",
+            "x = 0",
+            "x = √2"
+        ],
+        "correct_answer": "x = 1"
+    },
+    {
+        "question": "Solve the equation system: \n3x + 2y = 11\nx - y = 5",
+        "options": [
+            "x = 3, y = -2",
+            "x = 7, y = 2",
+            "x = 2, y = -7",
+            "x = 2, y = 7"
+        ],
+        "correct_answer": "x = 3, y = -2"
+    },
+    {
+        "question": "Find the domain of the function: g(x) = 1/(x - 4)",
+        "options": [
+            "x ≠ 4",
+            "x = 4",
+            "x > 4",
+            "x < 4"
+        ],
+        "correct_answer": "x ≠ 4"
+    },
+    {
+        "question": "Simplify: 5x - 3 + 2x + 7",
+        "options": [
+            "7x + 10",
+            "7x + 4",
+            "3x + 4",
+            "3x + 10"
+        ],
+        "correct_answer": "7x + 4"
+    },
+    {
+        "question": "Factorize: x^2 - 4",
+        "options": [
+            "(x + 2)(x - 2)",
+            "(x + 4)(x - 4)",
+            "(x + 1)(x - 1)",
+            "(x + 3)(x - 3)"
+        ],
+        "correct_answer": "(x + 2)(x - 2)"
+    },
+    {
+        "question": "Solve for x: 2(x + 5) = 3x - 7",
+        "options": [
+            "x = 12",
+            "x = -12",
+            "x = 10",
+            "x = -10"
+        ],
+        "correct_answer": "x = 12"
+    },
+    {
+        "question": "Find the value of x: √(x^2 + 16) = 8",
+        "options": [
+            "x = 0",
+            "x = 12",
+            "x = -12",
+            "x = 4"
+        ],
+        "correct_answer": "x = 0"
+    },
+    {
+        "question": "Simplify: 2sin(π/6) + 3cos(π/3)",
+        "options": [
+            "5/2",
+            "7/2",
+            "5",
+            "7"
+        ],
+        "correct_answer": "5/2"
+    },
+    {
+        "question": "Find the value of x: log₃(27x) = 4",
+        "options": [
+            "x = 3/27",
+            "x = 27/3",
+            "x = 81",
+            "x = 1/81"
+        ],
+        "correct_answer": "x = 3/27"
+    },
+    {
+        "question": "Solve for x: e^(3x) = 20",
+        "options": [
+            "x = ln(20/3)",
+            "x = ln(3/20)",
+            "x = 20",
+            "x = 3"
+        ],
+        "correct_answer": "x = ln(20/3)"
+    },
+    {
+        "question": "Simplify: cos(π/4) + cos(π/4)",
+        "options": [
+            "√2",
+            "2√2",
+            "1",
+            "2"
+        ],
+        "correct_answer": "√2"
+    },
+    {
+        "question": "Find the solution set for the inequality: 2x + 1 < 5",
+        "options": [
+            "x < 2",
+            "x > 2",
+            "x ≤ 2",
+            "x ≥ 2"
+        ],
+        "correct_answer": "x < 2"
+    },
+    {
+        "question": "Solve for x: 4x - 6 = 2x + 10",
+        "options": [
+            "x = 8",
+            "x = -8",
+            "x = 4",
+            "x = -4"
+        ],
+        "correct_answer": "x = 8"
+    },
+    {
+        "question": "Find the roots of the quadratic equation: 2x^2 - 5x - 12 = 0",
+        "options": [
+            "x = 4, x = -3/2",
+            "x = -4, x = 3/2",
+            "x = 3, x = -4/2",
+            "x = -3, x = 4/2"
+        ],
+        "correct_answer": "x = 4, x = -3/2"
+    },
+    {
+        "question": "Simplify: 3x^2 + 2x^2 - x^2",
+        "options": [
+            "4x^2",
+            "5x^2",
+            "6x^2",
+            "x^2"
+        ],
+        "correct_answer": "4x^2"
+    },
+    {
+        "question": "Find the value of x: tan(π/6) = x",
+        "options": [
+            "x = 1/√3",
+            "x = √3",
+            "x = 1",
+            "x = 2"
+        ],
+        "correct_answer": "x = 1/√3"
+    },
+    {
+        "question": "Solve for x: 2(4x - 5) = 3(2x + 1)",
+        "options": [
+            "x = 1",
+            "x = 2",
+            "x = 3",
+            "x = 4"
+        ],
+        "correct_answer": "x = 2"
+    },
+    {
+        "question": "Find the sum of the solutions of the equation: x^2 - 7x + 12 = 0",
+        "options": [
+            "7",
+            "12",
+            "5",
+            "14"
+        ],
+        "correct_answer": "7"
+    },
+    {
+        "question": "Simplify: 4(x + 3) - 2(2x - 1)",
+        "options": [
+            "2x + 2",
+            "6x + 2",
+            "2x + 10",
+            "6x + 10"
+        ],
+        "correct_answer": "2x + 2"
+    },
+    {
+        "question": "Find the value of x: log₅(25x) = 3",
+        "options": [
+            "x = 1/5",
+            "x = 1",
+            "x = 5",
+            "x = 25"
+        ],
+        "correct_answer": "x = 1/5"
+    },
+    {
+        "question": "Solve for x: 3(x + 2) = 6x - 1",
+        "options": [
+            "x = 3",
+            "x = -3",
+            "x = 2",
+            "x = -2"
+        ],
+        "correct_answer": "x = 3"
+    },
+    {
+        "question": "Factorize: x^2 + 6x + 9",
+        "options": [
+            "(x + 3)^2",
+            "(x - 3)^2",
+            "(x + 2)^2",
+            "(x - 2)^2"
+        ],
+        "correct_answer": "(x + 3)^2"
+    },
+    {
+        "question": "Find the domain of the function: h(x) = √(x + 4)",
+        "options": [
+            "x ≥ -4",
+            "x > -4",
+            "x < -4",
+            "x ≤ -4"
+        ],
+        "correct_answer": "x ≥ -4"
+    },
+    {
+        "question": "Simplify: sin(π/3) + cos(π/6)",
+        "options": [
+            "1",
+            "√3",
+            "1/√2",
+            "2"
+        ],
+        "correct_answer": "√3"
+    },
+    {
+        "question": "Solve for x: 3x - 2 = 4x + 1",
+        "options": [
+            "x = -3",
+            "x = 3",
+            "x = 2",
+            "x = -2"
+        ],
+        "correct_answer": "x = -3"
+    },
+    {
+        "question": "Find the value of x: log₁₀(x) = 2",
+        "options": [
+            "x = 100",
+            "x = 10",
+            "x = 1",
+            "x = 0"
+        ],
+        "correct_answer": "x = 100"
+    },
+    {
+        "question": "Simplify: 2(cosθ + sinθ) + 3(cosθ - sinθ)",
+        "options": [
+            "5cosθ + 5sinθ",
+            "5cosθ - 5sinθ",
+            "5cosθ",
+            "5sinθ"
+        ],
+        "correct_answer": "5cosθ"
+    },
+    {
+        "question": "Find the roots of the quadratic equation: x^2 + 6x + 9 = 0",
+        "options": [
+            "x = -3",
+            "x = 3",
+            "x = -6",
+            "x = 6"
+        ],
+        "correct_answer": "x = -3"
+    },
+    {
+        "question": "Simplify: 2(2x - 3) + 3(3x + 2)",
+        "options": [
+            "12x + 5",
+            "12x - 5",
+            "13x + 5",
+            "13x - 5"
+        ],
+        "correct_answer": "13x + 5"
+    },
+    {
+        "question": "Find the value of x: tan(π/3) = x",
+        "options": [
+            "x = √3",
+            "x = 1/√3",
+            "x = 1",
+            "x = 3"
+        ],
+        "correct_answer": "x = √3"
+    },
+    {
+        "question": "Solve for x: 3(2x - 4) = 5(3x + 1)",
+        "options": [
+            "x = 2",
+            "x = 3",
+            "x = 4",
+            "x = 5"
+        ],
+        "correct_answer": "x = 2"
+    },
+    {
+        "question": "Find the sum of the solutions of the equation: 2x^2 - 8x + 6 = 0",
+        "options": [
+            "8",
+            "6",
+            "4",
+            "2"
+        ],
+        "correct_answer": "4"
+    },
+    {
+        "question": "Simplify: sin(π/6) + cos(π/3)",
+        "options": [
+            "1",
+            "√3",
+            "1/√2",
+            "2"
+        ],
+        "correct_answer": "1 + √3"
+    },
+    {
+        "question": "Find the value of x: log₄(64x) = 3",
+        "options": [
+            "x = 1/64",
+            "x = 64",
+            "x = 1",
+            "x = 4"
+        ],
+        "correct_answer": "x = 1/64"
+    },
+    {
+        "question": "Solve for x: 5x + 3 = 2x - 1",
+        "options": [
+            "x = -1",
+            "x = 1",
+            "x = 2",
+            "x = -2"
+        ],
+        "correct_answer": "x = -1"
+    },
+    {
+        "question": "Find the value of x: log₃(27) = x",
+        "options": [
+            "x = 1",
+            "x = 2",
+            "x = 3",
+            "x = 4"
+        ],
+        "correct_answer": "x = 3"
+    },
+    {
+        "question": "Simplify: sin(π/4) + cos(π/4)",
+        "options": [
+            "1",
+            "√2",
+            "1/√2",
+            "2"
+        ],
+        "correct_answer": "√2"
+    },
+    {
+        "question": "Find the roots of the quadratic equation: x^2 - 6x + 9 = 0",
+        "options": [
+            "x = 3",
+            "x = -3",
+            "x = 6",
+            "x = -6"
+        ],
+        "correct_answer": "x = 3"
+    },
+    {
+        "question": "Simplify: 4(2x - 5) + 3(3x + 1)",
+        "options": [
+            "17x - 17",
+            "17x - 14",
+            "14x - 17",
+            "14x - 14"
+        ],
+        "correct_answer": "17x - 17"
+    },
+    {
+        "question": "Find the value of x: tan(π/4) = x",
+        "options": [
+            "x = 1",
+            "x = √2",
+            "x = 1/√2",
+            "x = 2"
+        ],
+        "correct_answer": "x = 1"
+    },
+    {
+        "question": "Solve for x: 2(3x + 2) = 5x - 1",
+        "options": [
+            "x = 1",
+            "x = 2",
+            "x = 3",
+            "x = 4"
+        ],
+        "correct_answer": "x = 1"
+    },
+    {
+        "question": "Factorize: x^2 - 8x + 16",
+        "options": [
+            "(x + 4)(x - 4)",
+            "(x + 2)(x - 2)",
+            "(x + 3)(x - 3)",
+            "(x + 6)(x - 6)"
+        ],
+        "correct_answer": "(x - 4)^2"
+    },
+    {
+        "question": "Find the domain of the function: f(x) = 1/(x + 2)",
+        "options": [
+            "x ≠ -2",
+            "x = -2",
+            "x > -2",
+            "x < -2"
+        ],
+        "correct_answer": "x ≠ -2"
+    },
+    {
+        "question": "Simplify: 2cos(π/6) + 3sin(π/3)",
+        "options": [
+            "3√3/2",
+            "√3/2",
+            "√6/2",
+            "3√2/2"
+        ],
+        "correct_answer": "3√3/2"
+    },
+    {
+        "question": "Solve for x: 4x - 7 = 3x + 2",
+        "options": [
+            "x = 9",
+            "x = -9",
+            "x = 5",
+            "x = -5"
+        ],
+        "correct_answer": "x = 9"
+    },
+    {
+        "question": "Find the value of x: log₂(8) = x",
+        "options": [
+            "x = 2",
+            "x = 3",
+            "x = 4",
+            "x = 5"
+        ],
+        "correct_answer": "x = 3"
+    },
+    {
+        "question": "Simplify: cos(π/3) - sin(π/6)",
+        "options": [
+            "√3/2",
+            "1/√2",
+            "√2",
+            "1"
+        ],
+        "correct_answer": "√3/2"
+    },
+    {
+        "question": "Find the roots of the quadratic equation: x^2 - 5x + 6 = 0",
+        "options": [
+            "x = 2, x = 3",
+            "x = -2, x = -3",
+            "x = 6, x = 1",
+            "x = -6, x = -1"
+        ],
+        "correct_answer": "x = 2, x = 3"
+    },
+    {
+        "question": "Simplify: 3(2x - 5) + 2(3x + 1)",
+        "options": [
+            "9x + 1",
+            "9x - 9",
+            "11x - 11",
+            "11x + 11"
+        ],
+        "correct_answer": "9x + 1"
+    },
+    {
+        "question": "Find the value of x: sin(π/4) = x",
+        "options": [
+            "x = 1",
+            "x = √2",
+            "x = 1/√2",
+            "x = 2"
+        ],
+        "correct_answer": "x = 1/√2"
+    },
+    {
+        "question": "Solve for x: 2(x + 3) = 3x - 5",
+        "options": [
+            "x = 13",
+            "x = -13",
+            "x = 8",
+            "x = -8"
+        ],
+        "correct_answer": "x = 13"
+    },
+    {
+        "question": "Find the product of the solutions of the equation: x^2 - 10x + 25 = 0",
+        "options": [
+            "25",
+            "10",
+            "1",
+            "0"
+        ],
+        "correct_answer": "25"
+    },
+    {
+        "question": "Simplify: 2sin(π/6) + 3cos(π/3)",
+        "options": [
+            "2 + √3",
+            "4√3/2",
+            "5/2",
+            "√2 + √3"
+        ],
+        "correct_answer": "2 + √3"
+    },
+    {
+        "question": "Find the value of x: log₅(125) = x",
+        "options": [
+            "x = 1",
+            "x = 2",
+            "x = 3",
+            "x = 4"
+        ],
+        "correct_answer": "x = 3"
+    },
+    {
+        "question": "Solve for x: 6x + 4 = 2x - 8",
+        "options": [
+            "x = -2",
+            "x = 2",
+            "x = 3",
+            "x = -3"
+        ],
+        "correct_answer": "x = -2"
+    },
+    {
+        "question": "Find the value of x: log₄(64) = x",
+        "options": [
+            "x = 1",
+            "x = 2",
+            "x = 3",
+            "x = 4"
+        ],
+        "correct_answer": "x = 3"
+    },
+    {
+        "question": "Simplify: cos(π/6) + sin(π/3)",
+        "options": [
+            "√2",
+            "1/√2",
+            "√3",
+            "1"
+        ],
+        "correct_answer": "√2"
+    },
+    {
+        "question": "Find the roots of the quadratic equation: x^2 - 4x + 4 = 0",
+        "options": [
+            "x = 2",
+            "x = -2",
+            "x = 4",
+            "x = -4"
+        ],
+        "correct_answer": "x = 2"
+    },
+    {
+        "question": "Simplify: 3(3x - 5) - 2(2x + 1)",
+        "options": [
+            "7x - 17",
+            "5x - 7",
+            "8x - 10",
+            "6x - 6"
+        ],
+        "correct_answer": "5x - 7"
+    },
+    {
+        "question": "Find the value of x: cos(π/4) = x",
+        "options": [
+            "x = √2",
+            "x = 1/√2",
+            "x = 1",
+            "x = 2"
+        ],
+        "correct_answer": "x = 1/√2"
+    },
+    {
+        "question": "Solve for x: 4(2x + 3) = 6x - 1",
+        "options": [
+            "x = 2",
+            "x = 3",
+            "x = 4",
+            "x = 5"
+        ],
+        "correct_answer": "x = 3"
+    },
+    {
+        "question": "Factorize: x^2 - 10x + 25",
+        "options": [
+            "(x - 5)^2",
+            "(x + 5)^2",
+            "(x - 3)^2",
+            "(x + 3)^2"
+        ],
+        "correct_answer": "(x - 5)^2"
+    },
+    {
+        "question": "Find the domain of the function: g(x) = 1/(x - 3)",
+        "options": [
+            "x ≠ 3",
+            "x = 3",
+            "x > 3",
+            "x < 3"
+        ],
+        "correct_answer": "x ≠ 3"
+    },
+    {
+        "question": "Simplify: 2cos(π/3) + 3sin(π/6)",
+        "options": [
+            "√6/2",
+            "3√2/2",
+            "√3/2",
+            "2√3/2"
+        ],
+        "correct_answer": "3√2/2"
+    },
+    {
+        "question": "Solve for x: 5x - 3 = 2x + 7",
+        "options": [
+            "x = 2",
+            "x = -2",
+            "x = 5",
+            "x = -5"
+        ],
+        "correct_answer": "x = 2"
+    },
+    {
+        "question": "Find the value of x: log₅(25) = x",
+        "options": [
+            "x = 1",
+            "x = 2",
+            "x = 3",
+            "x = 4"
+        ],
+        "correct_answer": "x = 2"
+    },
+    {
+        "question": "Simplify: sin(π/6) + cos(π/3)",
+        "options": [
+            "1",
+            "√3",
+            "1/√2",
+            "2"
+        ],
+        "correct_answer": "1 + √3"
+    },
+    {
+        "question": "Find the roots of the quadratic equation: x^2 - 7x + 12 = 0",
+        "options": [
+            "x = 3, x = 4",
+            "x = -3, x = -4",
+            "x = 6, x = 1",
+            "x = -6, x = -1"
+        ],
+        "correct_answer": "x = 3, x = 4"
+    },
+    {
+        "question": "Simplify: 3(2x - 4) - 2(3x + 1)",
+        "options": [
+            "x - 11",
+            "7x - 6",
+            "5x - 10",
+            "4x - 6"
+        ],
+        "correct_answer": "x - 11"
+    },
+    {
+        "question": "Find the value of x: cos(π/3) = x",
+        "options": [
+            "x = 1",
+            "x = √3",
+            "x = 1/√3",
+            "x = 2"
+        ],
+        "correct_answer": "x = 1/2"
+    },
+    {
+        "question": "Solve for x: 2(3x + 5) = 5x - 1",
+        "options": [
+            "x = 3",
+            "x = 4",
+            "x = 5",
+            "x = 6"
+        ],
+        "correct_answer": "x = 6"
+    },
+    {
+        "question": "Find the difference of the solutions of the equation: x^2 - 12x + 36 = 0",
+        "options": [
+            "12",
+            "6",
+            "3",
+            "0"
+        ],
+        "correct_answer": "6"
+    },
+    {
+        "question": "Simplify: 3sin(π/6) + 2cos(π/3)",
+        "options": [
+            "3 + √3",
+            "2√2 + 3√3",
+            "4/√2",
+            "3√2 + 2√3"
+        ],
+        "correct_answer": "3 + √3"
+    },
+    {
+        "question": "Find the value of x: log₁₀(10) = x",
+        "options": [
+            "x = 0",
+            "x = 1",
+            "x = 10",
+            "x = 100"
+        ],
+        "correct_answer": "x = 1"
+    }
+]

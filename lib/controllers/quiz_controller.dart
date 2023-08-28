@@ -2,12 +2,16 @@ import 'dart:convert';
 import 'package:http/http.dart' as http;
 import 'package:mathsaide/constants/constants.dart';
 import 'package:mathsaide/controllers/auth_controller.dart';
+import 'package:mathsaide/models/quiz_model.dart';
 
-Future generateQuestions({String topic = "Algebra", int number = 10}) async {
+Future<String?> generateQuestions(
+    {String topic = "Algebra", int number = 10}) async {
   // get student age
-  int? age;
+  // int? age;
   // get student level
   String? level;
+  //quiz questions list
+  List<Question> questionList = [];
 
   await db
       .collection("user_details")
@@ -15,7 +19,7 @@ Future generateQuestions({String topic = "Algebra", int number = 10}) async {
       .get()
       .then((value) {
     if (value.docs.isNotEmpty) {
-      age = value.docs.first.data()["age"];
+      // age = value.docs.first.data()["age"];
       level = value.docs.first.data()["class"];
     }
   });
@@ -33,7 +37,7 @@ Future generateQuestions({String topic = "Algebra", int number = 10}) async {
   var body = jsonEncode({
     "model": "gpt-3.5-turbo",
     "temperature": 0.9,
-    "max_tokens": 256,
+    // "max_tokens": 400,
     "frequency_penalty": 0,
     "presence_penalty": 0.5,
     "stop": 'finish',
@@ -43,7 +47,14 @@ Future generateQuestions({String topic = "Algebra", int number = 10}) async {
       {
         "role": "system",
         "content":
-            "Generate $number Mutliple Choice Questions with 4 options for a $level student on the topic $topic."
+            """Generate $number Multiple Choice Questions with 4 options for a $level student on the topic $topic. Format response as json like "question": "Simplify: 3sin(π/6) + 2cos(π/3)",
+        "options": [
+            "3 + √3",
+            "2√2 + 3√3",
+            "4/√2",
+            "3√2 + 2√3"
+        ],
+        "correct_answer": "3 + √3"."""
       }
     ],
   });
@@ -53,10 +64,15 @@ Future generateQuestions({String topic = "Algebra", int number = 10}) async {
 
     if (response.statusCode == 200) {
       // print(await response.stream.bytesToString());
+      // print(response.body);
+      Map<String, dynamic> jsonData = jsonDecode(response.body);
+      String content = jsonData['choices'][0]['message']['content'];
+      // print("content is $content");
 
-      return response.body;
+      return content;
     } else {
-      return ("${response.reasonPhrase!} ${response.statusCode}");
+      // return ("${response.reasonPhrase!} ${response.statusCode}");
+      return null;
     }
   } catch (e) {
     throw Exception(e);

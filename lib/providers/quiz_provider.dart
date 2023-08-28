@@ -1,35 +1,33 @@
 import 'dart:convert';
-import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:mathsaide/constants/constants.dart';
-import 'package:mathsaide/controllers/chat_controller.dart';
-import 'package:mathsaide/controllers/quiz_controller.dart';
 import 'package:mathsaide/models/quiz_model.dart';
 
 class QuizProvider extends ChangeNotifier {
-  List noQuestions = ["5", "10", "15", "20"];
-  int noOfQuestions = 10;
+  // List noQuestions = ["5", "10", "15", "20"];
+  int _noOfQuestions = 10;
   String selectedTopic = "Algebra";
   int quizIndex = 0;
   List<Question> _quizQuestions = [];
-  int quizScore = 0;
+  int _quizScore = 0;
   bool _isQuizStarted = false;
 
 // getters
 
-  int get getNoQuestions => noOfQuestions;
+  int get getNoQuestions => _noOfQuestions;
   String get getSelectedTopic => selectedTopic;
   int get getQuizIndex => quizIndex;
   List<Question> get getQuizQuestions => _quizQuestions;
-  int get getQuizScore => quizScore;
+  int get getQuizScore => _quizScore;
   bool get getIsQuizStarted => _isQuizStarted;
 
   void endQuiz() {
     _isQuizStarted = false;
     selectedTopic = "";
-    noOfQuestions = 0;
+    _noOfQuestions = 0;
+    _quizScore = 0;
     quizIndex = 0;
     notifyListeners();
   }
@@ -38,11 +36,12 @@ class QuizProvider extends ChangeNotifier {
 
   Future startQuiz({required String topic, required int number}) async {
     selectedTopic = topic;
-    noOfQuestions = number;
+    _noOfQuestions = number;
+    _quizScore = 0;
 
     // generate quiz questions
     setQuizQuestions(topic);
-    _isQuizStarted = true;
+
     notifyListeners();
   }
 
@@ -60,6 +59,7 @@ class QuizProvider extends ChangeNotifier {
         questions =
             parsed.map<Question>((json) => Question.fromJson(json)).toList();
         _quizQuestions = questions;
+        _isQuizStarted = true;
         notifyListeners();
       } else {
         print('No JSON file mapping found for topic "$selectedTopic".');
@@ -67,14 +67,6 @@ class QuizProvider extends ChangeNotifier {
     } else {
       print('Topic "$selectedTopic" is not found in the list of topics.');
     }
-
-    List<Question> questions = [];
-    final parsed = jsonDecode(json).cast<Map<String, dynamic>>();
-    questions =
-        parsed.map<Question>((json) => Question.fromJson(json)).toList();
-    _quizQuestions = questions;
-    notifyListeners();
-    // return questions;
   }
 
   void nextQuestion() {
@@ -83,7 +75,20 @@ class QuizProvider extends ChangeNotifier {
   }
 
   void increaseScore() {
-    quizScore++;
+    _quizScore++;
+    notifyListeners();
+  }
+
+  void checkAnswer(int selectedIndex) {
+    if (selectedIndex == getQuizQuestions[getQuizIndex].correctAnswer) {
+      _quizScore++;
+    }
+    if (quizIndex < _noOfQuestions - 1) {
+      quizIndex++;
+    } else {
+      // Quiz completed, show results
+      // You can navigate to a results screen or show a dialog here
+    }
     notifyListeners();
   }
 }

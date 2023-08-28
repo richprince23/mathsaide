@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:mathsaide/constants/constants.dart';
 import 'package:mathsaide/controllers/quiz_controller.dart';
 import 'package:mathsaide/providers/quiz_provider.dart';
-import 'package:mathsaide/screens/home/quiz_item.dart';
+import 'package:mathsaide/widgets/quiz_item.dart';
 import 'package:mathsaide/widgets/status_snack.dart';
 import 'package:provider/provider.dart';
 import 'package:resize/resize.dart';
@@ -38,32 +38,43 @@ class _MainQuizScreenState extends State<MainQuizScreen> {
                 ),
               ),
               SizedBox(
-                height: 10.h,
+                height: 50.h,
               ),
-              value.getQuizQuestions.isNotEmpty
-                  ? QuizItem(quizItem: value.getQuizQuestions[value.quizIndex])
-                  : Container(
-                      child: const Text("No Questions"),
+              Center(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    value.getQuizQuestions.isNotEmpty
+                        ? QuizItem(
+                            quizItem: value.getQuizQuestions[value.quizIndex])
+                        : Container(
+                            child: const Text("No Questions"),
+                          ),
+                    // const Spacer(),
+                    SizedBox(
+                      height: 20.h,
                     ),
-              const Spacer(),
-              SizedBox(
-                width: 100.vw,
-                child: ElevatedButton(
-                  onPressed: () async {
-                    var quiz = context.read<QuizProvider>().quizIndex;
-                    print(value.getQuizQuestions[quiz].questionText);
-                    if (quiz < total - 1) {
-                      context.read<QuizProvider>().nextQuestion();
-                    } else {
-                      // await context.read<QuizController>().submitQuiz();
-                      context.read<QuizProvider>().endQuiz();
-                      CustomSnackBar.show(
-                        context,
-                        message: "Quiz Submitted",
-                      );
-                    }
-                  },
-                  child: const Text("Submit"),
+                    SizedBox(
+                      width: 100.vw,
+                      child: ElevatedButton(
+                        onPressed: () async {
+                          setState(() {});
+                          var quiz = context.read<QuizProvider>().quizIndex;
+                          if (quiz < total - 1) {
+                            context.read<QuizProvider>().nextQuestion();
+                          } else {
+                            // await context.read<QuizController>().submitQuiz();
+                            context.read<QuizProvider>().endQuiz();
+                            CustomSnackBar.show(
+                              context,
+                              message: "Quiz Submitted",
+                            );
+                          }
+                        },
+                        child: const Text("Next"),
+                      ),
+                    ),
+                  ],
                 ),
               ),
             ],

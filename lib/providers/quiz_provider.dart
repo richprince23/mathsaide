@@ -41,7 +41,7 @@ class QuizProvider extends ChangeNotifier {
     noOfQuestions = number;
 
     // generate quiz questions
-
+    setQuizQuestions(topic);
     _isQuizStarted = true;
     notifyListeners();
   }

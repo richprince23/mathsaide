@@ -19,20 +19,20 @@ class QuizSummaryScreen extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                qz.getQuizScore <= 80
+                percent >= 80
                     ? Image.asset(
                         "assets/images/stars3.png",
-                        width: 100,
+                        height: 100,
                       )
-                    : (qz.getQuizScore >= 60 && qz.getQuizScore <= 80)
+                    : (percent < 80 && percent >= 60)
                         ? Image.asset(
                             "assets/images/stars2.png",
-                            width: 100,
+                            height: 100,
                           )
-                        : (qz.getQuizScore >= 40 && qz.getQuizScore < 60)
+                        : (percent >= 40 && percent < 60)
                             ? Image.asset(
                                 "assets/images/stars1.png",
-                                width: 100,
+                                height: 100,
                               )
                             : Text(
                                 "Better luck next time!",

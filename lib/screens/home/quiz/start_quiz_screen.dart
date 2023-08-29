@@ -24,70 +24,86 @@ class CreateQuizScreenState extends State<CreateQuizScreen> {
     return Container(
       padding: px2,
       child: Center(
-        child: Container(
-          padding: pa2,
-          decoration: ShapeDecoration(
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(10.r),
-              side: BorderSide(color: priCol),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text(
+              "Create a New Quiz by choosing a topic and number of questions.",
+              style: TextStyle(fontSize: 18.sp),
+              textAlign: TextAlign.center,
             ),
-            // color: accCol,
-          ),
-          child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              mainAxisSize: MainAxisSize.min,
-              children: [
-                SelectControl(
-                  onChanged: (topic) {
-                    selectedTopic = topic!;
-                  },
-                  initialValue: "Algebra",
-                  hintText: "Select a topic",
-                  items: kTopics
-                      .map((e) => DropdownMenuItem(
-                            value: e,
-                            child: Text(e),
-                          ))
-                      .toList(),
+            SizedBox(
+              height: 20.h,
+            ),
+            Container(
+              padding: pa2,
+              decoration: ShapeDecoration(
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(10.r),
+                  side: BorderSide(color: priCol),
                 ),
-                SelectControl(
-                  initialValue: "10",
-                  onChanged: (number) {
-                    selectedNoQuestions = number!;
-                  },
-                  items: noQuestions
-                      .map(
-                        (e) => DropdownMenuItem<String>(
-                          value: e,
-                          child: Text(e),
-                        ),
-                      )
-                      .toList(),
-                  hintText: "Number of questions",
-                ),
-                SizedBox(
-                  height: 20.w,
-                ),
-                SizedBox(
-                  width: 100.vw,
-                  child: ElevatedButton(
-                    onPressed: () async {
-                      showLoader(context);
-                      await Provider.of<QuizProvider>(context, listen: false)
-                          .startQuiz(
-                            topic: selectedTopic,
-                            number: int.parse(selectedNoQuestions),
+                // color: accCol,
+              ),
+              child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    SelectControl(
+                      onChanged: (topic) {
+                        selectedTopic = topic!;
+                      },
+                      initialValue: "Algebra",
+                      hintText: "Select a topic",
+                      items: kTopics
+                          .map((e) => DropdownMenuItem(
+                                value: e,
+                                child: Text(e),
+                              ))
+                          .toList(),
+                    ),
+                    SelectControl(
+                      initialValue: "10",
+                      onChanged: (number) {
+                        selectedNoQuestions = number!;
+                      },
+                      items: noQuestions
+                          .map(
+                            (e) => DropdownMenuItem<String>(
+                              value: e,
+                              child: Text(e),
+                            ),
                           )
-                          .then((value) => {
-                                Navigator.pop(context),
-                                CustomSnackBar.show(context,
-                                    message: "Quiz Started",),
-                              });
-                    },
-                    child: const Text("Start Quiz"),
-                  ),
-                ),
-              ]),
+                          .toList(),
+                      hintText: "Number of questions",
+                    ),
+                    SizedBox(
+                      height: 20.w,
+                    ),
+                    SizedBox(
+                      width: 100.vw,
+                      child: ElevatedButton(
+                        onPressed: () async {
+                          showLoader(context);
+                          await Provider.of<QuizProvider>(context,
+                                  listen: false)
+                              .startQuiz(
+                                topic: selectedTopic,
+                                number: int.parse(selectedNoQuestions),
+                              )
+                              .then((value) => {
+                                    Navigator.pop(context),
+                                    CustomSnackBar.show(
+                                      context,
+                                      message: "Quiz Started",
+                                    ),
+                                  });
+                        },
+                        child: const Text("Start Quiz"),
+                      ),
+                    ),
+                  ]),
+            ),
+          ],
         ),
       ),
     );

@@ -130,7 +130,9 @@ class QuizSummaryScreen extends StatelessWidget {
                   width: 100.vw,
                   child: ElevatedButton(
                     onPressed: () {
+                      showLoader(context);
                       qz.endQuiz();
+                      Navigator.pop(context);
                       Navigator.pop(context);
                     },
                     child: const Text("Done"),

@@ -16,7 +16,7 @@ class HistoryItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final dateTime = convertDateTimeString(sessionID);
+    final dateTime = convertDateTimeStringFromTimestamp(sessionID);
     return InkWell(
       onTap: () {
         Navigator.push(
@@ -30,6 +30,7 @@ class HistoryItem extends StatelessWidget {
         );
       },
       child: Container(
+        margin: py1,
         padding: pa1,
         decoration: ShapeDecoration(
           shape: RoundedRectangleBorder(

@@ -3,6 +3,8 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:mathsaide/constants/constants.dart';
+import 'package:mathsaide/controllers/auth_controller.dart';
+import 'package:mathsaide/controllers/quiz_controller.dart';
 import 'package:mathsaide/models/quiz_model.dart';
 
 class QuizProvider extends ChangeNotifier {
@@ -13,6 +15,7 @@ class QuizProvider extends ChangeNotifier {
   List<Question> quizQuestions = [];
   int _quizScore = 0;
   bool _isQuizStarted = false;
+  String quizId = "";
 
 // getters
 
@@ -23,7 +26,10 @@ class QuizProvider extends ChangeNotifier {
   int get getQuizScore => _quizScore;
   bool get getIsQuizStarted => _isQuizStarted;
 
-  void endQuiz() {
+//end quiz and upload to firebase
+  void endQuiz() async {
+    await uploadQuiz(quizId);
+    // reset quiz
     _isQuizStarted = false;
     selectedTopic = "";
     _noOfQuestions = 0;
@@ -32,13 +38,30 @@ class QuizProvider extends ChangeNotifier {
     notifyListeners();
   }
 
+// Upload quiz to firebase
+  Future uploadQuiz(String quizID) async {
+    // upload quiz to firebase
+    // upload quiz id to user's quiz list
+    final quiz = await db.collection("quiz_grades").doc(quizID).get();
+    if (!quiz.exists) {
+      await db.collection("quiz_grades").doc(quizID).set({
+        "quizID": quizID,
+        "userID": auth.currentUser!.uid,
+        "topic": selectedTopic,
+        "score": _quizScore,
+        "noOfQuestions": _noOfQuestions,
+        "timestamp": DateTime.now(),
+      });
+    }
+  }
 // setters
 
   Future startQuiz({required String topic, required int number}) async {
     selectedTopic = topic;
     _noOfQuestions = number;
     _quizScore = 0;
-
+    // generate quiz id
+    quizId = generateRandomString();
     // generate quiz questions
     setQuizQuestions(topic);
 
@@ -76,19 +99,6 @@ class QuizProvider extends ChangeNotifier {
 
   void increaseScore() {
     _quizScore++;
-    notifyListeners();
-  }
-
-  void checkAnswer(int selectedIndex) {
-    if (selectedIndex == getQuizQuestions[getQuizIndex].correctAnswer) {
-      _quizScore++;
-    }
-    if (quizIndex < _noOfQuestions - 1) {
-      quizIndex++;
-    } else {
-      // Quiz completed, show results
-      // You can navigate to a results screen or show a dialog here
-    }
     notifyListeners();
   }
 }

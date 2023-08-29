@@ -1,4 +1,6 @@
 import 'dart:convert';
+import 'dart:math';
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:http/http.dart' as http;
 import 'package:mathsaide/constants/constants.dart';
 import 'package:mathsaide/controllers/auth_controller.dart';
@@ -77,4 +79,26 @@ Future<String?> generateQuestions(
   } catch (e) {
     throw Exception(e);
   }
+}
+
+//Generate random String for quiz ID
+String generateRandomString() {
+  final Random random = Random.secure();
+  const String chars =
+      'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+
+  return List.generate(16, (index) => chars[random.nextInt(chars.length)])
+      .join();
+}
+
+///Get quiz history
+///
+///Returns a list of quiz history
+Stream<QuerySnapshot<Map<String, dynamic>>> getQuizHistory() {
+  final results = FirebaseFirestore.instance
+      .collection("quiz_grades")
+      .where("userID", isEqualTo: auth.currentUser!.uid)
+      .orderBy("timestamp", descending: false)
+      .snapshots();
+  return results;
 }

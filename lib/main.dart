@@ -13,6 +13,7 @@ import 'package:mathsaide/screens/auth/forgot_pass_screen.dart';
 import 'package:mathsaide/screens/auth/login_screen.dart';
 import 'package:mathsaide/screens/auth/signup_screen.dart';
 import 'package:mathsaide/screens/home/home.dart';
+import 'package:mathsaide/screens/home/quiz/quiz_history.dart';
 import 'package:mathsaide/screens/home/start_session_screen.dart';
 import 'package:mathsaide/screens/settings/edit_profile.dart';
 import 'package:mathsaide/screens/settings/history.dart';
@@ -65,6 +66,7 @@ class MainApp extends StatelessWidget {
           "/start-session": (context) => const StartSessionScreen(),
           "/edit-profile": (context) => const EditProfileScreen(),
           "/history": (context) => const HistoryScreen(),
+          "/quiz-history": (context) => const QuizHistoryScreen(),
         },
       ),
     );

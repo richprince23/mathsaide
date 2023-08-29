@@ -1,3 +1,5 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
+
 class Question {
   final String questionText;
   final List<String> options;
@@ -19,11 +21,27 @@ class Question {
 }
 
 class Quiz {
-  final String title;
-  final List<Question> questions;
+  final String topic;
+  final String quizID;
+  final int score;
+  final int totalQuestions;
+  final Timestamp timestamp;
 
   Quiz({
-    required this.title,
-    required this.questions,
+    required this.topic,
+    required this.quizID,
+    required this.score,
+    required this.totalQuestions,
+    required this.timestamp,
   });
+
+  factory Quiz.fromJson(Map<String, dynamic> json) {
+    return Quiz(
+      topic: json['topic'],
+      quizID: json["quizID"],
+      score: json["score"],
+      totalQuestions: json["noOfQuestions"],
+      timestamp: json["timestamp"],
+    );
+  }
 }

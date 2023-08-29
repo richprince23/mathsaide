@@ -28,7 +28,7 @@ class ViewHistoryScreen extends StatelessWidget {
               style: TextStyle(fontSize: 14.sp, color: txtCol),
             ),
             Text(
-              convertDateTimeString(sessionID),
+              convertDateTimeStringFromTimestamp(sessionID),
               style: TextStyle(fontSize: 12.sp, color: txtColLight),
             ),
           ],

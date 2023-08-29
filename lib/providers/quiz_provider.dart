@@ -10,7 +10,7 @@ class QuizProvider extends ChangeNotifier {
   int _noOfQuestions = 10;
   String selectedTopic = "Algebra";
   int quizIndex = 0;
-  List<Question> _quizQuestions = [];
+  List<Question> quizQuestions = [];
   int _quizScore = 0;
   bool _isQuizStarted = false;
 
@@ -19,7 +19,7 @@ class QuizProvider extends ChangeNotifier {
   int get getNoQuestions => _noOfQuestions;
   String get getSelectedTopic => selectedTopic;
   int get getQuizIndex => quizIndex;
-  List<Question> get getQuizQuestions => _quizQuestions;
+  List<Question> get getQuizQuestions => quizQuestions;
   int get getQuizScore => _quizScore;
   bool get getIsQuizStarted => _isQuizStarted;
 
@@ -58,7 +58,7 @@ class QuizProvider extends ChangeNotifier {
         final parsed = jsonDecode(json).cast<Map<String, dynamic>>();
         questions =
             parsed.map<Question>((json) => Question.fromJson(json)).toList();
-        _quizQuestions = questions;
+        quizQuestions = questions;
         _isQuizStarted = true;
         notifyListeners();
       } else {

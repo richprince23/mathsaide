@@ -21,20 +21,20 @@ class _LearnNowScreenState extends State<LearnNowScreen> {
     super.initState();
     _initializeRemoteConfig();
     // initialize network listening stream
+    checkConnectivity();
     connectivitySubscription =
         Provider.of<NetworkProvider>(context, listen: false)
             .connectivity
             .onConnectivityChanged
             .listen((ConnectivityResult result) {
-      // if (mounted) {
-      Provider.of<NetworkProvider>(context, listen: false)
-          .updateConnectionStatus(result);
-      // }
+      if (mounted) {
+        Provider.of<NetworkProvider>(context, listen: false)
+            .updateConnectionStatus(result);
+      }
     });
 
     // checkConnectivity();
     // if (mounted) {
-    checkConnectivity();
     // }
   }
 
@@ -82,7 +82,6 @@ class _LearnNowScreenState extends State<LearnNowScreen> {
                         ConnectionState.waiting) {
                       return const SizedBox();
                     }
-
                     return const SizedBox();
                   });
             },

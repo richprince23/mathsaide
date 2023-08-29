@@ -9,6 +9,7 @@ import 'package:mathsaide/controllers/prefs.dart';
 import 'package:mathsaide/models/response_model.dart';
 
 List<ChatResponse> chatHistory = [];
+List<ChatResponse> queryHistory = [];
 // String? topic;
 String? sessionID, topic = "";
 
@@ -23,7 +24,7 @@ Future sendMessage(String message) async {
   //if the message is a response, display the response
   //
   // final String userID = FirebaseAuth.instance.currentUser!.uid;
-  var response ;
+  var response;
 
   String? content;
   // String role;
@@ -79,7 +80,7 @@ Future<String?> makeRequest(String message) async {
   var body = jsonEncode({
     // "model": "text-davinci-003",
     "model": "gpt-3.5-turbo",
-    "temperature": 0.9,
+    "temperature": 0.5,
     "max_tokens": 256,
     "frequency_penalty": 0,
     "presence_penalty": 0,
@@ -165,4 +166,88 @@ Future<void> uploadChat({required String content, required String role}) async {
       }
     });
   });
+}
+
+///
+///
+/// Function to generate pactice questions for users to try and evaluate response
+Future generatePracticeQuestions(String? message) async {
+  // final String userID = FirebaseAuth.instance.currentUser!.uid;
+  var response;
+
+  String? content;
+
+  try {
+    await Prefs.getSession().then((value) => sessionID = value).then(
+          (e) => Prefs.getTopic().then((value) => topic = value),
+        );
+
+    if (message != "" || message!.isNotEmpty) {
+      queryHistory.add(ChatResponse(
+          content: "Evaluate my answer: ${message!.trim()}", role: "user"));
+    } else {
+      queryHistory
+          .add(ChatResponse(content: "Give me a question", role: "user"));
+    }
+    // String userPrompt = message!.trim();
+
+    var headers = {
+      'Content-Type': 'application/json',
+      'Authorization': "Bearer $apiKey"
+    };
+
+    // queryHistory.add(ChatResponse(content: userPrompt, role: "user"));
+
+    var history = queryHistory.map((e) => e.toJson()).toList();
+
+    print(history);
+
+    var body = jsonEncode({
+      // "model": "text-davinci-003",
+      "model": "gpt-3.5-turbo",
+      "temperature": 0.3,
+      "max_tokens": 256,
+      "frequency_penalty": 0,
+      "presence_penalty": 0,
+      "stop": 'finish',
+      "top_p": 1, "n": 1,
+      "messages": history,
+      // "messages": chatHistory,
+    });
+
+    // try {
+    var request = http.Request(
+        'POST', Uri.parse('https://api.openai.com/v1/chat/completions'));
+    request.body = (body);
+    //     '''{"model": "gpt-3.5-turbo","messages": [{"role": "system","content": $systemPrompt},{"role": "user", "content": $userPrompt}],"max_tokens": 200,"temperature": 0.9,"top_p": 1,"n": 1,"stop": "finish"}''';
+    request.headers.addAll(headers);
+
+    var res;
+    http.StreamedResponse response = await request.send();
+    // response = await response.stream
+    //     .bytesToString();
+
+    if (response.statusCode == 200) {
+      await response.stream
+          .bytesToString()
+          .then((value) => res = jsonDecode(value));
+      if (res != null && res['choices'] != null && res['choices'].isNotEmpty) {
+        content = res['choices'][0]['message']['content'];
+        return content;
+      } else {
+        // print("${response.reasonPhrase!} ${response.statusCode}");
+        return ("${response.reasonPhrase!} ${response.statusCode}");
+      }
+    } else {
+      // print("${response.reasonPhrase!} ${response.statusCode}");
+      return ("${response.reasonPhrase!} ${response.statusCode}");
+    }
+    // } catch (e) {
+    //   throw Exception(e);
+    // }
+    // return content;
+  } catch (e) {
+    // print(e);
+    throw Exception(e);
+  }
 }

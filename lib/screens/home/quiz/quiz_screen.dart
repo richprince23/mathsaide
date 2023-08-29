@@ -18,6 +18,9 @@ class _QuizScreenState extends State<QuizScreen> {
   bool isCorrect = false;
   Color wrongCol = Colors.red.withOpacity(0.3);
   Color rightCol = Colors.green.withOpacity(0.2);
+
+  List<bool> isCorrectList = [false, false, false, false];
+  List<bool> isTappedList = [false, false, false, false];
   // int correctIndex;
   void checkAnswer(bool correct) {
     setState(() {
@@ -54,7 +57,7 @@ class _QuizScreenState extends State<QuizScreen> {
                       child: ClipRRect(
                         borderRadius: BorderRadius.circular(10.r),
                         child: LinearProgressIndicator(
-                          value: qz.getQuizIndex + 1 / qz.getNoQuestions,
+                          value: qz.getQuizIndex / qz.getNoQuestions,
                           minHeight: 20.w,
                           backgroundColor: bgWhite,
                           valueColor: AlwaysStoppedAnimation<Color>(priCol),
@@ -74,7 +77,7 @@ class _QuizScreenState extends State<QuizScreen> {
                         ),
                       ),
                       child: Text(
-                        "Question ${qz.quizIndex + 1} / ${qz.getNoQuestions}",
+                        "Question ${qz.quizIndex < qz.getNoQuestions ? qz.quizIndex + 1 : qz.getNoQuestions} / ${qz.getNoQuestions}",
                         style: TextStyle(
                           fontSize: 16.sp,
                           color: txtCol,
@@ -112,13 +115,19 @@ class _QuizScreenState extends State<QuizScreen> {
                                   ? () {
                                       setState(() {
                                         isEnabled = false;
-                                      });
-                                      checkAnswer(
-                                        qz.quizQuestions[qz.quizIndex]
+                                        isTappedList[index] = true;
+
+                                        if (qz.quizQuestions[qz.quizIndex]
                                                 .options[index] ==
                                             qz.quizQuestions[qz.quizIndex]
-                                                .correctAnswer,
-                                      );
+                                                .correctAnswer) {
+                                          isCorrectList[index] = true;
+                                          // increase score
+                                          qz.increaseScore();
+                                        } else {
+                                          isCorrectList[index] = false;
+                                        }
+                                      });
                                     }
                                   : null,
                               child: Container(
@@ -131,15 +140,9 @@ class _QuizScreenState extends State<QuizScreen> {
                                     ),
                                     borderRadius: BorderRadius.circular(10.r),
                                   ),
-                                  color: isTapped &&
-                                          index ==
-                                              getCorrectIndex(
-                                                  qz.quizQuestions[qz.quizIndex]
-                                                      .correctAnswer,
-                                                  qz.quizQuestions[qz.quizIndex]
-                                                      .options)
-                                      ? isCorrect
-                                          ? rightCol 
+                                  color: isTappedList[index]
+                                      ? isCorrectList[index]
+                                          ? rightCol
                                           : wrongCol
                                       : bgWhite,
                                 ),
@@ -152,26 +155,45 @@ class _QuizScreenState extends State<QuizScreen> {
                                     ),
                                     const Spacer(),
                                     Container(
-                                      child: isTapped &&
-                                              index ==
-                                                  getCorrectIndex(
-                                                    qz
-                                                        .quizQuestions[
-                                                            qz.quizIndex]
-                                                        .correctAnswer,
-                                                    qz
-                                                        .quizQuestions[
-                                                            qz.quizIndex]
-                                                        .options,
-                                                  )
-                                          ? isCorrect
-                                              ? const Icon(Icons.check_circle)
-                                              : const Icon(Icons.cancel)
+                                      child: isTappedList[index]
+                                          ? isCorrectList[index]
+                                              ? const Icon(
+                                                  Icons.check_circle,
+                                                  color: Colors.green,
+                                                )
+                                              : const Icon(
+                                                  Icons.cancel,
+                                                  color: Colors.red,
+                                                )
                                           : const Icon(Icons.circle_outlined),
                                     ),
                                   ],
                                 ),
                               ),
+                            ),
+                          ),
+                          SizedBox(
+                            height: 20.h,
+                          ),
+                          ElevatedButton(
+                            onPressed: () {
+                              setState(() {
+                                isEnabled = true;
+                                isTapped = false;
+                                isCorrect = false;
+                                isCorrectList = [false, false, false, false];
+                                isTappedList = [false, false, false, false];
+                              });
+                              if (qz.quizIndex < qz.getNoQuestions) {
+                                qz.nextQuestion();
+                              } else {
+                                qz.endQuiz();
+                              }
+                            },
+                            child: Text(
+                              qz.quizIndex < qz.getNoQuestions
+                                  ? "Next"
+                                  : "Finish",
                             ),
                           ),
                         ],

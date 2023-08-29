@@ -29,8 +29,8 @@ class CreateQuizScreenState extends State<CreateQuizScreen> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
-              "Create a New Quiz by choosing a topic and number of questions.",
-              style: TextStyle(fontSize: 18.sp),
+              "Create a new Quiz by choosing a topic and number of questions.",
+              style: TextStyle(fontSize: 16.sp),
               textAlign: TextAlign.center,
             ),
             SizedBox(
@@ -107,11 +107,12 @@ class CreateQuizScreenState extends State<CreateQuizScreen> {
             SizedBox(
               height: 40.h,
             ),
-            OutlinedButton(
+            OutlinedButton.icon(
               onPressed: () {
                 Navigator.pushNamed(context, "/quiz-history");
               },
-              child: const Text("Recent Quizzes"),
+              icon: const Icon(Icons.history),
+              label: const Text("Recent Quizzes"),
             ),
           ],
         ),

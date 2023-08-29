@@ -30,7 +30,7 @@ class HistoryItem extends StatelessWidget {
         );
       },
       child: Container(
-        margin: py1,
+        margin: EdgeInsets.symmetric(horizontal: 10.w, vertical: 2.w),
         padding: pa1,
         decoration: ShapeDecoration(
           shape: RoundedRectangleBorder(

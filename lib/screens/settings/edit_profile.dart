@@ -1,6 +1,8 @@
+import 'dart:async';
 import 'dart:io';
 
 import 'package:cached_network_image/cached_network_image.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_keyboard_visibility/flutter_keyboard_visibility.dart';
 import 'package:image_cropper/image_cropper.dart';
@@ -27,12 +29,13 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
   final _schoolController = TextEditingController();
   String? _selectedGrade;
   final _formKey = GlobalKey<FormState>();
-  String imgUrl = "";
+  String imgUrl = "https://picsum.photos/200";
+  StreamSubscription<User?>? userChangesSubscription;
 
   @override
   void initState() {
     super.initState();
-    auth.userChanges().listen((user) {
+    userChangesSubscription = auth.userChanges().listen((user) {
       if (mounted) {
         setState(() {
           imgUrl = user?.photoURL ?? "https://picsum.photos/200";
@@ -50,9 +53,10 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
     _schoolController.dispose();
     selectedMedia = null;
     croppedMedia = null;
+    userChangesSubscription?.cancel();
   }
 
-  initUser() async {
+  Future initUser() async {
     await Auth.getUserDetails().then((value) {
       if (mounted) {
         setState(() {
@@ -64,7 +68,7 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
       }
       print(_selectedAge);
     });
-    // Future.delayed(const Duration(microseconds: 500));
+    Future.delayed(const Duration(microseconds: 500));
   }
 
   @override
@@ -108,9 +112,9 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
                         child: IconButton.filledTonal(
                           // color: priCol,
                           onPressed: () async {
-                            await uploadImage().then((value) async =>
-                                await cropImage()
-                                    .then((value) => setState(() {})));
+                            await uploadImage()
+                                .then((value) async => await cropImage());
+                            // .then((value) => setState(() {})));
                           },
                           icon: const Icon(Icons.camera_alt),
                         ),
@@ -139,7 +143,7 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
                         return const Loader();
                       }
                       return SelectControl(
-                        initialValue: _selectedAge,
+                        initialValue: _selectedAge ?? "12",
                         onChanged: (age) {
                           setState(() {
                             _selectedAge = age!;
@@ -176,7 +180,7 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
                   },
                 ),
                 SelectControl(
-                  initialValue: _selectedGrade,
+                  initialValue: _selectedGrade ?? "Grade 12",
                   onChanged: (grade) {
                     setState(() {
                       _selectedGrade = grade!;

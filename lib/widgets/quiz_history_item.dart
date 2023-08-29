@@ -16,7 +16,7 @@ class QuizHistoryItem extends StatelessWidget {
   Widget build(BuildContext context) {
     final dateTime = convertToDateTime(quiz.timestamp.toDate().toString());
     return Container(
-      margin: pa1,
+      margin: EdgeInsets.symmetric(horizontal: 10.w, vertical: 2.w),
       padding: pa1,
       decoration: ShapeDecoration(
         shape: RoundedRectangleBorder(

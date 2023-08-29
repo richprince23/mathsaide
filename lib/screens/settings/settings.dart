@@ -1,4 +1,7 @@
+import 'dart:async';
+
 import 'package:cached_network_image/cached_network_image.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:mathsaide/constants/constants.dart';
 import 'package:mathsaide/controllers/auth_controller.dart';
@@ -18,19 +21,25 @@ class SettingsScreen extends StatefulWidget {
 class _SettingsScreenState extends State<SettingsScreen> {
   String? imgUrl;
   String name = "";
+  StreamSubscription<User?>? userChangesSubscription;
+
   @override
   void initState() {
     super.initState();
-    auth.userChanges().listen((user) {
-      setState(() {
-        imgUrl = user?.photoURL ?? "https://picsum.photos/200";
-        name = user?.displayName ?? "";
-      });
+    userChangesSubscription = auth.userChanges().listen((user) {
+      if (mounted) {
+        setState(() {
+          imgUrl = user?.photoURL ?? "https://picsum.photos/200";
+          name = user?.displayName ?? "";
+        });
+      }
     });
   }
 
   @override
   void dispose() {
+    // Cancel the subscription to stop listening
+    userChangesSubscription?.cancel();
     super.dispose();
   }
 
@@ -123,6 +132,14 @@ class _SettingsScreenState extends State<SettingsScreen> {
                             iconColor: priCol,
                             leading: const Icon(Icons.notifications),
                             title: const Text("Notifications"),
+                          ),
+                          ListTile(
+                            trailing:
+                                const Icon(Icons.arrow_forward_ios, size: 14),
+                            onTap: () {},
+                            iconColor: priCol,
+                            leading: const Icon(Icons.access_alarm_outlined),
+                            title: const Text("Learning Reminders"),
                           ),
                         ],
                       ),

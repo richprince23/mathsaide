@@ -260,8 +260,8 @@ EdgeInsets py4 = EdgeInsets.symmetric(vertical: 32.w);
 
 const homePages = [
   LearnNowScreen(),
-  QuizScreen(),
   HistoryScreen(),
+  QuizScreen(),
   SettingsScreen(),
 ];
 

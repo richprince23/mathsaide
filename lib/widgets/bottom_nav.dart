@@ -74,10 +74,10 @@ class _BottomNavState extends State<BottomNav> {
                 child: value.pageIndex == 1
                     ? const NavItem(
                         label: "Practice",
-                        icon: Icons.menu_book,
+                        icon: Icons.run_circle,
                       )
                     : Icon(
-                        Icons.menu_book_outlined,
+                        Icons.run_circle_outlined,
                         color: txtCol,
                         size: 24.w,
                       ),
@@ -96,11 +96,11 @@ class _BottomNavState extends State<BottomNav> {
                 },
                 child: value.pageIndex == 2
                     ? const NavItem(
-                        label: "History",
-                        icon: Icons.work_history,
+                        label: "Quiz",
+                        icon: Icons.list_alt,
                       )
                     : Icon(
-                        Icons.work_history_outlined,
+                        Icons.list_alt_outlined,
                         color: txtCol,
                         size: 24.w,
                       ),

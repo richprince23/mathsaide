@@ -7,7 +7,7 @@ class Practice extends StatelessWidget {
       appBar: AppBar(
         title: Text('Practice'),
       ),
-      body: Center(
+      body: Container(
         child: Text('Practice'),
       ),
     );

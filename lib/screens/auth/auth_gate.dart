@@ -22,9 +22,9 @@ class _AuthGateState extends State<AuthGate> {
   void initState() {
     super.initState();
     auth.idTokenChanges().listen((event) async {
-      print("token changed");
+      // print("token changed");
       await auth.currentUser?.getIdTokenResult().then((value) {
-        print("new token ${value.token}");
+        // print("new token ${value.token}");
       });
     });
     auth.authStateChanges().listen((User? user) {
@@ -66,20 +66,20 @@ class _AuthGateState extends State<AuthGate> {
   Future<void> regenerateAuthTokens(User user) async {
     await user.getIdToken();
     user.refreshToken;
-    print('Auth tokens regenerated successfully.');
+    // print('Auth tokens regenerated successfully.');
   }
 
   @override
   Widget build(BuildContext context) {
     return StreamBuilder(
-      stream: auth.userChanges(),
+      stream: auth.authStateChanges(),
       builder: ((context, snapshot) {
         if (snapshot.connectionState == ConnectionState.waiting) {
           return const Loader();
         }
-        if (snapshot.data != null) {
+        if (snapshot.data != null && snapshot.data!.uid.isNotEmpty) {
           // if (snapshot.data!.uid.isNotEmpty) {
-          print(snapshot.data!.uid);
+          // print(snapshot.data!.uid);
           return const HomeScreen();
           // }
           // else {
@@ -87,9 +87,9 @@ class _AuthGateState extends State<AuthGate> {
           //   return const LoginScreen();
           // }
         } else {
-          print("No user data");
+          // print("No user data");
           auth.currentUser?.getIdTokenResult().then((value) {
-            print("token ${value.token}");
+            debugPrint("token ${value.token}");
           });
           return const LoginScreen();
         }

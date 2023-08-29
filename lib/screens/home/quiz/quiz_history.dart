@@ -77,7 +77,9 @@ class QuizHistoryScreen extends StatelessWidget {
                     ),
                     SizedBox(height: 10.w),
                     ElevatedButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.pop(context);
+                      },
                       child: const Text("Go to Quizzes"),
                     ),
                   ],

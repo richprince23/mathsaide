@@ -3,6 +3,7 @@ import 'package:firebase_remote_config/firebase_remote_config.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:mathsaide/screens/home/learn_now_screen.dart';
+import 'package:mathsaide/screens/home/quiz/main_quiz_screen.dart';
 
 import 'package:mathsaide/screens/home/quiz/quiz_screen.dart';
 import 'package:mathsaide/screens/settings/history.dart';
@@ -261,6 +262,7 @@ EdgeInsets py4 = EdgeInsets.symmetric(vertical: 32.w);
 const homePages = [
   LearnNowScreen(),
   HistoryScreen(),
+  // MainQuizScreen(),
   QuizScreen(),
   SettingsScreen(),
 ];

@@ -34,7 +34,7 @@ class QuizHistoryItem extends StatelessWidget {
           style: TextStyle(fontSize: 16.sp),
         ),
         subtitle:
-            Text("Score: ${quiz.score} / ${quiz.totalQuestions} \n$dateTime"),
+            Text("Score : ${quiz.score} / ${quiz.totalQuestions} \n$dateTime"),
         isThreeLine: true,
         trailing: IconButton.outlined(
           color: Colors.red,

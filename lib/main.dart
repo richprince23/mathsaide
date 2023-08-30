@@ -17,6 +17,7 @@ import 'package:mathsaide/screens/home/quiz/quiz_history.dart';
 import 'package:mathsaide/screens/home/start_session_screen.dart';
 import 'package:mathsaide/screens/settings/edit_profile.dart';
 import 'package:mathsaide/screens/settings/history.dart';
+import 'package:mathsaide/screens/settings/notifications.dart';
 import 'package:provider/provider.dart';
 import 'package:resize/resize.dart';
 
@@ -67,6 +68,8 @@ class MainApp extends StatelessWidget {
           "/edit-profile": (context) => const EditProfileScreen(),
           "/history": (context) => const HistoryScreen(),
           "/quiz-history": (context) => const QuizHistoryScreen(),
+          "/notifications": (context) => const NotificationsScreen(),
+          
         },
       ),
     );

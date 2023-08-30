@@ -120,17 +120,23 @@ class _PracticeScreenState extends State<PracticeScreen> {
                       //   messages.clear();
                       // });
                       showLoader(context);
-                      await sendRequest("New Question").then((value) => {
-                            setState(() {
-                              messages.add(
-                                const ChatBubble(
-                                  isUser: true,
-                                  message: "Another question",
-                                ),
-                              );
-                            }),
-                            Navigator.pop(context),
-                          });
+                      try {
+                        await sendRequest("New Question").then((value) => {
+                              setState(() {
+                                messages.add(
+                                  const ChatBubble(
+                                    isUser: true,
+                                    message: "Another question",
+                                  ),
+                                );
+                              }),
+                              Navigator.pop(context),
+                            });
+                      } catch (e) {
+                        Navigator.pop(context);
+                        CustomSnackBar.show(context,
+                            message: "An error occur!");
+                      }ed
                     },
                     // child: const Icon(Icons.add),
                     child: Text(
@@ -300,7 +306,7 @@ class _PracticeScreenState extends State<PracticeScreen> {
                                         } catch (e) {
                                           Navigator.pop(context);
                                           CustomSnackBar.show(context,
-                                              message: "An error occur!");
+                                              message: "An error occured!");
                                         }
                                         setState(() {
                                           txtInput.text = "";

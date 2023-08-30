@@ -152,32 +152,10 @@ class _LoginScreenState extends State<LoginScreen> {
                     FractionallySizedBox(
                       widthFactor: 1,
                       child: OutlinedButton(
-                        onPressed: () {},
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceAround,
-                          children: [
-                            Image.asset(
-                              "assets/images/google.png",
-                              width: 30,
-                              height: 30,
-                            ),
-                            const Text(
-                              'Login with Google',
-                            ),
-                          ],
-                        ),
-                      ),
-                    ),
-                    SizedBox(height: 40.w),
-                    InkWell(
-                      onTap: () => Navigator.pushNamed(context, "/signup"),
-                      child: Text(
-                        "New here? Sign Up",
-                        style: GoogleFonts.poppins(
-                          color: Colors.blue,
-                          fontSize: 14.sp,
-                          decoration: TextDecoration.underline,
-                          decorationColor: Colors.blue,
+                        onPressed: () =>
+                            Navigator.pushNamed(context, "/signup"),
+                        child: const Text(
+                          'Create Account',
                         ),
                       ),
                     ),

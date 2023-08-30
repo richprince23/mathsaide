@@ -155,47 +155,47 @@ class _SignUpScreenState extends State<SignUpScreen> {
                         child: const Text('Create Account'),
                       ),
                     ),
-                    SizedBox(
-                      height: 8.w,
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceAround,
-                      children: [
-                        SizedBox(
-                          width: 30.vw,
-                          height: 2,
-                          child: Container(color: priColDark),
-                        ),
-                        const Text("or"),
-                        SizedBox(
-                          width: 30.vw,
-                          height: 2,
-                          child: Container(color: priColDark),
-                        ),
-                      ],
-                    ),
-                    SizedBox(
-                      height: 8.w,
-                    ),
-                    FractionallySizedBox(
-                      widthFactor: 1,
-                      child: OutlinedButton(
-                        onPressed: () {},
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceAround,
-                          children: [
-                            Image.asset(
-                              "assets/images/google.png",
-                              width: 30,
-                              height: 30,
-                            ),
-                            const Text(
-                              'Continue with Google',
-                            ),
-                          ],
-                        ),
-                      ),
-                    ),
+                    // SizedBox(
+                    //   height: 8.w,
+                    // ),
+                    // Row(
+                    //   mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    //   children: [
+                    //     SizedBox(
+                    //       width: 30.vw,
+                    //       height: 2,
+                    //       child: Container(color: priColDark),
+                    //     ),
+                    //     const Text("or"),
+                    //     SizedBox(
+                    //       width: 30.vw,
+                    //       height: 2,
+                    //       child: Container(color: priColDark),
+                    //     ),
+                    //   ],
+                    // ),
+                    // SizedBox(
+                    //   height: 8.w,
+                    // ),
+                    // FractionallySizedBox(
+                    //   widthFactor: 1,
+                    //   child: OutlinedButton(
+                    //     onPressed: () {},
+                    //     child: Row(
+                    //       mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    //       children: [
+                    //         Image.asset(
+                    //           "assets/images/google.png",
+                    //           width: 30,
+                    //           height: 30,
+                    //         ),
+                    //         const Text(
+                    //           'Continue with Google',
+                    //         ),
+                    //       ],
+                    //     ),
+                    //   ),
+                    // ),
                   ],
                 ),
               ),

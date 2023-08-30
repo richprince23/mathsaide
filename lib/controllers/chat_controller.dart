@@ -80,12 +80,13 @@ Future<String?> makeRequest(String message) async {
   var body = jsonEncode({
     // "model": "text-davinci-003",
     "model": "gpt-3.5-turbo",
-    "temperature": 0.5,
+    "temperature": 0.7,
     "max_tokens": 256,
-    "frequency_penalty": 0,
+    "frequency_penalty": 1,
     "presence_penalty": 0,
     "stop": 'finish',
-    "top_p": 1, "n": 1,
+    // "top_p": 1,
+    "n": 1,
     "messages": history,
     // "messages": chatHistory,
   });
@@ -254,7 +255,6 @@ Future generatePracticeQuestions(String? message) async {
   }
 }
 
-
 //delete chat history from firestore
 
 Future deleteChatHistory(String sessionID) async {
@@ -262,9 +262,8 @@ Future deleteChatHistory(String sessionID) async {
   final CollectionReference sessionsCollection =
       firestore.collection('sessions');
 
-  QuerySnapshot sessionQuery = await sessionsCollection
-      .where('sessionID', isEqualTo: sessionID)
-      .get();
+  QuerySnapshot sessionQuery =
+      await sessionsCollection.where('sessionID', isEqualTo: sessionID).get();
 
   if (sessionQuery.docs.isNotEmpty && sessionQuery.size > 0) {
     // Session document with provided sessionID exists, delete chat subcollection

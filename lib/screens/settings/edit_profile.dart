@@ -63,7 +63,7 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
           _schoolController.text = value?.data()?["school"] ?? "";
           _selectedAge = value?.data()?["age"].toString() ?? "12";
           // _selectedAge = (value?.data()?["age"] as int?) as String? ?? "12";
-          _selectedGrade = value?.data()?["classLevel"] ?? "";
+          _selectedGrade = value?.data()?["classLevel"] ?? "Grade 12";
         });
       }
       print(_selectedAge);

@@ -186,6 +186,14 @@ class _SettingsScreenState extends State<SettingsScreen> {
                                 const Icon(Icons.arrow_forward_ios, size: 14),
                             onTap: () {},
                             iconColor: priCol,
+                            leading: const Icon(Icons.info),
+                            title: const Text("About MathsAide"),
+                          ),
+                          ListTile(
+                            trailing:
+                                const Icon(Icons.arrow_forward_ios, size: 14),
+                            onTap: () {},
+                            iconColor: priCol,
                             leading: const Icon(Icons.help),
                             title: const Text("Help & Support"),
                           ),

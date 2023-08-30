@@ -182,7 +182,7 @@ class _PracticeScreenState extends State<PracticeScreen> {
                                       ),
                                       SizedBox(height: 10.w),
                                       Text(
-                                        "No Learning History",
+                                        "No Active Session",
                                         style: TextStyle(
                                           fontSize: 18.sp,
                                           fontWeight: FontWeight.bold,
@@ -190,7 +190,7 @@ class _PracticeScreenState extends State<PracticeScreen> {
                                       ),
                                       SizedBox(height: 10.w),
                                       Text(
-                                        "Start a new session to see your learning history",
+                                        "Start a new session to practise here",
                                         style: TextStyle(
                                           fontSize: 16.sp,
                                           color: txtColLight,

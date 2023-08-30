@@ -135,8 +135,8 @@ class _PracticeScreenState extends State<PracticeScreen> {
                       } catch (e) {
                         Navigator.pop(context);
                         CustomSnackBar.show(context,
-                            message: "An error occur!");
-                      }ed
+                            message: "An error occured!");
+                      }
                     },
                     // child: const Icon(Icons.add),
                     child: Text(

@@ -204,7 +204,7 @@ Future generatePracticeQuestions(String? message) async {
     var body = jsonEncode({
       // "model": "text-davinci-003",
       "model": "gpt-3.5-turbo",
-      "temperature": 0.8,
+      "temperature": 0.9,
       "max_tokens": 256,
       "frequency_penalty": 0,
       "presence_penalty": 0,

@@ -10,6 +10,7 @@ import 'package:mathsaide/controllers/chat_controller.dart';
 import 'package:mathsaide/controllers/network_controller.dart';
 import 'package:mathsaide/controllers/prefs.dart';
 import 'package:mathsaide/models/response_model.dart';
+import 'package:mathsaide/providers/page_provider.dart';
 import 'package:mathsaide/widgets/chat_bubble.dart';
 import 'package:mathsaide/widgets/input_control.dart';
 import 'package:mathsaide/widgets/loader.dart';
@@ -29,6 +30,7 @@ class _PracticeScreenState extends State<PracticeScreen> {
   String selectedTopic = "";
   String initialPrompt = "";
   List messages = [];
+  // FocusNode focusNode = FocusNode();
   final mathsInput = MathFieldEditingController();
   final TextEditingController txtInput = TextEditingController();
   final scrollController = ScrollController();
@@ -37,7 +39,7 @@ class _PracticeScreenState extends State<PracticeScreen> {
   bool isStarted = false;
 
   String initPrompt() {
-    return "You are a Mathematics Questions generator for a 12th Grade student. Generate a question for a student to practice based on $selectedTopic. Evaluate the user's answer, return a step by step approach to solve the question, without letting them know whether they are wrong or right. Please take your time to think to provide accurate and correct calculations in your responses. Avoid any unrelated information or verbosity. Keep your response strictly focused on the question asked. Start by providing the user with a question only";
+    return "You are a Mathematics Questions generator for a 12th Grade student. Generate a question for a student to practice based on $selectedTopic. Evaluate the user's answer, return a step by step approach to solve the question, without letting them know whether they are wrong or right. If user's response is not based on the question, respond with 'Please provide your solution for me to help you'. Please take your time to think to provide accurate and correct calculations in your responses. Avoid any unrelated information or verbosity. Keep your response strictly focused on the question asked. Start by providing the user with a question only";
   }
 
   @override
@@ -50,6 +52,7 @@ class _PracticeScreenState extends State<PracticeScreen> {
   void dispose() {
     super.dispose();
     txtInput.dispose();
+    mathsInput.dispose();
     scrollController.dispose();
   }
 
@@ -109,7 +112,39 @@ class _PracticeScreenState extends State<PracticeScreen> {
     return Scaffold(
       appBar: AppBar(
         automaticallyImplyLeading: false,
-        title: const Text("Practice"),
+        title: Row(
+          children: [
+            const Text("Practice"),
+            const Spacer(),
+            isStarted == true
+                ? OutlinedButton(
+                    onPressed: () async {
+                      // setState(() {
+                      //   isStarted = false;
+                      //   messages.clear();
+                      // });
+                      showLoader(context);
+                      await sendRequest("New Question").then((value) => {
+                            setState(() {
+                              messages.add(
+                                const ChatBubble(
+                                  isUser: true,
+                                  message: "Another question",
+                                ),
+                              );
+                            }),
+                            Navigator.pop(context),
+                          });
+                    },
+                    // child: const Icon(Icons.add),
+                    child: Text(
+                      "New Question",
+                      style: TextStyle(fontSize: 14.sp),
+                    ),
+                  )
+                : const SizedBox.shrink(),
+          ],
+        ),
       ),
       body: KeyboardDismissOnTap(
         child: Consumer<NetworkProvider>(
@@ -127,7 +162,61 @@ class _PracticeScreenState extends State<PracticeScreen> {
                             if (snapData.hasError) {
                               return Text("Error: ${snapData.error}");
                             }
-
+                            if (!snapData.hasData ||
+                                snapData.data?.isEmpty == true) {
+                              return Center(
+                                child: Container(
+                                  margin: px2,
+                                  padding: pa4,
+                                  decoration: ShapeDecoration(
+                                    shape: RoundedRectangleBorder(
+                                      side: BorderSide(color: priColDark),
+                                      borderRadius: BorderRadius.circular(10),
+                                    ),
+                                    color: bgColDark,
+                                  ),
+                                  child: Column(
+                                    mainAxisSize: MainAxisSize.min,
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children: [
+                                      Icon(
+                                        Icons.history,
+                                        size: 50.w,
+                                        color: priCol,
+                                      ),
+                                      SizedBox(height: 10.w),
+                                      Text(
+                                        "No Learning History",
+                                        style: TextStyle(
+                                          fontSize: 18.sp,
+                                          fontWeight: FontWeight.bold,
+                                        ),
+                                      ),
+                                      SizedBox(height: 10.w),
+                                      Text(
+                                        "Start a new session to see your learning history",
+                                        style: TextStyle(
+                                          fontSize: 16.sp,
+                                          color: txtColLight,
+                                        ),
+                                        textAlign: TextAlign.center,
+                                      ),
+                                      SizedBox(height: 10.w),
+                                      ElevatedButton(
+                                        onPressed: () {
+                                          Provider.of<PageProvider>(context,
+                                                  listen: false)
+                                              .setPage(0);
+                                          // Navigator.pop(context);
+                                        },
+                                        child:
+                                            const Text("Start a new session"),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              );
+                            }
                             return isStarted != true
                                 ? startPractice(context)
                                 : ListView.builder(
@@ -161,6 +250,7 @@ class _PracticeScreenState extends State<PracticeScreen> {
                                     hintText: "Enter a prompt...",
                                     type: TextInputType.multiline,
                                     controller: txtInput,
+                                    // focusNode: focusNode,
                                     suffixIcon: IconButton(
                                       onPressed: () {
                                         showMathsKeyboard();
@@ -198,7 +288,19 @@ class _PracticeScreenState extends State<PracticeScreen> {
                                           await sendRequest(txtInput.text)
                                               .then((value) async => {
                                                     Navigator.pop(context),
-                                                  });
+                                                  })
+                                              .whenComplete(
+                                                () =>
+                                                    scrollController.animateTo(
+                                                  scrollController.position
+                                                          .maxScrollExtent +
+                                                      // 500,
+                                                      double.infinity,
+                                                  curve: Curves.easeOut,
+                                                  duration: const Duration(
+                                                      milliseconds: 200),
+                                                ),
+                                              );
                                         } catch (e) {
                                           Navigator.pop(context);
                                           CustomSnackBar.show(context,
@@ -223,6 +325,7 @@ class _PracticeScreenState extends State<PracticeScreen> {
     );
   }
 
+//build start practice scren
   Widget startPractice(BuildContext context) {
     return Column(
       children: [
@@ -254,6 +357,7 @@ class _PracticeScreenState extends State<PracticeScreen> {
     );
   }
 
+// show maths keyboard
   void showMathsKeyboard() {
     String mathExpression = "";
     showDialog(

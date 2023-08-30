@@ -1,8 +1,4 @@
-import 'dart:convert';
-
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/scheduler.dart';
 import 'package:flutter_keyboard_visibility/flutter_keyboard_visibility.dart';
 import 'package:math_keyboard/math_keyboard.dart';
 import 'package:mathsaide/constants/constants.dart';
@@ -61,10 +57,10 @@ class _PracticeScreenState extends State<PracticeScreen> {
     await Prefs.getSession().then(
       (value) async => {
         setState(
-          () => _sessionID = value!,
+          () => _sessionID = value ?? "",
         ),
         await Prefs.getTopic().then(
-          (topic) => setState(() => selectedTopic = topic!),
+          (topic) => setState(() => selectedTopic = topic ?? ""),
         ),
 
         // print(_sessionID),

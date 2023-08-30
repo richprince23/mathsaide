@@ -63,10 +63,10 @@ class _LearnNowScreenState extends State<LearnNowScreen> {
       appBar: AppBar(
         title: const Text("LearnNow"),
         actions: [
-          IconButton(
-            onPressed: () {},
-            icon: const Icon(Icons.help_outline),
-          ),
+          // IconButton(
+          //   onPressed: () {},
+          //   icon: const Icon(Icons.help_outline),
+          // ),
           Consumer<SessionProvider>(
             builder: (context, value, child) {
               return FutureBuilder(

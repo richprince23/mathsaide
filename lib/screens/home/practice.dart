@@ -4,6 +4,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:flutter_keyboard_visibility/flutter_keyboard_visibility.dart';
+import 'package:math_keyboard/math_keyboard.dart';
 import 'package:mathsaide/constants/constants.dart';
 import 'package:mathsaide/controllers/chat_controller.dart';
 import 'package:mathsaide/controllers/network_controller.dart';
@@ -28,7 +29,7 @@ class _PracticeScreenState extends State<PracticeScreen> {
   String selectedTopic = "";
   String initialPrompt = "";
   List messages = [];
-
+  final mathsInput = MathFieldEditingController();
   final TextEditingController txtInput = TextEditingController();
   final scrollController = ScrollController();
   String prompt = '';
@@ -36,7 +37,7 @@ class _PracticeScreenState extends State<PracticeScreen> {
   bool isStarted = false;
 
   String initPrompt() {
-    return "You are a Mathematics Questions generator for a 12th Grade student. Generate a question for a student to practice based on $selectedTopic. Evalute the user's answer and let them know if the answer is correct or incorrect. If incorrect , return a step by step approach to solve the question. Please provide a concise and accurate response. Avoid any unrelated information or verbosity. Keep your response strictly focused on the question asked. Start by providing the user with a question only";
+    return "You are a Mathematics Questions generator for a 12th Grade student. Generate a question for a student to practice based on $selectedTopic. Evaluate the user's answer, return a step by step approach to solve the question, without letting them know whether they are wrong or right. Please take your time to think to provide accurate and correct calculations in your responses. Avoid any unrelated information or verbosity. Keep your response strictly focused on the question asked. Start by providing the user with a question only";
   }
 
   @override
@@ -73,12 +74,12 @@ class _PracticeScreenState extends State<PracticeScreen> {
           },
 
         // queryHistory.add(ChatResponse(content: initPrompt(), role: 'system')),
-
         Future.delayed(const Duration(microseconds: 100))
       },
     );
   }
 
+  //send request to the api and save the response
   Future sendRequest(String prompt) async {
     if (prompt == "" && prompt.isEmpty) {
       setState(() {
@@ -136,19 +137,9 @@ class _PracticeScreenState extends State<PracticeScreen> {
                                         EdgeInsets.symmetric(horizontal: 10.w),
                                     controller: scrollController,
                                     scrollDirection: Axis.vertical,
-                                    itemCount: chatHistory.length - 1,
+                                    itemCount: messages.length,
                                     itemBuilder: (context, index) {
-                                      final data =
-                                          // ChatResponse.fromJson(
-                                          jsonDecode(
-                                              chatHistory[index + 1] as String);
-                                      // );
-                                      // print("data returned is   ${data?['content']}");
-                                      return ChatBubble(
-                                        isUser:
-                                            data.role == "user" ? true : false,
-                                        message: data.content,
-                                      );
+                                      return messages[index];
                                     },
                                   );
                           }),
@@ -170,6 +161,13 @@ class _PracticeScreenState extends State<PracticeScreen> {
                                     hintText: "Enter a prompt...",
                                     type: TextInputType.multiline,
                                     controller: txtInput,
+                                    suffixIcon: IconButton(
+                                      onPressed: () {
+                                        showMathsKeyboard();
+                                      },
+                                      icon: const Icon(Icons.calculate),
+                                      color: txtCol,
+                                    ),
                                   ),
                                 ),
                                 SizedBox(
@@ -253,6 +251,60 @@ class _PracticeScreenState extends State<PracticeScreen> {
               )
             : const SizedBox.shrink(),
       ],
+    );
+  }
+
+  void showMathsKeyboard() {
+    String mathExpression = "";
+    showDialog(
+      context: context,
+      builder: ((context) => Center(
+            child: Container(
+              height: 40.vh,
+              padding: const EdgeInsets.all(20.0),
+              margin: const EdgeInsets.all(20.0),
+              decoration: ShapeDecoration(
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(10.r),
+                ),
+                color: bgCol,
+              ),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  const Text("Input equation here..."),
+                  SizedBox(
+                    height: 20.h,
+                  ),
+                  MathField(
+                    controller: mathsInput,
+                    keyboardType: MathKeyboardType.expression,
+                    variables: const ['a', 'b', 'c', 'x', 'y', 'z'],
+                  ),
+                  SizedBox(
+                    height: 20.h,
+                  ),
+                  ElevatedButton(
+                    onPressed: () {
+                      if (!mathsInput.isEmpty) {
+                        // txtInput.text += mathsInput.currentEditingValue();
+                        final parsedExpression = TeXParser(
+                                mathsInput.currentEditingValue(
+                                    placeholderWhenEmpty: true))
+                            .parse();
+                        mathExpression = "\n$parsedExpression\n";
+                        // print(mathExpression);
+                        txtInput.text += mathExpression;
+                      }
+                      Navigator.pop(context);
+                    },
+                    child: const Text("Insert Equation"),
+                  )
+                ],
+              ),
+            ),
+          )),
     );
   }
 }

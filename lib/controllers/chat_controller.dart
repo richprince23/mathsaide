@@ -183,8 +183,7 @@ Future generatePracticeQuestions(String? message) async {
         );
 
     if (message != "" || message!.isNotEmpty) {
-      queryHistory.add(ChatResponse(
-          content: "Evaluate my answer: ${message!.trim()}", role: "user"));
+      queryHistory.add(ChatResponse(content: message!.trim(), role: "user"));
     } else {
       queryHistory
           .add(ChatResponse(content: "Give me a question", role: "user"));
@@ -205,7 +204,7 @@ Future generatePracticeQuestions(String? message) async {
     var body = jsonEncode({
       // "model": "text-davinci-003",
       "model": "gpt-3.5-turbo",
-      "temperature": 0.3,
+      "temperature": 0.8,
       "max_tokens": 256,
       "frequency_penalty": 0,
       "presence_penalty": 0,
@@ -233,6 +232,9 @@ Future generatePracticeQuestions(String? message) async {
           .then((value) => res = jsonDecode(value));
       if (res != null && res['choices'] != null && res['choices'].isNotEmpty) {
         content = res['choices'][0]['message']['content'];
+
+        //add to chat history
+        queryHistory.add(ChatResponse(content: content!, role: "assistant"));
         return content;
       } else {
         // print("${response.reasonPhrase!} ${response.statusCode}");

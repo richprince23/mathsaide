@@ -6,6 +6,9 @@ import 'package:mathsaide/constants/constants.dart';
 import 'package:mathsaide/controllers/auth_controller.dart';
 import 'package:mathsaide/models/quiz_model.dart';
 
+
+//genrate random question
+//not used
 Future<String?> generateQuestions(
     {String topic = "Algebra", int number = 10}) async {
   // get student age

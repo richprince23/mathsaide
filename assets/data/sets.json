@@ -1,0 +1,1102 @@
+[
+    {
+        "question": "Which of the following is a subset of the set {1, 2, 3}?",
+        "options": [
+            "{1, 2, 3}",
+            "{2, 3, 4}",
+            "{3, 4, 5}",
+            "{1, 2, 3, 4}"
+        ],
+        "correct_answer": "{1, 2, 3}"
+    },
+    {
+        "question": "What is the cardinality of the set {apple, banana, cherry}?",
+        "options": [
+            "0",
+            "1",
+            "2",
+            "3"
+        ],
+        "correct_answer": "3"
+    },
+    {
+        "question": "If A = {1, 2, 3} and B = {2, 3, 4}, what is the intersection of sets A and B?",
+        "options": [
+            "{1, 2, 3, 4}",
+            "{2, 3}",
+            "{1, 4}",
+            "{}"
+        ],
+        "correct_answer": "{2, 3}"
+    },
+    {
+        "question": "What is the complement of the set {a, b, c} with respect to the universal set U = {a, b, c, d, e}?",
+        "options": [
+            "{a, b, c, d, e}",
+            "{d, e}",
+            "{a, b, c}",
+            "{}"
+        ],
+        "correct_answer": "{d, e}"
+    },
+    {
+        "question": "In set-builder notation, how would you represent the set of even natural numbers?",
+        "options": [
+            "{n | n is even and n > 0}",
+            "{n | n is odd and n > 0}",
+            "{n | n is an integer and n > 0}",
+            "{n | n is even and n < 0}"
+        ],
+        "correct_answer": "{n | n is even and n > 0}"
+    },
+    {
+        "question": "If R is an equivalence relation on set A, which of the following is true?",
+        "options": [
+            "Reflexivity: (a, a) ∈ R for all a in A",
+            "Symmetry: (a, b) ∈ R implies (b, a) ∈ R for all a, b in A",
+            "Transitivity: (a, b) ∈ R and (b, c) ∈ R implies (a, c) ∈ R for all a, b, c in A",
+            "All of the above"
+        ],
+        "correct_answer": "All of the above"
+    },
+    {
+        "question": "In a relation, if every element in the domain is related to a unique element in the codomain, what type of relation is it?",
+        "options": [
+            "One-to-one (Injective)",
+            "Onto (Surjective)",
+            "Many-to-one",
+            "One-to-many"
+        ],
+        "correct_answer": "One-to-one (Injective)"
+    },
+    {
+        "question": "What is the Cartesian product of sets A = {1, 2} and B = {a, b, c}?",
+        "options": [
+            "{(1, a), (1, b), (1, c), (2, a), (2, b), (2, c)}",
+            "{(1, 1), (2, 2)}",
+            "{(1, a, 1), (2, b, 2)}",
+            "{(1, 1, a), (2, 2, b)}"
+        ],
+        "correct_answer": "{(1, a), (1, b), (1, c), (2, a), (2, b), (2, c)}"
+    },
+    {
+        "question": "What is the reflexive closure of the relation R = {(1, 1), (2, 2)} on set A = {1, 2, 3}?",
+        "options": [
+            "{(1, 1), (2, 2)}",
+            "{(1, 1), (2, 2), (3, 3)}",
+            "{(1, 1), (2, 2), (1, 2), (2, 1)}",
+            "{(1, 1), (2, 2), (3, 3), (1, 2), (2, 1)}"
+        ],
+        "correct_answer": "{(1, 1), (2, 2), (3, 3)}"
+    },
+    {
+        "question": "In set theory, what does the union of two sets represent?",
+        "options": [
+            "The set of elements common to both sets",
+            "The set of all elements in either set",
+            "The set of ordered pairs from both sets",
+            "The set of elements not in either set"
+        ],
+        "correct_answer": "The set of all elements in either set"
+    },
+    {
+        "question": "What is the intersection of the sets A = {1, 2, 3, 4} and B = {3, 4, 5, 6}?",
+        "options": [
+            "{1, 2, 3, 4, 5, 6}",
+            "{3, 4}",
+            "{1, 2, 5, 6}",
+            "{}"
+        ],
+        "correct_answer": "{3, 4}"
+    },
+    {
+        "question": "If set A = {a, b, c} and set B = {b, c, d}, what is the union of sets A and B?",
+        "options": [
+            "{a, b, c, d}",
+            "{a, b, c}",
+            "{b, c, d}",
+            "{a, d}"
+        ],
+        "correct_answer": "{a, b, c, d}"
+    },
+    {
+        "question": "What is the power set of the set {1, 2, 3}?",
+        "options": [
+            "{}",
+            "{{1}, {2}, {3}}",
+            "{{1, 2}, {1, 3}, {2, 3}}",
+            "{{1, 2, 3}}"
+        ],
+        "correct_answer": "{{}, {1}, {2}, {3}, {1, 2}, {1, 3}, {2, 3}, {1, 2, 3}}"
+    },
+    {
+        "question": "In a relation, if every element in the domain is related to an element in the codomain, what type of relation is it?",
+        "options": [
+            "One-to-one (Injective)",
+            "Onto (Surjective)",
+            "Many-to-one",
+            "One-to-many"
+        ],
+        "correct_answer": "Onto (Surjective)"
+    },
+    {
+        "question": "If set A = {1, 2, 3, 4, 5} and set B = {3, 4, 5, 6, 7}, what is the symmetric difference of sets A and B?",
+        "options": [
+            "{1, 2, 6, 7}",
+            "{1, 2}",
+            "{3, 4, 5}",
+            "{}"
+        ],
+        "correct_answer": "{1, 2, 6, 7}"
+    },
+    {
+        "question": "What is the cardinality of the empty set?",
+        "options": [
+            "0",
+            "1",
+            "2",
+            "Undefined"
+        ],
+        "correct_answer": "0"
+    },
+    {
+        "question": "In a reflexive relation, what is true about the ordered pairs (a, a) for all elements a in the set?",
+        "options": [
+            "They must all be in the relation",
+            "They must all not be in the relation",
+            "They may or may not be in the relation",
+            "None of the above"
+        ],
+        "correct_answer": "They must all be in the relation"
+    },
+    {
+        "question": "What is the difference between a function and a relation?",
+        "options": [
+            "A relation maps elements from the domain to the codomain, while a function does not.",
+            "A function is a specific type of relation where each element in the domain is related to exactly one element in the codomain.",
+            "A function always has a higher cardinality than a relation.",
+            "A relation is always one-to-one, while a function is not."
+        ],
+        "correct_answer": "A function is a specific type of relation where each element in the domain is related to exactly one element in the codomain."
+    },
+    {
+        "question": "What is the complement of the set {a, b, c, d} with respect to the universal set U = {a, b, c, d, e, f, g}?",
+        "options": [
+            "{a, b, c, d}",
+            "{e, f, g}",
+            "{a, b, c, d, e, f, g}",
+            "{}"
+        ],
+        "correct_answer": "{e, f, g}"
+    },
+    {
+        "question": "In set-builder notation, how would you represent the set of integers greater than 5?",
+        "options": [
+            "{x | x > 5}",
+            "{x | x < 5}",
+            "{x | x = 5}",
+            "{x | x ≥ 5}"
+        ],
+        "correct_answer": "{x | x > 5}"
+    },
+    {
+        "question": "What is the union of the sets A = {1, 2, 3} and B = {3, 4, 5}?",
+        "options": [
+            "{1, 2, 3, 4, 5}",
+            "{3}",
+            "{1, 2, 4, 5}",
+            "{}"
+        ],
+        "correct_answer": "{1, 2, 3, 4, 5}"
+    },
+    {
+        "question": "If set A = {a, b, c, d} and set B = {c, d, e, f}, what is the symmetric difference of sets A and B?",
+        "options": [
+            "{a, b, e, f}",
+            "{c, d}",
+            "{a, b, c, d, e, f}",
+            "{}"
+        ],
+        "correct_answer": "{a, b, e, f}"
+    },
+    {
+        "question": "What is the cardinality of the set of natural numbers less than 10?",
+        "options": [
+            "9",
+            "10",
+            "11",
+            "Infinite"
+        ],
+        "correct_answer": "9"
+    },
+    {
+        "question": "In a function, if each element in the domain is related to a unique element in the codomain, what type of function is it?",
+        "options": [
+            "One-to-one (Injective)",
+            "Onto (Surjective)",
+            "Many-to-one",
+            "One-to-many"
+        ],
+        "correct_answer": "One-to-one (Injective)"
+    },
+    {
+        "question": "If set A = {1, 2, 3, 4, 5} and set B = {3, 4, 5, 6, 7}, what is the intersection of sets A and B?",
+        "options": [
+            "{1, 2, 3, 4, 5, 6, 7}",
+            "{3, 4, 5}",
+            "{1, 2, 6, 7}",
+            "{}"
+        ],
+        "correct_answer": "{3, 4, 5}"
+    },
+    {
+        "question": "What is the power set of the set {a, b}?",
+        "options": [
+            "{}",
+            "{{a}, {b}}",
+            "{{a, b}}",
+            "{{}, {a}, {b}}"
+        ],
+        "correct_answer": "{{}, {a}, {b}, {a, b}}"
+    },
+    {
+        "question": "In a reflexive relation, what is true about the ordered pairs (a, a) for all elements a in the set?",
+        "options": [
+            "They must all be in the relation",
+            "They must all not be in the relation",
+            "They may or may not be in the relation",
+            "None of the above"
+        ],
+        "correct_answer": "They must all be in the relation"
+    },
+    {
+        "question": "What is the difference between a set and a relation?",
+        "options": [
+            "A set contains elements, while a relation contains ordered pairs of elements.",
+            "A set is always finite, while a relation can be finite or infinite.",
+            "A set can have duplicate elements, while a relation cannot.",
+            "A set and a relation are the same thing."
+        ],
+        "correct_answer": "A set contains elements, while a relation contains ordered pairs of elements."
+    },
+    {
+        "question": "What is the complement of the set {a, b, c} with respect to the universal set U = {a, b, c, d, e}?",
+        "options": [
+            "{}",
+            "{a, b, c}",
+            "{d, e}",
+            "{a, b, c, d, e}"
+        ],
+        "correct_answer": "{d, e}"
+    },
+    {
+        "question": "In set-builder notation, how would you represent the set of even integers?",
+        "options": [
+            "{x | x is even and x > 0}",
+            "{x | x is even}",
+            "{x | x is odd and x > 0}",
+            "{x | x is positive}"
+        ],
+        "correct_answer": "{x | x is even}"
+    },
+    {
+        "question": "What is the union of the sets A = {1, 2, 3} and B = {3, 4, 5}?",
+        "options": [
+            "{1, 2, 3, 4, 5}",
+            "{3}",
+            "{1, 2, 4, 5}",
+            "{}"
+        ],
+        "correct_answer": "{1, 2, 3, 4, 5}"
+    },
+    {
+        "question": "If set A = {a, b, c, d} and set B = {c, d, e, f}, what is the symmetric difference of sets A and B?",
+        "options": [
+            "{a, b, e, f}",
+            "{c, d}",
+            "{a, b, c, d, e, f}",
+            "{}"
+        ],
+        "correct_answer": "{a, b, e, f}"
+    },
+    {
+        "question": "What is the cardinality of the set of natural numbers less than 10?",
+        "options": [
+            "9",
+            "10",
+            "11",
+            "Infinite"
+        ],
+        "correct_answer": "9"
+    },
+    {
+        "question": "In a function, if each element in the domain is related to a unique element in the codomain, what type of function is it?",
+        "options": [
+            "One-to-one (Injective)",
+            "Onto (Surjective)",
+            "Many-to-one",
+            "One-to-many"
+        ],
+        "correct_answer": "One-to-one (Injective)"
+    },
+    {
+        "question": "If set A = {1, 2, 3, 4, 5} and set B = {3, 4, 5, 6, 7}, what is the intersection of sets A and B?",
+        "options": [
+            "{1, 2, 3, 4, 5, 6, 7}",
+            "{3, 4, 5}",
+            "{1, 2, 6, 7}",
+            "{}"
+        ],
+        "correct_answer": "{3, 4, 5}"
+    },
+    {
+        "question": "What is the power set of the set {a, b}?",
+        "options": [
+            "{}",
+            "{{a}, {b}}",
+            "{{a, b}}",
+            "{{}, {a}, {b}, {a, b}}"
+        ],
+        "correct_answer": "{{}, {a}, {b}, {a, b}}"
+    },
+    {
+        "question": "In a reflexive relation, what is true about the ordered pairs (a, a) for all elements a in the set?",
+        "options": [
+            "They must all be in the relation",
+            "They must all not be in the relation",
+            "They may or may not be in the relation",
+            "None of the above"
+        ],
+        "correct_answer": "They must all be in the relation"
+    },
+    {
+        "question": "What is the difference between a set and a relation?",
+        "options": [
+            "A set contains elements, while a relation contains ordered pairs of elements.",
+            "A set is always finite, while a relation can be finite or infinite.",
+            "A set can have duplicate elements, while a relation cannot.",
+            "A set and a relation are the same thing."
+        ],
+        "correct_answer": "A set contains elements, while a relation contains ordered pairs of elements."
+    },
+    {
+        "question": "What is the complement of the set {a, b, c} with respect to the universal set U = {a, b, c, d, e}?",
+        "options": [
+            "{}",
+            "{a, b, c}",
+            "{d, e}",
+            "{a, b, c, d, e}"
+        ],
+        "correct_answer": "{d, e}"
+    },
+    {
+        "question": "In set-builder notation, how would you represent the set of even integers?",
+        "options": [
+            "{x | x is even and x > 0}",
+            "{x | x is even}",
+            "{x | x is odd and x > 0}",
+            "{x | x is positive}"
+        ],
+        "correct_answer": "{x | x is even}"
+    },
+    {
+        "question": "What is the intersection of the sets A = {1, 2, 3} and B = {3, 4, 5}?",
+        "options": [
+            "{1, 2, 3, 4, 5}",
+            "{3}",
+            "{1, 2, 4, 5}",
+            "{}"
+        ],
+        "correct_answer": "{3}"
+    },
+    {
+        "question": "If set A = {a, b, c, d} and set B = {c, d, e, f}, what is the symmetric difference of sets A and B?",
+        "options": [
+            "{a, b, e, f}",
+            "{c, d}",
+            "{a, b, c, d, e, f}",
+            "{}"
+        ],
+        "correct_answer": "{a, b, e, f}"
+    },
+    {
+        "question": "What is the cardinality of the set of natural numbers less than 10?",
+        "options": [
+            "9",
+            "10",
+            "11",
+            "Infinite"
+        ],
+        "correct_answer": "9"
+    },
+    {
+        "question": "In a function, if each element in the domain is related to a unique element in the codomain, what type of function is it?",
+        "options": [
+            "One-to-one (Injective)",
+            "Onto (Surjective)",
+            "Many-to-one",
+            "One-to-many"
+        ],
+        "correct_answer": "One-to-one (Injective)"
+    },
+    {
+        "question": "If set A = {1, 2, 3, 4, 5} and set B = {3, 4, 5, 6, 7}, what is the intersection of sets A and B?",
+        "options": [
+            "{1, 2, 3, 4, 5, 6, 7}",
+            "{3, 4, 5}",
+            "{1, 2, 6, 7}",
+            "{}"
+        ],
+        "correct_answer": "{3, 4, 5}"
+    },
+    {
+        "question": "What is the power set of the set {a, b}?",
+        "options": [
+            "{}",
+            "{{a}, {b}}",
+            "{{a, b}}",
+            "{{}, {a}, {b}, {a, b}}"
+        ],
+        "correct_answer": "{{}, {a}, {b}, {a, b}}"
+    },
+    {
+        "question": "In a reflexive relation, what is true about the ordered pairs (a, a) for all elements a in the set?",
+        "options": [
+            "They must all be in the relation",
+            "They must all not be in the relation",
+            "They may or may not be in the relation",
+            "None of the above"
+        ],
+        "correct_answer": "They must all be in the relation"
+    },
+    {
+        "question": "What is the difference between a set and a relation?",
+        "options": [
+            "A set contains elements, while a relation contains ordered pairs of elements.",
+            "A set is always finite, while a relation can be finite or infinite.",
+            "A set can have duplicate elements, while a relation cannot.",
+            "A set and a relation are the same thing."
+        ],
+        "correct_answer": "A set contains elements, while a relation contains ordered pairs of elements."
+    },
+    {
+        "question": "What is the complement of the set {a, b, c} with respect to the universal set U = {a, b, c, d, e}?",
+        "options": [
+            "{}",
+            "{a, b, c}",
+            "{d, e}",
+            "{a, b, c, d, e}"
+        ],
+        "correct_answer": "{d, e}"
+    },
+    {
+        "question": "In set-builder notation, how would you represent the set of even integers?",
+        "options": [
+            "{x | x is even and x > 0}",
+            "{x | x is even}",
+            "{x | x is odd and x > 0}",
+            "{x | x is positive}"
+        ],
+        "correct_answer": "{x | x is even}"
+    },
+    {
+        "question": "What is the intersection of the sets A = {1, 2, 3} and B = {3, 4, 5}?",
+        "options": [
+            "{1, 2, 3, 4, 5}",
+            "{3}",
+            "{1, 2, 4, 5}",
+            "{}"
+        ],
+        "correct_answer": "{3}"
+    },
+    {
+        "question": "If set A = {a, b, c, d} and set B = {c, d, e, f}, what is the symmetric difference of sets A and B?",
+        "options": [
+            "{a, b, e, f}",
+            "{c, d}",
+            "{a, b, c, d, e, f}",
+            "{}"
+        ],
+        "correct_answer": "{a, b, e, f}"
+    },
+    {
+        "question": "What is the cardinality of the set of natural numbers less than 10?",
+        "options": [
+            "9",
+            "10",
+            "11",
+            "Infinite"
+        ],
+        "correct_answer": "9"
+    },
+    {
+        "question": "In a function, if each element in the domain is related to a unique element in the codomain, what type of function is it?",
+        "options": [
+            "One-to-one (Injective)",
+            "Onto (Surjective)",
+            "Many-to-one",
+            "One-to-many"
+        ],
+        "correct_answer": "One-to-one (Injective)"
+    },
+    {
+        "question": "If set A = {1, 2, 3, 4, 5} and set B = {3, 4, 5, 6, 7}, what is the intersection of sets A and B?",
+        "options": [
+            "{1, 2, 3, 4, 5, 6, 7}",
+            "{3, 4, 5}",
+            "{1, 2, 6, 7}",
+            "{}"
+        ],
+        "correct_answer": "{3, 4, 5}"
+    },
+    {
+        "question": "What is the power set of the set {a, b}?",
+        "options": [
+            "{}",
+            "{{a}, {b}}",
+            "{{a, b}}",
+            "{{}, {a}, {b}, {a, b}}"
+        ],
+        "correct_answer": "{{}, {a}, {b}, {a, b}}"
+    },
+    {
+        "question": "In a reflexive relation, what is true about the ordered pairs (a, a) for all elements a in the set?",
+        "options": [
+            "They must all be in the relation",
+            "They must all not be in the relation",
+            "They may or may not be in the relation",
+            "None of the above"
+        ],
+        "correct_answer": "They must all be in the relation"
+    },
+    {
+        "question": "What is the difference between a set and a relation?",
+        "options": [
+            "A set contains elements, while a relation contains ordered pairs of elements.",
+            "A set is always finite, while a relation can be finite or infinite.",
+            "A set can have duplicate elements, while a relation cannot.",
+            "A set and a relation are the same thing."
+        ],
+        "correct_answer": "A set contains elements, while a relation contains ordered pairs of elements."
+    },
+    {
+        "question": "What is the complement of the set {a, b, c} with respect to the universal set U = {a, b, c, d, e}?",
+        "options": [
+            "{}",
+            "{a, b, c}",
+            "{d, e}",
+            "{a, b, c, d, e}"
+        ],
+        "correct_answer": "{d, e}"
+    },
+    {
+        "question": "In set-builder notation, how would you represent the set of even integers?",
+        "options": [
+            "{x | x is even and x > 0}",
+            "{x | x is even}",
+            "{x | x is odd and x > 0}",
+            "{x | x is positive}"
+        ],
+        "correct_answer": "{x | x is even}"
+    },
+    {
+        "question": "What is the intersection of the sets A = {1, 2, 3} and B = {3, 4, 5}?",
+        "options": [
+            "{1, 2, 3, 4, 5}",
+            "{3}",
+            "{1, 2, 4, 5}",
+            "{}"
+        ],
+        "correct_answer": "{3}"
+    },
+    {
+        "question": "If set A = {a, b, c, d} and set B = {c, d, e, f}, what is the symmetric difference of sets A and B?",
+        "options": [
+            "{a, b, e, f}",
+            "{c, d}",
+            "{a, b, c, d, e, f}",
+            "{}"
+        ],
+        "correct_answer": "{a, b, e, f}"
+    },
+    {
+        "question": "What is the cardinality of the set of natural numbers less than 10?",
+        "options": [
+            "9",
+            "10",
+            "11",
+            "Infinite"
+        ],
+        "correct_answer": "9"
+    },
+    {
+        "question": "In a function, if each element in the domain is related to a unique element in the codomain, what type of function is it?",
+        "options": [
+            "One-to-one (Injective)",
+            "Onto (Surjective)",
+            "Many-to-one",
+            "One-to-many"
+        ],
+        "correct_answer": "One-to-one (Injective)"
+    },
+    {
+        "question": "If set A = {1, 2, 3, 4, 5} and set B = {3, 4, 5, 6, 7}, what is the intersection of sets A and B?",
+        "options": [
+            "{1, 2, 3, 4, 5, 6, 7}",
+            "{3, 4, 5}",
+            "{1, 2, 6, 7}",
+            "{}"
+        ],
+        "correct_answer": "{3, 4, 5}"
+    },
+    {
+        "question": "What is the power set of the set {a, b}?",
+        "options": [
+            "{}",
+            "{{a}, {b}}",
+            "{{a, b}}",
+            "{{}, {a}, {b}, {a, b}}"
+        ],
+        "correct_answer": "{{}, {a}, {b}, {a, b}}"
+    },
+    {
+        "question": "In a reflexive relation, what is true about the ordered pairs (a, a) for all elements a in the set?",
+        "options": [
+            "They must all be in the relation",
+            "They must all not be in the relation",
+            "They may or may not be in the relation",
+            "None of the above"
+        ],
+        "correct_answer": "They must all be in the relation"
+    },
+    {
+        "question": "What is the difference between a set and a relation?",
+        "options": [
+            "A set contains elements, while a relation contains ordered pairs of elements.",
+            "A set is always finite, while a relation can be finite or infinite.",
+            "A set can have duplicate elements, while a relation cannot.",
+            "A set and a relation are the same thing."
+        ],
+        "correct_answer": "A set contains elements, while a relation contains ordered pairs of elements."
+    },
+    {
+        "question": "What is the complement of the set {a, b, c} with respect to the universal set U = {a, b, c, d, e}?",
+        "options": [
+            "{}",
+            "{a, b, c}",
+            "{d, e}",
+            "{a, b, c, d, e}"
+        ],
+        "correct_answer": "{d, e}"
+    },
+    {
+        "question": "In set-builder notation, how would you represent the set of even integers?",
+        "options": [
+            "{x | x is even and x > 0}",
+            "{x | x is even}",
+            "{x | x is odd and x > 0}",
+            "{x | x is positive}"
+        ],
+        "correct_answer": "{x | x is even}"
+    },
+    {
+        "question": "What is the intersection of the sets A = {1, 2, 3} and B = {3, 4, 5}?",
+        "options": [
+            "{1, 2, 3, 4, 5}",
+            "{3}",
+            "{1, 2, 4, 5}",
+            "{}"
+        ],
+        "correct_answer": "{3}"
+    },
+    {
+        "question": "If set A = {a, b, c, d} and set B = {c, d, e, f}, what is the symmetric difference of sets A and B?",
+        "options": [
+            "{a, b, e, f}",
+            "{c, d}",
+            "{a, b, c, d, e, f}",
+            "{}"
+        ],
+        "correct_answer": "{a, b, e, f}"
+    },
+    {
+        "question": "What is the cardinality of the set of natural numbers less than 10?",
+        "options": [
+            "9",
+            "10",
+            "11",
+            "Infinite"
+        ],
+        "correct_answer": "9"
+    },
+    {
+        "question": "In a function, if each element in the domain is related to a unique element in the codomain, what type of function is it?",
+        "options": [
+            "One-to-one (Injective)",
+            "Onto (Surjective)",
+            "Many-to-one",
+            "One-to-many"
+        ],
+        "correct_answer": "One-to-one (Injective)"
+    },
+    {
+        "question": "If set A = {1, 2, 3, 4, 5} and set B = {3, 4, 5, 6, 7}, what is the intersection of sets A and B?",
+        "options": [
+            "{1, 2, 3, 4, 5, 6, 7}",
+            "{3, 4, 5}",
+            "{1, 2, 6, 7}",
+            "{}"
+        ],
+        "correct_answer": "{3, 4, 5}"
+    },
+    {
+        "question": "What is the power set of the set {a, b}?",
+        "options": [
+            "{}",
+            "{{a}, {b}}",
+            "{{a, b}}",
+            "{{}, {a}, {b}, {a, b}}"
+        ],
+        "correct_answer": "{{}, {a}, {b}, {a, b}}"
+    },
+    {
+        "question": "In a reflexive relation, what is true about the ordered pairs (a, a) for all elements a in the set?",
+        "options": [
+            "They must all be in the relation",
+            "They must all not be in the relation",
+            "They may or may not be in the relation",
+            "None of the above"
+        ],
+        "correct_answer": "They must all be in the relation"
+    },
+    {
+        "question": "What is the difference between a set and a relation?",
+        "options": [
+            "A set contains elements, while a relation contains ordered pairs of elements.",
+            "A set is always finite, while a relation can be finite or infinite.",
+            "A set can have duplicate elements, while a relation cannot.",
+            "A set and a relation are the same thing."
+        ],
+        "correct_answer": "A set contains elements, while a relation contains ordered pairs of elements."
+    },
+    {
+        "question": "What is the complement of the set {a, b, c} with respect to the universal set U = {a, b, c, d, e}?",
+        "options": [
+            "{}",
+            "{a, b, c}",
+            "{d, e}",
+            "{a, b, c, d, e}"
+        ],
+        "correct_answer": "{d, e}"
+    },
+    {
+        "question": "In set-builder notation, how would you represent the set of even integers?",
+        "options": [
+            "{x | x is even and x > 0}",
+            "{x | x is even}",
+            "{x | x is odd and x > 0}",
+            "{x | x is positive}"
+        ],
+        "correct_answer": "{x | x is even}"
+    },
+    {
+        "question": "What is the intersection of the sets A = {1, 2, 3} and B = {3, 4, 5}?",
+        "options": [
+            "{1, 2, 3, 4, 5}",
+            "{3}",
+            "{1, 2, 4, 5}",
+            "{}"
+        ],
+        "correct_answer": "{3}"
+    },
+    {
+        "question": "If set A = {a, b, c, d} and set B = {c, d, e, f}, what is the symmetric difference of sets A and B?",
+        "options": [
+            "{a, b, e, f}",
+            "{c, d}",
+            "{a, b, c, d, e, f}",
+            "{}"
+        ],
+        "correct_answer": "{a, b, e, f}"
+    },
+    {
+        "question": "What is the cardinality of the set of natural numbers less than 10?",
+        "options": [
+            "9",
+            "10",
+            "11",
+            "Infinite"
+        ],
+        "correct_answer": "9"
+    },
+    {
+        "question": "In a function, if each element in the domain is related to a unique element in the codomain, what type of function is it?",
+        "options": [
+            "One-to-one (Injective)",
+            "Onto (Surjective)",
+            "Many-to-one",
+            "One-to-many"
+        ],
+        "correct_answer": "One-to-one (Injective)"
+    },
+    {
+        "question": "If set A = {1, 2, 3, 4, 5} and set B = {3, 4, 5, 6, 7}, what is the intersection of sets A and B?",
+        "options": [
+            "{1, 2, 3, 4, 5, 6, 7}",
+            "{3, 4, 5}",
+            "{1, 2, 6, 7}",
+            "{}"
+        ],
+        "correct_answer": "{3, 4, 5}"
+    },
+    {
+        "question": "What is the power set of the set {a, b}?",
+        "options": [
+            "{}",
+            "{{a}, {b}}",
+            "{{a, b}}",
+            "{{}, {a}, {b}, {a, b}}"
+        ],
+        "correct_answer": "{{}, {a}, {b}, {a, b}}"
+    },
+    {
+        "question": "In a reflexive relation, what is true about the ordered pairs (a, a) for all elements a in the set?",
+        "options": [
+            "They must all be in the relation",
+            "They must all not be in the relation",
+            "They may or may not be in the relation",
+            "None of the above"
+        ],
+        "correct_answer": "They must all be in the relation"
+    },
+    {
+        "question": "What is the difference between a set and a relation?",
+        "options": [
+            "A set contains elements, while a relation contains ordered pairs of elements.",
+            "A set is always finite, while a relation can be finite or infinite.",
+            "A set can have duplicate elements, while a relation cannot.",
+            "A set and a relation are the same thing."
+        ],
+        "correct_answer": "A set contains elements, while a relation contains ordered pairs of elements."
+    },
+    {
+        "question": "What is the complement of the set {a, b, c} with respect to the universal set U = {a, b, c, d, e}?",
+        "options": [
+            "{}",
+            "{a, b, c}",
+            "{d, e}",
+            "{a, b, c, d, e}"
+        ],
+        "correct_answer": "{d, e}"
+    },
+    {
+        "question": "In set-builder notation, how would you represent the set of even integers?",
+        "options": [
+            "{x | x is even and x > 0}",
+            "{x | x is even}",
+            "{x | x is odd and x > 0}",
+            "{x | x is positive}"
+        ],
+        "correct_answer": "{x | x is even}"
+    },
+    {
+        "question": "What is the cardinality of the set of all vowels in the English alphabet?",
+        "options": [
+            "4",
+            "5",
+            "21",
+            "26"
+        ],
+        "correct_answer": "5"
+    },
+    {
+        "question": "If A = {1, 2, 3} and B = {3, 4, 5}, what is A ∩ B?",
+        "options": [
+            "{1, 2, 3, 4, 5}",
+            "{3}",
+            "{1, 2}",
+            "{}"
+        ],
+        "correct_answer": "{3}"
+    },
+    {
+        "question": "What is the complement of a set with respect to the universal set?",
+        "options": [
+            "The set itself",
+            "The empty set",
+            "The universal set",
+            "The power set"
+        ],
+        "correct_answer": "The empty set"
+    },
+    {
+        "question": "Which of the following relations is symmetric?",
+        "options": [
+            "{(1, 2), (2, 1), (1, 1)}",
+            "{(1, 2), (2, 1)}",
+            "{(1, 2), (2, 2)}",
+            "{(1, 1), (2, 2)}"
+        ],
+        "correct_answer": "{(1, 2), (2, 1)}"
+    },
+    {
+        "question": "If A = {a, b, c} and B = {b, c, d}, what is A - B?",
+        "options": [
+            "{a, b, c, d}",
+            "{a, d}",
+            "{a, b}",
+            "{c, d}"
+        ],
+        "correct_answer": "{a}"
+    },
+    {
+        "question": "Which of the following sets is a proper subset of {1, 2, 3}?",
+        "options": [
+            "{1, 2, 3}",
+            "{1, 3}",
+            "{2}",
+            "{4}"
+        ],
+        "correct_answer": "{1, 3}"
+    },
+    {
+        "question": "What is the range of a function?",
+        "options": [
+            "The set of all possible inputs",
+            "The set of all possible outputs",
+            "The set of ordered pairs",
+            "The set of all real numbers"
+        ],
+        "correct_answer": "The set of all possible outputs"
+    },
+    {
+        "question": "If A = {a, b, c} and B = {c, d, e}, what is A ⋃ B?",
+        "options": [
+            "{a, b, c, d, e}",
+            "{a, b, c}",
+            "{c}",
+            "{a, b, d, e}"
+        ],
+        "correct_answer": "{a, b, c, d, e}"
+    },
+    {
+        "question": "Which of the following sets is a finite set?",
+        "options": [
+            "The set of all integers",
+            "The set of all prime numbers",
+            "The set of all real numbers",
+            "The set of all positive integers"
+        ],
+        "correct_answer": "The set of all positive integers"
+    },
+    {
+        "question": "What is the difference between a relation and a function?",
+        "options": [
+            "A relation is a subset of a function",
+            "A relation has one input and one output",
+            "A relation can have multiple outputs for the same input",
+            "A relation can have only one ordered pair"
+        ],
+        "correct_answer": "A relation can have multiple outputs for the same input"
+    },
+    {
+        "question": "What is the cardinality of the set of all vowels in the English alphabet?",
+        "options": [
+            "4",
+            "5",
+            "21",
+            "26"
+        ],
+        "correct_answer": "5"
+    },
+    {
+        "question": "If A = {1, 2, 3} and B = {3, 4, 5}, what is A ∩ B?",
+        "options": [
+            "{1, 2, 3, 4, 5}",
+            "{3}",
+            "{1, 2}",
+            "{}"
+        ],
+        "correct_answer": "{3}"
+    },
+    {
+        "question": "What is the complement of a set with respect to the universal set?",
+        "options": [
+            "The set itself",
+            "The empty set",
+            "The universal set",
+            "The power set"
+        ],
+        "correct_answer": "The empty set"
+    },
+    {
+        "question": "Which of the following relations is symmetric?",
+        "options": [
+            "{(1, 2), (2, 1), (1, 1)}",
+            "{(1, 2), (2, 1)}",
+            "{(1, 2), (2, 2)}",
+            "{(1, 1), (2, 2)}"
+        ],
+        "correct_answer": "{(1, 2), (2, 1)}"
+    },
+    {
+        "question": "If A = {a, b, c} and B = {b, c, d}, what is A - B?",
+        "options": [
+            "{a, b, c, d}",
+            "{a, d}",
+            "{a, b}",
+            "{c, d}"
+        ],
+        "correct_answer": "{a}"
+    },
+    {
+        "question": "Which of the following sets is a proper subset of {1, 2, 3}?",
+        "options": [
+            "{1, 2, 3}",
+            "{1, 3}",
+            "{2}",
+            "{4}"
+        ],
+        "correct_answer": "{1, 3}"
+    },
+    {
+        "question": "What is the range of a function?",
+        "options": [
+            "The set of all possible inputs",
+            "The set of all possible outputs",
+            "The set of ordered pairs",
+            "The set of all real numbers"
+        ],
+        "correct_answer": "The set of all possible outputs"
+    },
+    {
+        "question": "If A = {a, b, c} and B = {c, d, e}, what is A ⋃ B?",
+        "options": [
+            "{a, b, c, d, e}",
+            "{a, b, c}",
+            "{c}",
+            "{a, b, d, e}"
+        ],
+        "correct_answer": "{a, b, c, d, e}"
+    },
+    {
+        "question": "Which of the following sets is a finite set?",
+        "options": [
+            "The set of all integers",
+            "The set of all prime numbers",
+            "The set of all real numbers",
+            "The set of all positive integers"
+        ],
+        "correct_answer": "The set of all positive integers"
+    },
+    {
+        "question": "What is the difference between a relation and a function?",
+        "options": [
+            "A relation is a subset of a function",
+            "A relation has one input and one output",
+            "A relation can have multiple outputs for the same input",
+            "A relation can have only one ordered pair"
+        ],
+        "correct_answer": "A relation can have multiple outputs for the same input"
+    }
+]

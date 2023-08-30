@@ -75,20 +75,29 @@ class QuizProvider extends ChangeNotifier {
     if (kTopics.contains(selectedTopic)) {
       String fileName = topicToFileMapping[selectedTopic] ?? '';
       if (fileName.isNotEmpty && fileName != null) {
-        print('JSON file for "$selectedTopic" is: $fileName');
+        debugPrint('JSON file for "$selectedTopic" is: $fileName');
+
         String json = await rootBundle.loadString('assets/data/$fileName');
+
         List<Question> questions = [];
         final parsed = jsonDecode(json).cast<Map<String, dynamic>>();
+
+        //get questions from json file
         questions =
             parsed.map<Question>((json) => Question.fromJson(json)).toList();
-        quizQuestions = questions;
+        // Shuffle the list to randomize the order of questions
+        questions.shuffle();
+
+        // Take only the desired number of questions based on _noOfQuestions
+        quizQuestions = questions.take(_noOfQuestions).toList();
+        // quizQuestions = questions;
         _isQuizStarted = true;
         notifyListeners();
       } else {
-        print('No JSON file mapping found for topic "$selectedTopic".');
+        debugPrint('No JSON file mapping found for topic "$selectedTopic".');
       }
     } else {
-      print('Topic "$selectedTopic" is not found in the list of topics.');
+      debugPrint('Topic "$selectedTopic" is not found in the list of topics.');
     }
   }
 

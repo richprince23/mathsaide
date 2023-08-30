@@ -253,3 +253,31 @@ Future generatePracticeQuestions(String? message) async {
     throw Exception(e);
   }
 }
+
+
+//delete chat history from firestore
+
+Future deleteChatHistory(String sessionID) async {
+  final FirebaseFirestore firestore = FirebaseFirestore.instance;
+  final CollectionReference sessionsCollection =
+      firestore.collection('sessions');
+
+  QuerySnapshot sessionQuery = await sessionsCollection
+      .where('sessionID', isEqualTo: sessionID)
+      .get();
+
+  if (sessionQuery.docs.isNotEmpty && sessionQuery.size > 0) {
+    // Session document with provided sessionID exists, delete chat subcollection
+    String sessionDocID = sessionQuery.docs.first.id;
+
+    await sessionsCollection
+        .doc(sessionDocID)
+        .collection('chats')
+        .get()
+        .then((snapshot) {
+      for (DocumentSnapshot ds in snapshot.docs) {
+        ds.reference.delete();
+      }
+    });
+  }
+}

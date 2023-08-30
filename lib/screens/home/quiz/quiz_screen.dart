@@ -66,7 +66,7 @@ class _QuizScreenState extends State<QuizScreen> {
                             child: ClipRRect(
                               borderRadius: BorderRadius.circular(10.r),
                               child: LinearProgressIndicator(
-                                value: qz.getQuizIndex / qz.getNoQuestions,
+                                value: (qz.quizIndex + 1) / qz.getNoQuestions,
                                 minHeight: 20.w,
                                 backgroundColor: bgWhite,
                                 valueColor:

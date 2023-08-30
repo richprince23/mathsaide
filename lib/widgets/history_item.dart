@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:mathsaide/constants/constants.dart';
 import 'package:mathsaide/constants/utils.dart';
+import 'package:mathsaide/controllers/chat_controller.dart';
 import 'package:mathsaide/screens/home/view_history.dart';
 import 'package:resize/resize.dart';
 
@@ -48,13 +49,16 @@ class HistoryItem extends StatelessWidget {
             style: TextStyle(fontSize: 16.sp),
           ),
           subtitle: Text(dateTime),
-          trailing: IconButton.outlined(
-            color: Colors.red,
-            onPressed: () {
-              // deleteSession(sessionID);
-            },
-            icon: const Icon(Icons.delete),
-          ),
+          // trailing: IconButton.outlined(
+          //   color: Colors.red,
+          //   onPressed: () async {
+          //     showLoader(context);
+          //     await deleteChatHistory(sessionID).then(
+          //       (value) => Navigator.pop(context),
+          //     );
+          //   },
+          //   icon: const Icon(Icons.delete),
+          // ),
         ),
       ),
     );

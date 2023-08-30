@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:mathsaide/constants/constants.dart';
 import 'package:mathsaide/constants/utils.dart';
+import 'package:mathsaide/controllers/quiz_controller.dart';
 import 'package:mathsaide/models/quiz_model.dart';
 import 'package:resize/resize.dart';
 
@@ -38,8 +39,11 @@ class QuizHistoryItem extends StatelessWidget {
         isThreeLine: true,
         trailing: IconButton.outlined(
           color: Colors.red,
-          onPressed: () {
-            // deleteSession(sessionID);
+          onPressed: () async {
+            showLoader(context);
+            await deleteQuiz(quiz.quizID).then(
+              (value) => Navigator.pop(context),
+            );
           },
           icon: const Icon(Icons.delete),
         ),

@@ -6,7 +6,6 @@ import 'package:mathsaide/constants/constants.dart';
 import 'package:mathsaide/controllers/auth_controller.dart';
 import 'package:mathsaide/models/quiz_model.dart';
 
-
 //genrate random question
 //not used
 Future<String?> generateQuestions(
@@ -104,4 +103,11 @@ Stream<QuerySnapshot<Map<String, dynamic>>> getQuizHistory() {
       .orderBy("timestamp", descending: false)
       .snapshots();
   return results;
+}
+
+//delete quiz from firebase
+
+Future deleteQuiz(String quizID) async {
+  Future.delayed(const Duration(seconds: 2));
+  await db.collection("quiz_grades").doc(quizID).delete();
 }

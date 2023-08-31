@@ -7,7 +7,7 @@
     <uses-permission android:name="android.permission.WAKE_LOCK" />
     <uses-permission android:name="android.permission.CAMERA" />
    <application
-        android:label="mathsaide"
+        android:label="MathsAide"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity
@@ -62,5 +62,10 @@
             <action android:name="android.intent.action.VIEW" />
             <data android:scheme="tel" />
         </intent>
+        <intent>
+            <action android:name="android.intent.action.SEND" />
+            <category android:name="android.intent.category.DEFAULT" />
+        <data android:scheme="text/plain" />
+    </intent>
     </queries>
 </manifest>

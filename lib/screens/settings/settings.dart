@@ -158,7 +158,9 @@ class _SettingsScreenState extends State<SettingsScreen> {
                           ListTile(
                             trailing:
                                 const Icon(Icons.arrow_forward_ios, size: 14),
-                            onTap: () {},
+                            onTap: () {
+                              Navigator.pushNamed(context, "/privacy");
+                            },
                             iconColor: priCol,
                             leading: const Icon(Icons.privacy_tip),
                             title: const Text("Privacy Policy"),
@@ -166,7 +168,9 @@ class _SettingsScreenState extends State<SettingsScreen> {
                           ListTile(
                             trailing:
                                 const Icon(Icons.arrow_forward_ios, size: 14),
-                            onTap: () {},
+                            onTap: () {
+                              Navigator.pushNamed(context, "/terms");
+                            },
                             iconColor: priCol,
                             leading: const Icon(Icons.handshake_rounded),
                             title: const Text("Terms & Conditions"),
@@ -186,7 +190,9 @@ class _SettingsScreenState extends State<SettingsScreen> {
                           ListTile(
                             trailing:
                                 const Icon(Icons.arrow_forward_ios, size: 14),
-                            onTap: () {},
+                            onTap: () {
+                              Navigator.pushNamed(context, "/about");
+                            },
                             iconColor: priCol,
                             leading: const Icon(Icons.info),
                             title: const Text("About MathsAide"),
@@ -194,7 +200,9 @@ class _SettingsScreenState extends State<SettingsScreen> {
                           ListTile(
                             trailing:
                                 const Icon(Icons.arrow_forward_ios, size: 14),
-                            onTap: () {},
+                            onTap: () {
+                              Navigator.pushNamed(context, "/help");
+                            },
                             iconColor: priCol,
                             leading: const Icon(Icons.help),
                             title: const Text("Help & Support"),
@@ -202,7 +210,9 @@ class _SettingsScreenState extends State<SettingsScreen> {
                           ListTile(
                             trailing:
                                 const Icon(Icons.arrow_forward_ios, size: 14),
-                            onTap: () {},
+                            onTap: () {
+                              Navigator.pushNamed(context, "/report-bug");
+                            },
                             iconColor: priCol,
                             leading: const Icon(Icons.flag),
                             title: const Text("Report Bugs"),
@@ -211,45 +221,45 @@ class _SettingsScreenState extends State<SettingsScreen> {
                       ),
                     ),
                     SizedBox(height: 10.h),
-                    const Text("Data Storage"),
-                    Container(
-                      decoration: ShapeDecoration(
-                        color: Colors.white,
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(10.r),
-                        ),
-                      ),
-                      child: ListBody(
-                        children: [
-                          ListTile(
-                            trailing:
-                                const Icon(Icons.arrow_forward_ios, size: 14),
-                            onTap: () {},
-                            iconColor: priCol,
-                            leading: const Icon(Icons.history_toggle_off),
-                            title: const Text("Clear History"),
-                          ),
-                          ListTile(
-                            trailing:
-                                const Icon(Icons.arrow_forward_ios, size: 14),
-                            onTap: () {},
-                            iconColor: priCol,
-                            leading: const Icon(Icons.memory),
-                            title: const Text("Clear Cache"),
-                          ),
-                          ListTile(
-                            trailing:
-                                const Icon(Icons.arrow_forward_ios, size: 14),
-                            onTap: () {},
-                            iconColor: Colors.red,
-                            textColor: Colors.red,
-                            leading: const Icon(Icons.delete_sharp),
-                            title: const Text("Delete Account"),
-                          ),
-                        ],
-                      ),
-                    ),
-                    SizedBox(height: 10.h),
+                    // const Text("Data Storage"),
+                    // Container(
+                    //   decoration: ShapeDecoration(
+                    //     color: Colors.white,
+                    //     shape: RoundedRectangleBorder(
+                    //       borderRadius: BorderRadius.circular(10.r),
+                    //     ),
+                    //   ),
+                    //   child: ListBody(
+                    //     children: [
+                    //       ListTile(
+                    //         trailing:
+                    //             const Icon(Icons.arrow_forward_ios, size: 14),
+                    //         onTap: () {},
+                    //         iconColor: priCol,
+                    //         leading: const Icon(Icons.history_toggle_off),
+                    //         title: const Text("Clear History"),
+                    //       ),
+                    //       ListTile(
+                    //         trailing:
+                    //             const Icon(Icons.arrow_forward_ios, size: 14),
+                    //         onTap: () {},
+                    //         iconColor: priCol,
+                    //         leading: const Icon(Icons.memory),
+                    //         title: const Text("Clear Cache"),
+                    //       ),
+                    //       ListTile(
+                    //         trailing:
+                    //             const Icon(Icons.arrow_forward_ios, size: 14),
+                    //         onTap: () {},
+                    //         iconColor: Colors.red,
+                    //         textColor: Colors.red,
+                    //         leading: const Icon(Icons.delete_sharp),
+                    //         title: const Text("Delete Account"),
+                    //       ),
+                    //     ],
+                    //   ),
+                    // ),
+                    // SizedBox(height: 10.h),
                     Container(
                       decoration: ShapeDecoration(
                         color: priCol,

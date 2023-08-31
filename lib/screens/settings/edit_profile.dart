@@ -66,7 +66,6 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
           _selectedGrade = value?.data()?["classLevel"] ?? "Grade 12";
         });
       }
-      print(_selectedAge);
     });
     Future.delayed(const Duration(microseconds: 500));
   }

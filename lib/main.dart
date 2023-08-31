@@ -15,9 +15,14 @@ import 'package:mathsaide/screens/auth/signup_screen.dart';
 import 'package:mathsaide/screens/home/home.dart';
 import 'package:mathsaide/screens/home/quiz/quiz_history.dart';
 import 'package:mathsaide/screens/home/start_session_screen.dart';
+import 'package:mathsaide/screens/settings/about_screen.dart';
 import 'package:mathsaide/screens/settings/edit_profile.dart';
+import 'package:mathsaide/screens/settings/help_screen.dart';
 import 'package:mathsaide/screens/settings/history.dart';
 import 'package:mathsaide/screens/settings/notifications.dart';
+import 'package:mathsaide/screens/settings/privacy_screen.dart';
+import 'package:mathsaide/screens/settings/report_bug.dart';
+import 'package:mathsaide/screens/settings/terms_screen.dart';
 import 'package:provider/provider.dart';
 import 'package:resize/resize.dart';
 
@@ -69,7 +74,11 @@ class MainApp extends StatelessWidget {
           "/history": (context) => const HistoryScreen(),
           "/quiz-history": (context) => const QuizHistoryScreen(),
           "/notifications": (context) => const NotificationsScreen(),
-          
+          "/about": (context) => const AboutScreen(),
+          "/terms": (context) => const TermsAndConditionsScreen(),
+          "/privacy": (context) => const PrivacyPolicyScreen(),
+          "/help": (context) => const HelpScreen(),
+          "/report-bug": (context) => BugReportScreen(),
         },
       ),
     );

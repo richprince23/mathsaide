@@ -47,6 +47,12 @@ class AboutScreenState extends State<AboutScreen> {
               ),
             ),
             SizedBox(height: 16.0.h),
+            Image.asset(
+              'assets/images/launcher.png',
+              height: 100.0.w,
+              width: 100.0.w,
+            ),
+            SizedBox(height: 16.0.h),
             Text(
               'Version: $_version',
               style: TextStyle(

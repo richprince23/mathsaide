@@ -74,7 +74,7 @@ class QuizProvider extends ChangeNotifier {
 
     if (kTopics.contains(selectedTopic)) {
       String fileName = topicToFileMapping[selectedTopic] ?? '';
-      if (fileName.isNotEmpty && fileName != null) {
+      if (fileName.isNotEmpty && fileName != "") {
         debugPrint('JSON file for "$selectedTopic" is: $fileName');
 
         String json = await rootBundle.loadString('assets/data/$fileName');

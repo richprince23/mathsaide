@@ -1,10 +1,10 @@
 import 'dart:convert';
 import 'dart:math';
+
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:http/http.dart' as http;
 import 'package:mathsaide/constants/constants.dart';
 import 'package:mathsaide/controllers/auth_controller.dart';
-import 'package:mathsaide/models/quiz_model.dart';
 
 //genrate random question
 //not used
@@ -15,7 +15,7 @@ Future<String?> generateQuestions(
   // get student level
   String? level;
   //quiz questions list
-  List<Question> questionList = [];
+  // List<Question> questionList = [];
 
   await db
       .collection("user_details")

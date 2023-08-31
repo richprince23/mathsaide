@@ -4,10 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:mathsaide/screens/home/learn_now_screen.dart';
 import 'package:mathsaide/screens/home/practice.dart';
-import 'package:mathsaide/screens/home/quiz/main_quiz_screen.dart';
-
 import 'package:mathsaide/screens/home/quiz/quiz_screen.dart';
-import 'package:mathsaide/screens/settings/history.dart';
 import 'package:mathsaide/screens/settings/settings.dart';
 import 'package:mathsaide/widgets/loader.dart';
 import 'package:resize/resize.dart';

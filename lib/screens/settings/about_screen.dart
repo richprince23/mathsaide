@@ -7,10 +7,10 @@ class AboutScreen extends StatefulWidget {
   const AboutScreen({super.key});
 
   @override
-  _AboutScreenState createState() => _AboutScreenState();
+  AboutScreenState createState() => AboutScreenState();
 }
 
-class _AboutScreenState extends State<AboutScreen> {
+class AboutScreenState extends State<AboutScreen> {
   String _version = '';
   String _buildNumber = '';
 
@@ -32,7 +32,7 @@ class _AboutScreenState extends State<AboutScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('About'),
+        title: const Text('About'),
       ),
       body: Center(
         child: Column(
@@ -60,7 +60,7 @@ class _AboutScreenState extends State<AboutScreen> {
               ),
             ),
             SizedBox(height: 32.0.h),
-            Text(
+            const Text(
               'MathsAide is a mobile application aimed at helping students learn Mathematics effectively.\n\n'
               'It provides features to assist students with learning disabilities in solving math problems through guided questioning and answering techniques.',
               textAlign: TextAlign.center,

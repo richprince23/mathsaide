@@ -1,5 +1,4 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:intl/intl.dart';
 import 'package:mathsaide/controllers/auth_controller.dart';
 
 /// Get all sessions from the database as a stream that matches the user ID and topic

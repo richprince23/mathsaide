@@ -24,6 +24,7 @@ Future sendMessage(String message) async {
   //if the message is a response, display the response
   //
   // final String userID = FirebaseAuth.instance.currentUser!.uid;
+  // ignore: prefer_typing_uninitialized_variables
   var response;
 
   String? content;
@@ -174,7 +175,8 @@ Future<void> uploadChat({required String content, required String role}) async {
 /// Function to generate pactice questions for users to try and evaluate response
 Future generatePracticeQuestions(String? message) async {
   // final String userID = FirebaseAuth.instance.currentUser!.uid;
-  var response;
+  // ignore: prefer_typing_uninitialized_variables
+  // var response;
 
   String? content;
 
@@ -200,7 +202,7 @@ Future generatePracticeQuestions(String? message) async {
 
     var history = queryHistory.map((e) => e.toJson()).toList();
 
-    print(history);
+    // print(history);
 
     var body = jsonEncode({
       // "model": "text-davinci-003",
@@ -222,6 +224,7 @@ Future generatePracticeQuestions(String? message) async {
     //     '''{"model": "gpt-3.5-turbo","messages": [{"role": "system","content": $systemPrompt},{"role": "user", "content": $userPrompt}],"max_tokens": 200,"temperature": 0.9,"top_p": 1,"n": 1,"stop": "finish"}''';
     request.headers.addAll(headers);
 
+    // ignore: prefer_typing_uninitialized_variables
     var res;
     http.StreamedResponse response = await request.send();
     // response = await response.stream

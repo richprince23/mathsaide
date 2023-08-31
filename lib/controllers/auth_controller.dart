@@ -98,7 +98,7 @@ class Auth {
         final imgRef = avatarRef.child(fileName);
         task = imgRef.putFile(img.absolute);
         final imgUrl = await (await task).ref.getDownloadURL();
-        print(imgUrl);
+        // print(imgUrl);
         // update the user's display image
         await auth.currentUser?.updatePhotoURL(imgUrl);
       }

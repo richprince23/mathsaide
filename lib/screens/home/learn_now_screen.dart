@@ -22,16 +22,20 @@ class _LearnNowScreenState extends State<LearnNowScreen> {
     _initializeRemoteConfig();
     // initialize network listening stream
     checkConnectivity();
-    connectivitySubscription =
-        Provider.of<NetworkProvider>(context, listen: false)
-            .connectivity
-            .onConnectivityChanged
-            .listen((ConnectivityResult result) {
-      if (mounted) {
-        Provider.of<NetworkProvider>(context, listen: false)
-            .updateConnectionStatus(result);
-      }
-    });
+    try {
+      connectivitySubscription =
+          Provider.of<NetworkProvider>(context, listen: false)
+              .connectivity
+              .onConnectivityChanged
+              .listen((ConnectivityResult result) {
+        if (mounted) {
+          Provider.of<NetworkProvider>(context, listen: false)
+              .updateConnectionStatus(result);
+        }
+      });
+    } catch (e) {
+      debugPrint(e.toString());
+    }
 
     // checkConnectivity();
     // if (mounted) {
@@ -40,8 +44,12 @@ class _LearnNowScreenState extends State<LearnNowScreen> {
 
   ///Initialize remote config
   Future<void> _initializeRemoteConfig() async {
-    await remoteConfig.setConfigSettings(configSettings);
-    await remoteConfig.fetchAndActivate();
+    try {
+      await remoteConfig.setConfigSettings(configSettings);
+      await remoteConfig.fetchAndActivate();
+    } catch (e) {
+      debugPrint(e.toString());
+    }
   }
 
   @override
@@ -51,10 +59,12 @@ class _LearnNowScreenState extends State<LearnNowScreen> {
   }
 
   void checkConnectivity() async {
-    if (mounted) {
-      await Provider.of<NetworkProvider>(context, listen: false)
-          .initConnectivity();
-    }
+    try {
+      if (mounted) {
+        await Provider.of<NetworkProvider>(context, listen: false)
+            .initConnectivity();
+      }
+    } catch (e) {}
   }
 
   @override

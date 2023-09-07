@@ -27,7 +27,7 @@ class QuizProvider extends ChangeNotifier {
   bool get getIsQuizStarted => _isQuizStarted;
 
 //end quiz and upload to firebase
-  void endQuiz() async {
+  Future endQuiz() async {
     //upload quiz
     await uploadQuiz(quizId);
     // reset quiz

@@ -20,6 +20,11 @@ class AboutScreenState extends State<AboutScreen> {
     _getAppInfo();
   }
 
+  @override
+  void dispose() {
+    super.dispose();
+  }
+
   Future<void> _getAppInfo() async {
     PackageInfo packageInfo = await PackageInfo.fromPlatform();
     setState(() {

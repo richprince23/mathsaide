@@ -68,7 +68,7 @@ class AboutScreenState extends State<AboutScreen> {
             SizedBox(height: 32.0.h),
             const Text(
               'MathsAide is a mobile application aimed at helping students learn Mathematics effectively.\n\n'
-              'It provides features to assist students with learning disabilities in solving math problems through guided questioning and answering techniques.',
+              'It provides features to assist students in solving math problems through guided questioning and answering techniques.',
               textAlign: TextAlign.center,
             ),
             SizedBox(height: 32.0.h),

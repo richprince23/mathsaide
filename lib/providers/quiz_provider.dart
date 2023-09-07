@@ -28,8 +28,10 @@ class QuizProvider extends ChangeNotifier {
 
 //end quiz and upload to firebase
   void endQuiz() async {
+    //upload quiz
     await uploadQuiz(quizId);
     // reset quiz
+    Future.delayed(const Duration(seconds: 2));
     _isQuizStarted = false;
     selectedTopic = "";
     _noOfQuestions = 0;

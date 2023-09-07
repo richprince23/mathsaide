@@ -129,11 +129,11 @@ class QuizSummaryScreen extends StatelessWidget {
                 SizedBox(
                   width: 100.vw,
                   child: ElevatedButton(
-                    onPressed: () {
+                    onPressed: () async {
                       showLoader(context);
                       qz.endQuiz();
                       Navigator.pop(context);
-                      Navigator.pop(context);
+                      // Navigator.pop(context);
                     },
                     child: const Text("Done"),
                   ),

@@ -70,7 +70,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                     radius: 14.vw,
                     backgroundImage: CachedNetworkImageProvider(
                       imgUrl ?? "https://picsum.photos/200",
-                      errorListener: () => const Icon(Icons.person),
+                      errorListener: (object) => const Icon(Icons.person),
                     ),
                   ),
                 ),

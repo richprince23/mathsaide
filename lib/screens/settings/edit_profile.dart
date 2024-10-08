@@ -101,7 +101,8 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
                                 radius: 50.r,
                                 backgroundImage: CachedNetworkImageProvider(
                                   imgUrl,
-                                  errorListener: () => const Icon(Icons.person),
+                                  errorListener: (obj) =>
+                                      const Icon(Icons.person),
                                 ),
                               ),
                       ),
@@ -136,6 +137,7 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
                   },
                 ),
                 FutureBuilder(
+                    future: null,
                     initialData: _selectedAge,
                     builder: (context, data) {
                       if (data.connectionState == ConnectionState.waiting) {

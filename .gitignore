@@ -51,3 +51,5 @@ app.*.map.json
 #env file
 env.dart
 env.txt
+
+*.jks

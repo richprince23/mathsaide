@@ -1,0 +1,51 @@
+<html>
+
+<head>
+    <title>Account Deletion Request</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link href="/dist/output.css" rel="stylesheet"> -->
+    <link rel="stylesheet" href="https://unpkg.com/tailwindcss@2.2.19/dist/tailwind.min.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <div class="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8">
+        
+        <form class="space-y-6 mt-10 sm:mx-auto sm:w-full sm:max-w-sm" action="{{route('delete-account')}}" method="POST">
+            <h2>Account Deletion Request</h2>
+            <i>Request to delete your Infoctess Koneqt Account. <br>
+                Deleting your account will remove all your data from our servers. <br> This will also mean automatic withdrawal from the society. This action cannot be undone.
+            </i>
+              @csrf
+            <div>
+              <label for="email" class="block text-sm font-medium leading-6 text-gray-900">Email address</label>
+              <div class="mt-2">
+                <input id="email" name="email" type="email" autocomplete="email" required class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+              </div>
+            </div>
+      
+            <div>
+              <div class="flex items-center justify-between">
+                <label for="indexnum" class="block text-sm font-medium leading-6 text-gray-900">Index Number</label>
+              </div>
+              <div class="mt-2">
+                <input id="indexnum" name="indexnum" type="number" autocomplete="mobile" required class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+              </div>
+            </div>
+      
+            <div>
+                <label for="reason" class="block text-sm font-medium leading-6 text-gray-900">Reason for deletion</label>
+                <div class="mt-2">
+                  <textarea id="reason" name="reason" type="text" required class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"></textarea>
+                </div>
+              </div>
+            <div>
+              <button type="submit" class="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Submit Request</button>
+            </div>
+          </form>
+      
+    </div>
+</body>
+
+</html>

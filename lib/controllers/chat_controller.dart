@@ -207,13 +207,15 @@ Future generatePracticeQuestions(String? message) async {
     var body = jsonEncode({
       // "model": "text-davinci-003",
       "model": "gpt-3.5-turbo",
-      "temperature": 0.9,
-      "max_tokens": 256,
-      "frequency_penalty": 0,
-      "presence_penalty": 0,
+      "temperature": 0.7,
+      "max_tokens": 400,
+      "frequency_penalty": 0.2,
+      "presence_penalty": 0.5,
       "stop": 'finish',
-      "top_p": 1, "n": 1,
+      "top_p": 0.1,
+      "n": 1,
       "messages": history,
+
       // "messages": chatHistory,
     });
 

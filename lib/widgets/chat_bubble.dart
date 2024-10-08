@@ -1,10 +1,9 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_markdown/flutter_markdown.dart';
+import 'package:flutter_tex/flutter_tex.dart';
 import 'package:mathsaide/constants/constants.dart';
 import 'package:resize/resize.dart';
-import 'package:markdown/markdown.dart' as md;
 
 class ChatBubble extends StatelessWidget {
   final bool isUser;
@@ -31,6 +30,18 @@ class ChatBubble extends StatelessWidget {
     this.hasOptions = false,
     super.key,
   });
+
+  // String convertToMarkdown(String input) {
+  //   // Example: Convert simple plain text into Markdown
+  //   // You can expand this function to include more complex rules
+
+  //   // Example rules for converting plain text to Markdown
+  //   input = input.replaceAll(RegExp(r'\*\*(.+?)\*\*'), r'**$1**'); // Bold
+  //   input = input.replaceAll(RegExp(r'\*(.+?)\*'), r'*${1}*'); // Italic
+  //   input = input.replaceAll(RegExp(r'\n'), r'\n\n'); // Paragraph spacing
+
+  //   return input;
+  // }
 
   @override
   Widget build(BuildContext context) {
@@ -86,22 +97,30 @@ class ChatBubble extends StatelessWidget {
                 crossAxisAlignment:
                     isUser ? CrossAxisAlignment.end : CrossAxisAlignment.start,
                 children: [
-                  MarkdownBody(
-                    data: message,
-                    styleSheet: MarkdownStyleSheet(
-                      p: TextStyle(
-                        fontSize: 16.sp,
-                        color: isUser ? bgCol : txtCol,
+                  // MarkdownBody(
+                  //   data: message,
+                  //   styleSheet: MarkdownStyleSheet(
+                  //     p: TextStyle(
+                  //       fontSize: 16.sp,
+                  //       color: isUser ? bgCol : txtCol,
+                  //     ),
+                  //   ),
+                  //   extensionSet: md.ExtensionSet(
+                  //     md.ExtensionSet.gitHubFlavored.blockSyntaxes,
+                  //     <md.InlineSyntax>[
+                  //       md.EmojiSyntax(),
+                  //       ...md.ExtensionSet.gitHubFlavored.inlineSyntaxes,
+                  //     ],
+                  //   ),
+                  // ),
+                  TeXView(
+                    renderingEngine: const TeXViewRenderingEngine.mathjax(),
+                    child: TeXViewDocument(
+                      message,
+                      style: TeXViewStyle(
+                        fontStyle: TeXViewFontStyle(fontSize: 16),
+                        contentColor: isUser ? bgCol : txtCol,
                       ),
-                    ),
-                    extensionSet: md.ExtensionSet(
-                      md.ExtensionSet.gitHubFlavored.blockSyntaxes,
-                      <md.InlineSyntax>[
-                        md.EmojiSyntax(),
-                        ...md.ExtensionSet.gitHubFlavored.inlineSyntaxes,
-                        md.
-
-                      ],
                     ),
                   ),
                   if (hasTime && time.isNotEmpty)
@@ -109,7 +128,7 @@ class ChatBubble extends StatelessWidget {
                       time,
                       style: TextStyle(
                         color: Colors.grey,
-                        fontSize: 12.sp,
+                        fontSize: 16.sp,
                         fontStyle: FontStyle.italic,
                       ),
                     ),

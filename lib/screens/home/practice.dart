@@ -31,7 +31,7 @@ class _PracticeScreenState extends State<PracticeScreen> {
   final TextEditingController txtInput = TextEditingController();
   final scrollController = ScrollController();
   String prompt = '';
-  String _sessionID = "";
+  String sessionID = "";
   bool isStarted = false;
 
   String initPrompt() {
@@ -57,7 +57,7 @@ class _PracticeScreenState extends State<PracticeScreen> {
     await Prefs.getSession().then(
       (value) async => {
         setState(
-          () => _sessionID = value ?? "",
+          () => sessionID = value ?? "",
         ),
         await Prefs.getTopic().then(
           (topic) => setState(() => selectedTopic = topic ?? ""),

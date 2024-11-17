@@ -39,8 +39,8 @@ Future<String?> generateQuestions(
   };
 
   var body = jsonEncode({
-    "model": "gpt-3.5-turbo",
-    "temperature": 0.9,
+    "model": "gpt-4o",
+    "temperature": 0.7,
     // "max_tokens": 400,
     "frequency_penalty": 0,
     "presence_penalty": 0.5,

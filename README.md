@@ -31,7 +31,7 @@ The "Learning Reminders" feature enables users to schedule learning sessions. Th
 ## Technology Stack
 
 - Frontend: Flutter/Dart
-- Backend: OpenAI GPT-3.5-turbo engine for text generation
+- Backend: OpenAI GPT-4o engine for text generation
 
 ## Privacy
 
@@ -47,7 +47,7 @@ We take user privacy seriously. MathsAide collects only essential information su
 
 List the dependencies required to run the project. For example:
 - Flutter
-- GPT-3.5-turbo engine
+- GPT-4o engine
 - Other relevant dependencies
 
 ## Screenshots

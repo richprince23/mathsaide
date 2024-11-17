@@ -80,7 +80,7 @@ Future<String?> makeRequest(String message) async {
 
   var body = jsonEncode({
     // "model": "text-davinci-003",
-    "model": "gpt-3.5-turbo",
+    "model": "gpt-4o",
     "temperature": 0.7,
     "max_tokens": 400,
     "frequency_penalty": 0.2,
@@ -96,7 +96,7 @@ Future<String?> makeRequest(String message) async {
     var request = http.Request(
         'POST', Uri.parse('https://api.openai.com/v1/chat/completions'));
     request.body = (body);
-    //     '''{"model": "gpt-3.5-turbo","messages": [{"role": "system","content": $systemPrompt},{"role": "user", "content": $userPrompt}],"max_tokens": 200,"temperature": 0.9,"top_p": 1,"n": 1,"stop": "finish"}''';
+    //     '''{"model": "gpt-4o","messages": [{"role": "system","content": $systemPrompt},{"role": "user", "content": $userPrompt}],"max_tokens": 200,"temperature": 0.9,"top_p": 1,"n": 1,"stop": "finish"}''';
     request.headers.addAll(headers);
 
     http.StreamedResponse response = await request.send();
@@ -206,7 +206,7 @@ Future generatePracticeQuestions(String? message) async {
 
     var body = jsonEncode({
       // "model": "text-davinci-003",
-      "model": "gpt-3.5-turbo",
+      "model": "gpt-4o",
       "temperature": 0.7,
       "max_tokens": 400,
       "frequency_penalty": 0.2,
@@ -223,7 +223,7 @@ Future generatePracticeQuestions(String? message) async {
     var request = http.Request(
         'POST', Uri.parse('https://api.openai.com/v1/chat/completions'));
     request.body = (body);
-    //     '''{"model": "gpt-3.5-turbo","messages": [{"role": "system","content": $systemPrompt},{"role": "user", "content": $userPrompt}],"max_tokens": 200,"temperature": 0.9,"top_p": 1,"n": 1,"stop": "finish"}''';
+    //     '''{"model": "gpt-4o","messages": [{"role": "system","content": $systemPrompt},{"role": "user", "content": $userPrompt}],"max_tokens": 200,"temperature": 0.9,"top_p": 1,"n": 1,"stop": "finish"}''';
     request.headers.addAll(headers);
 
     // ignore: prefer_typing_uninitialized_variables

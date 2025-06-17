@@ -26,6 +26,7 @@ import 'package:mathsaide/screens/settings/terms_screen.dart';
 import 'package:provider/provider.dart';
 import 'package:resize/resize.dart';
 
+
 void main() async {
   //init firebase
   WidgetsFlutterBinding.ensureInitialized();

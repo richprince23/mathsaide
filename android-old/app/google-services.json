@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "513703573923",
+    "project_id": "mathsaide-780f5",
+    "storage_bucket": "mathsaide-780f5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:513703573923:android:559bcf0fd09f5be4c78216",
+        "android_client_info": {
+          "package_name": "com.arksoft.mathsaide"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "513703573923-dvb4gpodj2n634vhheo4gb146c7bdbm1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyARnc3KIE_0ajOHc6hezcFz5rSoDkZ6H-M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "513703573923-dvb4gpodj2n634vhheo4gb146c7bdbm1.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "513703573923-2ijmumrl2ngr2n2gc636cg3r0evn8acd.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.arksoft.mathsaide"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

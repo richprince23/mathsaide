@@ -114,7 +114,7 @@ class ChatBubble extends StatelessWidget {
                   //   ),
                   // ),
                   TeXView(
-                    renderingEngine: const TeXViewRenderingEngine.mathjax(),
+                    // renderingEngine: const TeXViewRenderingEngine.mathjax(),
                     child: TeXViewDocument(
                       message,
                       style: TeXViewStyle(

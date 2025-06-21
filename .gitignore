@@ -55,3 +55,4 @@ env.dart
 env.txt
 
 *.jks
+android/app/src/main/AndroidManifest.xml

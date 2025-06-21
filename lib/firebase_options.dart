@@ -58,7 +58,7 @@ class DefaultFirebaseOptions {
 
   static const FirebaseOptions android = FirebaseOptions(
     apiKey: 'AIzaSyARnc3KIE_0ajOHc6hezcFz5rSoDkZ6H-M',
-    appId: '1:513703573923:android:559bcf0fd09f5be4c78216',
+    appId: '1:513703573923:android:255bac61de3ced15c78216',
     messagingSenderId: '513703573923',
     projectId: 'mathsaide-780f5',
     storageBucket: 'mathsaide-780f5.appspot.com',
@@ -66,11 +66,12 @@ class DefaultFirebaseOptions {
 
   static const FirebaseOptions ios = FirebaseOptions(
     apiKey: 'AIzaSyBWoLqEd8rAh1Sdg7cXiDBx30uzV3GlofQ',
-    appId: '1:513703573923:ios:4f0904d48ab3439ec78216',
+    appId: '1:513703573923:ios:fab5cffa23aae30ec78216',
     messagingSenderId: '513703573923',
     projectId: 'mathsaide-780f5',
     storageBucket: 'mathsaide-780f5.appspot.com',
-    iosClientId: '513703573923-2ijmumrl2ngr2n2gc636cg3r0evn8acd.apps.googleusercontent.com',
-    iosBundleId: 'com.arksoft.mathsaide',
+    iosClientId: '513703573923-rjclgmc21fapr53j1pbp0qr7c6eetj17.apps.googleusercontent.com',
+    iosBundleId: 'com.suptle.mathsaide',
   );
+
 }

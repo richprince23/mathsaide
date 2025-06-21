@@ -148,181 +148,179 @@ class _PracticeScreenState extends State<PracticeScreen> {
           ],
         ),
       ),
-      body: KeyboardDismissOnTap(
-        child: Consumer<NetworkProvider>(
-          builder: (context, value, child) => value.isConnected == true
-              ? Column(
-                  children: [
-                    Expanded(
-                      child: FutureBuilder(
-                          future: Prefs.getSession(),
-                          builder: (context, snapData) {
-                            if (snapData.connectionState ==
-                                ConnectionState.waiting) {
-                              return const Loader();
-                            }
-                            if (snapData.hasError) {
-                              return Text("Error: ${snapData.error}");
-                            }
-                            if (!snapData.hasData ||
-                                snapData.data?.isEmpty == true) {
-                              return Center(
-                                child: Container(
-                                  margin: px2,
-                                  padding: pa4,
-                                  decoration: ShapeDecoration(
-                                    shape: RoundedRectangleBorder(
-                                      side: BorderSide(color: priColDark),
-                                      borderRadius: BorderRadius.circular(10),
-                                    ),
-                                    color: bgColDark,
+      body: Consumer<NetworkProvider>(
+        builder: (context, value, child) => value.isConnected == true
+            ? Column(
+                children: [
+                  Expanded(
+                    child: FutureBuilder(
+                        future: Prefs.getSession(),
+                        builder: (context, snapData) {
+                          if (snapData.connectionState ==
+                              ConnectionState.waiting) {
+                            return const Loader();
+                          }
+                          if (snapData.hasError) {
+                            return Text("Error: ${snapData.error}");
+                          }
+                          if (!snapData.hasData ||
+                              snapData.data?.isEmpty == true) {
+                            return Center(
+                              child: Container(
+                                margin: px2,
+                                padding: pa4,
+                                decoration: ShapeDecoration(
+                                  shape: RoundedRectangleBorder(
+                                    side: BorderSide(color: priColDark),
+                                    borderRadius: BorderRadius.circular(10),
                                   ),
-                                  child: Column(
-                                    mainAxisSize: MainAxisSize.min,
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    children: [
-                                      Icon(
-                                        Icons.history,
-                                        size: 50.w,
-                                        color: priCol,
-                                      ),
-                                      SizedBox(height: 10.w),
-                                      Text(
-                                        "No Active Session",
-                                        style: TextStyle(
-                                          fontSize: 18.sp,
-                                          fontWeight: FontWeight.bold,
-                                        ),
-                                      ),
-                                      SizedBox(height: 10.w),
-                                      Text(
-                                        "Start a new session to practise here",
-                                        style: TextStyle(
-                                          fontSize: 16.sp,
-                                          color: txtColLight,
-                                        ),
-                                        textAlign: TextAlign.center,
-                                      ),
-                                      SizedBox(height: 10.w),
-                                      ElevatedButton(
-                                        onPressed: () {
-                                          Provider.of<PageProvider>(context,
-                                                  listen: false)
-                                              .setPage(0);
-                                          // Navigator.pop(context);
-                                        },
-                                        child:
-                                            const Text("Start a new session"),
-                                      ),
-                                    ],
-                                  ),
+                                  color: bgColDark,
                                 ),
-                              );
-                            }
-                            return isStarted != true
-                                ? startPractice(context)
-                                : ListView.builder(
-                                    physics: const BouncingScrollPhysics(),
-                                    cacheExtent: 50.vh,
-                                    padding:
-                                        EdgeInsets.symmetric(horizontal: 10.w),
-                                    controller: scrollController,
-                                    scrollDirection: Axis.vertical,
-                                    itemCount: messages.length,
-                                    itemBuilder: (context, index) {
-                                      return messages[index];
-                                    },
-                                  );
-                          }),
-                    ),
-                    SizedBox(
-                      height: 10.h,
-                    ),
-                    isStarted == true
-                        ? Container(
-                            padding: px1,
-                            // width: 94.vw,
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              children: [
-                                Expanded(
-                                  child: InputControl(
-                                    showLabel: false,
-                                    hintText: "Enter a prompt...",
-                                    type: TextInputType.multiline,
-                                    controller: txtInput,
-                                    // focusNode: focusNode,
-                                    suffixIcon: IconButton(
+                                child: Column(
+                                  mainAxisSize: MainAxisSize.min,
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Icon(
+                                      Icons.history,
+                                      size: 50.w,
+                                      color: priCol,
+                                    ),
+                                    SizedBox(height: 10.w),
+                                    Text(
+                                      "No Active Session",
+                                      style: TextStyle(
+                                        fontSize: 18.sp,
+                                        fontWeight: FontWeight.bold,
+                                      ),
+                                    ),
+                                    SizedBox(height: 10.w),
+                                    Text(
+                                      "Start a new session to practise here",
+                                      style: TextStyle(
+                                        fontSize: 16.sp,
+                                        color: txtColLight,
+                                      ),
+                                      textAlign: TextAlign.center,
+                                    ),
+                                    SizedBox(height: 10.w),
+                                    ElevatedButton(
                                       onPressed: () {
-                                        showMathsKeyboard();
+                                        Provider.of<PageProvider>(context,
+                                                listen: false)
+                                            .setPage(0);
+                                        // Navigator.pop(context);
                                       },
-                                      icon: const Icon(Icons.calculate),
-                                      color: txtCol,
+                                      child:
+                                          const Text("Start a new session"),
                                     ),
-                                  ),
+                                  ],
                                 ),
-                                SizedBox(
-                                  width: 10.w,
-                                ),
-                                Padding(
-                                  padding: const EdgeInsets.only(bottom: 8.0),
-                                  child: IconButton(
-                                    style: IconButton.styleFrom(
-                                      fixedSize: const Size(50, 50),
-                                      shape: RoundedRectangleBorder(
-                                        borderRadius:
-                                            BorderRadius.circular(10.r),
-                                      ),
-                                      backgroundColor: priCol,
-                                      foregroundColor: priColLight,
-                                      // padding: pa1,
-                                    ),
-                                    iconSize: 34,
-                                    icon: const Icon(
-                                      Icons.arrow_circle_right_rounded,
-                                    ),
-                                    onPressed: () async {
-                                      if (txtInput.text != "") {
-                                        //show loading
-                                        showLoader(context);
-                                        try {
-                                          await sendRequest(txtInput.text)
-                                              .then((value) async => {
-                                                    Navigator.pop(context),
-                                                  })
-                                              .whenComplete(
-                                                () =>
-                                                    scrollController.animateTo(
-                                                  scrollController.position
-                                                          .maxScrollExtent +
-                                                      // 500,
-                                                      double.infinity,
-                                                  curve: Curves.easeOut,
-                                                  duration: const Duration(
-                                                      milliseconds: 200),
-                                                ),
-                                              );
-                                        } catch (e) {
-                                          Navigator.pop(context);
-                                          CustomSnackBar.show(context,
-                                              message: "An error occured!");
-                                        }
-                                        setState(() {
-                                          txtInput.text = "";
-                                        });
-                                      }
+                              ),
+                            );
+                          }
+                          return isStarted != true
+                              ? startPractice(context)
+                              : ListView.builder(
+                                  physics: const BouncingScrollPhysics(),
+                                  cacheExtent: 50.vh,
+                                  padding:
+                                      EdgeInsets.symmetric(horizontal: 10.w),
+                                  controller: scrollController,
+                                  scrollDirection: Axis.vertical,
+                                  itemCount: messages.length,
+                                  itemBuilder: (context, index) {
+                                    return messages[index];
+                                  },
+                                );
+                        }),
+                  ),
+                  SizedBox(
+                    height: 10.h,
+                  ),
+                  isStarted == true
+                      ? Container(
+                          padding: px1,
+                          // width: 94.vw,
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: [
+                              Expanded(
+                                child: InputControl(
+                                  showLabel: false,
+                                  hintText: "Enter a prompt...",
+                                  type: TextInputType.multiline,
+                                  controller: txtInput,
+                                  // focusNode: focusNode,
+                                  suffixIcon: IconButton(
+                                    onPressed: () {
+                                      showMathsKeyboard();
                                     },
+                                    icon: const Icon(Icons.calculate),
+                                    color: txtCol,
                                   ),
                                 ),
-                              ],
-                            ),
-                          )
-                        : const SizedBox.shrink(),
-                  ],
-                )
-              : const NoNetwork(),
-        ),
+                              ),
+                              SizedBox(
+                                width: 10.w,
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.only(bottom: 8.0),
+                                child: IconButton(
+                                  style: IconButton.styleFrom(
+                                    fixedSize: const Size(50, 50),
+                                    shape: RoundedRectangleBorder(
+                                      borderRadius:
+                                          BorderRadius.circular(10.r),
+                                    ),
+                                    backgroundColor: priCol,
+                                    foregroundColor: priColLight,
+                                    // padding: pa1,
+                                  ),
+                                  iconSize: 34,
+                                  icon: const Icon(
+                                    Icons.arrow_circle_right_rounded,
+                                  ),
+                                  onPressed: () async {
+                                    if (txtInput.text != "") {
+                                      //show loading
+                                      showLoader(context);
+                                      try {
+                                        await sendRequest(txtInput.text)
+                                            .then((value) async => {
+                                                  Navigator.pop(context),
+                                                })
+                                            .whenComplete(
+                                              () =>
+                                                  scrollController.animateTo(
+                                                scrollController.position
+                                                        .maxScrollExtent +
+                                                    // 500,
+                                                    double.infinity,
+                                                curve: Curves.easeOut,
+                                                duration: const Duration(
+                                                    milliseconds: 200),
+                                              ),
+                                            );
+                                      } catch (e) {
+                                        Navigator.pop(context);
+                                        CustomSnackBar.show(context,
+                                            message: "An error occured!");
+                                      }
+                                      setState(() {
+                                        txtInput.text = "";
+                                      });
+                                    }
+                                  },
+                                ),
+                              ),
+                            ],
+                          ),
+                        )
+                      : const SizedBox.shrink(),
+                ],
+              )
+            : const NoNetwork(),
       ),
     );
   }

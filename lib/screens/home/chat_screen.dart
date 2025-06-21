@@ -83,156 +83,154 @@ class _ChatScreenState extends State<ChatScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return KeyboardDismissOnTap(
-      child: Consumer<NetworkProvider>(
-        builder: (context, value, child) => value.isConnected == true
-            ? Column(children: [
-                Expanded(
-                  child: FutureBuilder(
-                      future: Prefs.getSession(),
-                      builder: (context, snapData) {
-                        if (snapData.connectionState ==
-                            ConnectionState.waiting) {
-                          return const Loader();
-                        }
-                        if (snapData.hasError) {
-                          return Text("Error: ${snapData.error}");
-                        }
-
-                        return StreamBuilder<
-                                QuerySnapshot<Map<String, dynamic>>?>(
-                            // stream: getCurrentChat(),
-                            stream: getChatByID(_sessionID),
-                            builder: (context, snapshot) {
-                              if (snapshot.connectionState ==
-                                  ConnectionState.waiting) {
-                                return const Loader();
-                              }
-
-                              if (snapshot.hasError) {
-                                return Text('Error: ${snapshot.error}');
-                              }
-
-                              if (!snapshot.hasData ||
-                                  snapshot.data?.docs.isEmpty == true) {
-                                return Column(
-                                  children: [
-                                    ChatBubble(
-                                        isUser: false,
-                                        message:
-                                            "How can i help you with $selectedTopic today?"),
-                                  ],
-                                );
-                              }
-                              return ListView.builder(
-                                physics: const BouncingScrollPhysics(),
-                                cacheExtent: 50.vh,
-                                padding: EdgeInsets.symmetric(horizontal: 10.w),
-                                controller: scrollController,
-                                scrollDirection: Axis.vertical,
-                                itemCount: snapshot.data?.docs.length ?? 0,
-                                itemBuilder: (context, index) {
-                                  final data = snapshot.data?.docs[index];
-                                  // print("data returned is   ${data?['content']}");
-                                  return ChatBubble(
-                                    isUser: data!["isUser"],
-                                    message: data["content"],
-                                  );
-                                },
-                              );
-                            });
-                      }),
-                ),
-                SizedBox(
-                  height: 10.h,
-                ),
-                Container(
-                  padding: px1,
-                  // width: 94.vw,
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: [
-                      Expanded(
-                        child: InputControl(
-                          showLabel: false,
-                          hintText: "Enter a prompt...",
-                          type: TextInputType.multiline,
-                          controller: txtInput,
-                          suffixIcon: IconButton(
-                            onPressed: () {
-                              showMathsKeyboard();
-                            },
-                            icon: const Icon(Icons.calculate),
-                            color: txtCol,
-                          ),
-                        ),
-                      ),
-                      SizedBox(
-                        width: 10.w,
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.only(bottom: 8.0),
-                        child: IconButton(
-                          style: IconButton.styleFrom(
-                            fixedSize: const Size(50, 50),
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(10.r),
-                            ),
-                            backgroundColor: priCol,
-                            foregroundColor: priColLight,
-                            // padding: pa1,
-                          ),
-                          iconSize: 34,
-                          icon: const Icon(Icons.arrow_circle_right_rounded),
-                          onPressed: () async {
-                            if (txtInput.text != "") {
-                              //show loading
-                              showLoader(context);
-                              try {
-                                await sendMessage(txtInput.text)
-                                    .then((value) async => {
-                                          // send chat history to firestore
-                                          await uploadChat(
-                                                  content: txtInput.text,
-                                                  role: "user")
-                                              .then(
-                                            (res) async => await uploadChat(
-                                                content: value,
-                                                role: "assistant"),
-                                          ),
-                                          Navigator.pop(context),
-
-                                          SchedulerBinding.instance
-                                              .addPostFrameCallback((_) {
-                                            scrollController.animateTo(
-                                              scrollController
-                                                  .position.maxScrollExtent,
-                                              duration: const Duration(
-                                                microseconds: 100,
-                                              ),
-                                              curve: Curves.fastOutSlowIn,
-                                            );
-                                          }),
-                                        });
-                              } catch (e) {
-                                Navigator.pop(context);
-                                CustomSnackBar.show(context,
-                                    message: "An error occur!");
-                              }
-                              setState(() {
-                                txtInput.text = "";
-                              });
+    return Consumer<NetworkProvider>(
+      builder: (context, value, child) => value.isConnected == true
+          ? Column(children: [
+              Expanded(
+                child: FutureBuilder(
+                    future: Prefs.getSession(),
+                    builder: (context, snapData) {
+                      if (snapData.connectionState ==
+                          ConnectionState.waiting) {
+                        return const Loader();
+                      }
+                      if (snapData.hasError) {
+                        return Text("Error: ${snapData.error}");
+                      }
+    
+                      return StreamBuilder<
+                              QuerySnapshot<Map<String, dynamic>>?>(
+                          // stream: getCurrentChat(),
+                          stream: getChatByID(_sessionID),
+                          builder: (context, snapshot) {
+                            if (snapshot.connectionState ==
+                                ConnectionState.waiting) {
+                              return const Loader();
                             }
+    
+                            if (snapshot.hasError) {
+                              return Text('Error: ${snapshot.error}');
+                            }
+    
+                            if (!snapshot.hasData ||
+                                snapshot.data?.docs.isEmpty == true) {
+                              return Column(
+                                children: [
+                                  ChatBubble(
+                                      isUser: false,
+                                      message:
+                                          "How can i help you with $selectedTopic today?"),
+                                ],
+                              );
+                            }
+                            return ListView.builder(
+                              physics: const BouncingScrollPhysics(),
+                              cacheExtent: 50.vh,
+                              padding: EdgeInsets.symmetric(horizontal: 10.w),
+                              controller: scrollController,
+                              scrollDirection: Axis.vertical,
+                              itemCount: snapshot.data?.docs.length ?? 0,
+                              itemBuilder: (context, index) {
+                                final data = snapshot.data?.docs[index];
+                                // print("data returned is   ${data?['content']}");
+                                return ChatBubble(
+                                  isUser: data!["isUser"],
+                                  message: data["content"],
+                                );
+                              },
+                            );
+                          });
+                    }),
+              ),
+              SizedBox(
+                height: 10.h,
+              ),
+              Container(
+                padding: px1,
+                // width: 94.vw,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    Expanded(
+                      child: InputControl(
+                        showLabel: false,
+                        hintText: "Enter a prompt...",
+                        type: TextInputType.multiline,
+                        controller: txtInput,
+                        suffixIcon: IconButton(
+                          onPressed: () {
+                            showMathsKeyboard();
                           },
+                          icon: const Icon(Icons.calculate),
+                          color: txtCol,
                         ),
                       ),
-                    ],
-                  ),
+                    ),
+                    SizedBox(
+                      width: 10.w,
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(bottom: 8.0),
+                      child: IconButton(
+                        style: IconButton.styleFrom(
+                          fixedSize: const Size(50, 50),
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(10.r),
+                          ),
+                          backgroundColor: priCol,
+                          foregroundColor: priColLight,
+                          // padding: pa1,
+                        ),
+                        iconSize: 34,
+                        icon: const Icon(Icons.arrow_circle_right_rounded),
+                        onPressed: () async {
+                          if (txtInput.text != "") {
+                            //show loading
+                            showLoader(context);
+                            try {
+                              await sendMessage(txtInput.text)
+                                  .then((value) async => {
+                                        // send chat history to firestore
+                                        await uploadChat(
+                                                content: txtInput.text,
+                                                role: "user")
+                                            .then(
+                                          (res) async => await uploadChat(
+                                              content: value,
+                                              role: "assistant"),
+                                        ),
+                                        Navigator.pop(context),
+    
+                                        SchedulerBinding.instance
+                                            .addPostFrameCallback((_) {
+                                          scrollController.animateTo(
+                                            scrollController
+                                                .position.maxScrollExtent,
+                                            duration: const Duration(
+                                              microseconds: 100,
+                                            ),
+                                            curve: Curves.fastOutSlowIn,
+                                          );
+                                        }),
+                                      });
+                            } catch (e) {
+                              Navigator.pop(context);
+                              CustomSnackBar.show(context,
+                                  message: "An error occur!");
+                            }
+                            setState(() {
+                              txtInput.text = "";
+                            });
+                          }
+                        },
+                      ),
+                    ),
+                  ],
                 ),
-              ])
-            : const NoNetwork(),
-      ),
+              ),
+            ])
+          : const NoNetwork(),
     );
   }
 

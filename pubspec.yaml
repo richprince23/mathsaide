@@ -22,12 +22,12 @@ dependencies:
   cached_network_image: ^3.2.3
   google_fonts:
   image_picker: ^1.0.2
-  image_cropper: ^5.0.0
+  image_cropper: ^6.0.0
   shared_preferences: ^2.0.15
   provider: ^6.0.4
   path_provider: ^2.0.11
-  flutter_keyboard_visibility: ^5.4.0
-  connectivity_plus: ^4.0.1
+  flutter_keyboard_visibility: ^6.0.0
+  connectivity_plus: ^6.1.4
   http: 1.1.0
   math_keyboard: ^0.3.2
   intl:

@@ -4,7 +4,7 @@ publish_to: "none"
 version: 1.2.2+5
 
 environment:
-  sdk: ^3.6.0
+  sdk: ">=3.3.1 <4.0.0"
 
 dependencies:
   flutter:
@@ -20,7 +20,7 @@ dependencies:
   firebase_remote_config:
   resize:
   cached_network_image: ^3.2.3
-  google_fonts: ^5.1.0
+  google_fonts:
   image_picker: ^1.0.2
   image_cropper: ^5.0.0
   shared_preferences: ^2.0.15
@@ -29,12 +29,13 @@ dependencies:
   flutter_keyboard_visibility: ^5.4.0
   connectivity_plus: ^4.0.1
   http: 1.1.0
-  math_keyboard: ^0.3.0
+  math_keyboard: ^0.3.2
   intl:
   package_info_plus: ^4.1.0
   url_launcher: ^6.0.12
   flutter_markdown: ^0.7.3+2
-  flutter_tex: ^4.0.9
+  flutter_tex: 5.1.8
+  flutter_math_fork: 0.7.3
 
 dev_dependencies:
   flutter_test:

@@ -71,9 +71,8 @@ plugins {
 
 android {
     namespace = "com.suptle.mathsaide"
-    compileSdk = 35
+    compileSdk = flutter.compileSdkVersion
     ndkVersion = flutter.ndkVersion
-    // ndkVersion = "27.0.12077973"
 
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8

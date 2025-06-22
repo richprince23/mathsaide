@@ -1,0 +1,1352 @@
+[
+    {
+        "question": "What is the next term in the arithmetic sequence: 2, 5, 8, 11, ___?",
+        "options": [
+            "12",
+            "13",
+            "14",
+            "15"
+        ],
+        "correct_answer": "14"
+    },
+    {
+        "question": "Find the sum of the first 10 terms of the geometric sequence: 2, 6, 18, 54, ...",
+        "options": [
+            "2916",
+            "3280",
+            "3645",
+            "4095"
+        ],
+        "correct_answer": "3645"
+    },
+    {
+        "question": "What is the common ratio of the geometric sequence: 3, 9, 27, 81, ...?",
+        "options": [
+            "3",
+            "6",
+            "9",
+            "12"
+        ],
+        "correct_answer": "3"
+    },
+    {
+        "question": "Which term of the arithmetic sequence 7, 11, 15, 19, ... is 43?",
+        "options": [
+            "10th term",
+            "11th term",
+            "12th term",
+            "13th term"
+        ],
+        "correct_answer": "12th term"
+    },
+    {
+        "question": "What is the sum of the first 15 terms of the arithmetic series: 3, 7, 11, ...?",
+        "options": [
+            "210",
+            "225",
+            "240",
+            "255"
+        ],
+        "correct_answer": "255"
+    },
+    {
+        "question": "Find the next term in the Fibonacci sequence: 0, 1, 1, 2, 3, 5, 8, ___?",
+        "options": [
+            "10",
+            "11",
+            "12",
+            "13"
+        ],
+        "correct_answer": "13"
+    },
+    {
+        "question": "Which type of sequence has a common difference between consecutive terms?",
+        "options": [
+            "Arithmetic sequence",
+            "Geometric sequence",
+            "Fibonacci sequence",
+            "Quadratic sequence"
+        ],
+        "correct_answer": "Arithmetic sequence"
+    },
+    {
+        "question": "Find the sum of the infinite geometric series: 4 + 1 + 0.25 + ...",
+        "options": [
+            "3.5",
+            "4",
+            "4.5",
+            "5"
+        ],
+        "correct_answer": "5"
+    },
+    {
+        "question": "If the 8th term of an arithmetic sequence is 29 and the common difference is 3, what is the first term?",
+        "options": [
+            "7",
+            "10",
+            "14",
+            "20"
+        ],
+        "correct_answer": "14"
+    },
+    {
+        "question": "What is the sum of the first 12 terms of the series: 2 + 5 + 8 + 11 + ...?",
+        "options": [
+            "140",
+            "160",
+            "180",
+            "200"
+        ],
+        "correct_answer": "180"
+    },
+    {
+        "question": "What is the 7th term in the arithmetic sequence: 15, 12, 9, 6, ...?",
+        "options": [
+            "0",
+            "1",
+            "2",
+            "3"
+        ],
+        "correct_answer": "3"
+    },
+    {
+        "question": "Find the sum of the first 20 terms of the arithmetic series: 7 + 14 + 21 + ...",
+        "options": [
+            "700",
+            "1400",
+            "2100",
+            "2800"
+        ],
+        "correct_answer": "2100"
+    },
+    {
+        "question": "What is the 5th term of the geometric sequence: 2, 4, 8, 16, ...?",
+        "options": [
+            "16",
+            "32",
+            "64",
+            "128"
+        ],
+        "correct_answer": "32"
+    },
+    {
+        "question": "Find the sum of the infinite geometric series: 5 + 2.5 + 1.25 + ...",
+        "options": [
+            "8",
+            "10",
+            "12",
+            "15"
+        ],
+        "correct_answer": "10"
+    },
+    {
+        "question": "What is the common ratio of the geometric sequence: 1, -3, 9, -27, ...?",
+        "options": [
+            "-3",
+            "-9",
+            "3",
+            "9"
+        ],
+        "correct_answer": "-3"
+    },
+    {
+        "question": "Which term of the geometric sequence 2, 6, 18, 54, ... is 1458?",
+        "options": [
+            "7th term",
+            "8th term",
+            "9th term",
+            "10th term"
+        ],
+        "correct_answer": "9th term"
+    },
+    {
+        "question": "Find the sum of the first 25 terms of the series: 3 + 6 + 12 + 24 + ...",
+        "options": [
+            "62,775",
+            "63,000",
+            "63,225",
+            "63,450"
+        ],
+        "correct_answer": "63,450"
+    },
+    {
+        "question": "If the 12th term of an arithmetic sequence is 45 and the common difference is -3, what is the first term?",
+        "options": [
+            "57",
+            "60",
+            "63",
+            "66"
+        ],
+        "correct_answer": "57"
+    },
+    {
+        "question": "Find the sum of the infinite geometric series: 8 + 4 + 2 + 1 + ...",
+        "options": [
+            "4",
+            "6",
+            "8",
+            "10"
+        ],
+        "correct_answer": "16"
+    },
+    {
+        "question": "What is the next term in the arithmetic sequence: 4, 9, 14, 19, ...?",
+        "options": [
+            "23",
+            "24",
+            "25",
+            "26"
+        ],
+        "correct_answer": "24"
+    },
+    {
+        "question": "What is the sum of the first 15 terms of the arithmetic series: 10 + 15 + 20 + ...?",
+        "options": [
+            "300",
+            "375",
+            "450",
+            "525"
+        ],
+        "correct_answer": "375"
+    },
+    {
+        "question": "What is the 4th term of the arithmetic sequence: 2, 6, 10, 14, ...?",
+        "options": [
+            "18",
+            "20",
+            "22",
+            "24"
+        ],
+        "correct_answer": "18"
+    },
+    {
+        "question": "Find the sum of the infinite geometric series: 3/2 + 3/4 + 3/8 + ...",
+        "options": [
+            "2",
+            "3",
+            "4",
+            "5"
+        ],
+        "correct_answer": "3"
+    },
+    {
+        "question": "Which term of the geometric sequence 5, -10, 20, -40, ... is -1280?",
+        "options": [
+            "6th term",
+            "7th term",
+            "8th term",
+            "9th term"
+        ],
+        "correct_answer": "9th term"
+    },
+    {
+        "question": "What is the common difference of the arithmetic sequence: 18, 15, 12, 9, ...?",
+        "options": [
+            "2",
+            "3",
+            "4",
+            "5"
+        ],
+        "correct_answer": "3"
+    },
+    {
+        "question": "Find the 10th term of the geometric sequence: 2, 6, 18, 54, ...",
+        "options": [
+            "648",
+            "810",
+            "972",
+            "1134"
+        ],
+        "correct_answer": "648"
+    },
+    {
+        "question": "What is the sum of the first 30 terms of the arithmetic series: 5 + 10 + 15 + ...?",
+        "options": [
+            "450",
+            "675",
+            "900",
+            "1125"
+        ],
+        "correct_answer": "1125"
+    },
+    {
+        "question": "If the 7th term of an arithmetic sequence is 22 and the common difference is 3, what is the first term?",
+        "options": [
+            "13",
+            "15",
+            "16",
+            "18"
+        ],
+        "correct_answer": "13"
+    },
+    {
+        "question": "Find the sum of the infinite geometric series: 9 + 6 + 4 + 8/3 + ...",
+        "options": [
+            "6",
+            "9",
+            "12",
+            "15"
+        ],
+        "correct_answer": "18"
+    },
+    {
+        "question": "What is the 6th term in the arithmetic sequence: -2, 1, 4, 7, ...?",
+        "options": [
+            "12",
+            "15",
+            "18",
+            "21"
+        ],
+        "correct_answer": "18"
+    },
+    {
+        "question": "Find the sum of the first 10 terms of the series: 3 - 6 + 12 - 24 + ...",
+        "options": [
+            "-13",
+            "-11",
+            "-9",
+            "-7"
+        ],
+        "correct_answer": "-13"
+    },
+    {
+        "question": "What is the 3rd term of the arithmetic sequence: 7, 14, 21, 28, ...?",
+        "options": [
+            "31",
+            "32",
+            "33",
+            "34"
+        ],
+        "correct_answer": "21"
+    },
+    {
+        "question": "Find the sum of the first 40 terms of the arithmetic series: 2 + 6 + 10 + ...?",
+        "options": [
+            "680",
+            "700",
+            "720",
+            "740"
+        ],
+        "correct_answer": "720"
+    },
+    {
+        "question": "What is the next term in the geometric sequence: 3, 9, 27, 81, ...?",
+        "options": [
+            "243",
+            "252",
+            "270",
+            "288"
+        ],
+        "correct_answer": "243"
+    },
+    {
+        "question": "Which term of the arithmetic sequence 4, 7, 10, 13, ... is 37?",
+        "options": [
+            "10th term",
+            "11th term",
+            "12th term",
+            "13th term"
+        ],
+        "correct_answer": "13th term"
+    },
+    {
+        "question": "What is the sum of the infinite geometric series: 7/2 + 7/4 + 7/8 + ...?",
+        "options": [
+            "7",
+            "14",
+            "21",
+            "28"
+        ],
+        "correct_answer": "14"
+    },
+    {
+        "question": "What is the 9th term of the arithmetic sequence: -5, -1, 3, 7, ...?",
+        "options": [
+            "15",
+            "16",
+            "17",
+            "18"
+        ],
+        "correct_answer": "18"
+    },
+    {
+        "question": "Find the sum of the first 50 terms of the series: 1 + 4 + 9 + 16 + ...?",
+        "options": [
+            "6450",
+            "6550",
+            "6650",
+            "6750"
+        ],
+        "correct_answer": "6650"
+    },
+    {
+        "question": "What is the common ratio of the geometric sequence: 1, 5, 25, 125, ...?",
+        "options": [
+            "2",
+            "4",
+            "5",
+            "6"
+        ],
+        "correct_answer": "5"
+    },
+    {
+        "question": "What is the 8th term of the arithmetic sequence: 24, 20, 16, 12, ...?",
+        "options": [
+            "4",
+            "6",
+            "8",
+            "10"
+        ],
+        "correct_answer": "4"
+    },
+    {
+        "question": "Find the sum of the first 20 terms of the series: 1 - 3 + 9 - 27 + ...?",
+        "options": [
+            "-429654",
+            "-429655",
+            "-429656",
+            "-429657"
+        ],
+        "correct_answer": "-429655"
+    },
+    {
+        "question": "What is the 11th term in the arithmetic sequence: 2, 6, 10, 14, ...?",
+        "options": [
+            "26",
+            "28",
+            "30",
+            "32"
+        ],
+        "correct_answer": "32"
+    },
+    {
+        "question": "What is the common difference of the arithmetic sequence: 12, 17, 22, 27, ...?",
+        "options": [
+            "3",
+            "4",
+            "5",
+            "6"
+        ],
+        "correct_answer": "5"
+    },
+    {
+        "question": "Find the sum of the first 15 terms of the arithmetic series: 4 + 8 + 12 + ...",
+        "options": [
+            "240",
+            "300",
+            "360",
+            "420"
+        ],
+        "correct_answer": "360"
+    },
+    {
+        "question": "What is the 10th term of the geometric sequence: 5, -10, 20, -40, ...?",
+        "options": [
+            "-1280",
+            "-640",
+            "640",
+            "1280"
+        ],
+        "correct_answer": "-640"
+    },
+    {
+        "question": "Find the sum of the infinite geometric series: 7 + 2.8 + 1.12 + ...",
+        "options": [
+            "8",
+            "10",
+            "12",
+            "14"
+        ],
+        "correct_answer": "10"
+    },
+    {
+        "question": "What is the common ratio of the geometric sequence: 1/2, 1/4, 1/8, 1/16, ...?",
+        "options": [
+            "1/4",
+            "1/2",
+            "1/8",
+            "1/16"
+        ],
+        "correct_answer": "1/2"
+    },
+    {
+        "question": "Which term of the geometric sequence 3, 6, 12, 24, ... is 1536?",
+        "options": [
+            "7th term",
+            "8th term",
+            "9th term",
+            "10th term"
+        ],
+        "correct_answer": "9th term"
+    },
+    {
+        "question": "Find the sum of the first 30 terms of the series: 1 + 2 + 4 + 8 + ...",
+        "options": [
+            "1073741823",
+            "1073741824",
+            "2147483646",
+            "2147483647"
+        ],
+        "correct_answer": "2147483647"
+    },
+    {
+        "question": "If the 15th term of an arithmetic sequence is -10 and the common difference is -2, what is the first term?",
+        "options": [
+            "30",
+            "40",
+            "50",
+            "60"
+        ],
+        "correct_answer": "40"
+    },
+    {
+        "question": "Find the sum of the infinite geometric series: 3 + 1 + 1/3 + 1/9 + ...",
+        "options": [
+            "3",
+            "4",
+            "5",
+            "6"
+        ],
+        "correct_answer": "4"
+    },
+    {
+        "question": "What is the next term in the arithmetic sequence: 6, 12, 18, 24, ...?",
+        "options": [
+            "28",
+            "30",
+            "32",
+            "34"
+        ],
+        "correct_answer": "30"
+    },
+    {
+        "question": "What is the 6th term in the Fibonacci sequence?",
+        "options": [
+            "3",
+            "5",
+            "8",
+            "13"
+        ],
+        "correct_answer": "8"
+    },
+    {
+        "question": "Find the sum of the first 10 terms of the arithmetic series: -2, -5, -8, ...",
+        "options": [
+            "-140",
+            "-150",
+            "-160",
+            "-170"
+        ],
+        "correct_answer": "-160"
+    },
+    {
+        "question": "What is the 4th term of the geometric sequence: 7, 14, 28, 56, ...?",
+        "options": [
+            "28",
+            "49",
+            "112",
+            "224"
+        ],
+        "correct_answer": "56"
+    },
+    {
+        "question": "Which type of sequence has a constant ratio between consecutive terms?",
+        "options": [
+            "Arithmetic sequence",
+            "Geometric sequence",
+            "Fibonacci sequence",
+            "Quadratic sequence"
+        ],
+        "correct_answer": "Geometric sequence"
+    },
+    {
+        "question": "Find the sum of the infinite geometric series: 9 + 4.5 + 2.25 + ...",
+        "options": [
+            "5",
+            "7",
+            "9",
+            "11"
+        ],
+        "correct_answer": "15"
+    },
+    {
+        "question": "Find the sum of the arithmetic series: 10 + 15 + 20 + ... + 100.",
+        "options": [
+            "950",
+            "1050",
+            "1150",
+            "1250"
+        ],
+        "correct_answer": "1250"
+    },
+    {
+        "question": "What is the 4th term in the geometric sequence: 2, -6, 18, -54, ...?",
+        "options": [
+            "162",
+            "216",
+            "324",
+            "432"
+        ],
+        "correct_answer": "162"
+    },
+    {
+        "question": "Find the common difference of the arithmetic sequence: 3, 8, 13, 18, ...",
+        "options": [
+            "3",
+            "4",
+            "5",
+            "6"
+        ],
+        "correct_answer": "5"
+    },
+    {
+        "question": "What is the sum of the first 30 terms of the series: 1 - 2 + 4 - 8 + ...?",
+        "options": [
+            "-1073741823",
+            "-1073741824",
+            "1073741823",
+            "1073741824"
+        ],
+        "correct_answer": "1073741823"
+    },
+    {
+        "question": "Which term of the arithmetic sequence -2, -5, -8, -11, ... is -47?",
+        "options": [
+            "15th term",
+            "16th term",
+            "17th term",
+            "18th term"
+        ],
+        "correct_answer": "16th term"
+    },
+    {
+        "question": "What is the 9th term in the Fibonacci sequence?",
+        "options": [
+            "21",
+            "23",
+            "34",
+            "55"
+        ],
+        "correct_answer": "34"
+    },
+    {
+        "question": "Find the sum of the infinite geometric series: 3 + 1 + 1/3 + 1/9 + ...",
+        "options": [
+            "3.75",
+            "4",
+            "4.25",
+            "4.5"
+        ],
+        "correct_answer": "4.5"
+    },
+    {
+        "question": "If the sum of the first 15 terms of an arithmetic series is 225 and the common difference is 5, what is the first term?",
+        "options": [
+            "5",
+            "10",
+            "15",
+            "20"
+        ],
+        "correct_answer": "5"
+    },
+    {
+        "question": "Which type of sequence has a common ratio between consecutive terms?",
+        "options": [
+            "Arithmetic sequence",
+            "Geometric sequence",
+            "Fibonacci sequence",
+            "Quadratic sequence"
+        ],
+        "correct_answer": "Geometric sequence"
+    },
+    {
+        "question": "Find the sum of the first 40 terms of the series: 2 - 6 + 18 - 54 + ...?",
+        "options": [
+            "-801798",
+            "801798",
+            "-1603596",
+            "1603596"
+        ],
+        "correct_answer": "-801798"
+    },
+    {
+        "question": "What is the 12th term in the geometric sequence: 1, 4, 16, 64, ...?",
+        "options": [
+            "256",
+            "512",
+            "1024",
+            "2048"
+        ],
+        "correct_answer": "2048"
+    },
+    {
+        "question": "Find the next term in the sequence: 3, 9, 27, 81, ...?",
+        "options": [
+            "162",
+            "243",
+            "324",
+            "405"
+        ],
+        "correct_answer": "243"
+    },
+    {
+        "question": "What is the 10th term in the arithmetic sequence: 17, 20, 23, 26, ...?",
+        "options": [
+            "29",
+            "30",
+            "31",
+            "32"
+        ],
+        "correct_answer": "32"
+    },
+    {
+        "question": "Find the sum of the first 15 terms of the arithmetic series: 10 + 14 + 18 + ...",
+        "options": [
+            "375",
+            "400",
+            "425",
+            "450"
+        ],
+        "correct_answer": "375"
+    },
+    {
+        "question": "What is the 6th term of the geometric sequence: 3, 9, 27, 81, ...?",
+        "options": [
+            "243",
+            "729",
+            "2187",
+            "6561"
+        ],
+        "correct_answer": "243"
+    },
+    {
+        "question": "What is the common ratio of the geometric sequence: 5, -10, 20, -40, ...?",
+        "options": [
+            "-2",
+            "-4",
+            "2",
+            "4"
+        ],
+        "correct_answer": "-2"
+    },
+    {
+        "question": "Which term of the geometric sequence 1, 5, 25, 125, ... is 3125?",
+        "options": [
+            "5th term",
+            "6th term",
+            "7th term",
+            "8th term"
+        ],
+        "correct_answer": "8th term"
+    },
+    {
+        "question": "Find the sum of the first 30 terms of the series: 4 + 8 + 16 + 32 + ...",
+        "options": [
+            "536870908",
+            "536870912",
+            "536870920",
+            "536870928"
+        ],
+        "correct_answer": "536870908"
+    },
+    {
+        "question": "Find the sum of the infinite geometric series: 6 + 3 + 1.5 + 0.75 + ...",
+        "options": [
+            "8",
+            "10",
+            "12",
+            "14"
+        ],
+        "correct_answer": "12"
+    },
+    {
+        "question": "What is the next term in the arithmetic sequence: 11, 16, 21, 26, ...?",
+        "options": [
+            "31",
+            "32",
+            "33",
+            "34"
+        ],
+        "correct_answer": "31"
+    },
+    {
+        "question": "Find the 12th term in the arithmetic sequence: 3, 8, 13, 18, ...?",
+        "options": [
+            "48",
+            "49",
+            "50",
+            "51"
+        ],
+        "correct_answer": "50"
+    },
+    {
+        "question": "What is the sum of the first 25 terms of the arithmetic series: 6 + 9 + 12 + ...?",
+        "options": [
+            "975",
+            "1000",
+            "1025",
+            "1050"
+        ],
+        "correct_answer": "1025"
+    },
+    {
+        "question": "What is the 7th term in the geometric sequence: 2, 6, 18, 54, ...?",
+        "options": [
+            "162",
+            "486",
+            "1458",
+            "4374"
+        ],
+        "correct_answer": "162"
+    },
+    {
+        "question": "What is the common ratio of the geometric sequence: 1, -2, 4, -8, ...?",
+        "options": [
+            "-2",
+            "-4",
+            "2",
+            "4"
+        ],
+        "correct_answer": "-2"
+    },
+    {
+        "question": "Which term of the geometric sequence 2, 6, 18, 54, ... is 4374?",
+        "options": [
+            "7th term",
+            "8th term",
+            "9th term",
+            "10th term"
+        ],
+        "correct_answer": "10th term"
+    },
+    {
+        "question": "Find the sum of the first 40 terms of the series: 5 + 10 + 20 + 40 + ...",
+        "options": [
+            "1099511627775",
+            "1099511627776",
+            "1099511627777",
+            "1099511627778"
+        ],
+        "correct_answer": "1099511627775"
+    },
+    {
+        "question": "If the 20th term of an arithmetic sequence is 75 and the common difference is 5, what is the first term?",
+        "options": [
+            "25",
+            "30",
+            "35",
+            "40"
+        ],
+        "correct_answer": "25"
+    },
+    {
+        "question": "What is the next term in the arithmetic sequence: 13, 19, 25, 31, ...?",
+        "options": [
+            "37",
+            "38",
+            "39",
+            "40"
+        ],
+        "correct_answer": "37"
+    },
+    {
+        "question": "Find the 15th term in the arithmetic sequence: 2, 5, 8, 11, ...?",
+        "options": [
+            "38",
+            "39",
+            "40",
+            "41"
+        ],
+        "correct_answer": "38"
+    },
+    {
+        "question": "What is the sum of the first 35 terms of the arithmetic series: 12 + 16 + 20 + ...?",
+        "options": [
+            "3850",
+            "3900",
+            "3950",
+            "4000"
+        ],
+        "correct_answer": "3900"
+    },
+    {
+        "question": "Find the sum of the first 15 terms of the arithmetic series: 6 + 12 + 18 + ...",
+        "options": [
+            "540",
+            "630",
+            "720",
+            "810"
+        ],
+        "correct_answer": "630"
+    },
+    {
+        "question": "What is the 6th term of the geometric sequence: 1, 4, 16, 64, ...?",
+        "options": [
+            "128",
+            "256",
+            "512",
+            "1024"
+        ],
+        "correct_answer": "256"
+    },
+    {
+        "question": "Find the sum of the infinite geometric series: 3 + 0.9 + 0.27 + ...",
+        "options": [
+            "4",
+            "4.1",
+            "4.2",
+            "4.3"
+        ],
+        "correct_answer": "4.1"
+    },
+    {
+        "question": "What is the common ratio of the geometric sequence: 1, 2, 4, 8, ...?",
+        "options": [
+            "2",
+            "3",
+            "4",
+            "5"
+        ],
+        "correct_answer": "2"
+    },
+    {
+        "question": "If the sum of the first 5 terms of an arithmetic series is 35, and the common difference is 3, what is the first term?",
+        "options": [
+            "2",
+            "5",
+            "8",
+            "11"
+        ],
+        "correct_answer": "8"
+    },
+    {
+        "question": "Find the 10th term of the arithmetic sequence: 9, 15, 21, 27, ...",
+        "options": [
+            "33",
+            "34",
+            "35",
+            "36"
+        ],
+        "correct_answer": "33"
+    },
+    {
+        "question": "What is the sum of the first 30 terms of the arithmetic series: 2 + 4 + 6 + ...?",
+        "options": [
+            "930",
+            "960",
+            "990",
+            "1020"
+        ],
+        "correct_answer": "990"
+    },
+    {
+        "question": "Find the next term in the geometric sequence: 3, 6, 12, 24, ...?",
+        "options": [
+            "36",
+            "48",
+            "60",
+            "72"
+        ],
+        "correct_answer": "48"
+    },
+    {
+        "question": "Which type of sequence has a common ratio between consecutive terms?",
+        "options": [
+            "Arithmetic sequence",
+            "Geometric sequence",
+            "Fibonacci sequence",
+            "Quadratic sequence"
+        ],
+        "correct_answer": "Geometric sequence"
+    },
+    {
+        "question": "What is the 6th term of the Fibonacci sequence?",
+        "options": [
+            "5",
+            "8",
+            "13",
+            "21"
+        ],
+        "correct_answer": "8"
+    },
+    {
+        "question": "Find the sum of the first 15 terms of the geometric series: 3, 6, 12, 24, ...",
+        "options": [
+            "65532",
+            "65535",
+            "65538",
+            "65541"
+        ],
+        "correct_answer": "65535"
+    },
+    {
+        "question": "If the 4th term of an arithmetic sequence is 12 and the common difference is -2, what is the first term?",
+        "options": [
+            "20",
+            "18",
+            "16",
+            "14"
+        ],
+        "correct_answer": "18"
+    },
+    {
+        "question": "What is the sum of the infinite geometric series: 1 + 1/3 + 1/9 + ...?",
+        "options": [
+            "2",
+            "3",
+            "4",
+            "5"
+        ],
+        "correct_answer": "3"
+    },
+    {
+        "question": "Find the next term in the arithmetic sequence: -10, -7, -4, -1, ...?",
+        "options": [
+            "2",
+            "3",
+            "4",
+            "5"
+        ],
+        "correct_answer": "2"
+    },
+    {
+        "question": "What is the 8th term of the arithmetic sequence: -8, -4, 0, 4, ...?",
+        "options": [
+            "12",
+            "16",
+            "20",
+            "24"
+        ],
+        "correct_answer": "16"
+    },
+    {
+        "question": "Find the sum of the first 12 terms of the geometric series: 5, 10, 20, 40, ...",
+        "options": [
+            "819,200",
+            "1,638,400",
+            "3,276,800",
+            "6,553,600"
+        ],
+        "correct_answer": "6,553,600"
+    },
+    {
+        "question": "What is the common difference of the arithmetic sequence: -2, -5, -8, -11, ...?",
+        "options": [
+            "-3",
+            "-4",
+            "-5",
+            "-6"
+        ],
+        "correct_answer": "-3"
+    },
+    {
+        "question": "If the 7th term of an arithmetic sequence is 35 and the common difference is 5, what is the first term?",
+        "options": [
+            "0",
+            "5",
+            "10",
+            "15"
+        ],
+        "correct_answer": "0"
+    },
+    {
+        "question": "What is the sum of the first 8 terms of the arithmetic series: 1 + 5 + 9 + ...?",
+        "options": [
+            "216",
+            "280",
+            "360",
+            "440"
+        ],
+        "correct_answer": "360"
+    },
+    {
+        "question": "Find the next term in the geometric sequence: 7, 14, 28, 56, ...?",
+        "options": [
+            "112",
+            "224",
+            "448",
+            "896"
+        ],
+        "correct_answer": "112"
+    },
+    {
+        "question": "Which term of the geometric sequence 3, 9, 27, 81, ... is 243?",
+        "options": [
+            "4th term",
+            "5th term",
+            "6th term",
+            "7th term"
+        ],
+        "correct_answer": "6th term"
+    },
+    {
+        "question": "Find the sum of the first 50 terms of the series: 1 - 3 + 9 - 27 + ...?",
+        "options": [
+            "3,051",
+            "9,153",
+            "27,459",
+            "82,377"
+        ],
+        "correct_answer": "9,153"
+    },
+    {
+        "question": "If the 9th term of an arithmetic sequence is 42 and the common difference is 6, what is the first term?",
+        "options": [
+            "-6",
+            "-12",
+            "12",
+            "24"
+        ],
+        "correct_answer": "-6"
+    },
+    {
+        "question": "What is the sum of the infinite geometric series: 3 + 6/5 + 36/25 + ...?",
+        "options": [
+            "25",
+            "30",
+            "35",
+            "40"
+        ],
+        "correct_answer": "30"
+    },
+    {
+        "question": "Find the next term in the arithmetic sequence: 12, 8, 4, 0, ...?",
+        "options": [
+            "-4",
+            "-8",
+            "-12",
+            "-16"
+        ],
+        "correct_answer": "-4"
+    },
+    {
+        "question": "What is the 10th term of the arithmetic sequence: -3, -6, -9, -12, ...?",
+        "options": [
+            "-27",
+            "-30",
+            "-33",
+            "-36"
+        ],
+        "correct_answer": "-30"
+    },
+    {
+        "question": "Find the sum of the first 10 terms of the geometric series: 2, -6, 18, -54, ...",
+        "options": [
+            "327.68",
+            "328.50",
+            "329.40",
+            "330.00"
+        ],
+        "correct_answer": "328.50"
+    },
+    {
+        "question": "What is the common difference of the arithmetic sequence: 4, 7, 10, 13, ...?",
+        "options": [
+            "2",
+            "3",
+            "4",
+            "5"
+        ],
+        "correct_answer": "3"
+    },
+    {
+        "question": "If the 6th term of an arithmetic sequence is 25 and the common difference is 4, what is the first term?",
+        "options": [
+            "7",
+            "9",
+            "11",
+            "13"
+        ],
+        "correct_answer": "9"
+    },
+    {
+        "question": "What is the sum of the first 6 terms of the arithmetic series: -2 + 1 + 4 + ...?",
+        "options": [
+            "18",
+            "21",
+            "24",
+            "27"
+        ],
+        "correct_answer": "21"
+    },
+    {
+        "question": "Find the next term in the geometric sequence: 6, -12, 24, -48, ...?",
+        "options": [
+            "96",
+            "-96",
+            "192",
+            "-192"
+        ],
+        "correct_answer": "-96"
+    },
+    {
+        "question": "Which term of the geometric sequence -3, 6, -12, 24, ... is -384?",
+        "options": [
+            "5th term",
+            "6th term",
+            "7th term",
+            "8th term"
+        ],
+        "correct_answer": "7th term"
+    },
+    {
+        "question": "Find the sum of the first 40 terms of the series: 1 + 1/2 + 1/4 + ...?",
+        "options": [
+            "1.9999",
+            "2",
+            "2.0001",
+            "2.5"
+        ],
+        "correct_answer": "2.0001"
+    },
+    {
+        "question": "If the 10th term of an arithmetic sequence is 70 and the common difference is 8, what is the first term?",
+        "options": [
+            "10",
+            "18",
+            "26",
+            "34"
+        ],
+        "correct_answer": "18"
+    },
+    {
+        "question": "What is the sum of the infinite geometric series: 7/2 + 7/4 + 7/8 + ...?",
+        "options": [
+            "3",
+            "7",
+            "14",
+            "28"
+        ],
+        "correct_answer": "14"
+    },
+    {
+        "question": "Find the next term in the arithmetic sequence: 1, 4, 7, 10, ...?",
+        "options": [
+            "13",
+            "14",
+            "15",
+            "16"
+        ],
+        "correct_answer": "13"
+    },
+    {
+        "question": "What is the 9th term of the arithmetic sequence: 5, 9, 13, 17, ...?",
+        "options": [
+            "33",
+            "37",
+            "41",
+            "45"
+        ],
+        "correct_answer": "41"
+    },
+    {
+        "question": "Find the sum of the first 7 terms of the geometric series: -3, 6, -12, 24, ...",
+        "options": [
+            "5592",
+            "-2796",
+            "5598",
+            "-2799"
+        ],
+        "correct_answer": "-2796"
+    },
+    {
+        "question": "What is the common difference of the arithmetic sequence: 12, 8, 4, 0, ...?",
+        "options": [
+            "-2",
+            "-3",
+            "-4",
+            "-5"
+        ],
+        "correct_answer": "-4"
+    },
+    {
+        "question": "If the 5th term of an arithmetic sequence is 15 and the common difference is 2, what is the first term?",
+        "options": [
+            "5",
+            "7",
+            "9",
+            "11"
+        ],
+        "correct_answer": "7"
+    },
+    {
+        "question": "What is the sum of the first 5 terms of the arithmetic series: 3 + 7 + 11 + ...?",
+        "options": [
+            "65",
+            "75",
+            "85",
+            "95"
+        ],
+        "correct_answer": "75"
+    },
+    {
+        "question": "Find the next term in the geometric sequence: 2, 10, 50, 250, ...?",
+        "options": [
+            "1000",
+            "1250",
+            "1500",
+            "1750"
+        ],
+        "correct_answer": "1250"
+    },
+    {
+        "question": "Which term of the geometric sequence 1/3, 2/9, 4/27, 8/81, ... is 1024/6561?",
+        "options": [
+            "5th term",
+            "6th term",
+            "7th term",
+            "8th term"
+        ],
+        "correct_answer": "7th term"
+    },
+    {
+        "question": "Find the sum of the first 15 terms of the series: 4 + 1 - 4 + 1 - ...?",
+        "options": [
+            "2",
+            "4",
+            "6",
+            "8"
+        ],
+        "correct_answer": "6"
+    },
+    {
+        "question": "If the 8th term of an arithmetic sequence is 28 and the common difference is -4, what is the first term?",
+        "options": [
+            "114",
+            "118",
+            "112",
+            "116"
+        ],
+        "correct_answer": "112"
+    },
+    {
+        "question": "What is the sum of the infinite geometric series: 2/3 + 4/9 + 8/27 + ...?",
+        "options": [
+            "2",
+            "3",
+            "4",
+            "5"
+        ],
+        "correct_answer": "3"
+    },
+    {
+        "question": "Find the next term in the arithmetic sequence: -6, -2, 2, 6, ...?",
+        "options": [
+            "10",
+            "12",
+            "14",
+            "16"
+        ],
+        "correct_answer": "10"
+    },
+    {
+        "question": "What is the 6th term of the arithmetic sequence: -5, 0, 5, 10, ...?",
+        "options": [
+            "15",
+            "20",
+            "25",
+            "30"
+        ],
+        "correct_answer": "15"
+    }
+]

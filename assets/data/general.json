@@ -1,0 +1,2560 @@
+[
+    {
+        "question": "Which of the following is a prime number?",
+        "options": [
+            "10",
+            "15",
+            "7",
+            "12"
+        ],
+        "correct_answer": "7"
+    },
+    {
+        "question": "Simplify: 2x + 3y - x + 5y",
+        "options": [
+            "3x + 8y",
+            "x + 2y",
+            "x + 8y",
+            "x - 2y"
+        ],
+        "correct_answer": "x + 8y"
+    },
+    {
+        "question": "If a triangle has angles measuring 45°, 45°, and 90°, what type of triangle is it?",
+        "options": [
+            "Equilateral triangle",
+            "Isosceles triangle",
+            "Scalene triangle",
+            "Right triangle"
+        ],
+        "correct_answer": "Right triangle"
+    },
+    {
+        "question": "What is the square root of 144?",
+        "options": [
+            "12",
+            "24",
+            "16",
+            "18"
+        ],
+        "correct_answer": "12"
+    },
+    {
+        "question": "If log₃(x) = 4, what is the value of x?",
+        "options": [
+            "81",
+            "27",
+            "12",
+            "64"
+        ],
+        "correct_answer": "81"
+    },
+    {
+        "question": "What is the slope of a horizontal line?",
+        "options": [
+            "0",
+            "1",
+            "Undefined",
+            "Infinity"
+        ],
+        "correct_answer": "0"
+    },
+    {
+        "question": "Which of the following is an irrational number?",
+        "options": [
+            "2.5",
+            "0.333...",
+            "√2",
+            "3/4"
+        ],
+        "correct_answer": "√2"
+    },
+    {
+        "question": "If sin(θ) = 0.6, what is cos(θ)?",
+        "options": [
+            "0.6",
+            "0.8",
+            "0.4",
+            "0.2"
+        ],
+        "correct_answer": "0.8"
+    },
+    {
+        "question": "What is the perimeter of a rectangle with length 8 units and width 5 units?",
+        "options": [
+            "26 units",
+            "40 units",
+            "18 units",
+            "13 units"
+        ],
+        "correct_answer": "26 units"
+    },
+    {
+        "question": "Which trigonometric ratio is equivalent to tan(θ)?",
+        "options": [
+            "sin(θ) / cos(θ)",
+            "cos(θ) / sin(θ)",
+            "1 / sin(θ)",
+            "1 / cos(θ)"
+        ],
+        "correct_answer": "sin(θ) / cos(θ)"
+    },
+    {
+        "question": "What is the solution to the equation: 2x - 5 = 3?",
+        "options": [
+            "x = -1",
+            "x = 4",
+            "x = 2",
+            "x = 1"
+        ],
+        "correct_answer": "x = 4"
+    },
+    {
+        "question": "Which of the following is a permutation?",
+        "options": [
+            "nPr",
+            "nCr",
+            "n!",
+            "n^r"
+        ],
+        "correct_answer": "nPr"
+    },
+    {
+        "question": "If a dice is rolled, what is the probability of getting an even number?",
+        "options": [
+            "1/2",
+            "1/3",
+            "2/3",
+            "1/6"
+        ],
+        "correct_answer": "1/2"
+    },
+    {
+        "question": "What is the solution to the quadratic equation: x² - 6x + 9 = 0?",
+        "options": [
+            "x = 3",
+            "x = 2",
+            "x = -3",
+            "x = -2"
+        ],
+        "correct_answer": "x = 3"
+    },
+    {
+        "question": "Which of the following is a valid transformation of a function?",
+        "options": [
+            "Stretching it horizontally",
+            "Reflecting it over the x-axis",
+            "Shifting it up by a negative value",
+            "Compressing it vertically"
+        ],
+        "correct_answer": "Reflecting it over the x-axis"
+    },
+    {
+        "question": "What is the value of 2² + 3³?",
+        "options": [
+            "17",
+            "29",
+            "11",
+            "25"
+        ],
+        "correct_answer": "35"
+    },
+    {
+        "question": "If log₂(x) = 5, what is the value of x?",
+        "options": [
+            "2",
+            "25",
+            "32",
+            "64"
+        ],
+        "correct_answer": "32"
+    },
+    {
+        "question": "What is the area of a circle with radius 7 units (use π ≈ 3.14)?",
+        "options": [
+            "43.96 square units",
+            "154 square units",
+            "21 square units",
+            "308 square units"
+        ],
+        "correct_answer": "154 square units"
+    },
+    {
+        "question": "If a:b = 3:4 and b:c = 5:2, what is the value of a:c?",
+        "options": [
+            "15:8",
+            "3:10",
+            "10:3",
+            "8:15"
+        ],
+        "correct_answer": "15:8"
+    },
+    {
+        "question": "Which of the following is an imaginary number?",
+        "options": [
+            "2",
+            "√(-1)",
+            "1/2",
+            "-3"
+        ],
+        "correct_answer": "√(-1)"
+    },
+    {
+        "question": "If f(x) = 2x² - 3x + 1, what is f(4)?",
+        "options": [
+            "37",
+            "21",
+            "23",
+            "27"
+        ],
+        "correct_answer": "37"
+    },
+    {
+        "question": "What is the midpoint of the line segment with endpoints (2, 5) and (8, 11)?",
+        "options": [
+            "(5, 8)",
+            "(6, 9)",
+            "(4, 7)",
+            "(7, 10)"
+        ],
+        "correct_answer": "(5, 8)"
+    },
+    {
+        "question": "Which of the following is a factor of x² - 4x + 4?",
+        "options": [
+            "x",
+            "x - 2",
+            "x + 2",
+            "2x"
+        ],
+        "correct_answer": "x - 2"
+    },
+    {
+        "question": "What is the value of log₁₀(1000)?",
+        "options": [
+            "1",
+            "2",
+            "3",
+            "4"
+        ],
+        "correct_answer": "3"
+    },
+    {
+        "question": "If the ratio of the angles in a triangle is 2:3:5, what is the measure of the smallest angle?",
+        "options": [
+            "20°",
+            "30°",
+            "40°",
+            "50°"
+        ],
+        "correct_answer": "20°"
+    },
+    {
+        "question": "What is the domain of the function f(x) = √(x + 2)?",
+        "options": [
+            "x ≥ -2",
+            "x > 2",
+            "x ≤ -2",
+            "x < 2"
+        ],
+        "correct_answer": "x ≥ -2"
+    },
+    {
+        "question": "If a car travels 240 km in 3 hours, what is its average speed?",
+        "options": [
+            "80 km/h",
+            "120 km/h",
+            "60 km/h",
+            "90 km/h"
+        ],
+        "correct_answer": "80 km/h"
+    },
+    {
+        "question": "Which of the following is equivalent to 0.75 as a fraction?",
+        "options": [
+            "3/4",
+            "1/4",
+            "3/8",
+            "2/3"
+        ],
+        "correct_answer": "3/4"
+    },
+    {
+        "question": "What is the solution to the equation: 2sin(θ) = √2?",
+        "options": [
+            "θ = 30°",
+            "θ = 45°",
+            "θ = 60°",
+            "θ = 90°"
+        ],
+        "correct_answer": "θ = 45°"
+    },
+    {
+        "question": "What is the derivative of f(x) = 3x² - 2x + 5 with respect to x?",
+        "options": [
+            "6x - 2",
+            "3x² - 2x",
+            "3x - 2",
+            "6x² - 2"
+        ],
+        "correct_answer": "6x - 2"
+    },
+    {
+        "question": "If log₃(p) = 2 and log₃(q) = 3, what is the value of log₃(pq)?",
+        "options": [
+            "5",
+            "6",
+            "2",
+            "3"
+        ],
+        "correct_answer": "5"
+    },
+    {
+        "question": "Which of the following matrices is the identity matrix?",
+        "options": [
+            "[[1, 0], [0, 1]]",
+            "[[0, 1], [1, 0]]",
+            "[[1, 1], [1, 1]]",
+            "[[0, 0], [0, 0]]"
+        ],
+        "correct_answer": "[[1, 0], [0, 1]]"
+    },
+    {
+        "question": "What is the solution to the equation: 4x + 7 = 3x - 2?",
+        "options": [
+            "x = -9",
+            "x = 9",
+            "x = -5",
+            "x = 5"
+        ],
+        "correct_answer": "x = -9"
+    },
+    {
+        "question": "Which of the following is the vertex form of a quadratic equation?",
+        "options": [
+            "y = ax² + bx + c",
+            "y = a(x - h)² + k",
+            "y = x² + bx + c",
+            "y = a + bx + cx²"
+        ],
+        "correct_answer": "y = a(x - h)² + k"
+    },
+    {
+        "question": "What is the range of the function f(x) = 2x + 3?",
+        "options": [
+            "All real numbers",
+            "x ≥ 3",
+            "x ≤ 3",
+            "x > 3"
+        ],
+        "correct_answer": "All real numbers"
+    },
+    {
+        "question": "If log₄(x) = 2, what is the value of x?",
+        "options": [
+            "8",
+            "2",
+            "16",
+            "4"
+        ],
+        "correct_answer": "16"
+    },
+    {
+        "question": "What is the solution to the equation: 5(2x - 3) = 20?",
+        "options": [
+            "x = 1",
+            "x = 2",
+            "x = 3",
+            "x = 4"
+        ],
+        "correct_answer": "x = 3"
+    },
+    {
+        "question": "Which of the following is the formula for the area of a trapezoid?",
+        "options": [
+            "A = πr²",
+            "A = bh",
+            "A = (a + b)/2",
+            "A = lw"
+        ],
+        "correct_answer": "A = (a + b)/2"
+    },
+    {
+        "question": "What is the value of sin(0°)?",
+        "options": [
+            "1",
+            "0",
+            "undefined",
+            "0.5"
+        ],
+        "correct_answer": "0"
+    },
+    {
+        "question": "Which of the following is the formula for the volume of a sphere?",
+        "options": [
+            "V = lwh",
+            "V = πr²h",
+            "V = 4/3πr³",
+            "V = πd²/4"
+        ],
+        "correct_answer": "V = 4/3πr³"
+    },
+    {
+        "question": "What is the solution to the equation: 3x - 2 = 5x + 1?",
+        "options": [
+            "x = -1",
+            "x = 1",
+            "x = -3",
+            "x = 3"
+        ],
+        "correct_answer": "x = -1"
+    },
+    {
+        "question": "If log₅(x) = 3, what is the value of x?",
+        "options": [
+            "125",
+            "15",
+            "8",
+            "243"
+        ],
+        "correct_answer": "125"
+    },
+    {
+        "question": "What is the area of a triangle with base 10 units and height 8 units?",
+        "options": [
+            "18 square units",
+            "80 square units",
+            "40 square units",
+            "20 square units"
+        ],
+        "correct_answer": "40 square units"
+    },
+    {
+        "question": "Which of the following is true about parallel lines?",
+        "options": [
+            "They intersect at one point.",
+            "They are always equidistant.",
+            "They never intersect.",
+            "They intersect at two points."
+        ],
+        "correct_answer": "They never intersect."
+    },
+    {
+        "question": "What is the solution to the equation: 2cos(θ) = -√3?",
+        "options": [
+            "θ = 60°",
+            "θ = 120°",
+            "θ = 30°",
+            "θ = 90°"
+        ],
+        "correct_answer": "θ = 30°"
+    },
+    {
+        "question": "Solve the equation: 5x - 7 = 3x + 5",
+        "options": [
+            "x = 6",
+            "x = -6",
+            "x = 2",
+            "x = -2"
+        ],
+        "correct_answer": "x = 6"
+    },
+    {
+        "question": "What is the value of π (pi) approximately?",
+        "options": [
+            "3.14",
+            "2.71",
+            "1.62",
+            "4.76"
+        ],
+        "correct_answer": "3.14"
+    },
+    {
+        "question": "If a triangle has angles of 45°, 45°, and 90°, what type of triangle is it?",
+        "options": [
+            "Equilateral triangle",
+            "Isosceles triangle",
+            "Scalene triangle",
+            "Right triangle"
+        ],
+        "correct_answer": "Right triangle"
+    },
+    {
+        "question": "Which of the following is a prime number?",
+        "options": [
+            "4",
+            "9",
+            "11",
+            "15"
+        ],
+        "correct_answer": "11"
+    },
+    {
+        "question": "What is the square root of 144?",
+        "options": [
+            "12",
+            "16",
+            "10",
+            "8"
+        ],
+        "correct_answer": "12"
+    },
+    {
+        "question": "If a = 5 and b = 3, what is the value of a² + 2ab + b²?",
+        "options": [
+            "64",
+            "100",
+            "49",
+            "25"
+        ],
+        "correct_answer": "64"
+    },
+    {
+        "question": "What is the slope of the line 3x + 2y = 8?",
+        "options": [
+            "3/2",
+            "-3/2",
+            "2/3",
+            "-2/3"
+        ],
+        "correct_answer": "-3/2"
+    },
+    {
+        "question": "If sinθ = 0.8, what is the value of cosθ?",
+        "options": [
+            "0.6",
+            "0.3",
+            "0.4",
+            "0.9"
+        ],
+        "correct_answer": "0.6"
+    },
+    {
+        "question": "What is the derivative of x² with respect to x?",
+        "options": [
+            "2x",
+            "x",
+            "2",
+            "1"
+        ],
+        "correct_answer": "2x"
+    },
+    {
+        "question": "Which formula is used to find the area of a circle?",
+        "options": [
+            "A = πr²",
+            "A = 2πr",
+            "A = πd",
+            "A = πh"
+        ],
+        "correct_answer": "A = πr²"
+    },
+    {
+        "question": "What is the binary equivalent of the decimal number 25?",
+        "options": [
+            "11001",
+            "10101",
+            "10011",
+            "11100"
+        ],
+        "correct_answer": "11001"
+    },
+    {
+        "question": "Which of the following is an acute angle?",
+        "options": [
+            "90°",
+            "180°",
+            "30°",
+            "120°"
+        ],
+        "correct_answer": "30°"
+    },
+    {
+        "question": "If log₃ 27 = x, what is the value of x?",
+        "options": [
+            "1",
+            "2",
+            "3",
+            "4"
+        ],
+        "correct_answer": "3"
+    },
+    {
+        "question": "What is the sum of the interior angles of a hexagon?",
+        "options": [
+            "540°",
+            "360°",
+            "720°",
+            "450°"
+        ],
+        "correct_answer": "720°"
+    },
+    {
+        "question": "If a fair six-sided die is rolled, what is the probability of rolling an odd number?",
+        "options": [
+            "1/3",
+            "1/6",
+            "1/2",
+            "2/3"
+        ],
+        "correct_answer": "1/2"
+    },
+    {
+        "question": "What is the solution to the inequality 2x + 3 > 7?",
+        "options": [
+            "x > 2",
+            "x < 2",
+            "x > 4",
+            "x < 4"
+        ],
+        "correct_answer": "x > 2"
+    },
+    {
+        "question": "Which trigonometric ratio is equal to the side opposite the angle over the hypotenuse in a right triangle?",
+        "options": [
+            "Sine",
+            "Cosine",
+            "Tangent",
+            "Cotangent"
+        ],
+        "correct_answer": "Sine"
+    },
+    {
+        "question": "If a car travels 240 km in 4 hours, what is its average speed?",
+        "options": [
+            "60 km/h",
+            "40 km/h",
+            "80 km/h",
+            "120 km/h"
+        ],
+        "correct_answer": "60 km/h"
+    },
+    {
+        "question": "What is the greatest common factor (GCD) of 18 and 24?",
+        "options": [
+            "6",
+            "12",
+            "3",
+            "9"
+        ],
+        "correct_answer": "6"
+    },
+    {
+        "question": "If a box contains 15 red balls and 10 blue balls, what is the probability of drawing a red ball?",
+        "options": [
+            "2/3",
+            "3/5",
+            "1/2",
+            "5/8"
+        ],
+        "correct_answer": "3/5"
+    },
+    {
+        "question": "What is the value of 2⁴ + 3³?",
+        "options": [
+            "29",
+            "55",
+            "35",
+            "41"
+        ],
+        "correct_answer": "41"
+    },
+    {
+        "question": "Which equation represents a parabola?",
+        "options": [
+            "y = mx + b",
+            "x² + y² = r²",
+            "y = a(x - h)² + k",
+            "y = eˣ"
+        ],
+        "correct_answer": "y = a(x - h)² + k"
+    },
+    {
+        "question": "What is the median of the data set: 12, 8, 15, 6, 9?",
+        "options": [
+            "8",
+            "9",
+            "12",
+            "15"
+        ],
+        "correct_answer": "9"
+    },
+    {
+        "question": "If a = 3 and b = 4, what is the value of √(a² + b²)?",
+        "options": [
+            "7",
+            "25",
+            "5",
+            "√2"
+        ],
+        "correct_answer": "5"
+    },
+    {
+        "question": "What is the formula to calculate the perimeter of a rectangle?",
+        "options": [
+            "P = 2(l + w)",
+            "P = lw",
+            "P = 4s",
+            "P = 3.14r"
+        ],
+        "correct_answer": "P = 2(l + w)"
+    },
+    {
+        "question": "Which of the following is a rational number?",
+        "options": [
+            "√2",
+            "π",
+            "0.75",
+            "e"
+        ],
+        "correct_answer": "0.75"
+    },
+    {
+        "question": "What is the solution to the system of equations:\n2x - y = 3\nx + y = 5",
+        "options": [
+            "x = 2, y = 3",
+            "x = 3, y = 2",
+            "x = 4, y = 1",
+            "x = 1, y = 4"
+        ],
+        "correct_answer": "x = 4, y = 1"
+    },
+    {
+        "question": "If log₂ x = 3, what is the value of x?",
+        "options": [
+            "1/8",
+            "8",
+            "2/3",
+            "27"
+        ],
+        "correct_answer": "8"
+    },
+    {
+        "question": "What is the value of 5! (5 factorial)?",
+        "options": [
+            "20",
+            "120",
+            "25",
+            "60"
+        ],
+        "correct_answer": "120"
+    },
+    {
+        "question": "Which geometric shape has 5 sides?",
+        "options": [
+            "Triangle",
+            "Pentagon",
+            "Hexagon",
+            "Octagon"
+        ],
+        "correct_answer": "Pentagon"
+    },
+    {
+        "question": "If a function is even, what can be said about its symmetry?",
+        "options": [
+            "It has rotational symmetry",
+            "It has no symmetry",
+            "It has reflectional symmetry",
+            "It has both rotational and reflectional symmetry"
+        ],
+        "correct_answer": "It has reflectional symmetry"
+    },
+    {
+        "question": "What is the value of 2π radians in degrees?",
+        "options": [
+            "90°",
+            "180°",
+            "360°",
+            "720°"
+        ],
+        "correct_answer": "360°"
+    },
+    {
+        "question": "What is the area of a triangle with base 10 units and height 8 units?",
+        "options": [
+            "18 sq units",
+            "40 sq units",
+            "20 sq units",
+            "80 sq units"
+        ],
+        "correct_answer": "40 sq units"
+    },
+    {
+        "question": "If a dice is rolled, what is the probability of rolling a number less than 3?",
+        "options": [
+            "1/3",
+            "1/6",
+            "1/2",
+            "2/3"
+        ],
+        "correct_answer": "1/3"
+    },
+    {
+        "question": "Which of the following is an irrational number?",
+        "options": [
+            "3.14",
+            "1.732",
+            "0.75",
+            "√5"
+        ],
+        "correct_answer": "√5"
+    },
+    {
+        "question": "What is the midpoint of the line segment with endpoints (2, 5) and (6, 9)?",
+        "options": [
+            "(4, 7)",
+            "(8, 14)",
+            "(2, 9)",
+            "(6, 5)"
+        ],
+        "correct_answer": "(4, 7)"
+    },
+    {
+        "question": "If sinθ = 0.6, what is the value of cscθ?",
+        "options": [
+            "1.67",
+            "1.25",
+            "1.67",
+            "1.43"
+        ],
+        "correct_answer": "1.67"
+    },
+    {
+        "question": "What is the solution to the equation 2(3x + 4) = 18?",
+        "options": [
+            "x = 1",
+            "x = 2",
+            "x = 3",
+            "x = 4"
+        ],
+        "correct_answer": "x = 3"
+    },
+    {
+        "question": "Which term represents the sum of all values in a data set divided by the number of values?",
+        "options": [
+            "Median",
+            "Range",
+            "Mode",
+            "Mean"
+        ],
+        "correct_answer": "Mean"
+    },
+    {
+        "question": "What is the volume of a cube with side length 6 units?",
+        "options": [
+            "18 cubic units",
+            "24 cubic units",
+            "36 cubic units",
+            "216 cubic units"
+        ],
+        "correct_answer": "216 cubic units"
+    },
+    {
+        "question": "If a = 4 and b = 3, what is the value of a³ - b³?",
+        "options": [
+            "37",
+            "49",
+            "55",
+            "64"
+        ],
+        "correct_answer": "37"
+    },
+    {
+        "question": "What is the equation of a horizontal line?",
+        "options": [
+            "y = mx + b",
+            "x = a",
+            "y = a(x - h)² + k",
+            "y = eˣ"
+        ],
+        "correct_answer": "x = a"
+    },
+    {
+        "question": "What is the domain of the function y = √(x - 2)?",
+        "options": [
+            "All real numbers",
+            "x ≥ 2",
+            "x > 2",
+            "x ≤ 2"
+        ],
+        "correct_answer": "x ≥ 2"
+    },
+    {
+        "question": "Which of the following is a composite number?",
+        "options": [
+            "2",
+            "3",
+            "5",
+            "9"
+        ],
+        "correct_answer": "9"
+    },
+    {
+        "question": "What is the value of tan(π/4)?",
+        "options": [
+            "1",
+            "0",
+            "√2",
+            "2"
+        ],
+        "correct_answer": "1"
+    },
+    {
+        "question": "If log₄ x = 2, what is the value of x?",
+        "options": [
+            "8",
+            "16",
+            "4",
+            "32"
+        ],
+        "correct_answer": "16"
+    },
+    {
+        "question": "What is the sum of the exterior angles of any polygon?",
+        "options": [
+            "180°",
+            "360°",
+            "540°",
+            "720°"
+        ],
+        "correct_answer": "360°"
+    },
+    {
+        "question": "Which of the following is equivalent to 0.75?",
+        "options": [
+            "75%",
+            "7.5%",
+            "0.0075",
+            "750%"
+        ],
+        "correct_answer": "75%"
+    },
+    {
+        "question": "What is the value of 3⁵ + 4²?",
+        "options": [
+            "73",
+            "87",
+            "89",
+            "91"
+        ],
+        "correct_answer": "91"
+    },
+    {
+        "question": "What is the area of a rectangle with length 12 units and width 8 units?",
+        "options": [
+            "20 sq units",
+            "48 sq units",
+            "80 sq units",
+            "96 sq units"
+        ],
+        "correct_answer": "96 sq units"
+    },
+    {
+        "question": "If a = 2 and b = 5, what is the value of a⁴ ÷ b²?",
+        "options": [
+            "1/100",
+            "1/25",
+            "4/25",
+            "100/25"
+        ],
+        "correct_answer": "1/25"
+    },
+    {
+        "question": "What is the formula for the circumference of a circle?",
+        "options": [
+            "C = πr²",
+            "C = 2πr",
+            "C = πd",
+            "C = πh"
+        ],
+        "correct_answer": "C = 2πr"
+    },
+    {
+        "question": "Simplify: (2x^2 + 5x - 3) + (-x^2 + 2x + 1)",
+        "options": [
+            "x^2 + 7x - 2",
+            "x^2 + 3x - 2",
+            "x^2 + 7x + 2",
+            "3x^2 + 7x - 2"
+        ],
+        "correct_answer": "x^2 + 7x - 2"
+    },
+    {
+        "question": "Factorize: 4x^2 - 12x",
+        "options": [
+            "4x(x - 3)",
+            "4x(x + 3)",
+            "4(x - 3)",
+            "4(x + 3)"
+        ],
+        "correct_answer": "4x(x - 3)"
+    },
+    {
+        "question": "Find the value of x: 3(2x - 5) = 21",
+        "options": [
+            "x = 6",
+            "x = 5",
+            "x = 7",
+            "x = 4"
+        ],
+        "correct_answer": "x = 7"
+    },
+    {
+        "question": "Solve for x: 2x + 7 = 5x - 3",
+        "options": [
+            "x = 2",
+            "x = -2",
+            "x = 5",
+            "x = -5"
+        ],
+        "correct_answer": "x = 2"
+    },
+    {
+        "question": "What is the slope of the line 3x - 2y = 6?",
+        "options": [
+            "2/3",
+            "-3/2",
+            "3/2",
+            "-2/3"
+        ],
+        "correct_answer": "3/2"
+    },
+    {
+        "question": "If log₄x = 2, what is the value of x?",
+        "options": [
+            "x = 2",
+            "x = 4",
+            "x = 16",
+            "x = 8"
+        ],
+        "correct_answer": "x = 16"
+    },
+    {
+        "question": "Simplify: √(25/9)",
+        "options": [
+            "5/3",
+            "3/5",
+            "5",
+            "3"
+        ],
+        "correct_answer": "5/3"
+    },
+    {
+        "question": "What is the domain of the function f(x) = 1/(x - 4)?",
+        "options": [
+            "x ≠ 4",
+            "x ≠ 0",
+            "x ∈ ℝ",
+            "x < 4"
+        ],
+        "correct_answer": "x ≠ 4"
+    },
+    {
+        "question": "If sinθ = 0.8, what is the value of cosθ?",
+        "options": [
+            "0.2",
+            "0.6",
+            "0.8",
+            "0.4"
+        ],
+        "correct_answer": "0.6"
+    },
+    {
+        "question": "Find the derivative of f(x) = 3x^2 - 5x + 2 with respect to x.",
+        "options": [
+            "f'(x) = 6x - 5",
+            "f'(x) = 6x - 5",
+            "f'(x) = 3x^2 - 5x + 2",
+            "f'(x) = 6x - 5 + 2"
+        ],
+        "correct_answer": "f'(x) = 6x - 5"
+    },
+    {
+        "question": "What is the probability of rolling an even number on a fair six-sided die?",
+        "options": [
+            "1/6",
+            "1/2",
+            "2/3",
+            "1/3"
+        ],
+        "correct_answer": "1/2"
+    },
+    {
+        "question": "If a = 5 and b = 3, what is the value of √(a² + b²)?",
+        "options": [
+            "4",
+            "8",
+            "10",
+            "√34"
+        ],
+        "correct_answer": "√34"
+    },
+    {
+        "question": "Solve for x: log₂(x + 2) = 3",
+        "options": [
+            "x = 5",
+            "x = 8",
+            "x = 9",
+            "x = 6"
+        ],
+        "correct_answer": "x = 6"
+    },
+    {
+        "question": "What is the vertex of the parabola given by the equation y = x² - 4x + 3?",
+        "options": [
+            "(2, 1)",
+            "(1, -2)",
+            "(-2, 1)",
+            "(4, 3)"
+        ],
+        "correct_answer": "(2, 1)"
+    },
+    {
+        "question": "If a car travels 240 km in 3 hours, what is its speed in km/h?",
+        "options": [
+            "80",
+            "120",
+            "60",
+            "240"
+        ],
+        "correct_answer": "80"
+    },
+    {
+        "question": "What is the solution to the inequality 2x - 5 > 7?",
+        "options": [
+            "x > 6",
+            "x < 6",
+            "x < 1",
+            "x > 1"
+        ],
+        "correct_answer": "x > 6"
+    },
+    {
+        "question": "Evaluate: 2^(3/2)",
+        "options": [
+            "2",
+            "4",
+            "√2",
+            "8"
+        ],
+        "correct_answer": "√2"
+    },
+    {
+        "question": "If f(x) = 3x + 4 and g(x) = 2x - 1, what is f(g(2))?",
+        "options": [
+            "10",
+            "11",
+            "12",
+            "8"
+        ],
+        "correct_answer": "11"
+    },
+    {
+        "question": "What is the solution to the system of equations?\n2x - y = 3\nx + y = 5",
+        "options": [
+            "x = 2, y = 3",
+            "x = 4, y = 1",
+            "x = 1, y = 2",
+            "x = 3, y = 2"
+        ],
+        "correct_answer": "x = 4, y = 1"
+    },
+    {
+        "question": "If the diagonal of a square is √50 cm, what is the side length of the square?",
+        "options": [
+            "5 cm",
+            "7 cm",
+            "10 cm",
+            "√50 cm"
+        ],
+        "correct_answer": "5 cm"
+    },
+    {
+        "question": "What is the value of tan(π/4)?",
+        "options": [
+            "0",
+            "1",
+            "√2",
+            "2"
+        ],
+        "correct_answer": "1"
+    },
+    {
+        "question": "Which of the following is the prime factorization of 48?",
+        "options": [
+            "2^4 × 3",
+            "2^3 × 3^2",
+            "2^5 × 3",
+            "2^4 × 3^2"
+        ],
+        "correct_answer": "2^4 × 3"
+    },
+    {
+        "question": "Simplify: (3/5)^-2",
+        "options": [
+            "9/25",
+            "25/9",
+            "4/9",
+            "9/4"
+        ],
+        "correct_answer": "25/9"
+    },
+    {
+        "question": "If log₃x = 4, what is the value of x?",
+        "options": [
+            "x = 9",
+            "x = 64",
+            "x = 12",
+            "x = 81"
+        ],
+        "correct_answer": "x = 81"
+    },
+    {
+        "question": "What is the sum of the angles in a triangle?",
+        "options": [
+            "90°",
+            "180°",
+            "270°",
+            "360°"
+        ],
+        "correct_answer": "180°"
+    },
+    {
+        "question": "If a function is even, what can be said about its symmetry?",
+        "options": [
+            "It has symmetry about the x-axis.",
+            "It has symmetry about the y-axis.",
+            "It has rotational symmetry.",
+            "It has no symmetry."
+        ],
+        "correct_answer": "It has symmetry about the y-axis."
+    },
+    {
+        "question": "Solve for x: e^(2x) = 7",
+        "options": [
+            "x = ln(7)/2",
+            "x = ln(2)/7",
+            "x = ln(7)",
+            "x = 2ln(7)"
+        ],
+        "correct_answer": "x = ln(7)/2"
+    },
+    {
+        "question": "If sin(π/6) = 1/2, what is the value of cos(π/6)?",
+        "options": [
+            "√3/2",
+            "1/2",
+            "√2/2",
+            "1/√2"
+        ],
+        "correct_answer": "√3/2"
+    },
+    {
+        "question": "What is the area of a rectangle with length 8 cm and width 5 cm?",
+        "options": [
+            "40 cm²",
+            "13 cm²",
+            "20 cm²",
+            "35 cm²"
+        ],
+        "correct_answer": "40 cm²"
+    },
+    {
+        "question": "If a dice is rolled, what is the probability of getting an odd number?",
+        "options": [
+            "1/6",
+            "1/2",
+            "2/3",
+            "1/3"
+        ],
+        "correct_answer": "1/2"
+    },
+    {
+        "question": "Find the midpoint of the line segment with endpoints (2, 3) and (6, 9).",
+        "options": [
+            "(4, 6)",
+            "(8, 12)",
+            "(5, 6)",
+            "(3, 5)"
+        ],
+        "correct_answer": "(4, 6)"
+    },
+    {
+        "question": "If log₅x = 3, what is the value of x?",
+        "options": [
+            "x = 15",
+            "x = 125",
+            "x = 243",
+            "x = 75"
+        ],
+        "correct_answer": "x = 125"
+    },
+    {
+        "question": "What is the range of the function f(x) = x²?",
+        "options": [
+            "All real numbers",
+            "Positive real numbers",
+            "Negative real numbers",
+            "x ≥ 0"
+        ],
+        "correct_answer": "x ≥ 0"
+    },
+    {
+        "question": "Simplify: 2(3x + 4) - 5(2x - 1)",
+        "options": [
+            "x + 18",
+            "x + 8",
+            "5x + 7",
+            "5x - 7"
+        ],
+        "correct_answer": "5x + 7"
+    },
+    {
+        "question": "What is the value of 4! (4 factorial)?",
+        "options": [
+            "6",
+            "12",
+            "24",
+            "10"
+        ],
+        "correct_answer": "24"
+    },
+    {
+        "question": "If a = 3 and b = 4, what is the value of c in the Pythagorean theorem a² + b² = c²?",
+        "options": [
+            "5",
+            "7",
+            "25",
+            "9"
+        ],
+        "correct_answer": "5"
+    },
+    {
+        "question": "What is the sum of the first 10 positive integers?",
+        "options": [
+            "45",
+            "55",
+            "50",
+            "60"
+        ],
+        "correct_answer": "55"
+    },
+    {
+        "question": "If log₁₀x = 2, what is the value of x?",
+        "options": [
+            "x = 10",
+            "x = 1",
+            "x = 100",
+            "x = 0.1"
+        ],
+        "correct_answer": "x = 100"
+    },
+    {
+        "question": "What is the solution to the equation 2x + 3 = 5x - 2?",
+        "options": [
+            "x = 1",
+            "x = 2",
+            "x = -1",
+            "x = 3"
+        ],
+        "correct_answer": "x = 1"
+    },
+    {
+        "question": "Find the sum of the angles in a pentagon.",
+        "options": [
+            "180°",
+            "360°",
+            "540°",
+            "720°"
+        ],
+        "correct_answer": "540°"
+    },
+    {
+        "question": "If a = 2 and b = 7, what is the value of |a - b|?",
+        "options": [
+            "5",
+            "2",
+            "7",
+            "9"
+        ],
+        "correct_answer": "5"
+    },
+    {
+        "question": "What is the y-intercept of the line given by the equation y = -2x + 5?",
+        "options": [
+            "(0, 5)",
+            "(5, 0)",
+            "(0, -2)",
+            "(-2, 0)"
+        ],
+        "correct_answer": "(0, 5)"
+    },
+    {
+        "question": "If a dice is rolled, what is the probability of getting a prime number?",
+        "options": [
+            "1/2",
+            "1/3",
+            "2/3",
+            "1/6"
+        ],
+        "correct_answer": "1/2"
+    },
+    {
+        "question": "Solve for x: 4x + 9 = 2x + 15",
+        "options": [
+            "x = 3",
+            "x = -3",
+            "x = 6",
+            "x = -6"
+        ],
+        "correct_answer": "x = 3"
+    },
+    {
+        "question": "What is the value of sin(π/3)?",
+        "options": [
+            "√3/2",
+            "1/2",
+            "√2/2",
+            "1/√2"
+        ],
+        "correct_answer": "√3/2"
+    },
+    {
+        "question": "Solve the equation: 5x - 7 = 3x + 5",
+        "options": [
+            "x = 6",
+            "x = -6",
+            "x = 2",
+            "x = -2"
+        ],
+        "correct_answer": "x = 6"
+    },
+    {
+        "question": "What is the value of π (pi) approximately?",
+        "options": [
+            "3.14",
+            "2.71",
+            "1.62",
+            "4.18"
+        ],
+        "correct_answer": "3.14"
+    },
+    {
+        "question": "If a triangle has angles 45°, 45°, and 90°, what type of triangle is it?",
+        "options": [
+            "Equilateral triangle",
+            "Isosceles triangle",
+            "Scalene triangle",
+            "Right triangle"
+        ],
+        "correct_answer": "Isosceles triangle"
+    },
+    {
+        "question": "Which of the following is a prime number?",
+        "options": [
+            "10",
+            "27",
+            "17",
+            "15"
+        ],
+        "correct_answer": "17"
+    },
+    {
+        "question": "What is the slope of a horizontal line?",
+        "options": [
+            "0",
+            "1",
+            "-1",
+            "Undefined"
+        ],
+        "correct_answer": "0"
+    },
+    {
+        "question": "Which trigonometric ratio is equal to the length of the side opposite the angle divided by the hypotenuse?",
+        "options": [
+            "Sine",
+            "Cosine",
+            "Tangent",
+            "Cosecant"
+        ],
+        "correct_answer": "Sine"
+    },
+    {
+        "question": "What is the square root of 144?",
+        "options": [
+            "9",
+            "12",
+            "15",
+            "10"
+        ],
+        "correct_answer": "12"
+    },
+    {
+        "question": "If log₂x = 3, what is the value of x?",
+        "options": [
+            "2",
+            "8",
+            "6",
+            "16"
+        ],
+        "correct_answer": "8"
+    },
+    {
+        "question": "Which set of numbers does not include any irrational numbers?",
+        "options": [
+            "Integers",
+            "Rational numbers",
+            "Whole numbers",
+            "Natural numbers"
+        ],
+        "correct_answer": "Rational numbers"
+    },
+    {
+        "question": "What is the solution to the inequality 2x + 5 > 11?",
+        "options": [
+            "x < 3",
+            "x > 3",
+            "x > 2",
+            "x < 2"
+        ],
+        "correct_answer": "x > 3"
+    },
+    {
+        "question": "If a dice is rolled, what is the probability of getting an even number?",
+        "options": [
+            "1/2",
+            "1/3",
+            "2/3",
+            "1/6"
+        ],
+        "correct_answer": "1/2"
+    },
+    {
+        "question": "What is the least common multiple (LCM) of 8 and 12?",
+        "options": [
+            "24",
+            "18",
+            "16",
+            "20"
+        ],
+        "correct_answer": "24"
+    },
+    {
+        "question": "If log₃27 = x, what is the value of x?",
+        "options": [
+            "3",
+            "1/3",
+            "2",
+            "1"
+        ],
+        "correct_answer": "3"
+    },
+    {
+        "question": "Which formula is used to find the area of a circle?",
+        "options": [
+            "A = πr",
+            "A = 2πr",
+            "A = πr²",
+            "A = 4πr²"
+        ],
+        "correct_answer": "A = πr²"
+    },
+    {
+        "question": "If a = 3 and b = 4, what is the value of √(a² + b²)?",
+        "options": [
+            "7",
+            "5",
+            "25",
+            "2√7"
+        ],
+        "correct_answer": "5"
+    },
+    {
+        "question": "Which of the following is a composite number?",
+        "options": [
+            "2",
+            "3",
+            "5",
+            "4"
+        ],
+        "correct_answer": "4"
+    },
+    {
+        "question": "If sinθ = 0.6, what is the value of cosθ?",
+        "options": [
+            "0.6",
+            "0.8",
+            "0.4",
+            "0.2"
+        ],
+        "correct_answer": "0.8"
+    },
+    {
+        "question": "What is the perimeter of a rectangle with length 8 units and width 5 units?",
+        "options": [
+            "13 units",
+            "26 units",
+            "40 units",
+            "18 units"
+        ],
+        "correct_answer": "26 units"
+    },
+    {
+        "question": "If a car travels 240 kilometers in 3 hours, what is its speed in kilometers per hour?",
+        "options": [
+            "80 km/h",
+            "120 km/h",
+            "60 km/h",
+            "90 km/h"
+        ],
+        "correct_answer": "80 km/h"
+    },
+    {
+        "question": "What is the value of 5! (5 factorial)?",
+        "options": [
+            "25",
+            "120",
+            "30",
+            "150"
+        ],
+        "correct_answer": "120"
+    },
+    {
+        "question": "If x varies inversely with y, and x = 10 when y = 5, what is the value of x when y = 8?",
+        "options": [
+            "6",
+            "16",
+            "25",
+            "4"
+        ],
+        "correct_answer": "6"
+    },
+    {
+        "question": "Which of the following is not a quadratic equation?",
+        "options": [
+            "3x² + 2x - 1 = 0",
+            "x² - 5x + 6 = 0",
+            "4x + 7 = 0",
+            "2x² - 9x + 5 = 0"
+        ],
+        "correct_answer": "4x + 7 = 0"
+    },
+    {
+        "question": "What is the value of log₁₀100?",
+        "options": [
+            "1",
+            "2",
+            "10",
+            "100"
+        ],
+        "correct_answer": "2"
+    },
+    {
+        "question": "Simplify: 3x + 5 - 2x",
+        "options": [
+            "x + 5",
+            "x - 5",
+            "5x",
+            "3x"
+        ],
+        "correct_answer": "x + 5"
+    },
+    {
+        "question": "Solve for x: 2x + 7 = 15",
+        "options": [
+            "x = 4",
+            "x = 8",
+            "x = 5",
+            "x = 3"
+        ],
+        "correct_answer": "x = 4"
+    },
+    {
+        "question": "Simplify: 4(2x - 3)",
+        "options": [
+            "8x - 12",
+            "8x + 12",
+            "8x - 6",
+            "6x - 8"
+        ],
+        "correct_answer": "8x - 12"
+    },
+    {
+        "question": "Which of the following is a prime number?",
+        "options": [
+            "9",
+            "15",
+            "2",
+            "4"
+        ],
+        "correct_answer": "2"
+    },
+    {
+        "question": "What is the square root of 64?",
+        "options": [
+            "8",
+            "6",
+            "10",
+            "4"
+        ],
+        "correct_answer": "8"
+    },
+    {
+        "question": "If sinθ = 0.6, what is cosθ?",
+        "options": [
+            "0.8",
+            "0.6",
+            "0.4",
+            "0.2"
+        ],
+        "correct_answer": "0.8"
+    },
+    {
+        "question": "Simplify: | -5 |",
+        "options": [
+            "5",
+            "-5",
+            "0",
+            "25"
+        ],
+        "correct_answer": "5"
+    },
+    {
+        "question": "What is the value of π (pi) approximately?",
+        "options": [
+            "3.14",
+            "2.71",
+            "1.62",
+            "4.20"
+        ],
+        "correct_answer": "3.14"
+    },
+    {
+        "question": "If a = 4 and b = 7, what is the value of 2a + b?",
+        "options": [
+            "9",
+            "15",
+            "18",
+            "11"
+        ],
+        "correct_answer": "15"
+    },
+    {
+        "question": "Which of the following is an acute angle?",
+        "options": [
+            "180°",
+            "90°",
+            "120°",
+            "270°"
+        ],
+        "correct_answer": "90°"
+    },
+    {
+        "question": "What is the solution to the inequality: 2x + 3 > 9?",
+        "options": [
+            "x > 6",
+            "x < 6",
+            "x > 3",
+            "x < 3"
+        ],
+        "correct_answer": "x > 3"
+    },
+    {
+        "question": "What is the median of the following set of numbers? 3, 6, 9, 12, 15",
+        "options": [
+            "9",
+            "12",
+            "6",
+            "15"
+        ],
+        "correct_answer": "9"
+    },
+    {
+        "question": "If the probability of an event E is 0.25, what is the probability of the complement of E?",
+        "options": [
+            "0.75",
+            "0.5",
+            "0.25",
+            "1.0"
+        ],
+        "correct_answer": "0.75"
+    },
+    {
+        "question": "What is the least common multiple (LCM) of 12 and 18?",
+        "options": [
+            "24",
+            "30",
+            "36",
+            "42"
+        ],
+        "correct_answer": "36"
+    },
+    {
+        "question": "Simplify: 2^3 ÷ 2^2",
+        "options": [
+            "8",
+            "4",
+            "2",
+            "16"
+        ],
+        "correct_answer": "2"
+    },
+    {
+        "question": "If log₃ 9 = x, what is the value of x?",
+        "options": [
+            "1",
+            "2",
+            "3",
+            "4"
+        ],
+        "correct_answer": "2"
+    },
+    {
+        "question": "A bag contains 5 red marbles, 3 blue marbles, and 2 green marbles. What is the probability of drawing a blue marble?",
+        "options": [
+            "0.3",
+            "0.2",
+            "0.4",
+            "0.5"
+        ],
+        "correct_answer": "0.2"
+    },
+    {
+        "question": "Solve for x: 3(x - 4) = 21",
+        "options": [
+            "x = 7",
+            "x = 10",
+            "x = 8",
+            "x = 6"
+        ],
+        "correct_answer": "x = 7"
+    },
+    {
+        "question": "What is the value of tan 45°?",
+        "options": [
+            "1",
+            "0",
+            "√2",
+            "2"
+        ],
+        "correct_answer": "1"
+    },
+    {
+        "question": "If a car travels 240 km in 3 hours, what is its speed?",
+        "options": [
+            "80 km/h",
+            "120 km/h",
+            "60 km/h",
+            "40 km/h"
+        ],
+        "correct_answer": "80 km/h"
+    },
+    {
+        "question": "Which of the following numbers is a rational number?",
+        "options": [
+            "√2",
+            "π",
+            "e",
+            "1.5"
+        ],
+        "correct_answer": "1.5"
+    },
+    {
+        "question": "If f(x) = 2x² - 3x + 5, what is f(3)?",
+        "options": [
+            "20",
+            "18",
+            "16",
+            "14"
+        ],
+        "correct_answer": "20"
+    },
+    {
+        "question": "Simplify: 5² + 3³ - 2⁴",
+        "options": [
+            "22",
+            "32",
+            "12",
+            "42"
+        ],
+        "correct_answer": "12"
+    },
+    {
+        "question": "What is the perimeter of a rectangle with length 8 units and width 5 units?",
+        "options": [
+            "26 units",
+            "40 units",
+            "18 units",
+            "13 units"
+        ],
+        "correct_answer": "26 units"
+    },
+    {
+        "question": "If a dice is rolled, what is the probability of getting an even number?",
+        "options": [
+            "1/2",
+            "1/3",
+            "2/3",
+            "1/6"
+        ],
+        "correct_answer": "1/2"
+    },
+    {
+        "question": "Solve the equation: 2(2x + 3) = 10",
+        "options": [
+            "x = 1",
+            "x = 2",
+            "x = 3",
+            "x = 4"
+        ],
+        "correct_answer": "x = 2"
+    },
+    {
+        "question": "What is the sum of the angles in a triangle?",
+        "options": [
+            "180°",
+            "90°",
+            "270°",
+            "360°"
+        ],
+        "correct_answer": "180°"
+    },
+    {
+        "question": "If a = 3 and b = 4, what is the value of √(a² + b²)?",
+        "options": [
+            "5",
+            "7",
+            "25",
+            "9"
+        ],
+        "correct_answer": "5"
+    },
+    {
+        "question": "Which of the following is a solution to the equation: 2x - 5 = 7?",
+        "options": [
+            "x = 1",
+            "x = 6",
+            "x = -1",
+            "x = 4"
+        ],
+        "correct_answer": "x = 6"
+    },
+    {
+        "question": "What is the value of 4! (4 factorial)?",
+        "options": [
+            "24",
+            "12",
+            "16",
+            "8"
+        ],
+        "correct_answer": "24"
+    },
+    {
+        "question": "If log₁₀ 1000 = 3, what is log₁₀ 100?",
+        "options": [
+            "2",
+            "1",
+            "4",
+            "0"
+        ],
+        "correct_answer": "2"
+    },
+    {
+        "question": "What is the area of a circle with radius 6 units (use π = 3.14)?",
+        "options": [
+            "18.84 square units",
+            "113.04 square units",
+            "36.0 square units",
+            "28.26 square units"
+        ],
+        "correct_answer": "113.04 square units"
+    },
+    {
+        "question": "Simplify: 2(3x - 5) + 4(x + 2)",
+        "options": [
+            "10x - 2",
+            "10x + 2",
+            "14x - 6",
+            "14x + 6"
+        ],
+        "correct_answer": "10x + 2"
+    },
+    {
+        "question": "What is the y-intercept of the equation y = 2x + 3?",
+        "options": [
+            "2",
+            "3",
+            "0",
+            "-3"
+        ],
+        "correct_answer": "3"
+    },
+    {
+        "question": "If the principal amount is $1000, the interest rate is 8%, and the time period is 3 years, what is the simple interest?",
+        "options": [
+            "$240",
+            "$720",
+            "$180",
+            "$300"
+        ],
+        "correct_answer": "$240"
+    },
+    {
+        "question": "Which of the following is a cube number?",
+        "options": [
+            "8",
+            "6",
+            "12",
+            "27"
+        ],
+        "correct_answer": "27"
+    },
+    {
+        "question": "What is the slope of the line passing through the points (2, 4) and (6, 10)?",
+        "options": [
+            "2",
+            "1",
+            "4",
+            "3"
+        ],
+        "correct_answer": "1"
+    },
+    {
+        "question": "Solve for x: 5x/3 = 15",
+        "options": [
+            "x = 5",
+            "x = 9",
+            "x = 10",
+            "x = 3"
+        ],
+        "correct_answer": "x = 9"
+    },
+    {
+        "question": "What is the range of the following set of data? 2, 5, 8, 11, 14",
+        "options": [
+            "12",
+            "14",
+            "3",
+            "16"
+        ],
+        "correct_answer": "12"
+    },
+    {
+        "question": "If a coin is flipped, what is the probability of getting tails?",
+        "options": [
+            "1/2",
+            "1/3",
+            "2/3",
+            "1/6"
+        ],
+        "correct_answer": "1/2"
+    },
+    {
+        "question": "Simplify: 4x - 2(3x + 5)",
+        "options": [
+            "-10x - 10",
+            "-2x + 10",
+            "-6x + 10",
+            "10x - 10"
+        ],
+        "correct_answer": "-10x - 10"
+    },
+    {
+        "question": "What is the value of sin 30°?",
+        "options": [
+            "0.5",
+            "1",
+            "0",
+            "√2"
+        ],
+        "correct_answer": "0.5"
+    },
+    {
+        "question": "If a = 5, b = 12, and c = 13, is the triangle with sides a, b, and c a right triangle?",
+        "options": [
+            "Yes",
+            "No"
+        ],
+        "correct_answer": "Yes"
+    },
+    {
+        "question": "What is the solution to the equation: 0.2x + 0.5 = 1.1?",
+        "options": [
+            "x = 2.0",
+            "x = 4.5",
+            "x = 6.0",
+            "x = 5.5"
+        ],
+        "correct_answer": "x = 4.5"
+    },
+    {
+        "question": "What is the volume of a rectangular prism with length 6 units, width 4 units, and height 9 units?",
+        "options": [
+            "216 cubic units",
+            "108 cubic units",
+            "144 cubic units",
+            "72 cubic units"
+        ],
+        "correct_answer": "216 cubic units"
+    },
+    {
+        "question": "If log₂ x = 4, what is x?",
+        "options": [
+            "8",
+            "2",
+            "16",
+            "4"
+        ],
+        "correct_answer": "16"
+    },
+    {
+        "question": "Solve for x: 2x - 3 = 7",
+        "options": [
+            "x = 10",
+            "x = 5",
+            "x = 6",
+            "x = 7"
+        ],
+        "correct_answer": "x = 5"
+    },
+    {
+        "question": "What is the value of 5⁰?",
+        "options": [
+            "5",
+            "0",
+            "1",
+            "25"
+        ],
+        "correct_answer": "1"
+    },
+    {
+        "question": "If the scale factor between two similar polygons is 2, and the perimeter of the smaller polygon is 12 cm, what is the perimeter of the larger polygon?",
+        "options": [
+            "6 cm",
+            "24 cm",
+            "18 cm",
+            "36 cm"
+        ],
+        "correct_answer": "24 cm"
+    },
+    {
+        "question": "If a triangle has angles of 30 degrees, 60 degrees, and 90 degrees, what type of triangle is it?",
+        "options": [
+            "Equilateral triangle",
+            "Isosceles triangle",
+            "Scalene triangle",
+            "Right triangle"
+        ],
+        "correct_answer": "Right triangle"
+    },
+    {
+        "question": "What is the square root of 64?",
+        "options": [
+            "8",
+            "6",
+            "10",
+            "12"
+        ],
+        "correct_answer": "8"
+    },
+    {
+        "question": "If a = 5 and b = 3, what is the value of 2a + b?",
+        "options": [
+            "10",
+            "11",
+            "12",
+            "13"
+        ],
+        "correct_answer": "13"
+    },
+    {
+        "question": "What is the slope of the line 3x - 2y = 6?",
+        "options": [
+            "1.5",
+            "3",
+            "2",
+            "-1.5"
+        ],
+        "correct_answer": "1.5"
+    },
+    {
+        "question": "Which of the following is a prime number?",
+        "options": [
+            "1",
+            "4",
+            "9",
+            "7"
+        ],
+        "correct_answer": "7"
+    },
+    {
+        "question": "What is the area of a rectangle with length 8 units and width 5 units?",
+        "options": [
+            "13 units^2",
+            "35 units^2",
+            "40 units^2",
+            "42 units^2"
+        ],
+        "correct_answer": "40 units^2"
+    },
+    {
+        "question": "If sin(x) = 0.6, what is cos(x)?",
+        "options": [
+            "0.4",
+            "0.6",
+            "0.8",
+            "1.0"
+        ],
+        "correct_answer": "0.8"
+    },
+    {
+        "question": "What is the value of log10(100)?",
+        "options": [
+            "1",
+            "2",
+            "10",
+            "100"
+        ],
+        "correct_answer": "2"
+    },
+    {
+        "question": "If a dice is rolled, what is the probability of getting an even number?",
+        "options": [
+            "1/6",
+            "1/3",
+            "1/2",
+            "2/3"
+        ],
+        "correct_answer": "1/2"
+    },
+    {
+        "question": "Which of the following is a quadratic equation?",
+        "options": [
+            "3x + 2 = 7",
+            "2x - 5 = 0",
+            "4x^2 - 9x + 2 = 0",
+            "x/2 = 3"
+        ],
+        "correct_answer": "4x^2 - 9x + 2 = 0"
+    },
+    {
+        "question": "If a car travels 240 kilometers in 4 hours, what is its speed?",
+        "options": [
+            "60 km/h",
+            "120 km/h",
+            "40 km/h",
+            "80 km/h"
+        ],
+        "correct_answer": "60 km/h"
+    },
+    {
+        "question": "What is the probability of getting a sum of 7 when rolling two fair six-sided dice?",
+        "options": [
+            "1/6",
+            "1/12",
+            "1/9",
+            "1/36"
+        ],
+        "correct_answer": "1/6"
+    },
+    {
+        "question": "If a = 4 and b = 7, what is the value of a^2 + 3b?",
+        "options": [
+            "49",
+            "59",
+            "64",
+            "74"
+        ],
+        "correct_answer": "70"
+    },
+    {
+        "question": "Which of the following numbers is a rational number?",
+        "options": [
+            "√2",
+            "π",
+            "e",
+            "3/4"
+        ],
+        "correct_answer": "3/4"
+    },
+    {
+        "question": "What is the volume of a cube with side length 10 units?",
+        "options": [
+            "100 cubic units",
+            "1000 cubic units",
+            "10000 cubic units",
+            "10 cubic units"
+        ],
+        "correct_answer": "1000 cubic units"
+    },
+    {
+        "question": "If logx(100) = 2, what is the value of x?",
+        "options": [
+            "2",
+            "10",
+            "4",
+            "5"
+        ],
+        "correct_answer": "10"
+    },
+    {
+        "question": "What is the solution to the inequality 2x + 5 < 15?",
+        "options": [
+            "x < 5",
+            "x > 5",
+            "x ≤ 5",
+            "x ≥ 5"
+        ],
+        "correct_answer": "x < 5"
+    },
+    {
+        "question": "If a population of rabbits doubles every year, and there are currently 100 rabbits, how many rabbits will there be after 3 years?",
+        "options": [
+            "300 rabbits",
+            "400 rabbits",
+            "600 rabbits",
+            "800 rabbits"
+        ],
+        "correct_answer": "800 rabbits"
+    },
+    {
+        "question": "What is the midpoint of the line segment with endpoints (3, 5) and (7, 9)?",
+        "options": [
+            "(5, 7)",
+            "(10, 14)",
+            "(2, 4)",
+            "(6, 8)"
+        ],
+        "correct_answer": "(5, 7)"
+    },
+    {
+        "question": "If a = 3 and b = 4, what is the value of √(a^2 + b^2)?",
+        "options": [
+            "5",
+            "7",
+            "25",
+            "5√2"
+        ],
+        "correct_answer": "5"
+    },
+    {
+        "question": "What is the sum of the interior angles of a hexagon?",
+        "options": [
+            "180 degrees",
+            "360 degrees",
+            "540 degrees",
+            "720 degrees"
+        ],
+        "correct_answer": "720 degrees"
+    },
+    {
+        "question": "If f(x) = 2x^2 + 3x - 1, what is f(4)?",
+        "options": [
+            "7",
+            "37",
+            "23",
+            "41"
+        ],
+        "correct_answer": "41"
+    },
+    {
+        "question": "Which of the following is a prime factorization of 36?",
+        "options": [
+            "2^2 × 3^2",
+            "2^3 × 3",
+            "2 × 3^3",
+            "2^2 × 3"
+        ],
+        "correct_answer": "2^2 × 3^2"
+    },
+    {
+        "question": "If a triangle has sides of length 5, 12, and 13 units, what type of triangle is it?",
+        "options": [
+            "Equilateral triangle",
+            "Isosceles triangle",
+            "Scalene triangle",
+            "Right triangle"
+        ],
+        "correct_answer": "Right triangle"
+    },
+    {
+        "question": "What is the value of 5! (5 factorial)?",
+        "options": [
+            "10",
+            "20",
+            "25",
+            "120"
+        ],
+        "correct_answer": "120"
+    },
+    {
+        "question": "If the equation of a line is y = 2x + 3, what is its slope?",
+        "options": [
+            "2",
+            "-2",
+            "3",
+            "-3"
+        ],
+        "correct_answer": "2"
+    },
+    {
+        "question": "What is the value of 2^8 (2 raised to the power of 8)?",
+        "options": [
+            "16",
+            "64",
+            "128",
+            "256"
+        ],
+        "correct_answer": "256"
+    },
+    {
+        "question": "If a = 8 and b = 15, what is the value of 3a - 2b?",
+        "options": [
+            "6",
+            "14",
+            "21",
+            "27"
+        ],
+        "correct_answer": "6"
+    },
+    {
+        "question": "What is the surface area of a sphere with radius 6 units?",
+        "options": [
+            "24π square units",
+            "36π square units",
+            "72π square units",
+            "144π square units"
+        ],
+        "correct_answer": "144π square units"
+    },
+    {
+        "question": "If logx(1) = 0, what is the value of x?",
+        "options": [
+            "0",
+            "1",
+            "10",
+            "Undefined"
+        ],
+        "correct_answer": "1"
+    },
+    {
+        "question": "Which trigonometric ratio is equal to the side opposite an angle in a right triangle, divided by the hypotenuse?",
+        "options": [
+            "Sine",
+            "Cosine",
+            "Tangent",
+            "Cosecant"
+        ],
+        "correct_answer": "Sine"
+    },
+    {
+        "question": "What is the solution to the equation 2x - 9 = 5?",
+        "options": [
+            "x = -2",
+            "x = 2",
+            "x = 7",
+            "x = 14"
+        ],
+        "correct_answer": "x = 7"
+    },
+    {
+        "question": "If a sequence of numbers is 2, 4, 6, 8, what is the common difference?",
+        "options": [
+            "1",
+            "2",
+            "3",
+            "4"
+        ],
+        "correct_answer": "2"
+    },
+    {
+        "question": "What is the perimeter of a rectangle with length 10 units and width 6 units?",
+        "options": [
+            "12 units",
+            "32 units",
+            "48 units",
+            "60 units"
+        ],
+        "correct_answer": "32 units"
+    },
+    {
+        "question": "If cos(x) = 0.8, what is sin(x)?",
+        "options": [
+            "0.2",
+            "0.4",
+            "0.6",
+            "0.8"
+        ],
+        "correct_answer": "0.6"
+    },
+    {
+        "question": "What is the value of 3^4 (3 raised to the power of 4)?",
+        "options": [
+            "7",
+            "9",
+            "12",
+            "81"
+        ],
+        "correct_answer": "81"
+    },
+    {
+        "question": "If a = 5 and b = 12, what is the value of a² + b²?",
+        "options": [
+            "169",
+            "1690",
+            "16900",
+            "170"
+        ],
+        "correct_answer": "169"
+    },
+    {
+        "question": "What is the derivative of the function f(x) = 4x^3 + 2x^2 - 7x + 1 with respect to x?",
+        "options": [
+            "12x^2 + 4x - 7",
+            "12x^2 + 4x - 7 + C",
+            "8x^3 + 4x^2 - 7x",
+            "8x^3 + 4x^2 - 7x + C"
+        ],
+        "correct_answer": "12x^2 + 4x - 7"
+    },
+    {
+        "question": "If a = 3 and b = 4, what is the value of a/b?",
+        "options": [
+            "3/4",
+            "4/3",
+            "12",
+            "0.75"
+        ],
+        "correct_answer": "3/4"
+    },
+    {
+        "question": "What is the area of a circle with radius 9 units (use π ≈ 3.14)?",
+        "options": [
+            "254.34 square units",
+            "254.14 square units",
+            "314.16 square units",
+            "282.96 square units"
+        ],
+        "correct_answer": "254.34 square units"
+    },
+    {
+        "question": "Which of the following is the quadratic formula?",
+        "options": [
+            "x = (-b ± √(b^2 - 4ac)) / 2a",
+            "x = -b / 2a",
+            "x = √(b^2 - 4ac) / 2a",
+            "x = (-b ± √(b^2 + 4ac)) / 2a"
+        ],
+        "correct_answer": "x = (-b ± √(b^2 - 4ac)) / 2a"
+    },
+    {
+        "question": "What is the value of 7C3 (7 choose 3)?",
+        "options": [
+            "35",
+            "21",
+            "42",
+            "12"
+        ],
+        "correct_answer": "35"
+    }
+]

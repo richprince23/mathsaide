@@ -1,0 +1,1112 @@
+[
+    {
+        "question": "In a circle, what is the measure of a central angle that subtends an arc of 60 degrees?",
+        "options": [
+            "30 degrees",
+            "45 degrees",
+            "60 degrees",
+            "120 degrees"
+        ],
+        "correct_answer": "60 degrees"
+    },
+    {
+        "question": "What is the relationship between the angles formed by intersecting chords in a circle?",
+        "options": [
+            "They are equal",
+            "They are supplementary",
+            "They are complementary",
+            "They are congruent"
+        ],
+        "correct_answer": "They are equal"
+    },
+    {
+        "question": "What is the sum of the interior angles of a hexagon inscribed in a circle?",
+        "options": [
+            "360 degrees",
+            "540 degrees",
+            "720 degrees",
+            "900 degrees"
+        ],
+        "correct_answer": "720 degrees"
+    },
+    {
+        "question": "If an inscribed angle in a circle measures 40 degrees, what is the measure of the central angle that subtends the same arc?",
+        "options": [
+            "40 degrees",
+            "80 degrees",
+            "120 degrees",
+            "160 degrees"
+        ],
+        "correct_answer": "80 degrees"
+    },
+    {
+        "question": "What is the measure of an angle formed by a tangent and a chord that intersect on the circle?",
+        "options": [
+            "45 degrees",
+            "60 degrees",
+            "90 degrees",
+            "120 degrees"
+        ],
+        "correct_answer": "90 degrees"
+    },
+    {
+        "question": "In a circle with center O, if angle AOB is a right angle, what is the relationship between AO and OB?",
+        "options": [
+            "AO = OB",
+            "AO < OB",
+            "AO > OB",
+            "Cannot be determined"
+        ],
+        "correct_answer": "AO = OB"
+    },
+    {
+        "question": "If the diameter of a circle is 12 cm, what is the radius?",
+        "options": [
+            "3 cm",
+            "6 cm",
+            "9 cm",
+            "12 cm"
+        ],
+        "correct_answer": "6 cm"
+    },
+    {
+        "question": "In a circle, what is the relationship between the radius and a tangent line at the point of tangency?",
+        "options": [
+            "They are perpendicular",
+            "They are parallel",
+            "They are equal",
+            "They are supplementary"
+        ],
+        "correct_answer": "They are perpendicular"
+    },
+    {
+        "question": "What is the measure of the central angle of a semicircle?",
+        "options": [
+            "45 degrees",
+            "90 degrees",
+            "180 degrees",
+            "360 degrees"
+        ],
+        "correct_answer": "180 degrees"
+    },
+    {
+        "question": "In a circle with center O, what is the relationship between radius OA and diameter OB?",
+        "options": [
+            "OA < OB",
+            "OA = OB",
+            "OA > OB",
+            "Cannot be determined"
+        ],
+        "correct_answer": "OA = OB"
+    },
+    {
+        "question": "What is the measure of an inscribed angle that subtends a semicircular arc?",
+        "options": [
+            "45 degrees",
+            "60 degrees",
+            "90 degrees",
+            "180 degrees"
+        ],
+        "correct_answer": "90 degrees"
+    },
+    {
+        "question": "In a circle, what is the relationship between the measures of the central angle and the inscribed angle that subtends the same arc?",
+        "options": [
+            "They are equal",
+            "The central angle is twice the inscribed angle",
+            "The inscribed angle is twice the central angle",
+            "They are complementary"
+        ],
+        "correct_answer": "They are equal"
+    },
+    {
+        "question": "If the radius of a circle is 5 cm, what is the circumference?",
+        "options": [
+            "5 cm",
+            "10 cm",
+            "15 cm",
+            "25 cm"
+        ],
+        "correct_answer": "10 cm"
+    },
+    {
+        "question": "What is the relationship between the angles formed by intersecting tangents outside a circle?",
+        "options": [
+            "They are equal",
+            "They are supplementary",
+            "They are complementary",
+            "They are congruent"
+        ],
+        "correct_answer": "They are supplementary"
+    },
+    {
+        "question": "If a chord in a circle is equal in length to the radius, what is the measure of the central angle subtended by this chord?",
+        "options": [
+            "30 degrees",
+            "45 degrees",
+            "60 degrees",
+            "90 degrees"
+        ],
+        "correct_answer": "60 degrees"
+    },
+    {
+        "question": "In a circle with center O, if angle AOC is a right angle, what is the relationship between AO and CO?",
+        "options": [
+            "AO = CO",
+            "AO < CO",
+            "AO > CO",
+            "Cannot be determined"
+        ],
+        "correct_answer": "AO = CO"
+    },
+    {
+        "question": "What is the name of an angle that is formed by a chord and a tangent line that intersect on the circle?",
+        "options": [
+            "Inscribed angle",
+            "Central angle",
+            "Exterior angle",
+            "Tangent angle"
+        ],
+        "correct_answer": "Tangent angle"
+    },
+    {
+        "question": "In a circle with center O, if angle BOC is a right angle, what is the relationship between BO and OC?",
+        "options": [
+            "BO = OC",
+            "BO < OC",
+            "BO > OC",
+            "Cannot be determined"
+        ],
+        "correct_answer": "BO = OC"
+    },
+    {
+        "question": "What is the sum of the measures of the interior angles of a pentagon inscribed in a circle?",
+        "options": [
+            "360 degrees",
+            "540 degrees",
+            "720 degrees",
+            "900 degrees"
+        ],
+        "correct_answer": "540 degrees"
+    },
+    {
+        "question": "If the circumference of a circle is 36 cm, what is the radius?",
+        "options": [
+            "3 cm",
+            "6 cm",
+            "9 cm",
+            "12 cm"
+        ],
+        "correct_answer": "6 cm"
+    },
+    {
+        "question": "In a circle, what is the relationship between the diameter and the radius?",
+        "options": [
+            "The diameter is half of the radius",
+            "The radius is half of the diameter",
+            "They are equal",
+            "They are unrelated"
+        ],
+        "correct_answer": "The diameter is half of the radius"
+    },
+    {
+        "question": "What is the measure of an inscribed angle that subtends a quarter-circle arc?",
+        "options": [
+            "45 degrees",
+            "60 degrees",
+            "90 degrees",
+            "180 degrees"
+        ],
+        "correct_answer": "90 degrees"
+    },
+    {
+        "question": "In a circle with center O, if angle AOB is a right angle, what is the relationship between AO and BO?",
+        "options": [
+            "AO = BO",
+            "AO < BO",
+            "AO > BO",
+            "Cannot be determined"
+        ],
+        "correct_answer": "AO = BO"
+    },
+    {
+        "question": "What is the relationship between the angles formed by intersecting chords in a circle?",
+        "options": [
+            "They are equal",
+            "They are supplementary",
+            "They are complementary",
+            "They are congruent"
+        ],
+        "correct_answer": "They are equal"
+    },
+    {
+        "question": "If an inscribed angle in a circle measures 30 degrees, what is the measure of the central angle that subtends the same arc?",
+        "options": [
+            "30 degrees",
+            "60 degrees",
+            "120 degrees",
+            "180 degrees"
+        ],
+        "correct_answer": "60 degrees"
+    },
+    {
+        "question": "What is the measure of the central angle of a semicircle?",
+        "options": [
+            "45 degrees",
+            "90 degrees",
+            "180 degrees",
+            "360 degrees"
+        ],
+        "correct_answer": "180 degrees"
+    },
+    {
+        "question": "If the radius of a circle is 8 cm, what is the diameter?",
+        "options": [
+            "4 cm",
+            "8 cm",
+            "16 cm",
+            "64 cm"
+        ],
+        "correct_answer": "16 cm"
+    },
+    {
+        "question": "In a circle, what is the relationship between the radius and a tangent line at the point of tangency?",
+        "options": [
+            "They are perpendicular",
+            "They are parallel",
+            "They are equal",
+            "They are supplementary"
+        ],
+        "correct_answer": "They are perpendicular"
+    },
+    {
+        "question": "What is the measure of the central angle of an entire circle?",
+        "options": [
+            "45 degrees",
+            "90 degrees",
+            "180 degrees",
+            "360 degrees"
+        ],
+        "correct_answer": "360 degrees"
+    },
+    {
+        "question": "What is the relationship between the angles formed by intersecting tangents outside a circle?",
+        "options": [
+            "They are equal",
+            "They are supplementary",
+            "They are complementary",
+            "They are congruent"
+        ],
+        "correct_answer": "They are supplementary"
+    },
+    {
+        "question": "If a chord in a circle is equal in length to the radius, what is the measure of the central angle subtended by this chord?",
+        "options": [
+            "30 degrees",
+            "45 degrees",
+            "60 degrees",
+            "90 degrees"
+        ],
+        "correct_answer": "60 degrees"
+    },
+    {
+        "question": "What is the relationship between the angles formed by intersecting secants outside a circle?",
+        "options": [
+            "They are equal",
+            "They are supplementary",
+            "They are complementary",
+            "They are congruent"
+        ],
+        "correct_answer": "They are supplementary"
+    },
+    {
+        "question": "In a circle, what is the relationship between a radius and a tangent drawn to the circle at the point of tangency?",
+        "options": [
+            "They are perpendicular",
+            "They are parallel",
+            "They are equal",
+            "They are supplementary"
+        ],
+        "correct_answer": "They are perpendicular"
+    },
+    {
+        "question": "What is the name of the angle formed by two radii in a circle?",
+        "options": [
+            "Central angle",
+            "Inscribed angle",
+            "Exterior angle",
+            "Tangent angle"
+        ],
+        "correct_answer": "Central angle"
+    },
+    {
+        "question": "If the circumference of a circle is 50 cm, what is the radius?",
+        "options": [
+            "5 cm",
+            "10 cm",
+            "15 cm",
+            "25 cm"
+        ],
+        "correct_answer": "5 cm"
+    },
+    {
+        "question": "What is the relationship between the angles formed by intersecting tangents inside a circle?",
+        "options": [
+            "They are equal",
+            "They are supplementary",
+            "They are complementary",
+            "They are congruent"
+        ],
+        "correct_answer": "They are supplementary"
+    },
+    {
+        "question": "What is the name of an angle that is formed by two chords that intersect inside a circle?",
+        "options": [
+            "Inscribed angle",
+            "Central angle",
+            "Exterior angle",
+            "Tangent angle"
+        ],
+        "correct_answer": "Inscribed angle"
+    },
+    {
+        "question": "In a circle, what is the relationship between a radius and a chord drawn to the circle?",
+        "options": [
+            "They are perpendicular",
+            "They are parallel",
+            "They are equal",
+            "They are supplementary"
+        ],
+        "correct_answer": "They are perpendicular"
+    },
+    {
+        "question": "What is the relationship between the angles formed by intersecting secants inside a circle?",
+        "options": [
+            "They are equal",
+            "They are supplementary",
+            "They are complementary",
+            "They are congruent"
+        ],
+        "correct_answer": "They are supplementary"
+    },
+    {
+        "question": "What is the name of an angle that is formed by two secants that intersect outside a circle?",
+        "options": [
+            "Inscribed angle",
+            "Central angle",
+            "Exterior angle",
+            "Tangent angle"
+        ],
+        "correct_answer": "Exterior angle"
+    },
+    {
+        "question": "If the circumference of a circle is 36 cm and the radius is 6 cm, what is the diameter?",
+        "options": [
+            "6 cm",
+            "12 cm",
+            "18 cm",
+            "72 cm"
+        ],
+        "correct_answer": "12 cm"
+    },
+    {
+        "question": "In a circle, what is the relationship between the central angle and the arc it subtends?",
+        "options": [
+            "They are equal",
+            "The central angle is half the arc",
+            "The arc is half the central angle",
+            "They are complementary"
+        ],
+        "correct_answer": "They are equal"
+    },
+    {
+        "question": "What is the relationship between the angles formed by intersecting tangents inside a circle?",
+        "options": [
+            "They are equal",
+            "They are supplementary",
+            "They are complementary",
+            "They are congruent"
+        ],
+        "correct_answer": "They are supplementary"
+    },
+    {
+        "question": "If a chord in a circle is equal in length to the radius, what is the measure of the inscribed angle subtended by this chord?",
+        "options": [
+            "30 degrees",
+            "45 degrees",
+            "60 degrees",
+            "90 degrees"
+        ],
+        "correct_answer": "90 degrees"
+    },
+    {
+        "question": "What is the relationship between the angles formed by intersecting tangents outside a circle?",
+        "options": [
+            "They are equal",
+            "They are supplementary",
+            "They are complementary",
+            "They are congruent"
+        ],
+        "correct_answer": "They are supplementary"
+    },
+    {
+        "question": "If a chord in a circle is equal in length to the radius, what is the measure of the central angle subtended by this chord?",
+        "options": [
+            "30 degrees",
+            "45 degrees",
+            "60 degrees",
+            "90 degrees"
+        ],
+        "correct_answer": "60 degrees"
+    },
+    {
+        "question": "In a circle, what is the relationship between a radius and a chord drawn to the circle?",
+        "options": [
+            "They are perpendicular",
+            "They are parallel",
+            "They are equal",
+            "They are supplementary"
+        ],
+        "correct_answer": "They are perpendicular"
+    },
+    {
+        "question": "What is the measure of the central angle subtended by an arc that is one-third of the circumference of a circle?",
+        "options": [
+            "60 degrees",
+            "90 degrees",
+            "120 degrees",
+            "180 degrees"
+        ],
+        "correct_answer": "120 degrees"
+    },
+    {
+        "question": "In a circle with center O, if angle AOB is a straight angle (180 degrees), what is the relationship between AO and BO?",
+        "options": [
+            "AO = BO",
+            "AO < BO",
+            "AO > BO",
+            "Cannot be determined"
+        ],
+        "correct_answer": "AO = BO"
+    },
+    {
+        "question": "What is the name of the angle formed by a tangent and a chord that intersect on the circle?",
+        "options": [
+            "Inscribed angle",
+            "Central angle",
+            "Exterior angle",
+            "Tangent angle"
+        ],
+        "correct_answer": "Tangent angle"
+    },
+    {
+        "question": "What is the relationship between the angles formed by intersecting chords inside a circle?",
+        "options": [
+            "They are equal",
+            "They are supplementary",
+            "They are complementary",
+            "They are congruent"
+        ],
+        "correct_answer": "They are equal"
+    },
+    {
+        "question": "If the circumference of a circle is 60 cm and the radius is 10 cm, what is the diameter?",
+        "options": [
+            "10 cm",
+            "20 cm",
+            "30 cm",
+            "120 cm"
+        ],
+        "correct_answer": "20 cm"
+    },
+    {
+        "question": "In a circle, what is the relationship between a radius and a chord drawn to the circle?",
+        "options": [
+            "They are perpendicular",
+            "They are parallel",
+            "They are equal",
+            "They are supplementary"
+        ],
+        "correct_answer": "They are perpendicular"
+    },
+    {
+        "question": "What is the relationship between the angles formed by intersecting secants inside a circle?",
+        "options": [
+            "They are equal",
+            "They are supplementary",
+            "They are complementary",
+            "They are congruent"
+        ],
+        "correct_answer": "They are supplementary"
+    },
+    {
+        "question": "What is the name of an angle that is formed by two secants that intersect outside a circle?",
+        "options": [
+            "Inscribed angle",
+            "Central angle",
+            "Exterior angle",
+            "Tangent angle"
+        ],
+        "correct_answer": "Exterior angle"
+    },
+    {
+        "question": "If the circumference of a circle is 36 cm and the radius is 6 cm, what is the diameter?",
+        "options": [
+            "6 cm",
+            "12 cm",
+            "18 cm",
+            "72 cm"
+        ],
+        "correct_answer": "12 cm"
+    },
+    {
+        "question": "In a circle, what is the relationship between the central angle and the arc it subtends?",
+        "options": [
+            "They are equal",
+            "The central angle is half the arc",
+            "The arc is half the central angle",
+            "They are complementary"
+        ],
+        "correct_answer": "They are equal"
+    },
+    {
+        "question": "What is the relationship between the angles formed by intersecting tangents inside a circle?",
+        "options": [
+            "They are equal",
+            "They are supplementary",
+            "They are complementary",
+            "They are congruent"
+        ],
+        "correct_answer": "They are supplementary"
+    },
+    {
+        "question": "If a chord in a circle is equal in length to the radius, what is the measure of the inscribed angle subtended by this chord?",
+        "options": [
+            "30 degrees",
+            "45 degrees",
+            "60 degrees",
+            "90 degrees"
+        ],
+        "correct_answer": "90 degrees"
+    },
+    {
+        "question": "What is the relationship between the angles formed by intersecting tangents outside a circle?",
+        "options": [
+            "They are equal",
+            "They are supplementary",
+            "They are complementary",
+            "They are congruent"
+        ],
+        "correct_answer": "They are supplementary"
+    },
+    {
+        "question": "If a chord in a circle is equal in length to the radius, what is the measure of the central angle subtended by this chord?",
+        "options": [
+            "30 degrees",
+            "45 degrees",
+            "60 degrees",
+            "90 degrees"
+        ],
+        "correct_answer": "60 degrees"
+    },
+    {
+        "question": "In a circle, what is the relationship between a radius and a chord drawn to the circle?",
+        "options": [
+            "They are perpendicular",
+            "They are parallel",
+            "They are equal",
+            "They are supplementary"
+        ],
+        "correct_answer": "They are perpendicular"
+    },
+    {
+        "question": "What is the measure of the central angle subtended by an arc that is one-third of the circumference of a circle?",
+        "options": [
+            "60 degrees",
+            "90 degrees",
+            "120 degrees",
+            "180 degrees"
+        ],
+        "correct_answer": "120 degrees"
+    },
+    {
+        "question": "In a circle with center O, if angle AOB is a straight angle (180 degrees), what is the relationship between AO and BO?",
+        "options": [
+            "AO = BO",
+            "AO < BO",
+            "AO > BO",
+            "Cannot be determined"
+        ],
+        "correct_answer": "AO = BO"
+    },
+    {
+        "question": "What is the name of the angle formed by a tangent and a chord that intersect on the circle?",
+        "options": [
+            "Inscribed angle",
+            "Central angle",
+            "Exterior angle",
+            "Tangent angle"
+        ],
+        "correct_answer": "Tangent angle"
+    },
+    {
+        "question": "What is the relationship between the angles formed by intersecting chords inside a circle?",
+        "options": [
+            "They are equal",
+            "They are supplementary",
+            "They are complementary",
+            "They are congruent"
+        ],
+        "correct_answer": "They are equal"
+    },
+    {
+        "question": "If the circumference of a circle is 60 cm and the radius is 10 cm, what is the diameter?",
+        "options": [
+            "10 cm",
+            "20 cm",
+            "30 cm",
+            "120 cm"
+        ],
+        "correct_answer": "20 cm"
+    },
+    {
+        "question": "In a circle, what is the relationship between a radius and a chord drawn to the circle?",
+        "options": [
+            "They are perpendicular",
+            "They are parallel",
+            "They are equal",
+            "They are supplementary"
+        ],
+        "correct_answer": "They are perpendicular"
+    },
+    {
+        "question": "What is the relationship between the angles formed by intersecting secants inside a circle?",
+        "options": [
+            "They are equal",
+            "They are supplementary",
+            "They are complementary",
+            "They are congruent"
+        ],
+        "correct_answer": "They are supplementary"
+    },
+    {
+        "question": "What is the name of an angle that is formed by two secants that intersect outside a circle?",
+        "options": [
+            "Inscribed angle",
+            "Central angle",
+            "Exterior angle",
+            "Tangent angle"
+        ],
+        "correct_answer": "Exterior angle"
+    },
+    {
+        "question": "If the circumference of a circle is 36 cm and the radius is 6 cm, what is the diameter?",
+        "options": [
+            "6 cm",
+            "12 cm",
+            "18 cm",
+            "72 cm"
+        ],
+        "correct_answer": "12 cm"
+    },
+    {
+        "question": "In a circle, what is the relationship between the central angle and the arc it subtends?",
+        "options": [
+            "They are equal",
+            "The central angle is half the arc",
+            "The arc is half the central angle",
+            "They are complementary"
+        ],
+        "correct_answer": "They are equal"
+    },
+    {
+        "question": "What is the relationship between the angles formed by intersecting tangents inside a circle?",
+        "options": [
+            "They are equal",
+            "They are supplementary",
+            "They are complementary",
+            "They are congruent"
+        ],
+        "correct_answer": "They are supplementary"
+    },
+    {
+        "question": "If a chord in a circle is equal in length to the radius, what is the measure of the inscribed angle subtended by this chord?",
+        "options": [
+            "30 degrees",
+            "45 degrees",
+            "60 degrees",
+            "90 degrees"
+        ],
+        "correct_answer": "90 degrees"
+    },
+    {
+        "question": "What is the relationship between the angles formed by intersecting tangents outside a circle?",
+        "options": [
+            "They are equal",
+            "They are supplementary",
+            "They are complementary",
+            "They are congruent"
+        ],
+        "correct_answer": "They are supplementary"
+    },
+    {
+        "question": "If a chord in a circle is equal in length to the radius, what is the measure of the central angle subtended by this chord?",
+        "options": [
+            "30 degrees",
+            "45 degrees",
+            "60 degrees",
+            "90 degrees"
+        ],
+        "correct_answer": "60 degrees"
+    },
+    {
+        "question": "In a circle, what is the relationship between a radius and a chord drawn to the circle?",
+        "options": [
+            "They are perpendicular",
+            "They are parallel",
+            "They are equal",
+            "They are supplementary"
+        ],
+        "correct_answer": "They are perpendicular"
+    },
+    {
+        "question": "What is the measure of the central angle subtended by an arc that is one-third of the circumference of a circle?",
+        "options": [
+            "60 degrees",
+            "90 degrees",
+            "120 degrees",
+            "180 degrees"
+        ],
+        "correct_answer": "120 degrees"
+    },
+    {
+        "question": "In a circle with center O, if angle AOB is a straight angle (180 degrees), what is the relationship between AO and BO?",
+        "options": [
+            "AO = BO",
+            "AO < BO",
+            "AO > BO",
+            "Cannot be determined"
+        ],
+        "correct_answer": "AO = BO"
+    },
+    {
+        "question": "What is the name of the angle formed by a tangent and a chord that intersect on the circle?",
+        "options": [
+            "Inscribed angle",
+            "Central angle",
+            "Exterior angle",
+            "Tangent angle"
+        ],
+        "correct_answer": "Tangent angle"
+    },
+    {
+        "question": "What is the relationship between the angles formed by intersecting chords inside a circle?",
+        "options": [
+            "They are equal",
+            "They are supplementary",
+            "They are complementary",
+            "They are congruent"
+        ],
+        "correct_answer": "They are equal"
+    },
+    {
+        "question": "If the circumference of a circle is 60 cm and the radius is 10 cm, what is the diameter?",
+        "options": [
+            "10 cm",
+            "20 cm",
+            "30 cm",
+            "120 cm"
+        ],
+        "correct_answer": "20 cm"
+    },
+    {
+        "question": "In a circle, what is the relationship between a radius and a tangent line at the point of tangency?",
+        "options": [
+            "They are perpendicular",
+            "They are parallel",
+            "They are equal",
+            "They are supplementary"
+        ],
+        "correct_answer": "They are perpendicular"
+    },
+    {
+        "question": "What is the relationship between the angles formed by intersecting secants outside a circle?",
+        "options": [
+            "They are equal",
+            "They are supplementary",
+            "They are complementary",
+            "They are congruent"
+        ],
+        "correct_answer": "They are supplementary"
+    },
+    {
+        "question": "What is the name of an angle that is formed by two secants that intersect inside a circle?",
+        "options": [
+            "Inscribed angle",
+            "Central angle",
+            "Exterior angle",
+            "Tangent angle"
+        ],
+        "correct_answer": "Central angle"
+    },
+    {
+        "question": "If the circumference of a circle is 36 cm and the radius is 6 cm, what is the diameter?",
+        "options": [
+            "6 cm",
+            "12 cm",
+            "18 cm",
+            "72 cm"
+        ],
+        "correct_answer": "12 cm"
+    },
+    {
+        "question": "In a circle, what is the relationship between the central angle and the arc it subtends?",
+        "options": [
+            "They are equal",
+            "The central angle is half the arc",
+            "The arc is half the central angle",
+            "They are complementary"
+        ],
+        "correct_answer": "They are equal"
+    },
+    {
+        "question": "What is the relationship between the angles formed by intersecting tangents inside a circle?",
+        "options": [
+            "They are equal",
+            "They are supplementary",
+            "They are complementary",
+            "They are congruent"
+        ],
+        "correct_answer": "They are supplementary"
+    },
+    {
+        "question": "If a chord in a circle is equal in length to the radius, what is the measure of the inscribed angle subtended by this chord?",
+        "options": [
+            "30 degrees",
+            "45 degrees",
+            "60 degrees",
+            "90 degrees"
+        ],
+        "correct_answer": "90 degrees"
+    },
+    {
+        "question": "What is the relationship between the angles formed by intersecting tangents outside a circle?",
+        "options": [
+            "They are equal",
+            "They are supplementary",
+            "They are complementary",
+            "They are congruent"
+        ],
+        "correct_answer": "They are supplementary"
+    },
+    {
+        "question": "If a chord in a circle is equal in length to the radius, what is the measure of the central angle subtended by this chord?",
+        "options": [
+            "30 degrees",
+            "45 degrees",
+            "60 degrees",
+            "90 degrees"
+        ],
+        "correct_answer": "60 degrees"
+    },
+    {
+        "question": "In a circle, what is the relationship between a radius and a chord drawn to the circle?",
+        "options": [
+            "They are perpendicular",
+            "They are parallel",
+            "They are equal",
+            "They are supplementary"
+        ],
+        "correct_answer": "They are perpendicular"
+    },
+    {
+        "question": "What is the measure of the central angle subtended by an arc that is one-third of the circumference of a circle?",
+        "options": [
+            "60 degrees",
+            "90 degrees",
+            "120 degrees",
+            "180 degrees"
+        ],
+        "correct_answer": "120 degrees"
+    },
+    {
+        "question": "In a circle with center O, if angle AOB is a straight angle (180 degrees), what is the relationship between AO and BO?",
+        "options": [
+            "AO = BO",
+            "AO < BO",
+            "AO > BO",
+            "Cannot be determined"
+        ],
+        "correct_answer": "AO = BO"
+    },
+    {
+        "question": "What is the name of the angle formed by a tangent and a chord that intersect on the circle?",
+        "options": [
+            "Inscribed angle",
+            "Central angle",
+            "Exterior angle",
+            "Tangent angle"
+        ],
+        "correct_answer": "Tangent angle"
+    },
+    {
+        "question": "What is the relationship between the angles formed by intersecting chords inside a circle?",
+        "options": [
+            "They are equal",
+            "They are supplementary",
+            "They are complementary",
+            "They are congruent"
+        ],
+        "correct_answer": "They are equal"
+    },
+    {
+        "question": "If the circumference of a circle is 60 cm and the radius is 10 cm, what is the diameter?",
+        "options": [
+            "10 cm",
+            "20 cm",
+            "30 cm",
+            "120 cm"
+        ],
+        "correct_answer": "20 cm"
+    },
+    {
+        "question": "In a circle, what is the relationship between a radius and a tangent line at the point of tangency?",
+        "options": [
+            "They are perpendicular",
+            "They are parallel",
+            "They are equal",
+            "They are supplementary"
+        ],
+        "correct_answer": "They are perpendicular"
+    },
+    {
+        "question": "What is the relationship between the angles formed by intersecting secants outside a circle?",
+        "options": [
+            "They are equal",
+            "They are supplementary",
+            "They are complementary",
+            "They are congruent"
+        ],
+        "correct_answer": "They are supplementary"
+    },
+    {
+        "question": "What is the name of an angle that is formed by two secants that intersect inside a circle?",
+        "options": [
+            "Inscribed angle",
+            "Central angle",
+            "Exterior angle",
+            "Tangent angle"
+        ],
+        "correct_answer": "Central angle"
+    },
+    {
+        "question": "If the circumference of a circle is 36 cm and the radius is 6 cm, what is the diameter?",
+        "options": [
+            "6 cm",
+            "12 cm",
+            "18 cm",
+            "72 cm"
+        ],
+        "correct_answer": "12 cm"
+    },
+    {
+        "question": "In a circle, what is the relationship between a radius and a tangent line at the point of tangency?",
+        "options": [
+            "They are perpendicular",
+            "They are parallel",
+            "They are equal",
+            "They are supplementary"
+        ],
+        "correct_answer": "They are perpendicular"
+    },
+    {
+        "question": "What is the relationship between the angles formed by intersecting secants outside a circle?",
+        "options": [
+            "They are equal",
+            "They are supplementary",
+            "They are complementary",
+            "They are congruent"
+        ],
+        "correct_answer": "They are supplementary"
+    },
+    {
+        "question": "What is the name of an angle that is formed by two secants that intersect inside a circle?",
+        "options": [
+            "Inscribed angle",
+            "Central angle",
+            "Exterior angle",
+            "Tangent angle"
+        ],
+        "correct_answer": "Central angle"
+    },
+    {
+        "question": "If the circumference of a circle is 36 cm and the radius is 6 cm, what is the diameter?",
+        "options": [
+            "6 cm",
+            "12 cm",
+            "18 cm",
+            "72 cm"
+        ],
+        "correct_answer": "12 cm"
+    },
+    {
+        "question": "In a circle, what is the relationship between the central angle and the arc it subtends?",
+        "options": [
+            "They are equal",
+            "The central angle is half the arc",
+            "The arc is half the central angle",
+            "They are complementary"
+        ],
+        "correct_answer": "They are equal"
+    },
+    {
+        "question": "What is the relationship between the angles formed by intersecting tangents inside a circle?",
+        "options": [
+            "They are equal",
+            "They are supplementary",
+            "They are complementary",
+            "They are congruent"
+        ],
+        "correct_answer": "They are supplementary"
+    },
+    {
+        "question": "If a chord in a circle is equal in length to the radius, what is the measure of the inscribed angle subtended by this chord?",
+        "options": [
+            "30 degrees",
+            "45 degrees",
+            "60 degrees",
+            "90 degrees"
+        ],
+        "correct_answer": "90 degrees"
+    },
+    {
+        "question": "What is the relationship between the angles formed by intersecting tangents outside a circle?",
+        "options": [
+            "They are equal",
+            "They are supplementary",
+            "They are complementary",
+            "They are congruent"
+        ],
+        "correct_answer": "They are supplementary"
+    },
+    {
+        "question": "If a chord in a circle is equal in length to the radius, what is the measure of the central angle subtended by this chord?",
+        "options": [
+            "30 degrees",
+            "45 degrees",
+            "60 degrees",
+            "90 degrees"
+        ],
+        "correct_answer": "60 degrees"
+    },
+    {
+        "question": "In a circle, what is the relationship between a radius and a chord drawn to the circle?",
+        "options": [
+            "They are perpendicular",
+            "They are parallel",
+            "They are equal",
+            "They are supplementary"
+        ],
+        "correct_answer": "They are perpendicular"
+    }
+]

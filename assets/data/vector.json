@@ -1,0 +1,1052 @@
+[
+    {
+        "question": "In a Cartesian coordinate system, which axis represents the horizontal direction?",
+        "options": [
+            "X-axis",
+            "Y-axis",
+            "Z-axis",
+            "None of the above"
+        ],
+        "correct_answer": "X-axis"
+    },
+    {
+        "question": "What is the magnitude of a vector (3, 4) in two-dimensional space?",
+        "options": [
+            "3",
+            "4",
+            "5",
+            "7"
+        ],
+        "correct_answer": "5"
+    },
+    {
+        "question": "In which quadrant does a vector with positive x and positive y components lie?",
+        "options": [
+            "Quadrant I",
+            "Quadrant II",
+            "Quadrant III",
+            "Quadrant IV"
+        ],
+        "correct_answer": "Quadrant I"
+    },
+    {
+        "question": "What is the standard position of a vector?",
+        "options": [
+            "At the origin",
+            "In the first quadrant",
+            "On the X-axis",
+            "On the Y-axis"
+        ],
+        "correct_answer": "At the origin"
+    },
+    {
+        "question": "A bearing of 135 degrees corresponds to which compass direction?",
+        "options": [
+            "North",
+            "East",
+            "South",
+            "West"
+        ],
+        "correct_answer": "Southwest"
+    },
+    {
+        "question": "What is the determinant of a 2x2 matrix [[3, 5], [2, 4]]?",
+        "options": [
+            "2",
+            "4",
+            "6",
+            "8"
+        ],
+        "correct_answer": "2"
+    },
+    {
+        "question": "In matrix multiplication, the number of columns in the first matrix must match the number of _ in the second matrix.",
+        "options": [
+            "Rows",
+            "Columns",
+            "Diagonals",
+            "Entries"
+        ],
+        "correct_answer": "Rows"
+    },
+    {
+        "question": "What is the sum of the matrices [[1, 2], [3, 4]] and [[-1, -2], [-3, -4]]?",
+        "options": [
+            "[[0, 0], [0, 0]]",
+            "[[0, 1], [0, 1]]",
+            "[[-2, -4], [-6, -8]]",
+            "[[2, 4], [6, 8]]"
+        ],
+        "correct_answer": "[[0, 0], [0, 0]]"
+    },
+    {
+        "question": "In vector notation, what does 'i' represent?",
+        "options": [
+            "The unit vector in the x-direction",
+            "The unit vector in the y-direction",
+            "The unit vector in the z-direction",
+            "The magnitude of the vector"
+        ],
+        "correct_answer": "The unit vector in the x-direction"
+    },
+    {
+        "question": "If A is a 3x2 matrix and B is a 2x4 matrix, what is the resulting matrix when A is multiplied by B?",
+        "options": [
+            "A 3x4 matrix",
+            "A 3x2 matrix",
+            "A 2x2 matrix",
+            "A 2x4 matrix"
+        ],
+        "correct_answer": "A 3x4 matrix"
+    },
+    {
+        "question": "What is the dot product of two perpendicular vectors?",
+        "options": [
+            "0",
+            "1",
+            "-1",
+            "2"
+        ],
+        "correct_answer": "0"
+    },
+    {
+        "question": "If a vector has a magnitude of 5 and is in the direction of the positive x-axis, what are its components?",
+        "options": [
+            "(5, 0)",
+            "(0, 5)",
+            "(5, 5)",
+            "(1, 0)"
+        ],
+        "correct_answer": "(5, 0)"
+    },
+    {
+        "question": "In navigation, what is the bearing if you are traveling due east?",
+        "options": [
+            "0 degrees",
+            "45 degrees",
+            "90 degrees",
+            "180 degrees"
+        ],
+        "correct_answer": "90 degrees"
+    },
+    {
+        "question": "What is the result of subtracting the matrices [[3, 5], [2, 4]] and [[1, 2], [1, 2]]?",
+        "options": [
+            "[[2, 3], [1, 2]]",
+            "[[4, 6], [3, 5]]",
+            "[[2, 3], [3, 5]]",
+            "[[1, 2], [2, 3]]"
+        ],
+        "correct_answer": "[[2, 3], [1, 2]]"
+    },
+    {
+        "question": "In a 3D Cartesian coordinate system, how many axes are there?",
+        "options": [
+            "1",
+            "2",
+            "3",
+            "4"
+        ],
+        "correct_answer": "3"
+    },
+    {
+        "question": "What is the result of the cross product of two parallel vectors?",
+        "options": [
+            "0",
+            "1",
+            "-1",
+            "2"
+        ],
+        "correct_answer": "0"
+    },
+    {
+        "question": "In bearing notation, what does 'NE' represent?",
+        "options": [
+            "Northeast",
+            "Northwest",
+            "Southeast",
+            "Southwest"
+        ],
+        "correct_answer": "Northeast"
+    },
+    {
+        "question": "What is the inverse of a square matrix that is not invertible?",
+        "options": [
+            "Zero matrix",
+            "Identity matrix",
+            "It has no inverse",
+            "All matrices are invertible"
+        ],
+        "correct_answer": "It has no inverse"
+    },
+    {
+        "question": "What is the magnitude of the zero vector?",
+        "options": [
+            "0",
+            "1",
+            "Undefined",
+            "Infinity"
+        ],
+        "correct_answer": "0"
+    },
+    {
+        "question": "If a matrix A is multiplied by the identity matrix I, what is the result?",
+        "options": [
+            "Matrix A",
+            "Zero matrix",
+            "Identity matrix I",
+            "Matrix A transposed"
+        ],
+        "correct_answer": "Matrix A"
+    },
+    {
+        "question": "What is the resultant vector when adding a vector of magnitude 3 units to a vector of magnitude 5 units at a 90-degree angle?",
+        "options": [
+            "2 units",
+            "3 units",
+            "4 units",
+            "5 units"
+        ],
+        "correct_answer": "4 units"
+    },
+    {
+        "question": "What is the angle of depression if you are looking down at an object from an elevation of 45 degrees?",
+        "options": [
+            "45 degrees",
+            "90 degrees",
+            "135 degrees",
+            "180 degrees"
+        ],
+        "correct_answer": "45 degrees"
+    },
+    {
+        "question": "What is the determinant of a 3x3 identity matrix?",
+        "options": [
+            "0",
+            "1",
+            "3",
+            "9"
+        ],
+        "correct_answer": "1"
+    },
+    {
+        "question": "In bearing notation, what does 'SW' represent?",
+        "options": [
+            "Southeast",
+            "Southwest",
+            "Northeast",
+            "Northwest"
+        ],
+        "correct_answer": "Southwest"
+    },
+    {
+        "question": "What is the magnitude of the zero vector in three-dimensional space?",
+        "options": [
+            "0",
+            "1",
+            "Undefined",
+            "Infinity"
+        ],
+        "correct_answer": "0"
+    },
+    {
+        "question": "If matrix A is a 2x3 matrix and matrix B is a 3x2 matrix, what is the resulting matrix when A is multiplied by B?",
+        "options": [
+            "A 2x2 matrix",
+            "A 3x3 matrix",
+            "A 2x3 matrix",
+            "A 3x2 matrix"
+        ],
+        "correct_answer": "A 2x2 matrix"
+    },
+    {
+        "question": "What is the cross product of two vectors that are parallel to each other?",
+        "options": [
+            "0",
+            "1",
+            "-1",
+            "2"
+        ],
+        "correct_answer": "0"
+    },
+    {
+        "question": "In navigation, what is the bearing if you are traveling directly north?",
+        "options": [
+            "0 degrees",
+            "45 degrees",
+            "90 degrees",
+            "180 degrees"
+        ],
+        "correct_answer": "0 degrees"
+    },
+    {
+        "question": "What is the result of adding a matrix A to its negative, -A?",
+        "options": [
+            "Zero matrix",
+            "Identity matrix",
+            "Matrix A",
+            "Matrix A squared"
+        ],
+        "correct_answer": "Zero matrix"
+    },
+    {
+        "question": "What is the magnitude of a unit vector?",
+        "options": [
+            "0",
+            "1",
+            "2",
+            "3"
+        ],
+        "correct_answer": "1"
+    },
+    {
+        "question": "What is the formula to calculate the magnitude of a vector in three-dimensional space (x, y, z)?",
+        "options": [
+            "√(x^2 + y^2)",
+            "√(x^2 + y^2 + z^2)",
+            "√(x^3 + y^3 + z^3)",
+            "x + y + z"
+        ],
+        "correct_answer": "√(x^2 + y^2 + z^2)"
+    },
+    {
+        "question": "If vector A has components (3, 4) and vector B has components (1, -2), what is the dot product A · B?",
+        "options": [
+            "-10",
+            "10",
+            "-5",
+            "5"
+        ],
+        "correct_answer": "2"
+    },
+    {
+        "question": "In a matrix, what is the term used for the number located in the i-th row and j-th column?",
+        "options": [
+            "Element",
+            "Coefficient",
+            "Variable",
+            "Scalar"
+        ],
+        "correct_answer": "Element"
+    },
+    {
+        "question": "In navigation, what is the bearing if you are traveling due south?",
+        "options": [
+            "0 degrees",
+            "45 degrees",
+            "90 degrees",
+            "180 degrees"
+        ],
+        "correct_answer": "180 degrees"
+    },
+    {
+        "question": "What is the result of multiplying a matrix by the identity matrix?",
+        "options": [
+            "The original matrix",
+            "The zero matrix",
+            "The inverse matrix",
+            "An error"
+        ],
+        "correct_answer": "The original matrix"
+    },
+    {
+        "question": "What are the components of the unit vector in the positive y-direction?",
+        "options": [
+            "(0, 1)",
+            "(1, 0)",
+            "(1, 1)",
+            "(0, 0)"
+        ],
+        "correct_answer": "(0, 1)"
+    },
+    {
+        "question": "In bearing notation, what does 'NW' represent?",
+        "options": [
+            "Northeast",
+            "Northwest",
+            "Southeast",
+            "Southwest"
+        ],
+        "correct_answer": "Northwest"
+    },
+    {
+        "question": "What is the determinant of a 2x2 matrix [[a, b], [c, d]]?",
+        "options": [
+            "a * d - b * c",
+            "a + b + c + d",
+            "2 * (a + d)",
+            "a * c + b * d"
+        ],
+        "correct_answer": "a * d - b * c"
+    },
+    {
+        "question": "In a 3D Cartesian coordinate system, what is the orientation of the z-axis?",
+        "options": [
+            "Vertical and pointing up",
+            "Vertical and pointing down",
+            "Horizontal and pointing left",
+            "Horizontal and pointing right"
+        ],
+        "correct_answer": "Vertical and pointing up"
+    },
+    {
+        "question": "What is the result of subtracting a matrix A from itself, A - A?",
+        "options": [
+            "Zero matrix",
+            "Identity matrix",
+            "Matrix A",
+            "Matrix A squared"
+        ],
+        "correct_answer": "Zero matrix"
+    },
+    {
+        "question": "What is the magnitude of a unit vector?",
+        "options": [
+            "0",
+            "1",
+            "2",
+            "3"
+        ],
+        "correct_answer": "1"
+    },
+    {
+        "question": "If two vectors are orthogonal, what can you say about their dot product?",
+        "options": [
+            "It is zero",
+            "It is one",
+            "It is infinity",
+            "It is negative"
+        ],
+        "correct_answer": "It is zero"
+    },
+    {
+        "question": "In navigation, what is the bearing if you are traveling due west?",
+        "options": [
+            "0 degrees",
+            "45 degrees",
+            "90 degrees",
+            "180 degrees"
+        ],
+        "correct_answer": "270 degrees"
+    },
+    {
+        "question": "What is the result of multiplying a matrix by the zero matrix?",
+        "options": [
+            "The original matrix",
+            "The zero matrix",
+            "An error",
+            "The identity matrix"
+        ],
+        "correct_answer": "The zero matrix"
+    },
+    {
+        "question": "What are the components of the unit vector in the positive z-direction?",
+        "options": [
+            "(0, 0, 1)",
+            "(1, 1, 1)",
+            "(1, 0, 0)",
+            "(0, 1, 0)"
+        ],
+        "correct_answer": "(0, 0, 1)"
+    },
+    {
+        "question": "In bearing notation, what does 'SE' represent?",
+        "options": [
+            "Northeast",
+            "Northwest",
+            "Southeast",
+            "Southwest"
+        ],
+        "correct_answer": "Southeast"
+    },
+    {
+        "question": "What is the result of multiplying a matrix by the identity matrix?",
+        "options": [
+            "The original matrix",
+            "The zero matrix",
+            "An error",
+            "The identity matrix"
+        ],
+        "correct_answer": "The original matrix"
+    },
+    {
+        "question": "What is the determinant of a 3x3 identity matrix?",
+        "options": [
+            "0",
+            "1",
+            "3",
+            "9"
+        ],
+        "correct_answer": "1"
+    },
+    {
+        "question": "In a 3D Cartesian coordinate system, what is the orientation of the y-axis?",
+        "options": [
+            "Vertical and pointing up",
+            "Vertical and pointing down",
+            "Horizontal and pointing left",
+            "Horizontal and pointing right"
+        ],
+        "correct_answer": "Vertical and pointing up"
+    },
+    {
+        "question": "What is the cross product of two vectors that are parallel and in the same direction?",
+        "options": [
+            "0",
+            "1",
+            "-1",
+            "2"
+        ],
+        "correct_answer": "0"
+    },
+    {
+        "question": "What is the magnitude of a unit vector in three-dimensional space?",
+        "options": [
+            "0",
+            "1",
+            "2",
+            "3"
+        ],
+        "correct_answer": "1"
+    },
+    {
+        "question": "If two vectors are parallel and in opposite directions, what can you say about their dot product?",
+        "options": [
+            "It is zero",
+            "It is one",
+            "It is infinity",
+            "It is negative"
+        ],
+        "correct_answer": "It is negative"
+    },
+    {
+        "question": "In navigation, what is the bearing if you are traveling due east?",
+        "options": [
+            "0 degrees",
+            "45 degrees",
+            "90 degrees",
+            "180 degrees"
+        ],
+        "correct_answer": "90 degrees"
+    },
+    {
+        "question": "What is the result of multiplying a matrix by the identity matrix?",
+        "options": [
+            "The original matrix",
+            "The zero matrix",
+            "An error",
+            "The identity matrix"
+        ],
+        "correct_answer": "The original matrix"
+    },
+    {
+        "question": "What are the components of the unit vector in the positive y-direction?",
+        "options": [
+            "(0, 0, 1)",
+            "(1, 1, 1)",
+            "(1, 0, 0)",
+            "(0, 1, 0)"
+        ],
+        "correct_answer": "(0, 1, 0)"
+    },
+    {
+        "question": "In bearing notation, what does 'SW' represent?",
+        "options": [
+            "Northeast",
+            "Northwest",
+            "Southeast",
+            "Southwest"
+        ],
+        "correct_answer": "Southwest"
+    },
+    {
+        "question": "What is the result of multiplying a matrix by the zero matrix?",
+        "options": [
+            "The original matrix",
+            "The zero matrix",
+            "An error",
+            "The identity matrix"
+        ],
+        "correct_answer": "The zero matrix"
+    },
+    {
+        "question": "What is the determinant of a 2x2 identity matrix?",
+        "options": [
+            "0",
+            "1",
+            "2",
+            "4"
+        ],
+        "correct_answer": "1"
+    },
+    {
+        "question": "In a 3D Cartesian coordinate system, what is the orientation of the z-axis?",
+        "options": [
+            "Vertical and pointing up",
+            "Vertical and pointing down",
+            "Horizontal and pointing left",
+            "Horizontal and pointing right"
+        ],
+        "correct_answer": "Vertical and pointing up"
+    },
+    {
+        "question": "What is the cross product of two vectors that are parallel and in the same direction?",
+        "options": [
+            "0",
+            "1",
+            "-1",
+            "2"
+        ],
+        "correct_answer": "0"
+    },
+    {
+        "question": "What is the result of adding a vector to its negative?",
+        "options": [
+            "The original vector",
+            "Zero vector",
+            "An error",
+            "Scalar quantity"
+        ],
+        "correct_answer": "Zero vector"
+    },
+    {
+        "question": "If two vectors are perpendicular, what can you say about their dot product?",
+        "options": [
+            "It is zero",
+            "It is one",
+            "It is infinity",
+            "It is negative"
+        ],
+        "correct_answer": "It is zero"
+    },
+    {
+        "question": "In navigation, what is the bearing if you are traveling due south?",
+        "options": [
+            "0 degrees",
+            "45 degrees",
+            "90 degrees",
+            "180 degrees"
+        ],
+        "correct_answer": "180 degrees"
+    },
+    {
+        "question": "What is the result of multiplying a matrix by a scalar?",
+        "options": [
+            "A new matrix",
+            "The zero matrix",
+            "An error",
+            "The identity matrix"
+        ],
+        "correct_answer": "A new matrix"
+    },
+    {
+        "question": "What are the components of the unit vector in the positive z-direction?",
+        "options": [
+            "(0, 0, 1)",
+            "(1, 1, 1)",
+            "(1, 0, 0)",
+            "(0, 1, 0)"
+        ],
+        "correct_answer": "(0, 0, 1)"
+    },
+    {
+        "question": "In bearing notation, what does 'NW' represent?",
+        "options": [
+            "Northeast",
+            "Northwest",
+            "Southeast",
+            "Southwest"
+        ],
+        "correct_answer": "Northwest"
+    },
+    {
+        "question": "What is the result of multiplying a matrix by the identity matrix?",
+        "options": [
+            "The original matrix",
+            "The zero matrix",
+            "An error",
+            "The identity matrix"
+        ],
+        "correct_answer": "The original matrix"
+    },
+    {
+        "question": "What is the determinant of a 2x2 identity matrix?",
+        "options": [
+            "0",
+            "1",
+            "2",
+            "4"
+        ],
+        "correct_answer": "1"
+    },
+    {
+        "question": "In a 3D Cartesian coordinate system, what is the orientation of the x-axis?",
+        "options": [
+            "Vertical and pointing up",
+            "Vertical and pointing down",
+            "Horizontal and pointing left",
+            "Horizontal and pointing right"
+        ],
+        "correct_answer": "Horizontal and pointing right"
+    },
+    {
+        "question": "What is the cross product of two vectors that are parallel and in the same direction?",
+        "options": [
+            "0",
+            "1",
+            "-1",
+            "2"
+        ],
+        "correct_answer": "0"
+    },
+    {
+        "question": "What is the term for a vector with a magnitude of 1?",
+        "options": [
+            "Unit vector",
+            "Scalar vector",
+            "Zero vector",
+            "Orthogonal vector"
+        ],
+        "correct_answer": "Unit vector"
+    },
+    {
+        "question": "If two vectors are orthogonal, what is the angle between them?",
+        "options": [
+            "0 degrees",
+            "45 degrees",
+            "90 degrees",
+            "180 degrees"
+        ],
+        "correct_answer": "90 degrees"
+    },
+    {
+        "question": "In navigation, what is the bearing if you are traveling due west?",
+        "options": [
+            "0 degrees",
+            "45 degrees",
+            "90 degrees",
+            "180 degrees"
+        ],
+        "correct_answer": "270 degrees"
+    },
+    {
+        "question": "What is the result of multiplying a matrix by the zero matrix?",
+        "options": [
+            "The original matrix",
+            "The zero matrix",
+            "An error",
+            "The identity matrix"
+        ],
+        "correct_answer": "The zero matrix"
+    },
+    {
+        "question": "What are the components of the unit vector in the positive x-direction in three-dimensional space?",
+        "options": [
+            "(0, 0, 1)",
+            "(1, 1, 1)",
+            "(1, 0, 0)",
+            "(0, 1, 0)"
+        ],
+        "correct_answer": "(1, 0, 0)"
+    },
+    {
+        "question": "In bearing notation, what does 'SE' represent?",
+        "options": [
+            "Northeast",
+            "Northwest",
+            "Southeast",
+            "Southwest"
+        ],
+        "correct_answer": "Southeast"
+    },
+    {
+        "question": "What is the result of multiplying a matrix by the identity matrix?",
+        "options": [
+            "The original matrix",
+            "The zero matrix",
+            "An error",
+            "The identity matrix"
+        ],
+        "correct_answer": "The original matrix"
+    },
+    {
+        "question": "What is the determinant of a 2x2 identity matrix?",
+        "options": [
+            "0",
+            "1",
+            "2",
+            "4"
+        ],
+        "correct_answer": "1"
+    },
+    {
+        "question": "In a 3D Cartesian coordinate system, what is the orientation of the y-axis?",
+        "options": [
+            "Vertical and pointing up",
+            "Vertical and pointing down",
+            "Horizontal and pointing left",
+            "Horizontal and pointing right"
+        ],
+        "correct_answer": "Vertical and pointing up"
+    },
+    {
+        "question": "What is the cross product of two vectors that are parallel and in the same direction?",
+        "options": [
+            "0",
+            "1",
+            "-1",
+            "2"
+        ],
+        "correct_answer": "0"
+    },
+    {
+        "question": "What is the result of subtracting a vector from itself?",
+        "options": [
+            "The original vector",
+            "Zero vector",
+            "An error",
+            "Scalar quantity"
+        ],
+        "correct_answer": "Zero vector"
+    },
+    {
+        "question": "If two vectors are parallel and in the same direction, what is the angle between them?",
+        "options": [
+            "0 degrees",
+            "45 degrees",
+            "90 degrees",
+            "180 degrees"
+        ],
+        "correct_answer": "0 degrees"
+    },
+    {
+        "question": "In navigation, what is the bearing if you are traveling due north?",
+        "options": [
+            "0 degrees",
+            "45 degrees",
+            "90 degrees",
+            "180 degrees"
+        ],
+        "correct_answer": "0 degrees"
+    },
+    {
+        "question": "What is the result of multiplying a matrix by a scalar?",
+        "options": [
+            "A new matrix",
+            "The zero matrix",
+            "An error",
+            "The identity matrix"
+        ],
+        "correct_answer": "A new matrix"
+    },
+    {
+        "question": "What are the components of the unit vector in the positive z-direction in three-dimensional space?",
+        "options": [
+            "(0, 0, 1)",
+            "(1, 1, 1)",
+            "(1, 0, 0)",
+            "(0, 1, 0)"
+        ],
+        "correct_answer": "(0, 0, 1)"
+    },
+    {
+        "question": "In bearing notation, what does 'NW' represent?",
+        "options": [
+            "Northeast",
+            "Northwest",
+            "Southeast",
+            "Southwest"
+        ],
+        "correct_answer": "Northwest"
+    },
+    {
+        "question": "What is the result of multiplying a matrix by the identity matrix?",
+        "options": [
+            "The original matrix",
+            "The zero matrix",
+            "An error",
+            "The identity matrix"
+        ],
+        "correct_answer": "The original matrix"
+    },
+    {
+        "question": "What is the determinant of a 2x2 identity matrix?",
+        "options": [
+            "0",
+            "1",
+            "2",
+            "4"
+        ],
+        "correct_answer": "1"
+    },
+    {
+        "question": "In a 3D Cartesian coordinate system, what is the orientation of the x-axis?",
+        "options": [
+            "Vertical and pointing up",
+            "Vertical and pointing down",
+            "Horizontal and pointing left",
+            "Horizontal and pointing right"
+        ],
+        "correct_answer": "Horizontal and pointing right"
+    },
+    {
+        "question": "What is the cross product of two vectors that are parallel and in opposite directions?",
+        "options": [
+            "0",
+            "1",
+            "-1",
+            "2"
+        ],
+        "correct_answer": "0"
+    },
+    {
+        "question": "What is the term for a vector with a magnitude of 1?",
+        "options": [
+            "Unit vector",
+            "Scalar vector",
+            "Zero vector",
+            "Orthogonal vector"
+        ],
+        "correct_answer": "Unit vector"
+    },
+    {
+        "question": "If two vectors are orthogonal, what is the angle between them?",
+        "options": [
+            "0 degrees",
+            "45 degrees",
+            "90 degrees",
+            "180 degrees"
+        ],
+        "correct_answer": "90 degrees"
+    },
+    {
+        "question": "In navigation, what is the bearing if you are traveling due west?",
+        "options": [
+            "0 degrees",
+            "45 degrees",
+            "90 degrees",
+            "180 degrees"
+        ],
+        "correct_answer": "270 degrees"
+    },
+    {
+        "question": "What is the result of multiplying a matrix by the zero matrix?",
+        "options": [
+            "The original matrix",
+            "The zero matrix",
+            "An error",
+            "The identity matrix"
+        ],
+        "correct_answer": "The zero matrix"
+    },
+    {
+        "question": "What are the components of the unit vector in the positive x-direction in three-dimensional space?",
+        "options": [
+            "(0, 0, 1)",
+            "(1, 1, 1)",
+            "(1, 0, 0)",
+            "(0, 1, 0)"
+        ],
+        "correct_answer": "(1, 0, 0)"
+    },
+    {
+        "question": "In bearing notation, what does 'SE' represent?",
+        "options": [
+            "Northeast",
+            "Northwest",
+            "Southeast",
+            "Southwest"
+        ],
+        "correct_answer": "Southeast"
+    },
+    {
+        "question": "What is the result of multiplying a matrix by the identity matrix?",
+        "options": [
+            "The original matrix",
+            "The zero matrix",
+            "An error",
+            "The identity matrix"
+        ],
+        "correct_answer": "The original matrix"
+    },
+    {
+        "question": "What is the determinant of a 2x2 identity matrix?",
+        "options": [
+            "0",
+            "1",
+            "2",
+            "4"
+        ],
+        "correct_answer": "1"
+    },
+    {
+        "question": "In a 3D Cartesian coordinate system, what is the orientation of the x-axis?",
+        "options": [
+            "Vertical and pointing up",
+            "Vertical and pointing down",
+            "Horizontal and pointing left",
+            "Horizontal and pointing right"
+        ],
+        "correct_answer": "Horizontal and pointing right"
+    },
+    {
+        "question": "What is the cross product of two vectors that are parallel and in opposite directions?",
+        "options": [
+            "0",
+            "1",
+            "-1",
+            "2"
+        ],
+        "correct_answer": "0"
+    },
+    {
+        "question": "If vector A has components (3, 4) and vector B has components (1, -2), what is the dot product A · B?",
+        "options": [
+            "-10",
+            "10",
+            "-5",
+            "5"
+        ],
+        "correct_answer": "2"
+    },
+    {
+        "question": "In matrix multiplication, what is the size of the resulting matrix when a 2x3 matrix is multiplied by a 3x2 matrix?",
+        "options": [
+            "2x2 matrix",
+            "2x3 matrix",
+            "3x2 matrix",
+            "3x3 matrix"
+        ],
+        "correct_answer": "2x2 matrix"
+    },
+    {
+        "question": "In bearing notation, what does 'NE' represent?",
+        "options": [
+            "Northeast",
+            "Northwest",
+            "Southeast",
+            "Southwest"
+        ],
+        "correct_answer": "Northeast"
+    },
+    {
+        "question": "What is the result of subtracting a matrix from itself?",
+        "options": [
+            "The original matrix",
+            "Zero matrix",
+            "An error",
+            "Scalar quantity"
+        ],
+        "correct_answer": "Zero matrix"
+    },
+    {
+        "question": "What is the term for a vector with all components equal to zero?",
+        "options": [
+            "Unit vector",
+            "Scalar vector",
+            "Zero vector",
+            "Orthogonal vector"
+        ],
+        "correct_answer": "Zero vector"
+    }
+]

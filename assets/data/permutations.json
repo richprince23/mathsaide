@@ -1,0 +1,1912 @@
+[
+    {
+        "question": "How many permutations can be formed from the letters of the word 'MATH'?",
+        "options": [
+            "12",
+            "24",
+            "6",
+            "4"
+        ],
+        "correct_answer": "24"
+    },
+    {
+        "question": "In how many ways can a president, vice-president, and secretary be chosen from a group of 10 students?",
+        "options": [
+            "30",
+            "90",
+            "720",
+            "1000"
+        ],
+        "correct_answer": "720"
+    },
+    {
+        "question": "A committee of 4 students is to be selected from a group of 10. In how many ways can this be done?",
+        "options": [
+            "210",
+            "40",
+            "5040",
+            "720"
+        ],
+        "correct_answer": "210"
+    },
+    {
+        "question": "How many permutations can be formed from the digits 1, 2, 3, and 4?",
+        "options": [
+            "12",
+            "24",
+            "6",
+            "4"
+        ],
+        "correct_answer": "24"
+    },
+    {
+        "question": "In how many ways can 5 books be arranged on a shelf?",
+        "options": [
+            "5",
+            "10",
+            "20",
+            "120"
+        ],
+        "correct_answer": "120"
+    },
+    {
+        "question": "A password consists of 4 letters, where the first two letters are vowels and the next two are consonants. If repetition is not allowed, how many passwords are possible?",
+        "options": [
+            "100",
+            "360",
+            "210",
+            "400"
+        ],
+        "correct_answer": "360"
+    },
+    {
+        "question": "How many 3-letter words can be formed using the letters of the word 'APPLE'?",
+        "options": [
+            "6",
+            "27",
+            "81",
+            "18"
+        ],
+        "correct_answer": "27"
+    },
+    {
+        "question": "In how many ways can the letters of the word 'PERMUTATION' be arranged?",
+        "options": [
+            "11!",
+            "12!",
+            "10!",
+            "9!"
+        ],
+        "correct_answer": "12!"
+    },
+    {
+        "question": "What is the formula for calculating permutations of 'n' objects taken 'r' at a time?",
+        "options": [
+            "P(n, r) = n! / (n - r)!",
+            "P(n, r) = n! / r!",
+            "P(n, r) = n! + r!",
+            "P(n, r) = n^r"
+        ],
+        "correct_answer": "P(n, r) = n! / (n - r)!"
+    },
+    {
+        "question": "How many ways can 3 books be arranged on a shelf?",
+        "options": [
+            "3",
+            "6",
+            "9",
+            "12"
+        ],
+        "correct_answer": "6"
+    },
+    {
+        "question": "In how many ways can the letters of the word 'PERMUTE' be arranged?",
+        "options": [
+            "5040",
+            "720",
+            "120",
+            "360"
+        ],
+        "correct_answer": "720"
+    },
+    {
+        "question": "A committee of 5 students is to be formed from a group of 10 students. How many ways can this be done?",
+        "options": [
+            "10",
+            "20",
+            "30",
+            "252"
+        ],
+        "correct_answer": "252"
+    },
+    {
+        "question": "In how many ways can 4 red balls and 3 blue balls be arranged in a row?",
+        "options": [
+            "24",
+            "12",
+            "5040",
+            "144"
+        ],
+        "correct_answer": "144"
+    },
+    {
+        "question": "How many permutations are there of the letters in the word 'MISSISSIPPI'?",
+        "options": [
+            "34650",
+            "69300",
+            "22750",
+            "11550"
+        ],
+        "correct_answer": "34650"
+    },
+    {
+        "question": "A lock combination has 4 digits. If repetition of digits is allowed, how many combinations are possible?",
+        "options": [
+            "1000",
+            "256",
+            "5040",
+            "729"
+        ],
+        "correct_answer": "10000"
+    },
+    {
+        "question": "In how many ways can the letters of the word 'BANANA' be arranged?",
+        "options": [
+            "60",
+            "120",
+            "240",
+            "360"
+        ],
+        "correct_answer": "60"
+    },
+    {
+        "question": "How many ways can 5 books be arranged on a shelf if 2 of the books are identical?",
+        "options": [
+            "10",
+            "20",
+            "30",
+            "60"
+        ],
+        "correct_answer": "20"
+    },
+    {
+        "question": "A team of 8 basketball players needs to choose a captain and a co-captain. How many choices are there?",
+        "options": [
+            "56",
+            "16",
+            "64",
+            "28"
+        ],
+        "correct_answer": "56"
+    },
+    {
+        "question": "In how many ways can the letters of the word 'COMPUTE' be arranged?",
+        "options": [
+            "5040",
+            "720",
+            "120",
+            "360"
+        ],
+        "correct_answer": "720"
+    },
+    {
+        "question": "A committee of 3 people is to be selected from a group of 8. How many ways can this be done?",
+        "options": [
+            "24",
+            "336",
+            "56",
+            "112"
+        ],
+        "correct_answer": "56"
+    },
+    {
+        "question": "How many permutations of the word 'RACECAR' are there?",
+        "options": [
+            "40320",
+            "720",
+            "120",
+            "5040"
+        ],
+        "correct_answer": "40320"
+    },
+    {
+        "question": "A password consists of 4 letters, where each letter is a lowercase English letter. How many passwords are possible if repetition of letters is allowed?",
+        "options": [
+            "456976",
+            "256",
+            "5040",
+            "17576"
+        ],
+        "correct_answer": "456976"
+    },
+    {
+        "question": "In how many ways can 3 boys and 2 girls be arranged in a row?",
+        "options": [
+            "6",
+            "12",
+            "20",
+            "24"
+        ],
+        "correct_answer": "60"
+    },
+    {
+        "question": "How many permutations are possible using all the letters of the word 'MATH'?",
+        "options": [
+            "4",
+            "16",
+            "24",
+            "64"
+        ],
+        "correct_answer": "24"
+    },
+    {
+        "question": "A group of 6 friends wants to take a photo. In how many ways can they arrange themselves in a row?",
+        "options": [
+            "720",
+            "120",
+            "5040",
+            "360"
+        ],
+        "correct_answer": "720"
+    },
+    {
+        "question": "How many ways can the letters of the word 'SUCCESS' be arranged?",
+        "options": [
+            "5040",
+            "720",
+            "120",
+            "2520"
+        ],
+        "correct_answer": "5040"
+    },
+    {
+        "question": "A committee of 4 people is to be formed from 7 men and 5 women. In how many ways can this be done if at least 2 men and 2 women must be selected?",
+        "options": [
+            "3150",
+            "210",
+            "2520",
+            "6300"
+        ],
+        "correct_answer": "3150"
+    },
+    {
+        "question": "How many permutations can be formed using the letters of the word 'ALGORITHM'?",
+        "options": [
+            "362880",
+            "720",
+            "120",
+            "5040"
+        ],
+        "correct_answer": "362880"
+    },
+    {
+        "question": "A shelf has 5 books, including a red book and a blue book. How many ways can the books be arranged if the red book must be on the left?",
+        "options": [
+            "24",
+            "12",
+            "5040",
+            "48"
+        ],
+        "correct_answer": "48"
+    },
+    {
+        "question": "In how many ways can the letters of the word 'FACETIOUS' be arranged?",
+        "options": [
+            "5040",
+            "720",
+            "120",
+            "40320"
+        ],
+        "correct_answer": "40320"
+    },
+    {
+        "question": "How many ways can 4 apples and 3 oranges be arranged in a row?",
+        "options": [
+            "24",
+            "12",
+            "5040",
+            "144"
+        ],
+        "correct_answer": "144"
+    },
+    {
+        "question": "A box contains 8 black balls and 5 white balls. In how many ways can 5 balls be selected if at least 3 of them are black?",
+        "options": [
+            "164",
+            "246",
+            "1287",
+            "1024"
+        ],
+        "correct_answer": "246"
+    },
+    {
+        "question": "How many permutations of the letters in 'APPLE' start with the letter 'A'?",
+        "options": [
+            "20",
+            "24",
+            "60",
+            "12"
+        ],
+        "correct_answer": "24"
+    },
+    {
+        "question": "In how many ways can the letters of the word 'TENNIS' be arranged?",
+        "options": [
+            "720",
+            "120",
+            "5040",
+            "360"
+        ],
+        "correct_answer": "720"
+    },
+    {
+        "question": "A password consists of 5 characters, where each character is either a lowercase letter or a digit. How many passwords are possible if repetition of characters is allowed?",
+        "options": [
+            "11881376",
+            "2357",
+            "15625",
+            "32768"
+        ],
+        "correct_answer": "11881376"
+    },
+    {
+        "question": "In how many ways can a committee of 3 people be selected from 10 men and 7 women?",
+        "options": [
+            "816",
+            "120",
+            "5040",
+            "210"
+        ],
+        "correct_answer": "816"
+    },
+    {
+        "question": "How many permutations of the word 'TREAT' are there?",
+        "options": [
+            "120",
+            "24",
+            "720",
+            "5040"
+        ],
+        "correct_answer": "120"
+    },
+    {
+        "question": "A team of 11 soccer players needs to choose a captain and a co-captain. How many choices are there?",
+        "options": [
+            "1001",
+            "121",
+            "55",
+            "242"
+        ],
+        "correct_answer": "1001"
+    },
+    {
+        "question": "In how many ways can 3 different books and 2 identical books be arranged in a row?",
+        "options": [
+            "60",
+            "12",
+            "5040",
+            "144"
+        ],
+        "correct_answer": "60"
+    },
+    {
+        "question": "How many permutations are possible using the letters of the word 'PARALLEL'?",
+        "options": [
+            "72576",
+            "720",
+            "120",
+            "5040"
+        ],
+        "correct_answer": "72576"
+    },
+    {
+        "question": "A committee of 5 students is to be formed from a group of 8 students. How many ways can this be done?",
+        "options": [
+            "56",
+            "1680",
+            "2520",
+            "336"
+        ],
+        "correct_answer": "56"
+    },
+    {
+        "question": "How many permutations can be formed using all the letters of the word 'EQUATION'?",
+        "options": [
+            "5040",
+            "720",
+            "120",
+            "40320"
+        ],
+        "correct_answer": "40320"
+    },
+    {
+        "question": "In how many ways can 4 boys and 3 girls be arranged in a row?",
+        "options": [
+            "12",
+            "24",
+            "120",
+            "144"
+        ],
+        "correct_answer": "5040"
+    },
+    {
+        "question": "How many permutations are there of the letters in the word 'ELEPHANT'?",
+        "options": [
+            "40320",
+            "720",
+            "120",
+            "5040"
+        ],
+        "correct_answer": "40320"
+    },
+    {
+        "question": "A password consists of 6 letters, where each letter is an uppercase English letter. How many passwords are possible if repetition of letters is allowed?",
+        "options": [
+            "308915776",
+            "256",
+            "5040",
+            "1679616"
+        ],
+        "correct_answer": "308915776"
+    },
+    {
+        "question": "In how many ways can the letters of the word 'ENGINE' be arranged?",
+        "options": [
+            "720",
+            "120",
+            "5040",
+            "360"
+        ],
+        "correct_answer": "720"
+    },
+    {
+        "question": "A committee of 3 people is to be selected from a group of 5 men and 4 women. In how many ways can this be done if at least 2 women must be selected?",
+        "options": [
+            "36",
+            "84",
+            "144",
+            "120"
+        ],
+        "correct_answer": "84"
+    },
+    {
+        "question": "How many permutations of the word 'SWIMMING' are there?",
+        "options": [
+            "5040",
+            "720",
+            "120",
+            "40320"
+        ],
+        "correct_answer": "5040"
+    },
+    {
+        "question": "A lock combination has 3 digits, where each digit is between 0 and 9. How many combinations are possible?",
+        "options": [
+            "1000",
+            "256",
+            "5040",
+            "729"
+        ],
+        "correct_answer": "1000"
+    },
+    {
+        "question": "In how many ways can 2 red balls, 3 blue balls, and 4 green balls be arranged in a row?",
+        "options": [
+            "362880",
+            "5040",
+            "3628800",
+            "120"
+        ],
+        "correct_answer": "362880"
+    },
+    {
+        "question": "How many permutations can be formed using the letters of the word 'PHYSICS'?",
+        "options": [
+            "5040",
+            "720",
+            "120",
+            "40320"
+        ],
+        "correct_answer": "5040"
+    },
+    {
+        "question": "A committee of 4 students is to be formed from a group of 6 students. How many ways can this be done?",
+        "options": [
+            "15",
+            "720",
+            "360",
+            "24"
+        ],
+        "correct_answer": "15"
+    },
+    {
+        "question": "In how many ways can the letters of the word 'EXCELLENT' be arranged?",
+        "options": [
+            "3628800",
+            "720",
+            "120",
+            "5040"
+        ],
+        "correct_answer": "3628800"
+    },
+    {
+        "question": "How many ways can 3 different books and 3 identical books be arranged in a row?",
+        "options": [
+            "720",
+            "120",
+            "120",
+            "144"
+        ],
+        "correct_answer": "120"
+    },
+    {
+        "question": "How many permutations are there of the letters in the word 'MATHEMATICS'?",
+        "options": [
+            "3628800",
+            "720",
+            "120",
+            "5040"
+        ],
+        "correct_answer": "3628800"
+    },
+    {
+        "question": "In how many ways can 2 boys and 4 girls be arranged in a row?",
+        "options": [
+            "6",
+            "12",
+            "24",
+            "48"
+        ],
+        "correct_answer": "720"
+    },
+    {
+        "question": "How many permutations can be formed using the letters of the word 'UNIVERSITY'?",
+        "options": [
+            "3628800",
+            "720",
+            "120",
+            "40320"
+        ],
+        "correct_answer": "3628800"
+    },
+    {
+        "question": "In how many ways can the letters of the word 'MISSISSIPPI' be arranged?",
+        "options": [
+            "34650",
+            "1680",
+            "1140",
+            "11"
+        ],
+        "correct_answer": "34650"
+    },
+    {
+        "question": "A committee of 5 people is to be selected from a group of 10 individuals. How many different committees can be formed?",
+        "options": [
+            "120",
+            "252",
+            "210",
+            "1024"
+        ],
+        "correct_answer": "252"
+    },
+    {
+        "question": "How many ways can 3 books be arranged on a shelf?",
+        "options": [
+            "3",
+            "6",
+            "9",
+            "27"
+        ],
+        "correct_answer": "6"
+    },
+    {
+        "question": "In how many ways can the letters of the word 'COMPUTER' be arranged?",
+        "options": [
+            "5040",
+            "40320",
+            "720",
+            "362880"
+        ],
+        "correct_answer": "720"
+    },
+    {
+        "question": "How many permutations are there of the letters in the word 'FATHER'?",
+        "options": [
+            "720",
+            "120",
+            "360",
+            "5040"
+        ],
+        "correct_answer": "720"
+    },
+    {
+        "question": "In how many ways can 4 different books be arranged on a shelf?",
+        "options": [
+            "12",
+            "24",
+            "36",
+            "48"
+        ],
+        "correct_answer": "24"
+    },
+    {
+        "question": "How many permutations can be formed using all the letters of the word 'REPEAT'?",
+        "options": [
+            "720",
+            "120",
+            "360",
+            "5040"
+        ],
+        "correct_answer": "720"
+    },
+    {
+        "question": "A team of 8 basketball players is to be selected from a group of 12. How many different teams can be formed?",
+        "options": [
+            "12",
+            "56",
+            "495",
+            "792"
+        ],
+        "correct_answer": "495"
+    },
+    {
+        "question": "How many permutations can be formed using all the letters of the word 'MUSIC'?",
+        "options": [
+            "120",
+            "360",
+            "60",
+            "720"
+        ],
+        "correct_answer": "120"
+    },
+    {
+        "question": "In how many ways can 5 people stand in a queue?",
+        "options": [
+            "25",
+            "20",
+            "120",
+            "60"
+        ],
+        "correct_answer": "120"
+    },
+    {
+        "question": "How many permutations are possible using the letters of the word 'APPLE'?",
+        "options": [
+            "60",
+            "120",
+            "24",
+            "720"
+        ],
+        "correct_answer": "60"
+    },
+    {
+        "question": "In how many ways can the letters of the word 'RACE' be arranged?",
+        "options": [
+            "24",
+            "12",
+            "6",
+            "18"
+        ],
+        "correct_answer": "24"
+    },
+    {
+        "question": "How many permutations can be formed using the letters of the word 'TRAINS'?",
+        "options": [
+            "120",
+            "720",
+            "5040",
+            "60"
+        ],
+        "correct_answer": "720"
+    },
+    {
+        "question": "In how many ways can 3 students out of 5 be chosen to represent the class?",
+        "options": [
+            "15",
+            "10",
+            "5",
+            "20"
+        ],
+        "correct_answer": "10"
+    },
+    {
+        "question": "How many permutations are possible using the letters of the word 'WATER'?",
+        "options": [
+            "120",
+            "720",
+            "24",
+            "360"
+        ],
+        "correct_answer": "720"
+    },
+    {
+        "question": "A committee of 3 is to be chosen from 8 students. How many different committees can be formed?",
+        "options": [
+            "28",
+            "336",
+            "56",
+            "24"
+        ],
+        "correct_answer": "56"
+    },
+    {
+        "question": "In how many ways can the letters 'A', 'B', 'C', and 'D' be arranged?",
+        "options": [
+            "10",
+            "24",
+            "4",
+            "16"
+        ],
+        "correct_answer": "24"
+    },
+    {
+        "question": "How many permutations can be formed using the letters of the word 'ORANGE'?",
+        "options": [
+            "120",
+            "720",
+            "24",
+            "360"
+        ],
+        "correct_answer": "720"
+    },
+    {
+        "question": "In how many ways can 2 students out of 6 be chosen for a debate?",
+        "options": [
+            "30",
+            "12",
+            "6",
+            "15"
+        ],
+        "correct_answer": "15"
+    },
+    {
+        "question": "How many permutations are possible using the letters of the word 'BANANA'?",
+        "options": [
+            "120",
+            "720",
+            "60",
+            "24"
+        ],
+        "correct_answer": "60"
+    },
+    {
+        "question": "In how many ways can the letters of the word 'ELEVEN' be arranged?",
+        "options": [
+            "720",
+            "360",
+            "120",
+            "5040"
+        ],
+        "correct_answer": "720"
+    },
+    {
+        "question": "How many permutations can be formed using 4 out of 7 letters from the word 'GARDEN'?",
+        "options": [
+            "35",
+            "12",
+            "24",
+            "42"
+        ],
+        "correct_answer": "24"
+    },
+    {
+        "question": "In how many ways can 4 students out of 10 be selected to form a team?",
+        "options": [
+            "210",
+            "45",
+            "5040",
+            "120"
+        ],
+        "correct_answer": "210"
+    },
+    {
+        "question": "How many permutations can be formed using 3 out of 6 letters from the word 'PURPLE'?",
+        "options": [
+            "20",
+            "90",
+            "120",
+            "6"
+        ],
+        "correct_answer": "120"
+    },
+    {
+        "question": "What is the formula for calculating permutations of n objects taken r at a time?",
+        "options": [
+            "P(n, r) = n! / (n - r)!",
+            "P(n, r) = n! / r!",
+            "P(n, r) = n^r",
+            "P(n, r) = n * (n - r)"
+        ],
+        "correct_answer": "P(n, r) = n! / (n - r)!"
+    },
+    {
+        "question": "How many ways can you arrange the letters in the word 'APPLE'?",
+        "options": [
+            "12",
+            "60",
+            "120",
+            "720"
+        ],
+        "correct_answer": "60"
+    },
+    {
+        "question": "In how many ways can 3 books be arranged on a shelf?",
+        "options": [
+            "3",
+            "6",
+            "9",
+            "27"
+        ],
+        "correct_answer": "6"
+    },
+    {
+        "question": "What is the value of 7P3?",
+        "options": [
+            "105",
+            "210",
+            "420",
+            "5040"
+        ],
+        "correct_answer": "210"
+    },
+    {
+        "question": "A committee of 5 students is to be selected from a class of 20. How many different committees can be formed?",
+        "options": [
+            "100",
+            "320",
+            "15504",
+            "155"
+        ],
+        "correct_answer": "15504"
+    },
+    {
+        "question": "How many ways can the letters in the word 'COMPUTE' be arranged?",
+        "options": [
+            "5040",
+            "1440",
+            "720",
+            "210"
+        ],
+        "correct_answer": "720"
+    },
+    {
+        "question": "In how many ways can 4 boys and 3 girls be seated in a row if the boys and girls must alternate?",
+        "options": [
+            "144",
+            "280",
+            "576",
+            "504"
+        ],
+        "correct_answer": "144"
+    },
+    {
+        "question": "How many permutations are there of the letters in the word 'SUCCESS'?",
+        "options": [
+            "40320",
+            "10080",
+            "5040",
+            "720"
+        ],
+        "correct_answer": "5040"
+    },
+    {
+        "question": "A group of 8 people is to be arranged in a row for a photograph. How many ways can they be arranged?",
+        "options": [
+            "56",
+            "64",
+            "5040",
+            "40320"
+        ],
+        "correct_answer": "40320"
+    },
+    {
+        "question": "In how many ways can the letters in the word 'PERMUTATION' be arranged?",
+        "options": [
+            "40320",
+            "181440",
+            "362880",
+            "3628800"
+        ],
+        "correct_answer": "181440"
+    },
+    {
+        "question": "How many permutations of the word 'BOOK' are there?",
+        "options": [
+            "12",
+            "24",
+            "48",
+            "120"
+        ],
+        "correct_answer": "24"
+    },
+    {
+        "question": "A box contains 5 red balls and 3 blue balls. How many ways can 4 balls be selected from the box if at least 2 of them are blue?",
+        "options": [
+            "16",
+            "18",
+            "20",
+            "24"
+        ],
+        "correct_answer": "18"
+    },
+    {
+        "question": "In how many ways can 5 people be arranged in a circular seating arrangement?",
+        "options": [
+            "24",
+            "48",
+            "120",
+            "720"
+        ],
+        "correct_answer": "24"
+    },
+    {
+        "question": "How many ways can 3 math books, 4 science books, and 2 history books be arranged on a shelf if books of the same subject are placed together?",
+        "options": [
+            "576",
+            "1440",
+            "2880",
+            "4320"
+        ],
+        "correct_answer": "2880"
+    },
+    {
+        "question": "In how many ways can the letters in the word 'ALGORITHM' be arranged such that all vowels are together?",
+        "options": [
+            "30240",
+            "60480",
+            "10080",
+            "15120"
+        ],
+        "correct_answer": "10080"
+    },
+    {
+        "question": "A team of 5 students is to be selected from a class of 25. How many different teams can be formed if a specific student must be included?",
+        "options": [
+            "1000",
+            "4000",
+            "5000",
+            "625"
+        ],
+        "correct_answer": "5000"
+    },
+    {
+        "question": "In how many ways can 6 different books be arranged on a shelf?",
+        "options": [
+            "120",
+            "360",
+            "720",
+            "1800"
+        ],
+        "correct_answer": "720"
+    },
+    {
+        "question": "How many different arrangements are possible using the letters in the word 'MISSISSIPPI'?",
+        "options": [
+            "34650",
+            "69300",
+            "181440",
+            "362880"
+        ],
+        "correct_answer": "34650"
+    },
+    {
+        "question": "In how many ways can 2 red balls and 3 blue balls be arranged in a row?",
+        "options": [
+            "5",
+            "20",
+            "40",
+            "120"
+        ],
+        "correct_answer": "20"
+    },
+    {
+        "question": "How many permutations can be formed using the letters of the word 'MATH'?",
+        "options": [
+            "6",
+            "12",
+            "24",
+            "48"
+        ],
+        "correct_answer": "24"
+    },
+    {
+        "question": "In how many ways can 3 women and 2 men be seated in a row if the women must sit together?",
+        "options": [
+            "48",
+            "72",
+            "96",
+            "120"
+        ],
+        "correct_answer": "48"
+    },
+    {
+        "question": "How many ways can 5 green balls and 4 yellow balls be arranged in a row?",
+        "options": [
+            "45",
+            "90",
+            "144",
+            "720"
+        ],
+        "correct_answer": "10"
+    },
+    {
+        "question": "In how many ways can the letters in the word 'INDEPENDENT' be arranged?",
+        "options": [
+            "110",
+            "220",
+            "720",
+            "5040"
+        ],
+        "correct_answer": "110"
+    },
+    {
+        "question": "A password consists of 3 digits followed by 2 letters. How many different passwords are possible if repetition is not allowed?",
+        "options": [
+            "3600",
+            "6000",
+            "7200",
+            "9000"
+        ],
+        "correct_answer": "7200"
+    },
+    {
+        "question": "How many ways can 4 students out of 10 be chosen for a dance performance?",
+        "options": [
+            "40",
+            "210",
+            "5040",
+            "10000"
+        ],
+        "correct_answer": "210"
+    },
+    {
+        "question": "In how many ways can the letters in the word 'PERMUTE' be arranged such that the vowels are in alphabetical order?",
+        "options": [
+            "1440",
+            "2880",
+            "720",
+            "120"
+        ],
+        "correct_answer": "1440"
+    },
+    {
+        "question": "A committee of 4 people is to be formed from a group of 7 men and 3 women. How many different committees are possible if there must be at least 1 woman on the committee?",
+        "options": [
+            "47",
+            "80",
+            "156",
+            "236"
+        ],
+        "correct_answer": "236"
+    },
+    {
+        "question": "How many permutations can be formed using the letters of the word 'REPEAT'?",
+        "options": [
+            "180",
+            "360",
+            "720",
+            "1440"
+        ],
+        "correct_answer": "720"
+    },
+    {
+        "question": "In how many ways can 3 red balls, 4 blue balls, and 2 green balls be arranged in a row?",
+        "options": [
+            "504",
+            "576",
+            "720",
+            "1080"
+        ],
+        "correct_answer": "504"
+    },
+    {
+        "question": "How many permutations of the word 'TENNIS' have the vowels together?",
+        "options": [
+            "480",
+            "720",
+            "1440",
+            "2880"
+        ],
+        "correct_answer": "480"
+    },
+    {
+        "question": "A password consists of 4 digits followed by 2 letters. How many different passwords are possible if repetition is allowed?",
+        "options": [
+            "60466176",
+            "1000000",
+            "33600",
+            "1296"
+        ],
+        "correct_answer": "60466176"
+    },
+    {
+        "question": "In how many ways can 3 red balls and 4 green balls be arranged in a row?",
+        "options": [
+            "210",
+            "720",
+            "1440",
+            "3024"
+        ],
+        "correct_answer": "210"
+    },
+    {
+        "question": "How many permutations of the word 'STATISTICS' have the vowels in alphabetical order?",
+        "options": [
+            "1680",
+            "3360",
+            "6720",
+            "13440"
+        ],
+        "correct_answer": "1680"
+    },
+    {
+        "question": "In how many ways can the letters in the word 'SCHOOL' be arranged such that the vowels are together?",
+        "options": [
+            "720",
+            "1440",
+            "2880",
+            "5040"
+        ],
+        "correct_answer": "720"
+    },
+    {
+        "question": "A committee of 3 students is to be formed from a group of 10 boys and 5 girls. How many different committees are possible if there must be at least 1 boy and 1 girl on the committee?",
+        "options": [
+            "150",
+            "200",
+            "250",
+            "300"
+        ],
+        "correct_answer": "300"
+    },
+    {
+        "question": "How many permutations can be formed using the letters of the word 'SUCCESS'?",
+        "options": [
+            "2520",
+            "5040",
+            "10080",
+            "20160"
+        ],
+        "correct_answer": "2520"
+    },
+    {
+        "question": "In how many ways can 3 red balls, 2 blue balls, and 4 green balls be arranged in a row?",
+        "options": [
+            "2520",
+            "5040",
+            "10080",
+            "20160"
+        ],
+        "correct_answer": "5040"
+    },
+    {
+        "question": "How many permutations of the word 'MATHEMATICS' have the vowels in even positions?",
+        "options": [
+            "720",
+            "1440",
+            "2160",
+            "4320"
+        ],
+        "correct_answer": "720"
+    },
+    {
+        "question": "In how many ways can 2 identical red balls, 3 identical blue balls, and 4 identical green balls be arranged in a row?",
+        "options": [
+            "45",
+            "84",
+            "126",
+            "168"
+        ],
+        "correct_answer": "126"
+    },
+    {
+        "question": "How many permutations of the letters in the word 'STATISTICS' start with a vowel?",
+        "options": [
+            "1440",
+            "1680",
+            "3360",
+            "6720"
+        ],
+        "correct_answer": "1680"
+    },
+    {
+        "question": "A password consists of 5 digits followed by 3 letters. How many different passwords are possible if repetition is not allowed?",
+        "options": [
+            "33600",
+            "151200",
+            "125970",
+            "16807"
+        ],
+        "correct_answer": "151200"
+    },
+    {
+        "question": "In how many ways can the letters in the word 'SUCCESS' be arranged such that no two consonants are together?",
+        "options": [
+            "1440",
+            "2880",
+            "5040",
+            "10080"
+        ],
+        "correct_answer": "2880"
+    },
+    {
+        "question": "How many permutations can be formed using the letters of the word 'ENGINEERING'?",
+        "options": [
+            "453600",
+            "907200",
+            "1814400",
+            "3628800"
+        ],
+        "correct_answer": "907200"
+    },
+    {
+        "question": "In how many ways can 4 red balls and 3 blue balls be arranged in a row?",
+        "options": [
+            "1680",
+            "2520",
+            "3360",
+            "5040"
+        ],
+        "correct_answer": "1680"
+    },
+    {
+        "question": "How many permutations of the word 'PENCIL' have the vowels in odd positions?",
+        "options": [
+            "48",
+            "72",
+            "96",
+            "120"
+        ],
+        "correct_answer": "72"
+    },
+    {
+        "question": "A committee of 6 people is to be formed from a group of 8 men and 4 women. How many different committees are possible if there must be an equal number of men and women on the committee?",
+        "options": [
+            "105",
+            "175",
+            "330",
+            "495"
+        ],
+        "correct_answer": "330"
+    },
+    {
+        "question": "In how many ways can the letters in the word 'EXTRA' be arranged such that the vowels are together?",
+        "options": [
+            "60",
+            "120",
+            "240",
+            "360"
+        ],
+        "correct_answer": "60"
+    },
+    {
+        "question": "How many permutations can be formed using the letters of the word 'SUCCESSFUL'?",
+        "options": [
+            "362880",
+            "725760",
+            "1451520",
+            "2903040"
+        ],
+        "correct_answer": "725760"
+    },
+    {
+        "question": "In how many ways can 5 different books be arranged on a shelf if 2 specific books must always be together?",
+        "options": [
+            "48",
+            "72",
+            "96",
+            "120"
+        ],
+        "correct_answer": "96"
+    },
+    {
+        "question": "How many permutations can be formed using the letters of the word 'ARRANGEMENT'?",
+        "options": [
+            "1814400",
+            "3628800",
+            "7257600",
+            "14515200"
+        ],
+        "correct_answer": "7257600"
+    },
+    {
+        "question": "In how many ways can the letters of the word 'PERMUTE' be arranged?",
+        "options": [
+            "5040",
+            "720",
+            "120",
+            "40320"
+        ],
+        "correct_answer": "5040"
+    },
+    {
+        "question": "How many 3-digit numbers can be formed using the digits 1, 2, 3, and 4 without repetition?",
+        "options": [
+            "6",
+            "12",
+            "24",
+            "8"
+        ],
+        "correct_answer": "24"
+    },
+    {
+        "question": "In how many ways can 5 books be arranged on a shelf?",
+        "options": [
+            "120",
+            "720",
+            "20",
+            "5040"
+        ],
+        "correct_answer": "120"
+    },
+    {
+        "question": "How many different permutations can be made using all the letters of the word 'COMPUTER'?",
+        "options": [
+            "5040",
+            "40320",
+            "720",
+            "120"
+        ],
+        "correct_answer": "5040"
+    },
+    {
+        "question": "In how many ways can 3 red, 4 green, and 2 blue balls be arranged in a row?",
+        "options": [
+            "5040",
+            "10080",
+            "5760",
+            "720"
+        ],
+        "correct_answer": "10080"
+    },
+    {
+        "question": "How many permutations can be made using the letters of the word 'MATH'?",
+        "options": [
+            "12",
+            "6",
+            "24",
+            "4"
+        ],
+        "correct_answer": "24"
+    },
+    {
+        "question": "In how many ways can the letters of the word 'APPLE' be arranged?",
+        "options": [
+            "60",
+            "20",
+            "120",
+            "24"
+        ],
+        "correct_answer": "60"
+    },
+    {
+        "question": "How many 4-letter permutations can be made using the letters of the word 'WATER'?",
+        "options": [
+            "20",
+            "24",
+            "12",
+            "6"
+        ],
+        "correct_answer": "24"
+    },
+    {
+        "question": "In how many ways can 2 boys and 3 girls be seated in a row if the boys and girls must alternate?",
+        "options": [
+            "48",
+            "120",
+            "60",
+            "24"
+        ],
+        "correct_answer": "48"
+    },
+    {
+        "question": "How many permutations can be formed using the letters of the word 'BANANA'?",
+        "options": [
+            "120",
+            "60",
+            "20",
+            "240"
+        ],
+        "correct_answer": "60"
+    },
+    {
+        "question": "In how many ways can 5 books be arranged on a shelf if 2 particular books must always be together?",
+        "options": [
+            "48",
+            "144",
+            "240",
+            "96"
+        ],
+        "correct_answer": "48"
+    },
+    {
+        "question": "How many ways can you arrange the letters in the word 'APPLE'?",
+        "options": [
+            "12",
+            "60",
+            "120",
+            "720"
+        ],
+        "correct_answer": "60"
+    },
+    {
+        "question": "In how many ways can 3 books be arranged on a shelf?",
+        "options": [
+            "3",
+            "6",
+            "9",
+            "27"
+        ],
+        "correct_answer": "6"
+    },
+    {
+        "question": "A committee of 5 people is to be chosen from a group of 10. In how many ways can this be done?",
+        "options": [
+            "10",
+            "15",
+            "25",
+            "120"
+        ],
+        "correct_answer": "252"
+    },
+    {
+        "question": "How many permutations are there of the letters in the word 'COMPUTER'?",
+        "options": [
+            "5040",
+            "720",
+            "120",
+            "210"
+        ],
+        "correct_answer": "5040"
+    },
+    {
+        "question": "In how many ways can the letters of the word 'BANANA' be arranged?",
+        "options": [
+            "60",
+            "120",
+            "240",
+            "720"
+        ],
+        "correct_answer": "60"
+    },
+    {
+        "question": "How many 3-digit numbers can be formed using the digits 1, 2, 3, and 4 without repetition?",
+        "options": [
+            "6",
+            "12",
+            "24",
+            "64"
+        ],
+        "correct_answer": "24"
+    },
+    {
+        "question": "In how many ways can the letters in the word 'MISSISSIPPI' be arranged?",
+        "options": [
+            "34650",
+            "69300",
+            "119",
+            "6204480"
+        ],
+        "correct_answer": "34650"
+    },
+    {
+        "question": "A team of 8 basketball players needs to select a captain and a co-captain. How many choices are there?",
+        "options": [
+            "16",
+            "40",
+            "56",
+            "64"
+        ],
+        "correct_answer": "56"
+    },
+    {
+        "question": "How many ways can the letters in the word 'ELEPHANT' be arranged?",
+        "options": [
+            "40320",
+            "5040",
+            "720",
+            "362880"
+        ],
+        "correct_answer": "5040"
+    },
+    {
+        "question": "In how many ways can 4 different books be arranged on a shelf?",
+        "options": [
+            "12",
+            "24",
+            "36",
+            "48"
+        ],
+        "correct_answer": "24"
+    },
+    {
+        "question": "How many permutations are possible using the letters of the word 'MATHEMATICS'?",
+        "options": [
+            "3265920",
+            "3628800",
+            "40320",
+            "720"
+        ],
+        "correct_answer": "3628800"
+    },
+    {
+        "question": "A password consists of 4 letters, where each letter is from the set {A, B, C, D}. How many possible passwords are there?",
+        "options": [
+            "16",
+            "64",
+            "256",
+            "1024"
+        ],
+        "correct_answer": "256"
+    },
+    {
+        "question": "In how many ways can 5 cars be parked in a row?",
+        "options": [
+            "5",
+            "20",
+            "60",
+            "120"
+        ],
+        "correct_answer": "120"
+    },
+    {
+        "question": "How many permutations can be formed using the letters of the word 'SUCCESS'?",
+        "options": [
+            "5040",
+            "40320",
+            "720",
+            "120"
+        ],
+        "correct_answer": "5040"
+    },
+    {
+        "question": "A committee of 3 students is to be chosen from a class of 25. How many choices are there?",
+        "options": [
+            "50",
+            "75",
+            "100",
+            "2300"
+        ],
+        "correct_answer": "2300"
+    },
+    {
+        "question": "How many 2-letter permutations can be formed using the letters of the word 'MATH'?",
+        "options": [
+            "4",
+            "6",
+            "8",
+            "12"
+        ],
+        "correct_answer": "12"
+    },
+    {
+        "question": "In how many ways can the letters of the word 'TENNIS' be arranged?",
+        "options": [
+            "720",
+            "120",
+            "360",
+            "840"
+        ],
+        "correct_answer": "720"
+    },
+    {
+        "question": "A team of 10 players needs to select a captain and a vice-captain. How many choices are there?",
+        "options": [
+            "20",
+            "45",
+            "90",
+            "100"
+        ],
+        "correct_answer": "90"
+    },
+    {
+        "question": "How many permutations can be formed using the letters of the word 'DIAGONAL'?",
+        "options": [
+            "40320",
+            "362880",
+            "5040",
+            "720"
+        ],
+        "correct_answer": "362880"
+    },
+    {
+        "question": "In how many ways can 4 different paintings be hung on a wall?",
+        "options": [
+            "12",
+            "24",
+            "36",
+            "48"
+        ],
+        "correct_answer": "24"
+    },
+    {
+        "question": "How many permutations are possible using the letters of the word 'EQUATION'?",
+        "options": [
+            "40320",
+            "5040",
+            "720",
+            "362880"
+        ],
+        "correct_answer": "40320"
+    },
+    {
+        "question": "A license plate consists of 3 letters followed by 2 digits. How many possible license plates are there if repetition of letters and digits is not allowed?",
+        "options": [
+            "6500",
+            "67600",
+            "25200",
+            "129600"
+        ],
+        "correct_answer": "129600"
+    },
+    {
+        "question": "In how many ways can a committee of 4 people be selected from a group of 12?",
+        "options": [
+            "24",
+            "48",
+            "120",
+            "252"
+        ],
+        "correct_answer": "495"
+    },
+    {
+        "question": "How many permutations can be formed using the letters of the word 'GENIUS'?",
+        "options": [
+            "720",
+            "5040",
+            "120",
+            "40320"
+        ],
+        "correct_answer": "720"
+    },
+    {
+        "question": "In how many ways can the letters of the word 'FANTASTIC' be arranged?",
+        "options": [
+            "362880",
+            "40320",
+            "720",
+            "120"
+        ],
+        "correct_answer": "362880"
+    },
+    {
+        "question": "A box contains 6 red balls, 4 blue balls, and 3 green balls. How many arrangements can be made if balls of the same color are identical?",
+        "options": [
+            "52",
+            "180",
+            "390",
+            "286"
+        ],
+        "correct_answer": "286"
+    },
+    {
+        "question": "How many ways can a group of 5 people be chosen from 9 applicants?",
+        "options": [
+            "5",
+            "9",
+            "42",
+            "126"
+        ],
+        "correct_answer": "126"
+    },
+    {
+        "question": "How many permutations are possible using the letters of the word 'VOWELS'?",
+        "options": [
+            "5040",
+            "120",
+            "720",
+            "40320"
+        ],
+        "correct_answer": "720"
+    },
+    {
+        "question": "In how many ways can a necklace be made using 8 distinct beads?",
+        "options": [
+            "8",
+            "16",
+            "28",
+            "56"
+        ],
+        "correct_answer": "5040"
+    },
+    {
+        "question": "How many permutations can be formed using the letters of the word 'TOMATO'?",
+        "options": [
+            "120",
+            "720",
+            "5040",
+            "40320"
+        ],
+        "correct_answer": "720"
+    },
+    {
+        "question": "In how many ways can 5 books be arranged on a shelf if 2 specific books must be placed next to each other?",
+        "options": [
+            "24",
+            "48",
+            "72",
+            "120"
+        ],
+        "correct_answer": "48"
+    },
+    {
+        "question": "How many permutations are there of the letters in the word 'ALGORITHM'?",
+        "options": [
+            "40320",
+            "362880",
+            "5040",
+            "720"
+        ],
+        "correct_answer": "362880"
+    },
+    {
+        "question": "A password consists of 6 characters, including 2 letters and 4 digits. How many possible passwords are there if repetition of characters is not allowed?",
+        "options": [
+            "720",
+            "3600",
+            "7200",
+            "14400"
+        ],
+        "correct_answer": "7200"
+    },
+    {
+        "question": "In how many ways can 3 red balls, 2 blue balls, and 2 green balls be arranged in a row?",
+        "options": [
+            "105",
+            "280",
+            "5040",
+            "20160"
+        ],
+        "correct_answer": "5040"
+    },
+    {
+        "question": "How many permutations can be formed using the letters of the word 'PHYSICS'?",
+        "options": [
+            "40320",
+            "5040",
+            "720",
+            "362880"
+        ],
+        "correct_answer": "5040"
+    },
+    {
+        "question": "In how many ways can 5 students stand in a line if 2 of them refuse to stand next to each other?",
+        "options": [
+            "48",
+            "60",
+            "72",
+            "96"
+        ],
+        "correct_answer": "72"
+    },
+    {
+        "question": "How many permutations are there of the letters in the word 'EXTRAORDINARY'?",
+        "options": [
+            "479001600",
+            "40320",
+            "362880",
+            "720"
+        ],
+        "correct_answer": "479001600"
+    },
+    {
+        "question": "A committee of 4 people is to be chosen from 6 boys and 5 girls. In how many ways can this be done if at least 2 girls must be included?",
+        "options": [
+            "80",
+            "110",
+            "220",
+            "330"
+        ],
+        "correct_answer": "330"
+    },
+    {
+        "question": "How many permutations can be formed using the letters of the word 'SEQUENCE'?",
+        "options": [
+            "5040",
+            "40320",
+            "720",
+            "362880"
+        ],
+        "correct_answer": "5040"
+    },
+    {
+        "question": "In how many ways can 6 different books be divided equally among 3 students?",
+        "options": [
+            "20",
+            "30",
+            "40",
+            "50"
+        ],
+        "correct_answer": "20"
+    },
+    {
+        "question": "How many permutations are there of the letters in the word 'MISCONCEPTION'?",
+        "options": [
+            "3628800",
+            "40320",
+            "720",
+            "5040"
+        ],
+        "correct_answer": "3628800"
+    },
+    {
+        "question": "A code consists of 4 letters followed by 3 digits. How many possible codes are there if repetition of characters is not allowed?",
+        "options": [
+            "58500",
+            "5040",
+            "65520",
+            "120"
+        ],
+        "correct_answer": "65520"
+    },
+    {
+        "question": "In how many ways can 4 red balls, 3 blue balls, and 2 green balls be arranged in a row?",
+        "options": [
+            "5040",
+            "40320",
+            "1080",
+            "10080"
+        ],
+        "correct_answer": "5040"
+    },
+    {
+        "question": "How many permutations can be formed using the letters of the word 'SYLLABUS'?",
+        "options": [
+            "5040",
+            "40320",
+            "720",
+            "362880"
+        ],
+        "correct_answer": "5040"
+    },
+    {
+        "question": "In how many ways can 7 people sit around a circular table?",
+        "options": [
+            "7",
+            "14",
+            "42",
+            "5040"
+        ],
+        "correct_answer": "5040"
+    },
+    {
+        "question": "How many permutations are possible using the letters of the word 'PARALLEL'?",
+        "options": [
+            "40320",
+            "362880",
+            "720",
+            "5040"
+        ],
+        "correct_answer": "362880"
+    },
+    {
+        "question": "In how many ways can 5 boys and 4 girls be arranged in a row if no two girls can be together?",
+        "options": [
+            "10",
+            "144",
+            "720",
+            "5040"
+        ],
+        "correct_answer": "1440"
+    },
+    {
+        "question": "How many permutations are there of the letters in the word 'HARMONY'?",
+        "options": [
+            "5040",
+            "40320",
+            "720",
+            "362880"
+        ],
+        "correct_answer": "5040"
+    },
+    {
+        "question": "A committee of 3 must be formed from a group of 7 boys and 4 girls. How many choices are there if at least 2 girls must be included?",
+        "options": [
+            "16",
+            "28",
+            "32",
+            "42"
+        ],
+        "correct_answer": "42"
+    }
+]
